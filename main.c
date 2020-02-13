@@ -1,15 +1,15 @@
 #include "clientes.h"
-
+#include "produtos.h"
 
 int main() {
     //FILE *f;
 
     //f = fopen("/home/joao/Desktop/LI3/dados/Clientes.txt","r");
-    char *clientes[1000000];
+    char *clientes[clientsize];
+    char *produtos[productsize];
    // char cli_code[8];
    // int i = 0;
    // char* token;
-
 
 /*
     while (fgets(cli_code, 8, f)) {
@@ -22,6 +22,7 @@ int main() {
 
 */
     readClientes(clientes);
+    readProdutos(produtos);
 
 
     /*    char cliente;

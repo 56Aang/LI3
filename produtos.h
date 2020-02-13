@@ -1,8 +1,12 @@
-//
-// Created by joao on 12/02/20.
-//
+
 
 #ifndef LI3_PRODUTOS_H
 #define LI3_PRODUTOS_H
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#define productsize 1000000
+int readProdutos(char *produtos[productsize]);
 
 #endif //LI3_PRODUTOS_H

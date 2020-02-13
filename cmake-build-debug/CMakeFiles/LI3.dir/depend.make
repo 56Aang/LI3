@@ -6,6 +6,7 @@ CMakeFiles/LI3.dir/clientes.c.o: ../clientes.h
 
 CMakeFiles/LI3.dir/main.c.o: ../clientes.h
 CMakeFiles/LI3.dir/main.c.o: ../main.c
+CMakeFiles/LI3.dir/main.c.o: ../produtos.h
 
 CMakeFiles/LI3.dir/produtos.c.o: ../produtos.c
 CMakeFiles/LI3.dir/produtos.c.o: ../produtos.h

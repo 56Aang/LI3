@@ -5,7 +5,9 @@
 #include <stdlib.h>
 #include <string.h>
 
-int readClientes(char *clientes[1000000]);
+#define clientsize 1000000
+
+int readClientes(char *clientes[clientsize]);
 
 
 #endif //LI3_CLIENTES_H

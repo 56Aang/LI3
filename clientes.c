@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-int readClientes(char *clientes[1000000]){
+int readClientes(char *clientes[clientsize]){
     FILE *f;
     f = fopen("/home/joao/Desktop/LI3/dados/Clientes.txt","r");
     char* token;
