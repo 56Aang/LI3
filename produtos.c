@@ -2,7 +2,7 @@
 #include "produtos.h"
 int readProdutos(char *produtos[productsize]){
     FILE *f;
-    f = fopen("/home/joao/Desktop/LI3/dados/Produtos.txt","r");
+    f = fopen("dados/Produtos.txt","r");
     char* token;
     int i=0;
     char cli_code[9];
