@@ -6,7 +6,27 @@
 
 #IncludeRegexTransform: 
 
-/home/joao/Desktop/LI3/produtos.c
+/home/joao/Desktop/LI3/clientes.c
+stdio.h
+-
+clientes.h
+/home/joao/Desktop/LI3/clientes.h
+stdlib.h
+-
+string.h
+-
+
+/home/joao/Desktop/LI3/clientes.h
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+
+/home/joao/Desktop/LI3/main.c
+clientes.h
+/home/joao/Desktop/LI3/clientes.h
 produtos.h
 /home/joao/Desktop/LI3/produtos.h
 

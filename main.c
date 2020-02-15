@@ -1,35 +1,28 @@
 #include "clientes.h"
 #include "produtos.h"
-
+#include <time.h>
 int main() {
-    //FILE *f;
+    clock_t t;
+    t = clock();
+    
+ 
 
-    //f = fopen("/home/joao/Desktop/LI3/dados/Clientes.txt","r");
-    char *clientes[clientsize];
+    clients client_hash[clientsize];
+    init_client(client_hash);
+
+  //  char *clientes[clientsize];
+
     char *produtos[productsize];
-   // char cli_code[8];
-   // int i = 0;
-   // char* token;
+   // char *vendas[clientsize];
 
-/*
-    while (fgets(cli_code, 8, f)) {
-        token = strtok(cli_code,"\r\n");
-        printf("%s\n", token);
-        clientes[i] = malloc(sizeof(token));
-        strcpy(clientes[i],token);
-        i++;
-    }
-
-*/
-    readClientes(clientes);
+   
+    readClientes(client_hash);
     readProdutos(produtos);
 
+   
 
-    /*    char cliente;
-    int ncliente;
-    fscanf(f,"%c%d\n",&cliente, &ncliente);
-    printf("%c , %d", cliente , ncliente);
- */
-    //fclose(f);
+    t = clock() - t;
+    double time_taken = ((double)t)/CLOCKS_PER_SEC;
+    printf("%f\n segundos",time_taken );
     return 0;
 }

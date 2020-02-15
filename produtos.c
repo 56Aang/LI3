@@ -9,7 +9,7 @@ int readProdutos(char *produtos[productsize]){
 
     while (fgets(cli_code, 9, f)) {
         token = strtok(cli_code,"\r\n");
-        printf("%s\n", token);
+  //      printf("%s\n", token);
         produtos[i] = malloc(sizeof(token));
         strcpy(produtos[i],token);
         i++;
