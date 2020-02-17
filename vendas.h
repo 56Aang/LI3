@@ -8,6 +8,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-int readVendas (char *vendas);
+#include "clientes.h"
+#include "produtos.h"
+int readVendas (clients client_hash[clientsize], products product_hash[productsize]);
 
 #endif //LI3_VENDAS_H
