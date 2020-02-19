@@ -9,10 +9,10 @@ int readVendas (clients client_hash[clientsize], products product_hash[productsi
         char *p;
         char *preco;
         int qt;
-        char *cena;
+        char *tipo_compra;
         char *c;
-        int cena1;
-        int cena2;
+        int mes;
+        int filial;
         
         int count = 0;
         char *string;
@@ -24,25 +24,25 @@ int readVendas (clients client_hash[clientsize], products product_hash[productsi
         while (fgets(token, 64, f)) {
             string = strdup(token);
         
-            p = strsep(&string," "); // produto
+            p = strsep(&string," "); // Produto
             //printf("%s\n",p);
 
             preco = strsep(&string," "); // preço
             //printf("%s\n",preco);
  
-            qt = atoi(strsep(&string," ")); // quantidade ??
+            qt = atoi(strsep(&string," ")); // quantidade
             //printf("%d\n",qt);
 
-            cena = strsep(&string," "); // cena ??
+            tipo_compra = strsep(&string," "); // Normal ou Promoção (N,P)
             //printf("%s\n",cena);
 
-            c = strsep(&string," "); // S ou N
+            c = strsep(&string," "); // Cliente
             //printf("%s\n",c);
 
-            cena1 = atoi(strsep(&string," ")); // um int qualquer
+            mes = atoi(strsep(&string," ")); // mês da compra
             //printf("%d\n",cena1);
 
-            cena2 = atoi(strsep(&string,"\n")); // outro int qualquer
+            filial = atoi(strsep(&string,"\n")); // filial, onde a venda foi realizada
             //printf("%d\n",cena2);
         }
     fclose(f);
