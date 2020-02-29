@@ -10,6 +10,9 @@
 #include <string.h>
 #include "clientes.h"
 #include "produtos.h"
+#include <omp.h>
 int readVendas (clients client_hash[clientsize], products product_hash[productsize]);
+void readVendas2(char * arrvendas[]);
+int insereVendas (clients client_hash[clientsize], products product_hash[productsize],char *arrvendas[]);
 
 #endif //LI3_VENDAS_H

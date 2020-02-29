@@ -13,3 +13,5 @@ void read_with_fgets(FILE * f){
 	}
 }
 
+strtok (venda," ");
+strtok (NULL, " ");

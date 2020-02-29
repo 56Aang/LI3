@@ -1,5 +1,5 @@
 CC = gcc -fopenmp
-CFLAGS = -Wall
+CFLAGS = -Wall -g
 
 main : main.o clientes.o produtos.o vendas.o
 
