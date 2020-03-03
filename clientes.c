@@ -11,7 +11,7 @@ void init_client(clients client_hash[clientsize]){
             client_hash[i]->validade = 0;
         }
 
-    
+
 }
 
 
@@ -32,21 +32,13 @@ int insere_client(clients client_hash[clientsize],cliente c){
 }
 
 
-int readClientes(clients client_hash[clientsize],int indice_cliente_ordenado[]){
-    FILE *f;
-    f = fopen("dados/Clientes.txt","r");
-    int i = 0;
-    char *token;
-    char cli_code[8];
-    int hash_code;
-
-    while (fgets(cli_code, 8, f)) {
-        token = strtok(cli_code, "\r\n");
-        hash_code = insere_client(client_hash, token);
-        indice_cliente_ordenado[i] = hash_code;
-        i++;
+int readClientes(clients client_hash[clientsize], char *lista_clientes[clientsize],int indice_cliente_ordenado[]){
+    int i,indice;
+    for(i=0;lista_clientes[i];i++){
+      indice = insere_client(client_hash,lista_clientes[i]);
+      indice_cliente_ordenado[i] = indice;
+      printf("%s\n",client_hash[indice_cliente_ordenado[i]]->n_cliente);
     }
-    fclose(f);
     return i;
 }
 
@@ -55,7 +47,7 @@ int encontra_cliente(cliente c,clients client_hash[clientsize]){
     while(client_hash[hash_code])
         if (client_hash[hash_code]->validade == 1 && !strcmp(client_hash[hash_code]->n_cliente,c)) return hash_code;
         else hash_code = (hash_code+1)%clientsize;
-    
+
     return -1;
 }
 

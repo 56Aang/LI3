@@ -31,7 +31,7 @@ void init_product(products product_hash[productsize]);
 int hash_p(produto p);
 int insere_product(products product_hash[productsize],produto p);
 
-int readProdutos(products product_hash[productsize],int indice_produto_ordenado[productsize]);
+int readProdutos(products product_hash[productsize], char *lista_produtos[productsize],int indice_produto_ordenado[productsize]);
 int readProdutos_lista(char *lista_produtos[productsize]);
 
 int encontra_produto(produto p,products product_hash[productsize]);

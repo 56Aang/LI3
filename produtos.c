@@ -30,22 +30,13 @@ int insere_product(products product_hash[productsize],produto p){
 }
 
 
-int readProdutos(products product_hash[productsize],int indice_produto_ordenado[]){
-    FILE *f;
-    f = fopen("dados/Produtos.txt","r");
-    int i=0;
-    char* token;
-    char prod_code[9];
-    int hash_code;
-
-    while (fgets(prod_code, 9, f)) {
-        token = strtok(prod_code,"\r\n");
-        hash_code = insere_product(product_hash,token);
-        indice_produto_ordenado[i] = hash_code;
-        i++;
-    }
-    fclose(f);
-    return i;
+int readProdutos(products product_hash[productsize],char *lista_produtos[productsize] ,int indice_produto_ordenado[]){
+  int i,indice;
+  for(i=0;lista_produtos[i];i++){
+    indice = insere_product(product_hash,lista_produtos[i]);
+    indice_produto_ordenado[i] = indice;
+  }
+  return i;
 }
 
 int encontra_produto(produto p,products product_hash[productsize]){
@@ -54,7 +45,7 @@ int encontra_produto(produto p,products product_hash[productsize]){
     while(product_hash[hash_code])
         if (product_hash[hash_code]->validade == 1 && strcmp(product_hash[hash_code]->n_produto,p) == 0) return 1;
         else hash_code = (hash_code+1)%productsize;
-    
+
     return r;
 }
 

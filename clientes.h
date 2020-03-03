@@ -18,7 +18,7 @@ typedef struct s_cliente{
 void init_client(clients client_hash[clientsize]);
 int insere_client(clients client_hash[clientsize],cliente c);
 
-int readClientes(clients client_hash[clientsize],int indice_cliente_ordenado[]);
+int readClientes(clients client_hash[clientsize], char *lista_clientes[clientsize],int indice_cliente_ordenado[]);
 int readClientes_lista(char *lista_clientes[clientsize]);
 
 int hash_c(cliente c);
