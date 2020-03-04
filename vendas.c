@@ -88,7 +88,7 @@ int readVendas (clients client_hash[clientsize], products product_hash[productsi
     return 0;
 }
 
-
+/*
 
 int insereVendas (clients client_hash[clientsize], products product_hash[productsize],char *arrvendas[]){
     char *p;
@@ -153,3 +153,4 @@ void readVendas2(char * arrvendas[]){
     }
     fclose(f);
 }
+*/

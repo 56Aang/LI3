@@ -37,7 +37,7 @@ int readClientes(clients client_hash[clientsize], char *lista_clientes[clientsiz
     for(i=0;lista_clientes[i];i++){
       indice = insere_client(client_hash,lista_clientes[i]);
       indice_cliente_ordenado[i] = indice;
-      printf("%s\n",client_hash[indice_cliente_ordenado[i]]->n_cliente);
+      //printf("%s\n",client_hash[indice_cliente_ordenado[i]]->n_cliente);
     }
     return i;
 }

@@ -55,7 +55,7 @@ int getProductsStartedByLetter(char p,products product_hash[productsize]){
     int k = 0;
     for(i=0;i<productsize;i++)
         if(product_hash[i] && product_hash[i]->n_produto[0] == p) {
-            printf("%s\n",product_hash[i]->n_produto );
+            //printf("%s\n",product_hash[i]->n_produto );
             k++;
         }
 

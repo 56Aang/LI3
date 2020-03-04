@@ -46,7 +46,7 @@ int main() {
     qsort(lista_produtos,total_produtos,sizeof(lista_produtos[0]),cstring_cmp);
     readProdutos(product_hash,lista_produtos, indice_produto_ordenado);
     while(lista_produtos[i]){
-        printf("%s\n",lista_produtos[i]);
+        //printf("%s\n",lista_produtos[i]);
         free(lista_produtos[i++]);
     }
 
@@ -61,7 +61,7 @@ int main() {
 
    // insereVendas(client_hash,product_hash,arrvendas);
 
-    //readVendas(client_hash,product_hash);
+    readVendas(client_hash,product_hash);
 
 
 
