@@ -1,6 +1,6 @@
 
 #include <stdio.h>
-#include "clientes.h"
+#include "headers/clientes.h"
 #include <stdlib.h>
 #include <string.h>
 
@@ -10,7 +10,6 @@ typedef struct s_cliente{
 }*clients;
 
 clients *client_hash;
-
 void init_client(){
     client_hash = calloc(clientsize , sizeof(struct s_cliente)); // inicialização da hash_table de clientes
 }

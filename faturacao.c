@@ -1,11 +1,11 @@
 #include "headers/faturacao.h"
 
 typedef struct s_vendas{
-    char *n_produto;
+    char n_produto[7];
     float preco;
     int qt;
     char tipo_compra;
-    char *n_cliente;
+    char n_cliente[6];
     int mes;
     int filial;
 }*faturacao;
@@ -26,16 +26,12 @@ void init_faturacao(){
 
 int insere_faturacao(char* p,float preco,int qt,char tipo_compra,char* c,int mes,int filial){
     int hash_code = hash_F(p,c);
-    while(!faturacao_hash[hash_code]) hash_code++;
-    printf("teste\n");
-    faturacao_hash[hash_code]->n_produto = malloc(sizeof(char[6]));
-    printf("teste\n");
+    while(faturacao_hash[hash_code]) hash_code++;
+    faturacao_hash[hash_code] = malloc(sizeof(struct s_vendas));
     strcpy(faturacao_hash[hash_code]->n_produto,p);
     faturacao_hash[hash_code]->preco = preco;
-
     faturacao_hash[hash_code]->qt = qt;
     faturacao_hash[hash_code]->tipo_compra = tipo_compra;
-    faturacao_hash[hash_code]->n_cliente = malloc(sizeof(char[5]));
     strcpy(faturacao_hash[hash_code]->n_cliente,c);
     faturacao_hash[hash_code]->mes = mes;
     faturacao_hash[hash_code]->filial = filial;

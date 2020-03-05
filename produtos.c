@@ -1,5 +1,5 @@
 
-#include "produtos.h"
+#include "headers/produtos.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -41,12 +41,11 @@ int readProdutos(char *lista_produtos[productsize] ,int indice_produto_ordenado[
 
 int encontra_produto(produto p){
     int hash_code = hash_p(p);
-    int r = 0;
     while(product_hash[hash_code])
-        if (product_hash[hash_code]->validade == 1 && strcmp(product_hash[hash_code]->n_produto,p) == 0) return 1;
+        if (product_hash[hash_code]->validade == 1 && strcmp(product_hash[hash_code]->n_produto,p) == 0) return hash_code;
         else hash_code = (hash_code+1)%productsize;
 
-    return r;
+    return -1;
 }
 
 

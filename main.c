@@ -1,8 +1,10 @@
 #include "headers/clientes.h"
 #include "headers/produtos.h"
-#include "headers/faturaçao.h"
+#include "headers/faturacao.h"
 #include <time.h>
 #include <omp.h>
+
+
 
 int cstring_cmp(const void *a, const void *b)
 {
@@ -23,7 +25,7 @@ int readVendas (){
         int i = 0;
         int count = 0;
         char *p;
-        char *preco;
+        float preco;
         int qt;
         char *tipo_compra;
         char *c;
@@ -41,7 +43,7 @@ int readVendas (){
             p = strsep(&string," ");
             //printf("%s\n",p);
 
-            preco = strsep(&string," ");
+            preco = (float)atoll(strsep(&string," "));
             //printf("%s\n",preco);
 
             qt = atoi(strsep(&string," "));
@@ -60,9 +62,9 @@ int readVendas (){
             //printf("%d\n",filial);
            
 
-            if(encontra_cliente(c) && encontra_produto(p)){
+            if(encontra_cliente(c)!=-1 && encontra_produto(p)!=-1){
                 count ++;
-                insere_faturacao(p,preco,qt,tipo_compra,c,mes,filial);
+                insere_faturacao(p,preco,qt,tipo_compra[0],c,mes,filial);
             }
             
             i++;
@@ -128,6 +130,12 @@ int main() {
 
     clock_t t2;
     t2 = clock();
+
+    init_faturacao();
+    readVendas();
+
+
+
 
     t2 = clock() - t2;
     printf("%f segundos - vendas\n",((double)t2)/CLOCKS_PER_SEC);

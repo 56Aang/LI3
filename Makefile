@@ -1,15 +1,34 @@
 CC = gcc -fopenmp
-CFLAGS = -Wall -g
+### Makefile ###
 
-main : main.o clientes.o produtos.o vendas.o
+objects = clientes.o produtos.o faturacao.o
 
-clientes.o : clientes.c clientes.h
 
-produtos.o : produtos.c produtos.h
 
-vendas.o : vendas.c vendas.h
+CFLAGS = -Wall -O2
 
-main.o : main.c
+all:
+			make clean
+			make produtos
+			make clientes
+			make faturacao
+			make main
+
+main: main.c clientes.o produtos.o faturacao.o
+		gcc main.c clientes.o produtos.o faturacao.o $(CFLAGS) -o prog
+
+clientes: clientes.c headers/clientes.h
+		gcc clientes.c -c $(CFLAGS)
+
+produtos: produtos.c headers/produtos.h
+		gcc produtos.c -c $(CFLAGS)
+
+faturacao: faturacao.c headers/faturacao.h
+		gcc faturacao.c -c $(CFLAGS)
+
+
 
 clean : 
-	rm *.o
+	rm -f prog
+	rm -f $(objects)
+	rm -f gesval
