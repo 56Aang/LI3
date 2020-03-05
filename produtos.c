@@ -4,14 +4,14 @@
 #include <stdlib.h>
 #include <string.h>
 
-void init_product(products product_hash[productsize]){
-    int i;
-//    #pragma omp parallel for num_threads(2)
-        for(i = 0; i< productsize; i++){
-            product_hash[i] = malloc(sizeof(struct s_produto));
-            product_hash[i]->validade = 0;
-        }
-    printf("done\n");
+typedef struct s_produto{
+    int validade;
+    char n_produto[6];
+}*products;
+
+products *product_hash;
+void init_product(){
+    product_hash = calloc(productsize , sizeof(struct s_produto));
 }
 
 int hash_p(produto p){
@@ -20,7 +20,7 @@ int hash_p(produto p){
     return (sum%productsize);
 }
 
-int insere_product(products product_hash[productsize],produto p){
+int insere_product(produto p){
     int hash_code = hash_p(p);
     while(product_hash[hash_code]) hash_code = (hash_code+1)%productsize;
     if (product_hash[hash_code] == NULL) product_hash[hash_code] = malloc(sizeof(struct s_produto));
@@ -30,16 +30,16 @@ int insere_product(products product_hash[productsize],produto p){
 }
 
 
-int readProdutos(products product_hash[productsize],char *lista_produtos[productsize] ,int indice_produto_ordenado[]){
+int readProdutos(char *lista_produtos[productsize] ,int indice_produto_ordenado[]){
   int i,indice;
   for(i=0;lista_produtos[i];i++){
-    indice = insere_product(product_hash,lista_produtos[i]);
+    indice = insere_product(lista_produtos[i]);
     indice_produto_ordenado[i] = indice;
   }
   return i;
 }
 
-int encontra_produto(produto p,products product_hash[productsize]){
+int encontra_produto(produto p){
     int hash_code = hash_p(p);
     int r = 0;
     while(product_hash[hash_code])
@@ -50,7 +50,7 @@ int encontra_produto(produto p,products product_hash[productsize]){
 }
 
 
-int getProductsStartedByLetter(char p,products product_hash[productsize]){
+int getProductsStartedByLetter(char p){
     int i;
     int k = 0;
     for(i=0;i<productsize;i++)

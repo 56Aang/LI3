@@ -4,14 +4,15 @@
 #include <stdlib.h>
 #include <string.h>
 
-void init_client(clients client_hash[clientsize]){
-//    #pragma omp parallel for num_threads(2)
-        for(int i = 0; i< clientsize; i++){
-            client_hash[i] = malloc(sizeof(struct s_cliente));
-            client_hash[i]->validade = 0;
-        }
+typedef struct s_cliente{
+    int validade;
+    char n_cliente[5];
+}*clients;
 
+clients *client_hash;
 
+void init_client(){
+    client_hash = calloc(clientsize , sizeof(struct s_cliente)); // inicialização da hash_table de clientes
 }
 
 
@@ -21,28 +22,27 @@ int hash_c(cliente c){
     return (sum%clientsize);
 }
 
-int insere_client(clients client_hash[clientsize],cliente c){
+int insere_client(cliente c){
     int hash_code = hash_c(c);
     while(client_hash[hash_code]) hash_code = (hash_code+1)%clientsize;
     if (client_hash[hash_code] == NULL) client_hash[hash_code] = malloc(sizeof(struct s_cliente));
     client_hash[hash_code]->validade=1;
     strcpy(client_hash[hash_code]->n_cliente,c);
-    client_hash[hash_code]->p = NULL;
     return hash_code;
 }
 
 
-int readClientes(clients client_hash[clientsize], char *lista_clientes[clientsize],int indice_cliente_ordenado[]){
+int readClientes(char *lista_clientes[clientsize],int indice_cliente_ordenado[]){
     int i,indice;
     for(i=0;lista_clientes[i];i++){
-      indice = insere_client(client_hash,lista_clientes[i]);
+      indice = insere_client(lista_clientes[i]);
       indice_cliente_ordenado[i] = indice;
       //printf("%s\n",client_hash[indice_cliente_ordenado[i]]->n_cliente);
     }
     return i;
 }
 
-int encontra_cliente(cliente c,clients client_hash[clientsize]){
+int encontra_cliente(cliente c){
     int hash_code = hash_c(c);
     while(client_hash[hash_code])
         if (client_hash[hash_code]->validade == 1 && !strcmp(client_hash[hash_code]->n_cliente,c)) return hash_code;
