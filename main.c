@@ -2,7 +2,6 @@
 #include "headers/produtos.h"
 #include "headers/faturacao.h"
 #include <time.h>
-#include <omp.h>
 
 
 
@@ -19,6 +18,8 @@ int cstring_cmp(const void *a, const void *b)
 int readVendas (){
     FILE *f;
     f = fopen("dados/Vendas_1M.txt","r");
+    FILE *vendasValidas;
+    vendasValidas = fopen("dados/vendasValidas.txt", "w");
     if (f==NULL) printf("não encontrou ficheiro");
     else {
         char token[64];
@@ -65,11 +66,13 @@ int readVendas (){
             if(encontra_cliente(c)!=-1 && encontra_produto(p)!=-1){
                 count ++;
                 insere_faturacao(p,preco,qt,tipo_compra[0],c,mes,filial);
+                fprintf(vendasValidas,"%s\n", token);
             }
             
             i++;
         }
         fclose(f);
+        fclose(vendasValidas);
         printf("%d\n",count );
     }
     return 0;
