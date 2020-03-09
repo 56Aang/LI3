@@ -1,0 +1,5 @@
+LI3_workspace.code-workspace
+prog
+*.o
+.vscode/*
+dados/vendasValidas.txt

@@ -66,7 +66,7 @@ int readVendas (){
             if(encontra_cliente(c)!=-1 && encontra_produto(p)!=-1){
                 count ++;
                 insere_faturacao(p,preco,qt,tipo_compra[0],c,mes,filial);
-                fprintf(vendasValidas,"%s\n", token);
+                fprintf(vendasValidas,"%s", token);
             }
             
             i++;
