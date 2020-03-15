@@ -10,3 +10,7 @@ void init_faturacao();
 int hash_F(char *p, char *c);
 //Função que insere na hashtable a venda
 int insere_faturacao(char* p,float preco,int qt,char tipo_compra,char* c,int mes,int filial);
+//Função que conta o numero de vendas de uma filial
+int contaVendasFilial(int f);
+//Função que calcula o total de faturação das vendas
+double faturacaoTotal();

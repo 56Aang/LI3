@@ -44,3 +44,22 @@ int insere_faturacao(char* p,float preco,int qt,char tipo_compra,char* c,int mes
 
     return 0;
 }
+
+//Função que conta o numero de vendas de uma filial
+int contaVendasFilial(int f){
+  int i;
+  int count = 0;
+  for(i=0;faturacao_hash[i];i++){
+    if( (faturacao_hash[i]->filial) == f) count++;
+  }
+  return count;
+}
+
+
+//Função que calcula o valor total de faturação total
+double faturacaoTotal(){
+  int i;
+  double total=0;
+  for(i=0;faturacao_hash[i];i++) total += faturacao_hash[i]->preco * faturacao_hash[i]->qt;
+  return total;
+}

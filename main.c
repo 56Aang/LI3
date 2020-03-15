@@ -134,6 +134,7 @@ int main() {
 
 
     //Produtos
+
     total_produtos = readProdutos_lista(lista_produtos);
     i=0;
     //Ordena o array de produtos
@@ -149,11 +150,15 @@ int main() {
     clock_t t2;
     t2 = clock();
 
+    //Inicialização da estrutura referente ás vendas
     init_faturacao();
+    //Leitura do ficho das vendas e atribuição dos valores às variáveis da estrutura
     readVendas();
 
-
-
+    int f2 = contaVendasFilial(1);
+    printf("%d\n",f2);
+    double total = faturacaoTotal();
+    printf("%f\n", total);
 
     t2 = clock() - t2;
     printf("%f segundos - vendas\n",((double)t2)/CLOCKS_PER_SEC);
