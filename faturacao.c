@@ -49,8 +49,9 @@ int insere_faturacao(char* p,float preco,int qt,char tipo_compra,char* c,int mes
 int contaVendasFilial(int f){
   int i;
   int count = 0;
-  for(i=0;faturacao_hash[i];i++){
-    if( (faturacao_hash[i]->filial) == f) count++;
+  for(i=0;i<faturacaosize;i++){
+    if(faturacao_hash[i])
+      if((faturacao_hash[i]->filial) == f) count++;
   }
   return count;
 }
@@ -60,6 +61,7 @@ int contaVendasFilial(int f){
 double faturacaoTotal(){
   int i;
   double total=0;
-  for(i=0;faturacao_hash[i];i++) total += faturacao_hash[i]->preco * faturacao_hash[i]->qt;
+  for(i=0;i<faturacaosize;i++) 
+    if(faturacao_hash[i]) total += faturacao_hash[i]->preco * faturacao_hash[i]->qt;
   return total;
 }

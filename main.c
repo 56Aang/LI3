@@ -156,9 +156,9 @@ int main() {
     readVendas();
 
     int f2 = contaVendasFilial(1);
-    printf("%d\n",f2);
+    printf("%d vendas da filial 1\n",f2);
     double total = faturacaoTotal();
-    printf("%f\n", total);
+    printf("%f de faturacao total\n", total);
 
     t2 = clock() - t2;
     printf("%f segundos - vendas\n",((double)t2)/CLOCKS_PER_SEC);
