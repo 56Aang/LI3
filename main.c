@@ -155,8 +155,31 @@ int main() {
     //Leitura do ficho das vendas e atribuição dos valores às variáveis da estrutura
     readVendas();
 
-    int f2 = contaVendasFilial(1);
-    printf("%d vendas da filial 1\n",f2);
+
+
+    //Filiais
+    int f1 = contaVendasFilial(1);
+    int f2 = contaVendasFilial(2);
+    int f3 = contaVendasFilial(3);
+    printf("%d vendas da filial 1\n",f1);
+    printf("%d vendas da filial 2\n",f2);
+    printf("%d vendas da filial 3\n",f3);
+
+
+
+
+    i=0;
+    char **c_f_o=malloc(sizeof(char));
+    int pA = clientesOrdenadosFilial(c_f_o,2);
+    while(i < pA){
+      for(int j=0;j<6;j++) printf("%s",c_f_o[j]);
+    }
+
+
+
+
+
+
     double total = faturacaoTotal();
     printf("%f de faturacao total\n", total);
 

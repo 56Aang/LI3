@@ -61,7 +61,30 @@ int contaVendasFilial(int f){
 double faturacaoTotal(){
   int i;
   double total=0;
-  for(i=0;i<faturacaosize;i++) 
+  for(i=0;i<faturacaosize;i++)
     if(faturacao_hash[i]) total += faturacao_hash[i]->preco * faturacao_hash[i]->qt;
   return total;
+}
+
+//Função de comparação entre duas strings
+int cstring_cmp2(const void *a, const void *b)
+{
+    const char **ia = (const char **)a;
+    const char **ib = (const char **)b;
+    return strcmp(*ia, *ib);
+    /* strcmp functions works exactly as expected from
+    comparison function */
+}
+
+//Função que retorna um array com os clientes, ordenados, de uma certa filial
+int clientesOrdenadosFilial(char **c_f_o, int f){
+  int i,pArray=0;
+  for(i=0;i<faturacaosize;i++)
+    if (faturacao_hash[i])
+      if(faturacao_hash[i]->filial == f){
+        c_f_o[pArray] = calloc(6,sizeof(char));
+        strcpy(c_f_o[pArray++],faturacao_hash[i]->n_cliente);
+      }
+  qsort(c_f_o,pArray,sizeof(char),cstring_cmp2);
+  return pArray;
 }

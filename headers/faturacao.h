@@ -14,3 +14,8 @@ int insere_faturacao(char* p,float preco,int qt,char tipo_compra,char* c,int mes
 int contaVendasFilial(int f);
 //Função que calcula o total de faturação das vendas
 double faturacaoTotal();
+//Função que retorna um array com os clientes, ordenados, de uma certa filial
+int clientesOrdenadosFilial(char **clientes_filial_ord, int f);
+
+
+int cstring_cmp2(const void *a, const void *b);

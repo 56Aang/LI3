@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "produtos.h"
 
 #define clientsize 500000
 typedef char *cliente; // o cliente é uma string
