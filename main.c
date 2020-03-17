@@ -169,7 +169,7 @@ int main() {
 
 
     i=0;
-    char **c_f_o=malloc(sizeof(char));
+    char **c_f_o = malloc(sizeof(char[6]));
     int pA = clientesOrdenadosFilial(c_f_o,2);
     while(i < pA){
       for(int j=0;j<6;j++) printf("%s",c_f_o[j]);
