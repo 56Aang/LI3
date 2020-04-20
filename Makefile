@@ -1,34 +1,28 @@
-CC = gcc -fopenmp
 ### Makefile ###
 
-objects = clientes.o produtos.o faturacao.o
+CC = gcc
+
+CFLAGS = -Wall -O3 -ansi -D_GNU_SOURCE -g
+
+INCLUDE =-I include
+SRC := src
+OBJ := obj
+
+SOURCES := $(wildcard $(SRC)/*.c)
+NAME = program
+
+OBJECTS := $(patsubst $(SRC)/%.c, $(OBJ)/%.o, $(SOURCES))
+
+program: $(OBJECTS)
+		$(CC) $(CFLAGS) $(INCLUDE) -o $(NAME) $(OBJECTS)
 
 
+$(OBJ)/%.o: $(SRC)/%.c
+		$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@
 
-CFLAGS = -Wall -O2
+$(shell mkdir -p $(OBJ))
 
-all:
-			make clean
-			make produtos
-			make clientes
-			make faturacao
-			make main
-
-main: main.c clientes.o produtos.o faturacao.o
-		gcc main.c clientes.o produtos.o faturacao.o $(CFLAGS) -o prog
-
-clientes: clientes.c headers/clientes.h
-		gcc clientes.c -c $(CFLAGS)
-
-produtos: produtos.c headers/produtos.h
-		gcc produtos.c -c $(CFLAGS)
-
-faturacao: faturacao.c headers/faturacao.h
-		gcc faturacao.c -c $(CFLAGS)
-
-
-
-clean : 
-	rm -f prog
-	rm -f $(objects)
-	rm -f gesval
+clean:
+		rm -r $(OBJ)
+		rm -f program
+		rm -f gesval
