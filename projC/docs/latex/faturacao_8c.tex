@@ -1,0 +1,1095 @@
+\hypertarget{faturacao_8c}{}\doxysection{Referência ao ficheiro src/faturacao.c}
+\label{faturacao_8c}\index{src/faturacao.c@{src/faturacao.c}}
+
+
+Ficheiro que contém a A\+PI relativa à implementação da faturação.  
+
+
+{\ttfamily \#include \char`\"{}../include/faturacao.\+h\char`\"{}}\newline
+\doxysubsection*{Estruturas de Dados}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcatalogo__faturacao}{catalogo\+\_\+faturacao}}
+\item 
+struct \mbox{\hyperlink{structfat__info}{fat\+\_\+info}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+Faturacao\+\_\+\+Catalog \mbox{\hyperlink{faturacao_8c_ab3e6f99c70abaa24016477bdea48eab0}{cria\+\_\+\+Faturacao}} (Faturacao\+\_\+\+Catalog cat, Produto p, int mes, int filial, char modo, double preco, int qtd)
+\begin{DoxyCompactList}\small\item\em Função que cria um catálogo da faturação, inserindo informação no mesmo. \end{DoxyCompactList}\item 
+Faturacao\+\_\+\+Catalog \mbox{\hyperlink{faturacao_8c_a5b382a89fee7d02eb3855f94e7822bd5}{altera\+\_\+\+Faturacao}} (Faturacao\+\_\+\+Catalog cat, Produto p, int mes, int filial, char modo, double preco, int qtd)
+\begin{DoxyCompactList}\small\item\em Função que altera o catálogo da faturação. \end{DoxyCompactList}\item 
+Estrutura \mbox{\hyperlink{faturacao_8c_a9cdd16c7cbef5e648fd6ad5cb0cb3605}{get\+\_\+\+Fat\+\_\+struct}} (Faturacao\+\_\+\+Catalog cat, Produto p)
+\begin{DoxyCompactList}\small\item\em Função que devolve a estrutura associada a um produto de um catálogo que lhe é passado como argumento. \end{DoxyCompactList}\item 
+f\+\_\+info \mbox{\hyperlink{faturacao_8c_ab1adca20729d2bfe315fb76c8fe8985f}{init\+\_\+\+Info\+\_\+\+Faturacao}} ()
+\begin{DoxyCompactList}\small\item\em Função que inicializa a informação da faturação. \end{DoxyCompactList}\item 
+Faturacao\+\_\+\+Catalog \mbox{\hyperlink{faturacao_8c_ae7d33e0cc1704b65d8bc45f5a6bba511}{init\+\_\+faturacao\+\_\+catalogo}} ()
+\begin{DoxyCompactList}\small\item\em Função que inicializa o catálogo da faturação. \end{DoxyCompactList}\item 
+Boolean \mbox{\hyperlink{faturacao_8c_a1c33cc0d11ce825aa8c0014d9f7faecf}{existe\+\_\+faturacao}} (Faturacao\+\_\+\+Catalog cat, Produto p)
+\begin{DoxyCompactList}\small\item\em Função que verifica se existe, dado um produto, uma certa faturação a ele associada. \end{DoxyCompactList}\item 
+Faturacao\+\_\+\+Catalog \mbox{\hyperlink{faturacao_8c_a8df5bebac86ad8e47477b8a46b371c3e}{insere\+\_\+faturacao}} (Faturacao\+\_\+\+Catalog cat, Produto p, void $\ast$estrutura)
+\begin{DoxyCompactList}\small\item\em Função que insere no produto de um catálogo uma estrutura. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{faturacao_8c_abc7f1720453f963ee1335e88c5ff1d32}{free\+\_\+\+Faturacao}} (Faturacao\+\_\+\+Catalog cat)
+\begin{DoxyCompactList}\small\item\em Função que liberta da memória o espaço ocupado por um catálogo da faturação. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{faturacao_8c_a434a13e579209e1424ea8b9941d582e1}{imprime\+\_\+\+Faturacao}} (Faturacao\+\_\+\+Catalog cat)
+\begin{DoxyCompactList}\small\item\em Função que imprime a faturação. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{faturacao_8c_a9953fb35fe71d69681f164f226ac7d09}{get\+Qt\+Total\+Fat}} (f\+\_\+info f, int filial)
+\begin{DoxyCompactList}\small\item\em Função que retorna a quantidade total de produtos por filial. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{faturacao_8c_a2aba6ae247ab5660d7d6bca7c45c24ea}{get\+\_\+\+N\+Vendas\+\_\+\+Mes\+\_\+\+Faturacao}} (Faturacao\+\_\+\+Catalog f, char $\ast$product, int month, Q3 q)
+\begin{DoxyCompactList}\small\item\em Função insere numa estrutura o número de vendas de um certo produto realizadas num dado mês. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{faturacao_8c_a82a1bff71e58ef2648cce6bbfe59bef3}{get\+\_\+\+Fat\+\_\+\+Mes\+\_\+\+Faturacao}} (Faturacao\+\_\+\+Catalog f, char $\ast$product, int month, Q3 q)
+\begin{DoxyCompactList}\small\item\em Função insere numa estrutura o total faturado de um certo produto realizadas num dado mês. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{faturacao_8c_a6afa4518f550620edfa6e87565eb464c}{percorre\+\_\+\+N\+O\+D\+O\+\_\+\+Fat\+\_\+\+Q4}} (N\+O\+DO tree, Q2 q, int $\ast$aux)
+\begin{DoxyCompactList}\small\item\em Função que percorre os nodos da A\+VL. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{faturacao_8c_aa646dd001c3cf1975b9318e75ca5eb3f}{percorre\+\_\+\+A\+V\+L\+\_\+\+Fat\+\_\+\+Q4}} (A\+VL tree, Q2 q, int $\ast$aux)
+\begin{DoxyCompactList}\small\item\em Função que percorre uma A\+VL. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{faturacao_8c_a1a1452f4ea1cfd17ee3bca24b786ac05}{produtos\+\_\+nao\+\_\+comprados}} (Faturacao\+\_\+\+Catalog f, Q2 q)
+\begin{DoxyCompactList}\small\item\em Função que insere numa estrutura o total e o código dos produtos que não foram comprados globalmente. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{faturacao_8c_a3a487295f78f04996bdaaee24d7fea0e}{percorre\+\_\+\+N\+O\+D\+O\+\_\+\+Fat\+\_\+\+Q6}} (N\+O\+DO tree, Q6 q, int $\ast$aux)
+\begin{DoxyCompactList}\small\item\em Função que percorre os nodos da A\+VL. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{faturacao_8c_adfad6bec368267fd2fdcddba3adfaa00}{percorre\+\_\+\+A\+V\+L\+\_\+\+Fat\+\_\+\+Q6}} (A\+VL tree, Q6 q, int $\ast$aux)
+\begin{DoxyCompactList}\small\item\em Função que percorre uma A\+VL. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{faturacao_8c_a26497d662e20b7f28f114a416d12b1d4}{produtos\+\_\+nao\+\_\+comprados\+\_\+num}} (Faturacao\+\_\+\+Catalog f, Q6 q)
+\begin{DoxyCompactList}\small\item\em Função que insere numa estrutura o total de produtos que não foram comprados. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{faturacao_8c_ad95375f300444d3d0bc6a7b6818bcd78}{percorre\+\_\+\+N\+O\+D\+O\+\_\+\+N\+Vendas\+\_\+\+Q8}} (N\+O\+DO tree, int m1, int m2, int $\ast$total, Q8 q)
+\begin{DoxyCompactList}\small\item\em Função que percorre os nodos da A\+VL. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{faturacao_8c_a354a63798caf81b77f59bba49ea82cf4}{percorre\+\_\+\+A\+V\+L\+\_\+\+N\+Vendas\+\_\+\+Q8}} (A\+VL auxiliar, int m1, int m2, int $\ast$total, Q8 q)
+\begin{DoxyCompactList}\small\item\em Função que percorre uma A\+VL. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{faturacao_8c_ae69a924d20ab0f5944ee71a42685644f}{get\+\_\+\+N\+Vendas\+\_\+\+Faturacao\+\_\+\+Entre\+Meses}} (Faturacao\+\_\+\+Catalog f, int m1, int m2, Q8 q)
+\begin{DoxyCompactList}\small\item\em Função que insere numa estrutura o total de vendas registadas num intervalo de meses. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{faturacao_8c_acdb0ce7aba7975474d51bbbb9e1a4023}{percorre\+\_\+\+N\+O\+D\+O\+\_\+\+Fat\+\_\+\+Q8}} (N\+O\+DO tree, int m1, int m2, double $\ast$total, Q8 q)
+\begin{DoxyCompactList}\small\item\em Função que percorre os nodos da A\+VL. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{faturacao_8c_a731e4e35037ffe662c768e5bffd844e9}{percorre\+\_\+\+A\+V\+L\+\_\+\+Fat\+\_\+\+Q8}} (A\+VL auxiliar, int m1, int m2, double $\ast$total, Q8 q)
+\begin{DoxyCompactList}\small\item\em Função que percorre uma A\+VL. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{faturacao_8c_a5554c5f0230bda76be4824d7e7c4f8ea}{get\+\_\+\+Fat\+\_\+\+Faturacao\+\_\+\+Entre\+Meses}} (Faturacao\+\_\+\+Catalog f, int m1, int m2, Q8 q)
+\begin{DoxyCompactList}\small\item\em Função que insere numa estrutura o total faturado num intervalo de meses. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{faturacao_8c_afeb2e8b288e2622dd2819dc6f137e7d5}{percorre\+\_\+\+N\+O\+D\+O\+\_\+\+Fat\+\_\+\+Q11}} (N\+O\+DO tree, Q11 q)
+\begin{DoxyCompactList}\small\item\em Função que percorre os nodos da A\+VL. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{faturacao_8c_af767925f1b2eccbb2da9f76705d20fdf}{percorre\+\_\+\+A\+V\+L\+\_\+\+Fat\+\_\+\+Q11}} (A\+VL tree, Q11 q)
+\begin{DoxyCompactList}\small\item\em Função que percorre uma A\+VL. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{faturacao_8c_a1e3719cc2978d5d216267585dd0d4d77}{produtos\+Mais\+Comprados\+Q11}} (Faturacao\+\_\+\+Catalog f, Q11 q)
+\begin{DoxyCompactList}\small\item\em Função que insere numa estrutura o código dos produtos bem como a sua quantidade comprada. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Ficheiro que contém a A\+PI relativa à implementação da faturação. 
+
+
+
+\doxysubsection{Documentação das funções}
+\mbox{\Hypertarget{faturacao_8c_a5b382a89fee7d02eb3855f94e7822bd5}\label{faturacao_8c_a5b382a89fee7d02eb3855f94e7822bd5}} 
+\index{faturacao.c@{faturacao.c}!altera\_Faturacao@{altera\_Faturacao}}
+\index{altera\_Faturacao@{altera\_Faturacao}!faturacao.c@{faturacao.c}}
+\doxysubsubsection{\texorpdfstring{altera\_Faturacao()}{altera\_Faturacao()}}
+{\footnotesize\ttfamily Faturacao\+\_\+\+Catalog altera\+\_\+\+Faturacao (\begin{DoxyParamCaption}\item[{Faturacao\+\_\+\+Catalog}]{cat,  }\item[{Produto}]{p,  }\item[{int}]{mes,  }\item[{int}]{filial,  }\item[{char}]{modo,  }\item[{double}]{preco,  }\item[{int}]{qtd }\end{DoxyParamCaption})}
+
+
+
+Função que altera o catálogo da faturação. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em cat} & Faturacao\+\_\+catalog Catálogo da faturação que vai ser alterado e onde vão se vai inserir a nova informação. \\
+\hline
+{\em p} & Produto a ser inserido. ~\\
+\hline
+{\em mes} & int, utilizado na matriz tridimensional, onde vai ser alterada a informação. \\
+\hline
+{\em filial} & int, utilizado na matriz tridimensional, onde vai ser alterada a informação. \\
+\hline
+{\em modo} & char, que indica se a venda foi efetuada em regime normal ou promocional. \\
+\hline
+{\em preco} & double, que vai ser inserido na faturação. \\
+\hline
+{\em qtd} & int, que vai ser inserida na faturação. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+novo catálogo da faturação alterado. 
+\end{DoxyReturn}
+
+
+Definido na linha 54 do ficheiro faturacao.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{54                                                                                                                        \{}
+\DoxyCodeLine{55   \textcolor{keywordtype}{char} *aux = \mbox{\hyperlink{produtos_8c_a41fd3a5ec4fda805f937ed25bcbe5750}{getProdutoCode}}(p);}
+\DoxyCodeLine{56   f\_info f = \mbox{\hyperlink{catalogo_8c_a2ed88930f3b18c3f107506ef3170508d}{get\_Cat\_struct}}(cat-\/>catalogo,aux);}
+\DoxyCodeLine{57   \textcolor{keywordflow}{if} (f == NULL) f = \mbox{\hyperlink{faturacao_8c_ab1adca20729d2bfe315fb76c8fe8985f}{init\_Info\_Faturacao}}();}
+\DoxyCodeLine{58   \textcolor{keywordtype}{int} m=0;}
+\DoxyCodeLine{59   \textcolor{keywordflow}{if}(modo == \textcolor{charliteral}{'P'}) m=1;}
+\DoxyCodeLine{60   f-\/>fat[m][filial-\/1][mes-\/1] += qtd * preco;}
+\DoxyCodeLine{61   f-\/>qtd[m][filial-\/1][mes-\/1] += qtd;}
+\DoxyCodeLine{62   f-\/>n\_vendas[m][filial-\/1][mes-\/1]++;}
+\DoxyCodeLine{63   f-\/>qtd\_total[filial-\/1] += qtd;}
+\DoxyCodeLine{64   cat-\/>catalogo = \mbox{\hyperlink{catalogo_8c_acc5f085d5be2ccd45505eff9015e27db}{altera\_Catalogo}}(cat-\/>catalogo,aux,f);}
+\DoxyCodeLine{65   free(aux);}
+\DoxyCodeLine{66   \textcolor{keywordflow}{return} cat;}
+\DoxyCodeLine{67 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{faturacao_8c_ab3e6f99c70abaa24016477bdea48eab0}\label{faturacao_8c_ab3e6f99c70abaa24016477bdea48eab0}} 
+\index{faturacao.c@{faturacao.c}!cria\_Faturacao@{cria\_Faturacao}}
+\index{cria\_Faturacao@{cria\_Faturacao}!faturacao.c@{faturacao.c}}
+\doxysubsubsection{\texorpdfstring{cria\_Faturacao()}{cria\_Faturacao()}}
+{\footnotesize\ttfamily Faturacao\+\_\+\+Catalog cria\+\_\+\+Faturacao (\begin{DoxyParamCaption}\item[{Faturacao\+\_\+\+Catalog}]{cat,  }\item[{Produto}]{p,  }\item[{int}]{mes,  }\item[{int}]{filial,  }\item[{char}]{modo,  }\item[{double}]{preco,  }\item[{int}]{qtd }\end{DoxyParamCaption})}
+
+
+
+Função que cria um catálogo da faturação, inserindo informação no mesmo. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em cat} & Faturacao\+\_\+catalog Catálogo da faturação que vai ser criado e onde se vai inserir a informação. \\
+\hline
+{\em p} & Produto a ser inserido. ~\\
+\hline
+{\em mes} & int, utilizado na matriz tridimensional, onde vai ser inserida a informação. \\
+\hline
+{\em filial} & int, utilizado na matriz tridimensional, onde vai ser inserida a informação. \\
+\hline
+{\em modo} & char, que indica se a venda foi efetuada em regime normal ou promocional. \\
+\hline
+{\em preco} & double, que vai ser inserido na faturação. \\
+\hline
+{\em qtd} & int, que vai ser inserida na faturação. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+novo catálogo da faturação criado. 
+\end{DoxyReturn}
+
+
+Definido na linha 31 do ficheiro faturacao.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{31                                                                                                                        \{}
+\DoxyCodeLine{32   f\_info f = \mbox{\hyperlink{faturacao_8c_ab1adca20729d2bfe315fb76c8fe8985f}{init\_Info\_Faturacao}}();}
+\DoxyCodeLine{33   \textcolor{keywordtype}{int} m=0;}
+\DoxyCodeLine{34   \textcolor{keywordflow}{if}(modo == \textcolor{charliteral}{'P'}) m=1;}
+\DoxyCodeLine{35   f-\/>fat[m][filial-\/1][mes-\/1] += qtd * preco;}
+\DoxyCodeLine{36   f-\/>qtd[m][filial-\/1][mes-\/1] += qtd;}
+\DoxyCodeLine{37   f-\/>n\_vendas[m][filial-\/1][mes-\/1]++;}
+\DoxyCodeLine{38   f-\/>qtd\_total[filial-\/1] += qtd;}
+\DoxyCodeLine{39   cat = \mbox{\hyperlink{faturacao_8c_a8df5bebac86ad8e47477b8a46b371c3e}{insere\_faturacao}}(cat,p,f);}
+\DoxyCodeLine{40   \textcolor{keywordflow}{return} cat;}
+\DoxyCodeLine{41 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{faturacao_8c_a1c33cc0d11ce825aa8c0014d9f7faecf}\label{faturacao_8c_a1c33cc0d11ce825aa8c0014d9f7faecf}} 
+\index{faturacao.c@{faturacao.c}!existe\_faturacao@{existe\_faturacao}}
+\index{existe\_faturacao@{existe\_faturacao}!faturacao.c@{faturacao.c}}
+\doxysubsubsection{\texorpdfstring{existe\_faturacao()}{existe\_faturacao()}}
+{\footnotesize\ttfamily Boolean existe\+\_\+faturacao (\begin{DoxyParamCaption}\item[{Faturacao\+\_\+\+Catalog}]{cat,  }\item[{Produto}]{p }\end{DoxyParamCaption})}
+
+
+
+Função que verifica se existe, dado um produto, uma certa faturação a ele associada. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em cat} & Faturacao\+\_\+\+Catalog onde se procura. \\
+\hline
+{\em p} & Produto utilizado como referência de procura. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Boolean com o resultado. 
+\end{DoxyReturn}
+
+
+Definido na linha 117 do ficheiro faturacao.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{117                                                           \{}
+\DoxyCodeLine{118   \textcolor{keywordtype}{char} *aux = \mbox{\hyperlink{produtos_8c_a41fd3a5ec4fda805f937ed25bcbe5750}{getProdutoCode}}(p);}
+\DoxyCodeLine{119   Boolean a = \mbox{\hyperlink{catalogo_8c_a93fc716391dc53901dc2dbff97e75da1}{existe\_Catalogo}}(cat-\/>catalogo,aux);}
+\DoxyCodeLine{120   free(aux);}
+\DoxyCodeLine{121   \textcolor{keywordflow}{return} a;}
+\DoxyCodeLine{122 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{faturacao_8c_abc7f1720453f963ee1335e88c5ff1d32}\label{faturacao_8c_abc7f1720453f963ee1335e88c5ff1d32}} 
+\index{faturacao.c@{faturacao.c}!free\_Faturacao@{free\_Faturacao}}
+\index{free\_Faturacao@{free\_Faturacao}!faturacao.c@{faturacao.c}}
+\doxysubsubsection{\texorpdfstring{free\_Faturacao()}{free\_Faturacao()}}
+{\footnotesize\ttfamily void free\+\_\+\+Faturacao (\begin{DoxyParamCaption}\item[{Faturacao\+\_\+\+Catalog}]{cat }\end{DoxyParamCaption})}
+
+
+
+Função que liberta da memória o espaço ocupado por um catálogo da faturação. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em cat} & Faturacao\+\_\+\+Catalog a ser limpo da memória. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 143 do ficheiro faturacao.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{143                                           \{}
+\DoxyCodeLine{144   \mbox{\hyperlink{catalogo_8c_aa40131c98313b4683617cd1757f7ea66}{free\_Catalogo}}(cat-\/>catalogo,free);}
+\DoxyCodeLine{145   free(cat);}
+\DoxyCodeLine{146 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{faturacao_8c_a5554c5f0230bda76be4824d7e7c4f8ea}\label{faturacao_8c_a5554c5f0230bda76be4824d7e7c4f8ea}} 
+\index{faturacao.c@{faturacao.c}!get\_Fat\_Faturacao\_EntreMeses@{get\_Fat\_Faturacao\_EntreMeses}}
+\index{get\_Fat\_Faturacao\_EntreMeses@{get\_Fat\_Faturacao\_EntreMeses}!faturacao.c@{faturacao.c}}
+\doxysubsubsection{\texorpdfstring{get\_Fat\_Faturacao\_EntreMeses()}{get\_Fat\_Faturacao\_EntreMeses()}}
+{\footnotesize\ttfamily void get\+\_\+\+Fat\+\_\+\+Faturacao\+\_\+\+Entre\+Meses (\begin{DoxyParamCaption}\item[{Faturacao\+\_\+\+Catalog}]{f,  }\item[{int}]{m1,  }\item[{int}]{m2,  }\item[{Q8}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que insere numa estrutura o total faturado num intervalo de meses. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em f} & Faturacao\+\_\+catalog onde serão consultados os produtos. \\
+\hline
+{\em m1} & int que é o limite inferior do intervalo de meses. \\
+\hline
+{\em m2} & int que é o limite superior do intervalo de meses \\
+\hline
+{\em q} & Q8 onde será inserido esse valor. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 431 do ficheiro faturacao.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{431                                                                             \{}
+\DoxyCodeLine{432   \textcolor{keywordtype}{int} k;}
+\DoxyCodeLine{433   \textcolor{keywordtype}{double} total=0;}
+\DoxyCodeLine{434   AVL auxiliar;}
+\DoxyCodeLine{435   \textcolor{keywordflow}{for}(k=0;k<NR\_LETRAS;k++)\{}
+\DoxyCodeLine{436     auxiliar = \mbox{\hyperlink{catalogo_8c_a551505c19cd86f02ff31019e350df2a6}{catalogo\_getAVL}}(f-\/>catalogo,k);}
+\DoxyCodeLine{437     \mbox{\hyperlink{faturacao_8c_a731e4e35037ffe662c768e5bffd844e9}{percorre\_AVL\_Fat\_Q8}}(auxiliar,m1,m2,\&total,q);}
+\DoxyCodeLine{438   \}}
+\DoxyCodeLine{439   \mbox{\hyperlink{estruturas_8c_ae5f3bba421573d83341b22ad44722815}{setFat\_Q8}}(total,q);}
+\DoxyCodeLine{440 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{faturacao_8c_a82a1bff71e58ef2648cce6bbfe59bef3}\label{faturacao_8c_a82a1bff71e58ef2648cce6bbfe59bef3}} 
+\index{faturacao.c@{faturacao.c}!get\_Fat\_Mes\_Faturacao@{get\_Fat\_Mes\_Faturacao}}
+\index{get\_Fat\_Mes\_Faturacao@{get\_Fat\_Mes\_Faturacao}!faturacao.c@{faturacao.c}}
+\doxysubsubsection{\texorpdfstring{get\_Fat\_Mes\_Faturacao()}{get\_Fat\_Mes\_Faturacao()}}
+{\footnotesize\ttfamily void get\+\_\+\+Fat\+\_\+\+Mes\+\_\+\+Faturacao (\begin{DoxyParamCaption}\item[{Faturacao\+\_\+\+Catalog}]{f,  }\item[{char $\ast$}]{product,  }\item[{int}]{month,  }\item[{Q3}]{q }\end{DoxyParamCaption})}
+
+
+
+Função insere numa estrutura o total faturado de um certo produto realizadas num dado mês. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em f} & Faturacao\+\_\+\+Catalog que é onde será consultada a informação do produto. \\
+\hline
+{\em product} & char$\ast$ que é o código do produto a avaliar. \\
+\hline
+{\em month} & int que é o mês a investigar. \\
+\hline
+{\em q} & Q3 que é a estrutura onde será inserida a informação. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 195 do ficheiro faturacao.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{195                                                                                \{}
+\DoxyCodeLine{196   \textcolor{keywordtype}{double} aux1=0,aux2=0;}
+\DoxyCodeLine{197   f\_info fat = \mbox{\hyperlink{catalogo_8c_a2ed88930f3b18c3f107506ef3170508d}{get\_Cat\_struct}}(f-\/>catalogo,product);}
+\DoxyCodeLine{198   \textcolor{keywordtype}{int} i;}
+\DoxyCodeLine{199   \textcolor{keywordflow}{for}(i=0;i<FILIAL;i++)\{}
+\DoxyCodeLine{200     aux1 += fat-\/>fat[0][i][month-\/1];}
+\DoxyCodeLine{201     aux2 += fat-\/>fat[1][i][month-\/1];}
+\DoxyCodeLine{202   \}}
+\DoxyCodeLine{203   \mbox{\hyperlink{estruturas_8c_a029be7affe21b7c0f6a660b4f1859fff}{setFat\_NQ3}}(aux1,q);}
+\DoxyCodeLine{204   \mbox{\hyperlink{estruturas_8c_af16b3ade4c87b1b81b3b0771fdb4078f}{setFat\_PQ3}}(aux2,q);}
+\DoxyCodeLine{205 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{faturacao_8c_a9cdd16c7cbef5e648fd6ad5cb0cb3605}\label{faturacao_8c_a9cdd16c7cbef5e648fd6ad5cb0cb3605}} 
+\index{faturacao.c@{faturacao.c}!get\_Fat\_struct@{get\_Fat\_struct}}
+\index{get\_Fat\_struct@{get\_Fat\_struct}!faturacao.c@{faturacao.c}}
+\doxysubsubsection{\texorpdfstring{get\_Fat\_struct()}{get\_Fat\_struct()}}
+{\footnotesize\ttfamily Estrutura get\+\_\+\+Fat\+\_\+struct (\begin{DoxyParamCaption}\item[{Faturacao\+\_\+\+Catalog}]{cat,  }\item[{Produto}]{p }\end{DoxyParamCaption})}
+
+
+
+Função que devolve a estrutura associada a um produto de um catálogo que lhe é passado como argumento. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em cat} & Faturacao\+\_\+\+Catalog de onde será devolvida a estrutura. \\
+\hline
+{\em p} & Produto indicando o produto a procurar onde estará associada a estrutura. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Estrutura ou N\+U\+LL caso a mesma nao se encontre lá. 
+\end{DoxyReturn}
+
+
+Definido na linha 75 do ficheiro faturacao.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{75                                                           \{}
+\DoxyCodeLine{76   \textcolor{keywordtype}{char} *aux = \mbox{\hyperlink{produtos_8c_a41fd3a5ec4fda805f937ed25bcbe5750}{getProdutoCode}}(p);}
+\DoxyCodeLine{77   Estrutura a = \mbox{\hyperlink{catalogo_8c_a2ed88930f3b18c3f107506ef3170508d}{get\_Cat\_struct}}(cat-\/>catalogo,aux);}
+\DoxyCodeLine{78   free(aux);}
+\DoxyCodeLine{79   \textcolor{keywordflow}{return} a;}
+\DoxyCodeLine{80 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{faturacao_8c_ae69a924d20ab0f5944ee71a42685644f}\label{faturacao_8c_ae69a924d20ab0f5944ee71a42685644f}} 
+\index{faturacao.c@{faturacao.c}!get\_NVendas\_Faturacao\_EntreMeses@{get\_NVendas\_Faturacao\_EntreMeses}}
+\index{get\_NVendas\_Faturacao\_EntreMeses@{get\_NVendas\_Faturacao\_EntreMeses}!faturacao.c@{faturacao.c}}
+\doxysubsubsection{\texorpdfstring{get\_NVendas\_Faturacao\_EntreMeses()}{get\_NVendas\_Faturacao\_EntreMeses()}}
+{\footnotesize\ttfamily void get\+\_\+\+N\+Vendas\+\_\+\+Faturacao\+\_\+\+Entre\+Meses (\begin{DoxyParamCaption}\item[{Faturacao\+\_\+\+Catalog}]{f,  }\item[{int}]{m1,  }\item[{int}]{m2,  }\item[{Q8}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que insere numa estrutura o total de vendas registadas num intervalo de meses. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em f} & Faturacao\+\_\+catalog onde serão consultados os produtos. \\
+\hline
+{\em m1} & int que é o limite inferior do intervalo de meses. \\
+\hline
+{\em m2} & int que é o limite superior do intervalo de meses \\
+\hline
+{\em q} & Q8 onde serão inseridos os códigos dos produtos. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 368 do ficheiro faturacao.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{368                                                                                 \{}
+\DoxyCodeLine{369   \textcolor{keywordtype}{int} k;}
+\DoxyCodeLine{370   \textcolor{keywordtype}{int} total=0;}
+\DoxyCodeLine{371   AVL auxiliar;}
+\DoxyCodeLine{372   \textcolor{keywordflow}{for}(k=0;k<NR\_LETRAS;k++)\{}
+\DoxyCodeLine{373     auxiliar = \mbox{\hyperlink{catalogo_8c_a551505c19cd86f02ff31019e350df2a6}{catalogo\_getAVL}}(f-\/>catalogo,k);}
+\DoxyCodeLine{374     \mbox{\hyperlink{faturacao_8c_a354a63798caf81b77f59bba49ea82cf4}{percorre\_AVL\_NVendas\_Q8}}(auxiliar,m1,m2,\&total,q);}
+\DoxyCodeLine{375   \}}
+\DoxyCodeLine{376   \mbox{\hyperlink{estruturas_8c_ad0bb18f7237bbfe9aee55bd7d5b32415}{setNVendas\_Q8}}(total,q);}
+\DoxyCodeLine{377 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{faturacao_8c_a2aba6ae247ab5660d7d6bca7c45c24ea}\label{faturacao_8c_a2aba6ae247ab5660d7d6bca7c45c24ea}} 
+\index{faturacao.c@{faturacao.c}!get\_NVendas\_Mes\_Faturacao@{get\_NVendas\_Mes\_Faturacao}}
+\index{get\_NVendas\_Mes\_Faturacao@{get\_NVendas\_Mes\_Faturacao}!faturacao.c@{faturacao.c}}
+\doxysubsubsection{\texorpdfstring{get\_NVendas\_Mes\_Faturacao()}{get\_NVendas\_Mes\_Faturacao()}}
+{\footnotesize\ttfamily void get\+\_\+\+N\+Vendas\+\_\+\+Mes\+\_\+\+Faturacao (\begin{DoxyParamCaption}\item[{Faturacao\+\_\+\+Catalog}]{f,  }\item[{char $\ast$}]{product,  }\item[{int}]{month,  }\item[{Q3}]{q }\end{DoxyParamCaption})}
+
+
+
+Função insere numa estrutura o número de vendas de um certo produto realizadas num dado mês. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em f} & Faturacao\+\_\+\+Catalog que é onde será consultada a informação do produto. \\
+\hline
+{\em product} & char$\ast$ que é o código do produto a avaliar. \\
+\hline
+{\em month} & int que é o mês a investigar. \\
+\hline
+{\em q} & Q3 que é a estrutura onde será inserida a informação. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 177 do ficheiro faturacao.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{177                                                                                    \{}
+\DoxyCodeLine{178   \textcolor{keywordtype}{int} i,aux1=0,aux2=0;}
+\DoxyCodeLine{179   f\_info fat = \mbox{\hyperlink{catalogo_8c_a2ed88930f3b18c3f107506ef3170508d}{get\_Cat\_struct}}(f-\/>catalogo,product);}
+\DoxyCodeLine{180   \textcolor{keywordflow}{for}(i=0;i<FILIAL;i++)\{}
+\DoxyCodeLine{181     aux1 += fat-\/>n\_vendas[0][i][month-\/1];}
+\DoxyCodeLine{182     aux2 += fat-\/>n\_vendas[1][i][month-\/1];}
+\DoxyCodeLine{183   \}}
+\DoxyCodeLine{184   \mbox{\hyperlink{estruturas_8c_ae7ddfc6c12a3175edafa3f58f95b0b6a}{setQt\_NQ3}}(aux1,q);}
+\DoxyCodeLine{185   \mbox{\hyperlink{estruturas_8c_a350838bc921f8e756fc5867488b40318}{setQt\_PQ3}}(aux2,q);}
+\DoxyCodeLine{186 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{faturacao_8c_a9953fb35fe71d69681f164f226ac7d09}\label{faturacao_8c_a9953fb35fe71d69681f164f226ac7d09}} 
+\index{faturacao.c@{faturacao.c}!getQtTotalFat@{getQtTotalFat}}
+\index{getQtTotalFat@{getQtTotalFat}!faturacao.c@{faturacao.c}}
+\doxysubsubsection{\texorpdfstring{getQtTotalFat()}{getQtTotalFat()}}
+{\footnotesize\ttfamily int get\+Qt\+Total\+Fat (\begin{DoxyParamCaption}\item[{f\+\_\+info}]{f,  }\item[{int}]{filial }\end{DoxyParamCaption})}
+
+
+
+Função que retorna a quantidade total de produtos por filial. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em f} & f\+\_\+info onde se acede à informação. \\
+\hline
+{\em filial} & int da qual queremos obter a quantidade total. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+int com a quantidade total. 
+\end{DoxyReturn}
+
+
+Definido na linha 162 do ficheiro faturacao.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{162                                        \{}
+\DoxyCodeLine{163   \textcolor{keywordtype}{int} a = f-\/>qtd\_total[filial];}
+\DoxyCodeLine{164   \textcolor{keywordflow}{return} a;}
+\DoxyCodeLine{165 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{faturacao_8c_a434a13e579209e1424ea8b9941d582e1}\label{faturacao_8c_a434a13e579209e1424ea8b9941d582e1}} 
+\index{faturacao.c@{faturacao.c}!imprime\_Faturacao@{imprime\_Faturacao}}
+\index{imprime\_Faturacao@{imprime\_Faturacao}!faturacao.c@{faturacao.c}}
+\doxysubsubsection{\texorpdfstring{imprime\_Faturacao()}{imprime\_Faturacao()}}
+{\footnotesize\ttfamily void imprime\+\_\+\+Faturacao (\begin{DoxyParamCaption}\item[{Faturacao\+\_\+\+Catalog}]{cat }\end{DoxyParamCaption})}
+
+
+
+Função que imprime a faturação. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em cat} & Faturacao\+\_\+\+Catalog onde se encontram os produtos a ser impressos. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 152 do ficheiro faturacao.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{152                                              \{}
+\DoxyCodeLine{153   \mbox{\hyperlink{catalogo_8c_a00844e192fa3f0c5afc710d9da7c2c83}{imprime\_Catalogo}}(cat-\/>catalogo);}
+\DoxyCodeLine{154 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{faturacao_8c_ae7d33e0cc1704b65d8bc45f5a6bba511}\label{faturacao_8c_ae7d33e0cc1704b65d8bc45f5a6bba511}} 
+\index{faturacao.c@{faturacao.c}!init\_faturacao\_catalogo@{init\_faturacao\_catalogo}}
+\index{init\_faturacao\_catalogo@{init\_faturacao\_catalogo}!faturacao.c@{faturacao.c}}
+\doxysubsubsection{\texorpdfstring{init\_faturacao\_catalogo()}{init\_faturacao\_catalogo()}}
+{\footnotesize\ttfamily Faturacao\+\_\+\+Catalog init\+\_\+faturacao\+\_\+catalogo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função que inicializa o catálogo da faturação. 
+
+\begin{DoxyReturn}{Retorna}
+Faturacao\+\_\+\+Catalog inicializado. 
+\end{DoxyReturn}
+
+
+Definido na linha 105 do ficheiro faturacao.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{105                                            \{}
+\DoxyCodeLine{106   Faturacao\_Catalog \textcolor{keyword}{new} = malloc(\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} \mbox{\hyperlink{structcatalogo__faturacao}{catalogo\_faturacao}}));}
+\DoxyCodeLine{107   \textcolor{keyword}{new}-\/>catalogo = \mbox{\hyperlink{catalogo_8c_a5add1241036a95c143d5cb5d8e5e7fe5}{init\_Catalogo}}();}
+\DoxyCodeLine{108   \textcolor{keywordflow}{return} \textcolor{keyword}{new};}
+\DoxyCodeLine{109 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{faturacao_8c_ab1adca20729d2bfe315fb76c8fe8985f}\label{faturacao_8c_ab1adca20729d2bfe315fb76c8fe8985f}} 
+\index{faturacao.c@{faturacao.c}!init\_Info\_Faturacao@{init\_Info\_Faturacao}}
+\index{init\_Info\_Faturacao@{init\_Info\_Faturacao}!faturacao.c@{faturacao.c}}
+\doxysubsubsection{\texorpdfstring{init\_Info\_Faturacao()}{init\_Info\_Faturacao()}}
+{\footnotesize\ttfamily f\+\_\+info init\+\_\+\+Info\+\_\+\+Faturacao (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função que inicializa a informação da faturação. 
+
+\begin{DoxyReturn}{Retorna}
+f\+\_\+info inicializada. 
+\end{DoxyReturn}
+
+
+Definido na linha 86 do ficheiro faturacao.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{86                             \{}
+\DoxyCodeLine{87   f\_info f = (f\_info) malloc((\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} \mbox{\hyperlink{structfat__info}{fat\_info}})));}
+\DoxyCodeLine{88   \textcolor{keywordtype}{int} i,j,k;}
+\DoxyCodeLine{89   \textcolor{keywordflow}{for}(i=0 ; i<MODO ; i++)}
+\DoxyCodeLine{90     \textcolor{keywordflow}{for}(j=0 ; j<FILIAL ; j++)\{}
+\DoxyCodeLine{91         f-\/>qtd\_total[j] = 0;}
+\DoxyCodeLine{92         \textcolor{keywordflow}{for}(k=0 ; k<MESES ; k++)\{}
+\DoxyCodeLine{93           f-\/>fat[i][j][k] = 0;}
+\DoxyCodeLine{94           f-\/>qtd[i][j][k] = 0;}
+\DoxyCodeLine{95           f-\/>n\_vendas[i][j][k] = 0;}
+\DoxyCodeLine{96         \}}
+\DoxyCodeLine{97     \}}
+\DoxyCodeLine{98   \textcolor{keywordflow}{return} f;}
+\DoxyCodeLine{99 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{faturacao_8c_a8df5bebac86ad8e47477b8a46b371c3e}\label{faturacao_8c_a8df5bebac86ad8e47477b8a46b371c3e}} 
+\index{faturacao.c@{faturacao.c}!insere\_faturacao@{insere\_faturacao}}
+\index{insere\_faturacao@{insere\_faturacao}!faturacao.c@{faturacao.c}}
+\doxysubsubsection{\texorpdfstring{insere\_faturacao()}{insere\_faturacao()}}
+{\footnotesize\ttfamily Faturacao\+\_\+\+Catalog insere\+\_\+faturacao (\begin{DoxyParamCaption}\item[{Faturacao\+\_\+\+Catalog}]{cat,  }\item[{Produto}]{p,  }\item[{void $\ast$}]{estrutura }\end{DoxyParamCaption})}
+
+
+
+Função que insere no produto de um catálogo uma estrutura. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em cat} & Faturacao\+\_\+\+Catalog onde se vai inserir. \\
+\hline
+{\em p} & Produto onde se vai inserir. \\
+\hline
+{\em estrutura} & void$\ast$ a ser inserida. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Faturacao\+\_\+\+Catalog com a estrutura inserida. 
+\end{DoxyReturn}
+
+
+Definido na linha 131 do ficheiro faturacao.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{131                                                                                      \{}
+\DoxyCodeLine{132   \textcolor{keywordtype}{char} *aux = \mbox{\hyperlink{produtos_8c_a41fd3a5ec4fda805f937ed25bcbe5750}{getProdutoCode}}(p);}
+\DoxyCodeLine{133   cat-\/>catalogo = \mbox{\hyperlink{catalogo_8c_a63d5cf63479a790b0f74a7bfa0dcd10a}{insere\_Catalogo}}(cat-\/>catalogo,aux,estrutura);}
+\DoxyCodeLine{134   free(aux);}
+\DoxyCodeLine{135   \textcolor{keywordflow}{return} cat;}
+\DoxyCodeLine{136 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{faturacao_8c_af767925f1b2eccbb2da9f76705d20fdf}\label{faturacao_8c_af767925f1b2eccbb2da9f76705d20fdf}} 
+\index{faturacao.c@{faturacao.c}!percorre\_AVL\_Fat\_Q11@{percorre\_AVL\_Fat\_Q11}}
+\index{percorre\_AVL\_Fat\_Q11@{percorre\_AVL\_Fat\_Q11}!faturacao.c@{faturacao.c}}
+\doxysubsubsection{\texorpdfstring{percorre\_AVL\_Fat\_Q11()}{percorre\_AVL\_Fat\_Q11()}}
+{\footnotesize\ttfamily void percorre\+\_\+\+A\+V\+L\+\_\+\+Fat\+\_\+\+Q11 (\begin{DoxyParamCaption}\item[{A\+VL}]{tree,  }\item[{Q11}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que percorre uma A\+VL. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em tree} & A\+VL que será percorrida. \\
+\hline
+{\em q} & Q8 onde serão inseridas essas informações. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 480 do ficheiro faturacao.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{480                                           \{}
+\DoxyCodeLine{481   NODO f = \mbox{\hyperlink{avl_8c_af568e679a8db439de3758447f23b86e2}{getNodo}}(tree);}
+\DoxyCodeLine{482   \mbox{\hyperlink{faturacao_8c_afeb2e8b288e2622dd2819dc6f137e7d5}{percorre\_NODO\_Fat\_Q11}}(f,q);}
+\DoxyCodeLine{483   \mbox{\hyperlink{avl_8c_ab7e925aeda628a2fb80ed170c192c3c4}{free\_Nodo}}(f);}
+\DoxyCodeLine{484 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{faturacao_8c_aa646dd001c3cf1975b9318e75ca5eb3f}\label{faturacao_8c_aa646dd001c3cf1975b9318e75ca5eb3f}} 
+\index{faturacao.c@{faturacao.c}!percorre\_AVL\_Fat\_Q4@{percorre\_AVL\_Fat\_Q4}}
+\index{percorre\_AVL\_Fat\_Q4@{percorre\_AVL\_Fat\_Q4}!faturacao.c@{faturacao.c}}
+\doxysubsubsection{\texorpdfstring{percorre\_AVL\_Fat\_Q4()}{percorre\_AVL\_Fat\_Q4()}}
+{\footnotesize\ttfamily void percorre\+\_\+\+A\+V\+L\+\_\+\+Fat\+\_\+\+Q4 (\begin{DoxyParamCaption}\item[{A\+VL}]{tree,  }\item[{Q2}]{q,  }\item[{int $\ast$}]{aux }\end{DoxyParamCaption})}
+
+
+
+Função que percorre uma A\+VL. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em tree} & A\+VL que será percorrida. \\
+\hline
+{\em q} & Q2 onde serão inseridos os códigos dos produtos. \\
+\hline
+{\em aux} & int$\ast$ que serve como contador recursivo do número de produtos que não foram comprados. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 243 do ficheiro faturacao.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{243                                                   \{}
+\DoxyCodeLine{244   NODO f = \mbox{\hyperlink{avl_8c_af568e679a8db439de3758447f23b86e2}{getNodo}}(tree);}
+\DoxyCodeLine{245   \mbox{\hyperlink{faturacao_8c_a6afa4518f550620edfa6e87565eb464c}{percorre\_NODO\_Fat\_Q4}}(f,q,aux);}
+\DoxyCodeLine{246   \mbox{\hyperlink{avl_8c_ab7e925aeda628a2fb80ed170c192c3c4}{free\_Nodo}}(f);}
+\DoxyCodeLine{247 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{faturacao_8c_adfad6bec368267fd2fdcddba3adfaa00}\label{faturacao_8c_adfad6bec368267fd2fdcddba3adfaa00}} 
+\index{faturacao.c@{faturacao.c}!percorre\_AVL\_Fat\_Q6@{percorre\_AVL\_Fat\_Q6}}
+\index{percorre\_AVL\_Fat\_Q6@{percorre\_AVL\_Fat\_Q6}!faturacao.c@{faturacao.c}}
+\doxysubsubsection{\texorpdfstring{percorre\_AVL\_Fat\_Q6()}{percorre\_AVL\_Fat\_Q6()}}
+{\footnotesize\ttfamily void percorre\+\_\+\+A\+V\+L\+\_\+\+Fat\+\_\+\+Q6 (\begin{DoxyParamCaption}\item[{A\+VL}]{tree,  }\item[{Q6}]{q,  }\item[{int $\ast$}]{aux }\end{DoxyParamCaption})}
+
+
+
+Função que percorre uma A\+VL. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em tree} & A\+VL que será percorrida. \\
+\hline
+{\em q} & Q6 onde serão inseridos os códigos dos produtos. \\
+\hline
+{\em aux} & int$\ast$ que serve como contador recursivo do número de produtos que não foram comprados. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 293 do ficheiro faturacao.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{293                                                   \{}
+\DoxyCodeLine{294   NODO f = \mbox{\hyperlink{avl_8c_af568e679a8db439de3758447f23b86e2}{getNodo}}(tree);}
+\DoxyCodeLine{295   \mbox{\hyperlink{faturacao_8c_a3a487295f78f04996bdaaee24d7fea0e}{percorre\_NODO\_Fat\_Q6}}(f,q,aux);}
+\DoxyCodeLine{296   \mbox{\hyperlink{avl_8c_ab7e925aeda628a2fb80ed170c192c3c4}{free\_Nodo}}(f);}
+\DoxyCodeLine{297 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{faturacao_8c_a731e4e35037ffe662c768e5bffd844e9}\label{faturacao_8c_a731e4e35037ffe662c768e5bffd844e9}} 
+\index{faturacao.c@{faturacao.c}!percorre\_AVL\_Fat\_Q8@{percorre\_AVL\_Fat\_Q8}}
+\index{percorre\_AVL\_Fat\_Q8@{percorre\_AVL\_Fat\_Q8}!faturacao.c@{faturacao.c}}
+\doxysubsubsection{\texorpdfstring{percorre\_AVL\_Fat\_Q8()}{percorre\_AVL\_Fat\_Q8()}}
+{\footnotesize\ttfamily void percorre\+\_\+\+A\+V\+L\+\_\+\+Fat\+\_\+\+Q8 (\begin{DoxyParamCaption}\item[{A\+VL}]{auxiliar,  }\item[{int}]{m1,  }\item[{int}]{m2,  }\item[{double $\ast$}]{total,  }\item[{Q8}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que percorre uma A\+VL. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em tree} & A\+VL que será percorrida. \\
+\hline
+{\em m1} & int que é o limite inferior do intervalo de meses. \\
+\hline
+{\em m2} & int que é o limite superior do intervalo de meses \\
+\hline
+{\em total} & int$\ast$ que serve como contador recursivo do total faturado. \\
+\hline
+{\em q} & Q8 onde serão inseridos os códigos dos produtos. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 418 do ficheiro faturacao.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{418                                                                          \{}
+\DoxyCodeLine{419   NODO f = \mbox{\hyperlink{avl_8c_af568e679a8db439de3758447f23b86e2}{getNodo}}(auxiliar);}
+\DoxyCodeLine{420   \mbox{\hyperlink{faturacao_8c_acdb0ce7aba7975474d51bbbb9e1a4023}{percorre\_NODO\_Fat\_Q8}}(f,m1,m2,total,q);}
+\DoxyCodeLine{421   \mbox{\hyperlink{avl_8c_ab7e925aeda628a2fb80ed170c192c3c4}{free\_Nodo}}(f);}
+\DoxyCodeLine{422 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{faturacao_8c_a354a63798caf81b77f59bba49ea82cf4}\label{faturacao_8c_a354a63798caf81b77f59bba49ea82cf4}} 
+\index{faturacao.c@{faturacao.c}!percorre\_AVL\_NVendas\_Q8@{percorre\_AVL\_NVendas\_Q8}}
+\index{percorre\_AVL\_NVendas\_Q8@{percorre\_AVL\_NVendas\_Q8}!faturacao.c@{faturacao.c}}
+\doxysubsubsection{\texorpdfstring{percorre\_AVL\_NVendas\_Q8()}{percorre\_AVL\_NVendas\_Q8()}}
+{\footnotesize\ttfamily void percorre\+\_\+\+A\+V\+L\+\_\+\+N\+Vendas\+\_\+\+Q8 (\begin{DoxyParamCaption}\item[{A\+VL}]{auxiliar,  }\item[{int}]{m1,  }\item[{int}]{m2,  }\item[{int $\ast$}]{total,  }\item[{Q8}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que percorre uma A\+VL. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em tree} & A\+VL que será percorrida. \\
+\hline
+{\em m1} & int que é o limite inferior do intervalo de meses. \\
+\hline
+{\em m2} & int que é o limite superior do intervalo de meses \\
+\hline
+{\em total} & int$\ast$ que serve como contador recursivo do total de vendas realizadas. \\
+\hline
+{\em q} & Q8 onde serão inseridos os códigos dos produtos. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 355 do ficheiro faturacao.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{355                                                                          \{}
+\DoxyCodeLine{356   NODO f = \mbox{\hyperlink{avl_8c_af568e679a8db439de3758447f23b86e2}{getNodo}}(auxiliar);}
+\DoxyCodeLine{357   \mbox{\hyperlink{faturacao_8c_ad95375f300444d3d0bc6a7b6818bcd78}{percorre\_NODO\_NVendas\_Q8}}(f,m1,m2,total,q);}
+\DoxyCodeLine{358   \mbox{\hyperlink{avl_8c_ab7e925aeda628a2fb80ed170c192c3c4}{free\_Nodo}}(f);}
+\DoxyCodeLine{359 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{faturacao_8c_afeb2e8b288e2622dd2819dc6f137e7d5}\label{faturacao_8c_afeb2e8b288e2622dd2819dc6f137e7d5}} 
+\index{faturacao.c@{faturacao.c}!percorre\_NODO\_Fat\_Q11@{percorre\_NODO\_Fat\_Q11}}
+\index{percorre\_NODO\_Fat\_Q11@{percorre\_NODO\_Fat\_Q11}!faturacao.c@{faturacao.c}}
+\doxysubsubsection{\texorpdfstring{percorre\_NODO\_Fat\_Q11()}{percorre\_NODO\_Fat\_Q11()}}
+{\footnotesize\ttfamily void percorre\+\_\+\+N\+O\+D\+O\+\_\+\+Fat\+\_\+\+Q11 (\begin{DoxyParamCaption}\item[{N\+O\+DO}]{tree,  }\item[{Q11}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que percorre os nodos da A\+VL. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em tree} & N\+O\+DO que será percorrida. \\
+\hline
+{\em q} & Q8 onde serão inseridas essas informações. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 450 do ficheiro faturacao.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{450                                             \{}
+\DoxyCodeLine{451   \textcolor{keywordflow}{if}(tree==NULL) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{452   NODO esq = \mbox{\hyperlink{avl_8c_aac6e354b6a9d07b76313a36c510c9f10}{getNodoEsq}}(tree);}
+\DoxyCodeLine{453   \mbox{\hyperlink{faturacao_8c_afeb2e8b288e2622dd2819dc6f137e7d5}{percorre\_NODO\_Fat\_Q11}}(esq,q);}
+\DoxyCodeLine{454   \mbox{\hyperlink{avl_8c_ab7e925aeda628a2fb80ed170c192c3c4}{free\_Nodo}}(esq);}
+\DoxyCodeLine{455 }
+\DoxyCodeLine{456   f\_info aux = \mbox{\hyperlink{avl_8c_a948222e5aea0bc2696faf0a9ed64afe7}{getCont}}(tree);}
+\DoxyCodeLine{457   \textcolor{keywordtype}{char}* \mbox{\hyperlink{structproduto}{produto}};}
+\DoxyCodeLine{458   \textcolor{keywordflow}{if}(aux==NULL);}
+\DoxyCodeLine{459   \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{460     \mbox{\hyperlink{structproduto}{produto}} = \mbox{\hyperlink{avl_8c_a5804b8d40ea06fecc2ecd97415a6c18c}{getString}}(tree);}
+\DoxyCodeLine{461     \textcolor{keywordtype}{int} i;}
+\DoxyCodeLine{462     \textcolor{keywordtype}{int} qt[FILIAL];}
+\DoxyCodeLine{463     \textcolor{keywordflow}{for}(i=0;i<FILIAL;i++)\{}
+\DoxyCodeLine{464       qt[i] = \mbox{\hyperlink{faturacao_8c_a9953fb35fe71d69681f164f226ac7d09}{getQtTotalFat}}(aux,i);}
+\DoxyCodeLine{465     \}}
+\DoxyCodeLine{466     \mbox{\hyperlink{estruturas_8c_a8a4021930dd4dd73ce5da02f3324ecf7}{insere\_ProdInfoQ11}}(q,\mbox{\hyperlink{structproduto}{produto}},qt);}
+\DoxyCodeLine{467     free(\mbox{\hyperlink{structproduto}{produto}});}
+\DoxyCodeLine{468   \}}
+\DoxyCodeLine{469 }
+\DoxyCodeLine{470   NODO dir = \mbox{\hyperlink{avl_8c_a5c9e707dfc9a11ffe65746c91b5111ba}{getNodoDir}}(tree);}
+\DoxyCodeLine{471   \mbox{\hyperlink{faturacao_8c_afeb2e8b288e2622dd2819dc6f137e7d5}{percorre\_NODO\_Fat\_Q11}}(dir,q);}
+\DoxyCodeLine{472   \mbox{\hyperlink{avl_8c_ab7e925aeda628a2fb80ed170c192c3c4}{free\_Nodo}}(dir);}
+\DoxyCodeLine{473 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{faturacao_8c_a6afa4518f550620edfa6e87565eb464c}\label{faturacao_8c_a6afa4518f550620edfa6e87565eb464c}} 
+\index{faturacao.c@{faturacao.c}!percorre\_NODO\_Fat\_Q4@{percorre\_NODO\_Fat\_Q4}}
+\index{percorre\_NODO\_Fat\_Q4@{percorre\_NODO\_Fat\_Q4}!faturacao.c@{faturacao.c}}
+\doxysubsubsection{\texorpdfstring{percorre\_NODO\_Fat\_Q4()}{percorre\_NODO\_Fat\_Q4()}}
+{\footnotesize\ttfamily void percorre\+\_\+\+N\+O\+D\+O\+\_\+\+Fat\+\_\+\+Q4 (\begin{DoxyParamCaption}\item[{N\+O\+DO}]{tree,  }\item[{Q2}]{q,  }\item[{int $\ast$}]{aux }\end{DoxyParamCaption})}
+
+
+
+Função que percorre os nodos da A\+VL. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em tree} & N\+O\+DO que será percorrida. \\
+\hline
+{\em q} & Q2 onde serão inseridos os códigos dos produtos. \\
+\hline
+{\em aux} & int$\ast$ que serve como contador recursivo do número de produtos que não foram comprados. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 218 do ficheiro faturacao.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{218                                                     \{}
+\DoxyCodeLine{219   \textcolor{keywordflow}{if} (tree == NULL) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{220   NODO esq = \mbox{\hyperlink{avl_8c_aac6e354b6a9d07b76313a36c510c9f10}{getNodoEsq}}(tree);}
+\DoxyCodeLine{221   \mbox{\hyperlink{faturacao_8c_a6afa4518f550620edfa6e87565eb464c}{percorre\_NODO\_Fat\_Q4}}(esq,q,aux);}
+\DoxyCodeLine{222   \mbox{\hyperlink{avl_8c_ab7e925aeda628a2fb80ed170c192c3c4}{free\_Nodo}}(esq);}
+\DoxyCodeLine{223   f\_info f = (f\_info) \mbox{\hyperlink{avl_8c_a948222e5aea0bc2696faf0a9ed64afe7}{getCont}}(tree);}
+\DoxyCodeLine{224   \textcolor{keywordtype}{char}* prod = \mbox{\hyperlink{avl_8c_a5804b8d40ea06fecc2ecd97415a6c18c}{getString}}(tree);}
+\DoxyCodeLine{225   \textcolor{keywordflow}{if}(f==NULL)\{}
+\DoxyCodeLine{226     \mbox{\hyperlink{estruturas_8c_a55dfe0c3e3dc5cc8ce80bad1bd26f7ae}{insere\_ProdQ2}}(prod,q);}
+\DoxyCodeLine{227     (*aux)++;}
+\DoxyCodeLine{228   \}}
+\DoxyCodeLine{229   free(prod);}
+\DoxyCodeLine{230   NODO dir;}
+\DoxyCodeLine{231   dir = \mbox{\hyperlink{avl_8c_a5c9e707dfc9a11ffe65746c91b5111ba}{getNodoDir}}(tree);}
+\DoxyCodeLine{232   \mbox{\hyperlink{faturacao_8c_a6afa4518f550620edfa6e87565eb464c}{percorre\_NODO\_Fat\_Q4}}(dir,q,aux);}
+\DoxyCodeLine{233   \mbox{\hyperlink{avl_8c_ab7e925aeda628a2fb80ed170c192c3c4}{free\_Nodo}}(dir);}
+\DoxyCodeLine{234 }
+\DoxyCodeLine{235 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{faturacao_8c_a3a487295f78f04996bdaaee24d7fea0e}\label{faturacao_8c_a3a487295f78f04996bdaaee24d7fea0e}} 
+\index{faturacao.c@{faturacao.c}!percorre\_NODO\_Fat\_Q6@{percorre\_NODO\_Fat\_Q6}}
+\index{percorre\_NODO\_Fat\_Q6@{percorre\_NODO\_Fat\_Q6}!faturacao.c@{faturacao.c}}
+\doxysubsubsection{\texorpdfstring{percorre\_NODO\_Fat\_Q6()}{percorre\_NODO\_Fat\_Q6()}}
+{\footnotesize\ttfamily void percorre\+\_\+\+N\+O\+D\+O\+\_\+\+Fat\+\_\+\+Q6 (\begin{DoxyParamCaption}\item[{N\+O\+DO}]{tree,  }\item[{Q6}]{q,  }\item[{int $\ast$}]{aux }\end{DoxyParamCaption})}
+
+
+
+Função que percorre os nodos da A\+VL. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em tree} & N\+O\+DO que será percorrida. \\
+\hline
+{\em q} & Q6 onde serão inseridos os códigos dos produtos. \\
+\hline
+{\em aux} & int$\ast$ que serve como contador recursivo do número de produtos que não foram comprados. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 272 do ficheiro faturacao.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{272                                                     \{}
+\DoxyCodeLine{273   \textcolor{keywordflow}{if} (tree == NULL) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{274   NODO esq = \mbox{\hyperlink{avl_8c_aac6e354b6a9d07b76313a36c510c9f10}{getNodoEsq}}(tree);}
+\DoxyCodeLine{275   \mbox{\hyperlink{faturacao_8c_a3a487295f78f04996bdaaee24d7fea0e}{percorre\_NODO\_Fat\_Q6}}(esq,q,aux);}
+\DoxyCodeLine{276   \mbox{\hyperlink{avl_8c_ab7e925aeda628a2fb80ed170c192c3c4}{free\_Nodo}}(esq);}
+\DoxyCodeLine{277 }
+\DoxyCodeLine{278   NODO dir;}
+\DoxyCodeLine{279   dir = \mbox{\hyperlink{avl_8c_a5c9e707dfc9a11ffe65746c91b5111ba}{getNodoDir}}(tree);}
+\DoxyCodeLine{280   \mbox{\hyperlink{faturacao_8c_a3a487295f78f04996bdaaee24d7fea0e}{percorre\_NODO\_Fat\_Q6}}(dir,q,aux);}
+\DoxyCodeLine{281   \mbox{\hyperlink{avl_8c_ab7e925aeda628a2fb80ed170c192c3c4}{free\_Nodo}}(dir);}
+\DoxyCodeLine{282 }
+\DoxyCodeLine{283   f\_info f = (f\_info) \mbox{\hyperlink{avl_8c_a948222e5aea0bc2696faf0a9ed64afe7}{getCont}}(tree);}
+\DoxyCodeLine{284   \textcolor{keywordflow}{if}(f==NULL) (*aux)++;}
+\DoxyCodeLine{285 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{faturacao_8c_acdb0ce7aba7975474d51bbbb9e1a4023}\label{faturacao_8c_acdb0ce7aba7975474d51bbbb9e1a4023}} 
+\index{faturacao.c@{faturacao.c}!percorre\_NODO\_Fat\_Q8@{percorre\_NODO\_Fat\_Q8}}
+\index{percorre\_NODO\_Fat\_Q8@{percorre\_NODO\_Fat\_Q8}!faturacao.c@{faturacao.c}}
+\doxysubsubsection{\texorpdfstring{percorre\_NODO\_Fat\_Q8()}{percorre\_NODO\_Fat\_Q8()}}
+{\footnotesize\ttfamily void percorre\+\_\+\+N\+O\+D\+O\+\_\+\+Fat\+\_\+\+Q8 (\begin{DoxyParamCaption}\item[{N\+O\+DO}]{tree,  }\item[{int}]{m1,  }\item[{int}]{m2,  }\item[{double $\ast$}]{total,  }\item[{Q8}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que percorre os nodos da A\+VL. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em tree} & N\+O\+DO que será percorrida. \\
+\hline
+{\em m1} & int que é o limite inferior do intervalo de meses. \\
+\hline
+{\em m2} & int que é o limite superior do intervalo de meses \\
+\hline
+{\em total} & int$\ast$ que serve como contador recursivo do total faturado. \\
+\hline
+{\em q} & Q8 onde será inserido esse valor. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 388 do ficheiro faturacao.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{388                                                                         \{}
+\DoxyCodeLine{389   \textcolor{keywordtype}{int} i,j,k;}
+\DoxyCodeLine{390   \textcolor{keywordflow}{if}(tree==NULL) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{391   NODO esq = \mbox{\hyperlink{avl_8c_aac6e354b6a9d07b76313a36c510c9f10}{getNodoEsq}}(tree);}
+\DoxyCodeLine{392   \mbox{\hyperlink{faturacao_8c_acdb0ce7aba7975474d51bbbb9e1a4023}{percorre\_NODO\_Fat\_Q8}}(esq,m1,m2,total,q);}
+\DoxyCodeLine{393   \mbox{\hyperlink{avl_8c_ab7e925aeda628a2fb80ed170c192c3c4}{free\_Nodo}}(esq);}
+\DoxyCodeLine{394   NODO dir;}
+\DoxyCodeLine{395   dir = \mbox{\hyperlink{avl_8c_a5c9e707dfc9a11ffe65746c91b5111ba}{getNodoDir}}(tree);}
+\DoxyCodeLine{396   \mbox{\hyperlink{faturacao_8c_acdb0ce7aba7975474d51bbbb9e1a4023}{percorre\_NODO\_Fat\_Q8}}(dir,m1,m2,total,q);}
+\DoxyCodeLine{397   \mbox{\hyperlink{avl_8c_ab7e925aeda628a2fb80ed170c192c3c4}{free\_Nodo}}(dir);}
+\DoxyCodeLine{398   f\_info f = (f\_info) \mbox{\hyperlink{avl_8c_a948222e5aea0bc2696faf0a9ed64afe7}{getCont}}(tree);}
+\DoxyCodeLine{399   \textcolor{keywordflow}{if}(f==NULL) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{400 }
+\DoxyCodeLine{401   \textcolor{keywordflow}{for}(i=0;i<MODO;i++)\{}
+\DoxyCodeLine{402     \textcolor{keywordflow}{for}(j=0;j<FILIAL;j++)\{}
+\DoxyCodeLine{403       \textcolor{keywordflow}{for}(k=m1-\/1;k<m2;k++)\{}
+\DoxyCodeLine{404         *total += f-\/>fat[i][j][k];}
+\DoxyCodeLine{405       \}}
+\DoxyCodeLine{406     \}}
+\DoxyCodeLine{407   \}}
+\DoxyCodeLine{408 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{faturacao_8c_ad95375f300444d3d0bc6a7b6818bcd78}\label{faturacao_8c_ad95375f300444d3d0bc6a7b6818bcd78}} 
+\index{faturacao.c@{faturacao.c}!percorre\_NODO\_NVendas\_Q8@{percorre\_NODO\_NVendas\_Q8}}
+\index{percorre\_NODO\_NVendas\_Q8@{percorre\_NODO\_NVendas\_Q8}!faturacao.c@{faturacao.c}}
+\doxysubsubsection{\texorpdfstring{percorre\_NODO\_NVendas\_Q8()}{percorre\_NODO\_NVendas\_Q8()}}
+{\footnotesize\ttfamily void percorre\+\_\+\+N\+O\+D\+O\+\_\+\+N\+Vendas\+\_\+\+Q8 (\begin{DoxyParamCaption}\item[{N\+O\+DO}]{tree,  }\item[{int}]{m1,  }\item[{int}]{m2,  }\item[{int $\ast$}]{total,  }\item[{Q8}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que percorre os nodos da A\+VL. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em tree} & N\+O\+DO que será percorrida. \\
+\hline
+{\em m1} & int que é o limite inferior do intervalo de meses. \\
+\hline
+{\em m2} & int que é o limite superior do intervalo de meses \\
+\hline
+{\em total} & int$\ast$ que serve como contador recursivo do total de vendas realizadas. \\
+\hline
+{\em q} & Q8 onde serão inseridos os códigos dos produtos. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 324 do ficheiro faturacao.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{324                                                                           \{}
+\DoxyCodeLine{325     \textcolor{keywordtype}{int} j, k, i;}
+\DoxyCodeLine{326     \textcolor{keywordflow}{if} (tree == NULL) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{327     NODO esq = \mbox{\hyperlink{avl_8c_aac6e354b6a9d07b76313a36c510c9f10}{getNodoEsq}}(tree);}
+\DoxyCodeLine{328     \mbox{\hyperlink{faturacao_8c_ad95375f300444d3d0bc6a7b6818bcd78}{percorre\_NODO\_NVendas\_Q8}}(esq, m1, m2, total,q);}
+\DoxyCodeLine{329     \mbox{\hyperlink{avl_8c_ab7e925aeda628a2fb80ed170c192c3c4}{free\_Nodo}}(esq);}
+\DoxyCodeLine{330     NODO dir;}
+\DoxyCodeLine{331     dir = \mbox{\hyperlink{avl_8c_a5c9e707dfc9a11ffe65746c91b5111ba}{getNodoDir}}(tree);}
+\DoxyCodeLine{332     \mbox{\hyperlink{faturacao_8c_ad95375f300444d3d0bc6a7b6818bcd78}{percorre\_NODO\_NVendas\_Q8}}(dir, m1, m2, total,q);}
+\DoxyCodeLine{333     \mbox{\hyperlink{avl_8c_ab7e925aeda628a2fb80ed170c192c3c4}{free\_Nodo}}(dir);}
+\DoxyCodeLine{334     f\_info f = (f\_info) \mbox{\hyperlink{avl_8c_a948222e5aea0bc2696faf0a9ed64afe7}{getCont}}(tree);}
+\DoxyCodeLine{335     \textcolor{keywordflow}{if} (f == NULL) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{336 }
+\DoxyCodeLine{337     \textcolor{keywordflow}{for} (i = 0; i < MODO; i++) \{}
+\DoxyCodeLine{338         \textcolor{keywordflow}{for} (j = 0; j < FILIAL; j++) \{}
+\DoxyCodeLine{339             \textcolor{keywordflow}{for} (k = m1-\/1; k < m2; k++) \{}
+\DoxyCodeLine{340                 *total += f-\/>n\_vendas[i][j][k];}
+\DoxyCodeLine{341             \}}
+\DoxyCodeLine{342         \}}
+\DoxyCodeLine{343     \}}
+\DoxyCodeLine{344 }
+\DoxyCodeLine{345 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{faturacao_8c_a1a1452f4ea1cfd17ee3bca24b786ac05}\label{faturacao_8c_a1a1452f4ea1cfd17ee3bca24b786ac05}} 
+\index{faturacao.c@{faturacao.c}!produtos\_nao\_comprados@{produtos\_nao\_comprados}}
+\index{produtos\_nao\_comprados@{produtos\_nao\_comprados}!faturacao.c@{faturacao.c}}
+\doxysubsubsection{\texorpdfstring{produtos\_nao\_comprados()}{produtos\_nao\_comprados()}}
+{\footnotesize\ttfamily void produtos\+\_\+nao\+\_\+comprados (\begin{DoxyParamCaption}\item[{Faturacao\+\_\+\+Catalog}]{f,  }\item[{Q2}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que insere numa estrutura o total e o código dos produtos que não foram comprados globalmente. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em f} & Faturacao\+\_\+catalog onde serão consultados os produtos. \\
+\hline
+{\em q} & Q2 onde serão inseridas essas informações. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 254 do ficheiro faturacao.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{254                                                       \{}
+\DoxyCodeLine{255   \textcolor{keywordtype}{int} k,aux=0;}
+\DoxyCodeLine{256   AVL auxiliar;}
+\DoxyCodeLine{257   \textcolor{keywordflow}{for}(k=0;k<NR\_LETRAS;k++)\{}
+\DoxyCodeLine{258     auxiliar = \mbox{\hyperlink{catalogo_8c_a551505c19cd86f02ff31019e350df2a6}{catalogo\_getAVL}}(f-\/>catalogo,k);}
+\DoxyCodeLine{259     \mbox{\hyperlink{faturacao_8c_aa646dd001c3cf1975b9318e75ca5eb3f}{percorre\_AVL\_Fat\_Q4}}(auxiliar,q,\&aux);}
+\DoxyCodeLine{260   \}}
+\DoxyCodeLine{261   \mbox{\hyperlink{estruturas_8c_a89139245dabf3f29938430bb633be51d}{setNum\_totalQ2}}(aux,q);}
+\DoxyCodeLine{262 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{faturacao_8c_a26497d662e20b7f28f114a416d12b1d4}\label{faturacao_8c_a26497d662e20b7f28f114a416d12b1d4}} 
+\index{faturacao.c@{faturacao.c}!produtos\_nao\_comprados\_num@{produtos\_nao\_comprados\_num}}
+\index{produtos\_nao\_comprados\_num@{produtos\_nao\_comprados\_num}!faturacao.c@{faturacao.c}}
+\doxysubsubsection{\texorpdfstring{produtos\_nao\_comprados\_num()}{produtos\_nao\_comprados\_num()}}
+{\footnotesize\ttfamily void produtos\+\_\+nao\+\_\+comprados\+\_\+num (\begin{DoxyParamCaption}\item[{Faturacao\+\_\+\+Catalog}]{f,  }\item[{Q6}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que insere numa estrutura o total de produtos que não foram comprados. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em f} & Faturacao\+\_\+catalog onde serão consultados os produtos. \\
+\hline
+{\em q} & Q6 onde será inserido esse valor. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 304 do ficheiro faturacao.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{304                                                           \{}
+\DoxyCodeLine{305   \textcolor{keywordtype}{int} k,aux=0;}
+\DoxyCodeLine{306   AVL auxiliar;}
+\DoxyCodeLine{307   \textcolor{keywordflow}{for}(k=0;k<NR\_LETRAS;k++)\{}
+\DoxyCodeLine{308     auxiliar = \mbox{\hyperlink{catalogo_8c_a551505c19cd86f02ff31019e350df2a6}{catalogo\_getAVL}}(f-\/>catalogo,k);}
+\DoxyCodeLine{309     \mbox{\hyperlink{faturacao_8c_adfad6bec368267fd2fdcddba3adfaa00}{percorre\_AVL\_Fat\_Q6}}(auxiliar,q,\&aux);}
+\DoxyCodeLine{310   \}}
+\DoxyCodeLine{311   \mbox{\hyperlink{estruturas_8c_a7b486f143ae7d234e9c519a2d18f627f}{setNumProdsQ6}}(q,aux);}
+\DoxyCodeLine{312 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{faturacao_8c_a1e3719cc2978d5d216267585dd0d4d77}\label{faturacao_8c_a1e3719cc2978d5d216267585dd0d4d77}} 
+\index{faturacao.c@{faturacao.c}!produtosMaisCompradosQ11@{produtosMaisCompradosQ11}}
+\index{produtosMaisCompradosQ11@{produtosMaisCompradosQ11}!faturacao.c@{faturacao.c}}
+\doxysubsubsection{\texorpdfstring{produtosMaisCompradosQ11()}{produtosMaisCompradosQ11()}}
+{\footnotesize\ttfamily void produtos\+Mais\+Comprados\+Q11 (\begin{DoxyParamCaption}\item[{Faturacao\+\_\+\+Catalog}]{f,  }\item[{Q11}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que insere numa estrutura o código dos produtos bem como a sua quantidade comprada. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em f} & Faturacao\+\_\+catalog onde serão consultados os produtos. \\
+\hline
+{\em q} & Q11 onde serão inseridas essas informações. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 491 do ficheiro faturacao.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{491                                                          \{}
+\DoxyCodeLine{492   \textcolor{keywordtype}{int} j;}
+\DoxyCodeLine{493   AVL auxiliar;}
+\DoxyCodeLine{494   \textcolor{keywordflow}{for}(j=0;j<NR\_LETRAS;j++)\{}
+\DoxyCodeLine{495     auxiliar = \mbox{\hyperlink{catalogo_8c_a551505c19cd86f02ff31019e350df2a6}{catalogo\_getAVL}}(f-\/>catalogo,j);}
+\DoxyCodeLine{496     \mbox{\hyperlink{faturacao_8c_af767925f1b2eccbb2da9f76705d20fdf}{percorre\_AVL\_Fat\_Q11}}(auxiliar,q);}
+\DoxyCodeLine{497   \}}
+\DoxyCodeLine{498 \}}
+
+\end{DoxyCode}

@@ -1,0 +1,606 @@
+\hypertarget{avl_8c}{}\doxysection{Referência ao ficheiro src/avl.c}
+\label{avl_8c}\index{src/avl.c@{src/avl.c}}
+
+
+Ficheiro que contém a A\+PI relativa à implementação de A\+VL\textquotesingle{}s.  
+
+
+{\ttfamily \#include \char`\"{}../include/avl.\+h\char`\"{}}\newline
+\doxysubsection*{Estruturas de Dados}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structnode_a_v_l}{node\+A\+VL}}
+\item 
+struct \mbox{\hyperlink{structavl}{avl}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+A\+VL \mbox{\hyperlink{avl_8c_a12edfb9dbe827acf6f4eadc70cf84c44}{init\+A\+VL}} ()
+\begin{DoxyCompactList}\small\item\em Função que inicializa uma nova A\+VL. \end{DoxyCompactList}\item 
+A\+VL \mbox{\hyperlink{avl_8c_a28030a6963aec8fe11604cee697ef155}{atualiza\+\_\+avl}} (A\+VL tree, char $\ast$value, Estrutura estrutura)
+\begin{DoxyCompactList}\small\item\em Função que insere uma nova estrutura na arvore tree tendo como referência de posicionamento um char$\ast$ value. \end{DoxyCompactList}\item 
+A\+VL \mbox{\hyperlink{avl_8c_a1dec82bcbce333d16733ecf7344d378b}{avl\+\_\+insert}} (A\+VL tree, Valor key, Estrutura estrutura)
+\begin{DoxyCompactList}\small\item\em Função que insere na arvore tree tendo como referência de posicionamento um char$\ast$. \end{DoxyCompactList}\item 
+Boolean \mbox{\hyperlink{avl_8c_a8fddc39a0bdd4496fe33e6b48a167c95}{avl\+\_\+look\+Up}} (A\+VL tree, Valor value)
+\begin{DoxyCompactList}\small\item\em Função que devolve um Boolean referente a ter encontrado ou não na A\+VL o Valor value. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{avl_8c_a874b3d9374eb0bf5fc57cd3cf57c9704}{avl\+\_\+count}} (A\+VL tree)
+\begin{DoxyCompactList}\small\item\em Função que devolve o tamanho (quantidade de nodos) de uma A\+VL passada como argumento. \end{DoxyCompactList}\item 
+A\+VL \mbox{\hyperlink{avl_8c_af1c5b01501962cc16f68e5ff9458b5d6}{avl\+\_\+clone}} (A\+VL node, A\+VL novo)
+\begin{DoxyCompactList}\small\item\em Função que executa um clone de uma dada A\+VL. \end{DoxyCompactList}\item 
+Estrutura \mbox{\hyperlink{avl_8c_a9c63fca5348576aa37364760756f565e}{avl\+\_\+get\+Estrutura}} (A\+VL node, Valor value)
+\begin{DoxyCompactList}\small\item\em Função que devolve a estrutura associada a um nodo de uma A\+VL passada como argumento. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{avl_8c_a785a0f5acefc1cd1085f1eb65fff5c43}{avl\+\_\+get\+Tamanho}} (A\+VL tree)
+\begin{DoxyCompactList}\small\item\em Função que devolve o tamanho de uma A\+VL. \end{DoxyCompactList}\item 
+N\+O\+DO \mbox{\hyperlink{avl_8c_af568e679a8db439de3758447f23b86e2}{get\+Nodo}} (A\+VL a)
+\begin{DoxyCompactList}\small\item\em Função que dada uma A\+VL retorna o nodo da sua raiz. \end{DoxyCompactList}\item 
+N\+O\+DO \mbox{\hyperlink{avl_8c_aac6e354b6a9d07b76313a36c510c9f10}{get\+Nodo\+Esq}} (N\+O\+DO n)
+\begin{DoxyCompactList}\small\item\em Função que dado um N\+O\+DO retorna o nodo á sua esquerda. \end{DoxyCompactList}\item 
+N\+O\+DO \mbox{\hyperlink{avl_8c_a5c9e707dfc9a11ffe65746c91b5111ba}{get\+Nodo\+Dir}} (N\+O\+DO n)
+\begin{DoxyCompactList}\small\item\em Função que dado um N\+O\+DO retorna o nodo á sua direita. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{avl_8c_a5804b8d40ea06fecc2ecd97415a6c18c}{get\+String}} (N\+O\+DO n)
+\begin{DoxyCompactList}\small\item\em Função que dado um N\+O\+DO retorna uma copia da sua string. \end{DoxyCompactList}\item 
+void $\ast$ \mbox{\hyperlink{avl_8c_a948222e5aea0bc2696faf0a9ed64afe7}{get\+Cont}} (N\+O\+DO n)
+\begin{DoxyCompactList}\small\item\em Função que dado um N\+O\+DO retorna o seu contéudo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{avl_8c_a79d17c2e6df846c93b8a5743cd025735}{avl\+\_\+free}} (A\+VL nodo, Funcao f)
+\begin{DoxyCompactList}\small\item\em Função com o objetivo de limpar da memória uma dada A\+VL. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{avl_8c_ab7e925aeda628a2fb80ed170c192c3c4}{free\+\_\+\+Nodo}} (N\+O\+DO node)
+\begin{DoxyCompactList}\small\item\em Função que limpa da memória um dado N\+O\+DO. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{avl_8c_ac9fb4d6bce6ae1d02ce0e82b10b59945}{imprime\+\_\+\+Conteudo\+\_\+\+A\+VL}} (N\+O\+DO tree)
+\begin{DoxyCompactList}\small\item\em Função que imprime os nodos da A\+VL. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{avl_8c_a6bf7ed43f3cf1c72b56ec0e18fcda525}{imprime\+\_\+\+A\+V\+L\+\_\+\+String}} (A\+VL tree)
+\begin{DoxyCompactList}\small\item\em Função que imprime todas as Strings da A\+VL. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Ficheiro que contém a A\+PI relativa à implementação de A\+VL\textquotesingle{}s. 
+
+
+
+\doxysubsection{Documentação das funções}
+\mbox{\Hypertarget{avl_8c_a28030a6963aec8fe11604cee697ef155}\label{avl_8c_a28030a6963aec8fe11604cee697ef155}} 
+\index{avl.c@{avl.c}!atualiza\_avl@{atualiza\_avl}}
+\index{atualiza\_avl@{atualiza\_avl}!avl.c@{avl.c}}
+\doxysubsubsection{\texorpdfstring{atualiza\_avl()}{atualiza\_avl()}}
+{\footnotesize\ttfamily A\+VL atualiza\+\_\+avl (\begin{DoxyParamCaption}\item[{A\+VL}]{tree,  }\item[{char $\ast$}]{value,  }\item[{Estrutura}]{estrutura }\end{DoxyParamCaption})}
+
+
+
+Função que insere uma nova estrutura na arvore tree tendo como referência de posicionamento um char$\ast$ value. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em tree} & A\+VL onde insere. \\
+\hline
+{\em value} & char$\ast$ a inserir. \\
+\hline
+{\em estrutura} & Conteúdo/\+Estrutura a inserir. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+A\+VL atualizada. 
+\end{DoxyReturn}
+
+
+Definido na linha 53 do ficheiro avl.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{53                                                              \{}
+\DoxyCodeLine{54     tree-\/>arvore = atualiza\_node(tree-\/>arvore,value,estrutura);}
+\DoxyCodeLine{55     \textcolor{keywordflow}{return} tree;}
+\DoxyCodeLine{56 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{avl_8c_af1c5b01501962cc16f68e5ff9458b5d6}\label{avl_8c_af1c5b01501962cc16f68e5ff9458b5d6}} 
+\index{avl.c@{avl.c}!avl\_clone@{avl\_clone}}
+\index{avl\_clone@{avl\_clone}!avl.c@{avl.c}}
+\doxysubsubsection{\texorpdfstring{avl\_clone()}{avl\_clone()}}
+{\footnotesize\ttfamily A\+VL avl\+\_\+clone (\begin{DoxyParamCaption}\item[{A\+VL}]{node,  }\item[{A\+VL}]{novo }\end{DoxyParamCaption})}
+
+
+
+Função que executa um clone de uma dada A\+VL. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em node} & A\+VL a clonar. \\
+\hline
+{\em novo} & A\+VL onde colocar o clone. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+A\+VL nova, clonada da anterior. 
+\end{DoxyReturn}
+
+
+Definido na linha 97 do ficheiro avl.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{97                                   \{}
+\DoxyCodeLine{98     novo = (AVL) malloc(\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} \mbox{\hyperlink{structavl}{avl}}));}
+\DoxyCodeLine{99     novo-\/>arvore = tree\_clone(node-\/>arvore,novo-\/>arvore);}
+\DoxyCodeLine{100     novo-\/>avl\_tamanho = node-\/>avl\_tamanho;}
+\DoxyCodeLine{101     \textcolor{keywordflow}{return} novo;}
+\DoxyCodeLine{102 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{avl_8c_a874b3d9374eb0bf5fc57cd3cf57c9704}\label{avl_8c_a874b3d9374eb0bf5fc57cd3cf57c9704}} 
+\index{avl.c@{avl.c}!avl\_count@{avl\_count}}
+\index{avl\_count@{avl\_count}!avl.c@{avl.c}}
+\doxysubsubsection{\texorpdfstring{avl\_count()}{avl\_count()}}
+{\footnotesize\ttfamily int avl\+\_\+count (\begin{DoxyParamCaption}\item[{A\+VL}]{tree }\end{DoxyParamCaption})}
+
+
+
+Função que devolve o tamanho (quantidade de nodos) de uma A\+VL passada como argumento. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em tree} & A\+VL da qual se pretende o tamanho. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Int com tamanho da A\+VL. 
+\end{DoxyReturn}
+
+
+Definido na linha 87 do ficheiro avl.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{87                         \{}
+\DoxyCodeLine{88     \textcolor{keywordflow}{return} tree-\/>avl\_tamanho;}
+\DoxyCodeLine{89 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{avl_8c_a79d17c2e6df846c93b8a5743cd025735}\label{avl_8c_a79d17c2e6df846c93b8a5743cd025735}} 
+\index{avl.c@{avl.c}!avl\_free@{avl\_free}}
+\index{avl\_free@{avl\_free}!avl.c@{avl.c}}
+\doxysubsubsection{\texorpdfstring{avl\_free()}{avl\_free()}}
+{\footnotesize\ttfamily void avl\+\_\+free (\begin{DoxyParamCaption}\item[{A\+VL}]{nodo,  }\item[{Funcao}]{f }\end{DoxyParamCaption})}
+
+
+
+Função com o objetivo de limpar da memória uma dada A\+VL. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em nodo} & A\+VL a limpar da memória. \\
+\hline
+{\em f} & Funcao que liberta a memória da estrutura associada. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 210 do ficheiro avl.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{210                                   \{}
+\DoxyCodeLine{211     tree\_free(nodo-\/>arvore,f);}
+\DoxyCodeLine{212     free(nodo);}
+\DoxyCodeLine{213 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{avl_8c_a9c63fca5348576aa37364760756f565e}\label{avl_8c_a9c63fca5348576aa37364760756f565e}} 
+\index{avl.c@{avl.c}!avl\_getEstrutura@{avl\_getEstrutura}}
+\index{avl\_getEstrutura@{avl\_getEstrutura}!avl.c@{avl.c}}
+\doxysubsubsection{\texorpdfstring{avl\_getEstrutura()}{avl\_getEstrutura()}}
+{\footnotesize\ttfamily Estrutura avl\+\_\+get\+Estrutura (\begin{DoxyParamCaption}\item[{A\+VL}]{node,  }\item[{Valor}]{value }\end{DoxyParamCaption})}
+
+
+
+Função que devolve a estrutura associada a um nodo de uma A\+VL passada como argumento. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em node} & A\+VL de onde será devolvida a estrutura. \\
+\hline
+{\em value} & char$\ast$ indicando o nodo a procurar onde estará a estrutura associada. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void$\ast$ com apontador para a estrutura ou N\+U\+LL caso a mesma nao se encontre lá. 
+\end{DoxyReturn}
+
+
+Definido na linha 110 do ficheiro avl.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{110                                                   \{}
+\DoxyCodeLine{111     \textcolor{keywordflow}{return} node\_getEstrutura(node-\/>arvore,value);}
+\DoxyCodeLine{112 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{avl_8c_a785a0f5acefc1cd1085f1eb65fff5c43}\label{avl_8c_a785a0f5acefc1cd1085f1eb65fff5c43}} 
+\index{avl.c@{avl.c}!avl\_getTamanho@{avl\_getTamanho}}
+\index{avl\_getTamanho@{avl\_getTamanho}!avl.c@{avl.c}}
+\doxysubsubsection{\texorpdfstring{avl\_getTamanho()}{avl\_getTamanho()}}
+{\footnotesize\ttfamily int avl\+\_\+get\+Tamanho (\begin{DoxyParamCaption}\item[{A\+VL}]{tree }\end{DoxyParamCaption})}
+
+
+
+Função que devolve o tamanho de uma A\+VL. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em tree} & A\+VL da qual se calcula o tamanho. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+int com o tamanho da A\+VL. 
+\end{DoxyReturn}
+
+
+Definido na linha 119 do ficheiro avl.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{119                             \{}
+\DoxyCodeLine{120   \textcolor{keywordflow}{return} tree-\/>avl\_tamanho;}
+\DoxyCodeLine{121 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{avl_8c_a1dec82bcbce333d16733ecf7344d378b}\label{avl_8c_a1dec82bcbce333d16733ecf7344d378b}} 
+\index{avl.c@{avl.c}!avl\_insert@{avl\_insert}}
+\index{avl\_insert@{avl\_insert}!avl.c@{avl.c}}
+\doxysubsubsection{\texorpdfstring{avl\_insert()}{avl\_insert()}}
+{\footnotesize\ttfamily A\+VL avl\+\_\+insert (\begin{DoxyParamCaption}\item[{A\+VL}]{tree,  }\item[{Valor}]{key,  }\item[{Estrutura}]{estrutura }\end{DoxyParamCaption})}
+
+
+
+Função que insere na arvore tree tendo como referência de posicionamento um char$\ast$. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em tree} & A\+VL onde insere. \\
+\hline
+{\em key} & char$\ast$ a inserir. \\
+\hline
+{\em estrutura} & Conteúdo/\+Estrutura a inserir. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+A\+VL com o novo nodo adicionado. 
+\end{DoxyReturn}
+
+
+Definido na linha 65 do ficheiro avl.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{65                                                          \{}
+\DoxyCodeLine{66     tree-\/>arvore = node\_insert(tree-\/>arvore,key,estrutura);}
+\DoxyCodeLine{67     tree-\/>avl\_tamanho ++;}
+\DoxyCodeLine{68     \textcolor{keywordflow}{return} tree;}
+\DoxyCodeLine{69 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{avl_8c_a8fddc39a0bdd4496fe33e6b48a167c95}\label{avl_8c_a8fddc39a0bdd4496fe33e6b48a167c95}} 
+\index{avl.c@{avl.c}!avl\_lookUp@{avl\_lookUp}}
+\index{avl\_lookUp@{avl\_lookUp}!avl.c@{avl.c}}
+\doxysubsubsection{\texorpdfstring{avl\_lookUp()}{avl\_lookUp()}}
+{\footnotesize\ttfamily Boolean avl\+\_\+look\+Up (\begin{DoxyParamCaption}\item[{A\+VL}]{tree,  }\item[{Valor}]{value }\end{DoxyParamCaption})}
+
+
+
+Função que devolve um Boolean referente a ter encontrado ou não na A\+VL o Valor value. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em tree} & A\+VL onde é efectuada a procura. \\
+\hline
+{\em value} & valor a procurar na A\+VL. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Boolean com o resultado. 
+\end{DoxyReturn}
+
+
+Definido na linha 77 do ficheiro avl.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{77                                           \{}
+\DoxyCodeLine{78     \textcolor{keywordflow}{if}(tree==NULL) \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{79     \textcolor{keywordflow}{return} node\_lookUp(tree-\/>arvore,value);}
+\DoxyCodeLine{80 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{avl_8c_ab7e925aeda628a2fb80ed170c192c3c4}\label{avl_8c_ab7e925aeda628a2fb80ed170c192c3c4}} 
+\index{avl.c@{avl.c}!free\_Nodo@{free\_Nodo}}
+\index{free\_Nodo@{free\_Nodo}!avl.c@{avl.c}}
+\doxysubsubsection{\texorpdfstring{free\_Nodo()}{free\_Nodo()}}
+{\footnotesize\ttfamily void free\+\_\+\+Nodo (\begin{DoxyParamCaption}\item[{N\+O\+DO}]{node }\end{DoxyParamCaption})}
+
+
+
+Função que limpa da memória um dado N\+O\+DO. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em node} & N\+O\+DO a remover. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 446 do ficheiro avl.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{446                           \{}
+\DoxyCodeLine{447     \textcolor{keywordflow}{if}(node != NULL) \{}
+\DoxyCodeLine{448         free(node-\/>string);}
+\DoxyCodeLine{449         free(node);}
+\DoxyCodeLine{450     \}}
+\DoxyCodeLine{451 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{avl_8c_a948222e5aea0bc2696faf0a9ed64afe7}\label{avl_8c_a948222e5aea0bc2696faf0a9ed64afe7}} 
+\index{avl.c@{avl.c}!getCont@{getCont}}
+\index{getCont@{getCont}!avl.c@{avl.c}}
+\doxysubsubsection{\texorpdfstring{getCont()}{getCont()}}
+{\footnotesize\ttfamily void$\ast$ get\+Cont (\begin{DoxyParamCaption}\item[{N\+O\+DO}]{n }\end{DoxyParamCaption})}
+
+
+
+Função que dado um N\+O\+DO retorna o seu contéudo. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em n} & N\+O\+DO. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void$\ast$. 
+\end{DoxyReturn}
+
+
+Definido na linha 201 do ficheiro avl.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{201                       \{}
+\DoxyCodeLine{202     \textcolor{keywordflow}{return} n-\/>cont;}
+\DoxyCodeLine{203 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{avl_8c_af568e679a8db439de3758447f23b86e2}\label{avl_8c_af568e679a8db439de3758447f23b86e2}} 
+\index{avl.c@{avl.c}!getNodo@{getNodo}}
+\index{getNodo@{getNodo}!avl.c@{avl.c}}
+\doxysubsubsection{\texorpdfstring{getNodo()}{getNodo()}}
+{\footnotesize\ttfamily N\+O\+DO get\+Nodo (\begin{DoxyParamCaption}\item[{A\+VL}]{a }\end{DoxyParamCaption})}
+
+
+
+Função que dada uma A\+VL retorna o nodo da sua raiz. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em a} & A\+VL de onde se pretende o nodo. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+N\+O\+DO. 
+\end{DoxyReturn}
+
+
+Definido na linha 128 do ficheiro avl.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{128                     \{}
+\DoxyCodeLine{129     NODO novo;}
+\DoxyCodeLine{130     \textcolor{keywordflow}{if}(a-\/>arvore) \{}
+\DoxyCodeLine{131         novo = (NODO) malloc(\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} \mbox{\hyperlink{structnode_a_v_l}{nodeAVL}}));}
+\DoxyCodeLine{132         novo-\/>string = malloc((strlen(a-\/>arvore-\/>string)+1)*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));}
+\DoxyCodeLine{133         strcpy(novo-\/>string,a-\/>arvore-\/>string);}
+\DoxyCodeLine{134         novo-\/>cont = a-\/>arvore-\/>cont;}
+\DoxyCodeLine{135         novo-\/>left = a-\/>arvore-\/>left;}
+\DoxyCodeLine{136         novo-\/>right = a-\/>arvore-\/>right;}
+\DoxyCodeLine{137     \}\textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{138         novo = NULL;}
+\DoxyCodeLine{139     \}}
+\DoxyCodeLine{140 }
+\DoxyCodeLine{141     \textcolor{keywordflow}{return} novo;}
+\DoxyCodeLine{142 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{avl_8c_a5c9e707dfc9a11ffe65746c91b5111ba}\label{avl_8c_a5c9e707dfc9a11ffe65746c91b5111ba}} 
+\index{avl.c@{avl.c}!getNodoDir@{getNodoDir}}
+\index{getNodoDir@{getNodoDir}!avl.c@{avl.c}}
+\doxysubsubsection{\texorpdfstring{getNodoDir()}{getNodoDir()}}
+{\footnotesize\ttfamily N\+O\+DO get\+Nodo\+Dir (\begin{DoxyParamCaption}\item[{N\+O\+DO}]{n }\end{DoxyParamCaption})}
+
+
+
+Função que dado um N\+O\+DO retorna o nodo á sua direita. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em n} & N\+O\+DO. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+N\+O\+DO à direita. 
+\end{DoxyReturn}
+
+
+Definido na linha 169 do ficheiro avl.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{169                         \{}
+\DoxyCodeLine{170     NODO novo;}
+\DoxyCodeLine{171     \textcolor{keywordflow}{if}(n-\/>right) \{}
+\DoxyCodeLine{172         novo = (NODO) malloc(\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} \mbox{\hyperlink{structnode_a_v_l}{nodeAVL}}));}
+\DoxyCodeLine{173         novo-\/>string = malloc((strlen(n-\/>right-\/>string)+1)*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));}
+\DoxyCodeLine{174         strcpy(novo-\/>string,n-\/>right-\/>string);}
+\DoxyCodeLine{175         novo-\/>cont = n-\/>right-\/>cont;}
+\DoxyCodeLine{176         novo-\/>left = n-\/>right-\/>left;}
+\DoxyCodeLine{177         novo-\/>right = n-\/>right-\/>right;}
+\DoxyCodeLine{178     \}\textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{179         novo = NULL;}
+\DoxyCodeLine{180     \}}
+\DoxyCodeLine{181     \textcolor{keywordflow}{return} novo;}
+\DoxyCodeLine{182 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{avl_8c_aac6e354b6a9d07b76313a36c510c9f10}\label{avl_8c_aac6e354b6a9d07b76313a36c510c9f10}} 
+\index{avl.c@{avl.c}!getNodoEsq@{getNodoEsq}}
+\index{getNodoEsq@{getNodoEsq}!avl.c@{avl.c}}
+\doxysubsubsection{\texorpdfstring{getNodoEsq()}{getNodoEsq()}}
+{\footnotesize\ttfamily N\+O\+DO get\+Nodo\+Esq (\begin{DoxyParamCaption}\item[{N\+O\+DO}]{n }\end{DoxyParamCaption})}
+
+
+
+Função que dado um N\+O\+DO retorna o nodo á sua esquerda. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em n} & N\+O\+DO. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+N\+O\+DO à esquerda. 
+\end{DoxyReturn}
+
+
+Definido na linha 149 do ficheiro avl.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{149                         \{}
+\DoxyCodeLine{150     NODO novo;}
+\DoxyCodeLine{151     \textcolor{keywordflow}{if}(n-\/>left) \{}
+\DoxyCodeLine{152         novo = (NODO) malloc(\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} \mbox{\hyperlink{structnode_a_v_l}{nodeAVL}}));}
+\DoxyCodeLine{153         novo-\/>string = malloc((strlen(n-\/>left-\/>string)+1)*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));}
+\DoxyCodeLine{154         strcpy(novo-\/>string,n-\/>left-\/>string);}
+\DoxyCodeLine{155         novo-\/>cont = n-\/>left-\/>cont;}
+\DoxyCodeLine{156         novo-\/>left = n-\/>left-\/>left;}
+\DoxyCodeLine{157         novo-\/>right = n-\/>left-\/>right;}
+\DoxyCodeLine{158     \}\textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{159         novo = NULL;}
+\DoxyCodeLine{160     \}}
+\DoxyCodeLine{161     \textcolor{keywordflow}{return} novo;}
+\DoxyCodeLine{162 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{avl_8c_a5804b8d40ea06fecc2ecd97415a6c18c}\label{avl_8c_a5804b8d40ea06fecc2ecd97415a6c18c}} 
+\index{avl.c@{avl.c}!getString@{getString}}
+\index{getString@{getString}!avl.c@{avl.c}}
+\doxysubsubsection{\texorpdfstring{getString()}{getString()}}
+{\footnotesize\ttfamily char$\ast$ get\+String (\begin{DoxyParamCaption}\item[{N\+O\+DO}]{n }\end{DoxyParamCaption})}
+
+
+
+Função que dado um N\+O\+DO retorna uma copia da sua string. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em n} & N\+O\+DO. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+char$\ast$ com a cópia. 
+\end{DoxyReturn}
+
+
+Definido na linha 189 do ficheiro avl.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{189                         \{}
+\DoxyCodeLine{190     \textcolor{keywordtype}{char}* novo;}
+\DoxyCodeLine{191     novo = malloc((strlen(n-\/>string)+1)*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));}
+\DoxyCodeLine{192     strcpy(novo,n-\/>string);}
+\DoxyCodeLine{193     \textcolor{keywordflow}{return} novo;}
+\DoxyCodeLine{194 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{avl_8c_a6bf7ed43f3cf1c72b56ec0e18fcda525}\label{avl_8c_a6bf7ed43f3cf1c72b56ec0e18fcda525}} 
+\index{avl.c@{avl.c}!imprime\_AVL\_String@{imprime\_AVL\_String}}
+\index{imprime\_AVL\_String@{imprime\_AVL\_String}!avl.c@{avl.c}}
+\doxysubsubsection{\texorpdfstring{imprime\_AVL\_String()}{imprime\_AVL\_String()}}
+{\footnotesize\ttfamily void imprime\+\_\+\+A\+V\+L\+\_\+\+String (\begin{DoxyParamCaption}\item[{A\+VL}]{tree }\end{DoxyParamCaption})}
+
+
+
+Função que imprime todas as Strings da A\+VL. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em tree} & A\+VL a imprimir \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 468 do ficheiro avl.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{468                                  \{}
+\DoxyCodeLine{469     \mbox{\hyperlink{avl_8c_ac9fb4d6bce6ae1d02ce0e82b10b59945}{imprime\_Conteudo\_AVL}}(tree-\/>arvore);}
+\DoxyCodeLine{470 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{avl_8c_ac9fb4d6bce6ae1d02ce0e82b10b59945}\label{avl_8c_ac9fb4d6bce6ae1d02ce0e82b10b59945}} 
+\index{avl.c@{avl.c}!imprime\_Conteudo\_AVL@{imprime\_Conteudo\_AVL}}
+\index{imprime\_Conteudo\_AVL@{imprime\_Conteudo\_AVL}!avl.c@{avl.c}}
+\doxysubsubsection{\texorpdfstring{imprime\_Conteudo\_AVL()}{imprime\_Conteudo\_AVL()}}
+{\footnotesize\ttfamily void imprime\+\_\+\+Conteudo\+\_\+\+A\+VL (\begin{DoxyParamCaption}\item[{N\+O\+DO}]{tree }\end{DoxyParamCaption})}
+
+
+
+Função que imprime os nodos da A\+VL. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em tree} & N\+O\+DO a imprimir. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 457 do ficheiro avl.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{457                                     \{}
+\DoxyCodeLine{458     \textcolor{keywordflow}{if} (tree == NULL) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{459     \mbox{\hyperlink{avl_8c_ac9fb4d6bce6ae1d02ce0e82b10b59945}{imprime\_Conteudo\_AVL}}(tree-\/>left);}
+\DoxyCodeLine{460     printf(\textcolor{stringliteral}{"\%s\(\backslash\)n"},tree-\/>string);}
+\DoxyCodeLine{461     \mbox{\hyperlink{avl_8c_ac9fb4d6bce6ae1d02ce0e82b10b59945}{imprime\_Conteudo\_AVL}}(tree-\/>right);}
+\DoxyCodeLine{462 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{avl_8c_a12edfb9dbe827acf6f4eadc70cf84c44}\label{avl_8c_a12edfb9dbe827acf6f4eadc70cf84c44}} 
+\index{avl.c@{avl.c}!initAVL@{initAVL}}
+\index{initAVL@{initAVL}!avl.c@{avl.c}}
+\doxysubsubsection{\texorpdfstring{initAVL()}{initAVL()}}
+{\footnotesize\ttfamily A\+VL init\+A\+VL (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função que inicializa uma nova A\+VL. 
+
+\begin{DoxyReturn}{Retorna}
+Nova A\+VL nula 
+\end{DoxyReturn}
+
+
+Definido na linha 39 do ficheiro avl.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{39               \{}
+\DoxyCodeLine{40     AVL tree = malloc(\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} \mbox{\hyperlink{structavl}{avl}}));}
+\DoxyCodeLine{41     tree-\/>arvore = NULL;}
+\DoxyCodeLine{42     tree-\/>avl\_tamanho = 0;}
+\DoxyCodeLine{43     \textcolor{keywordflow}{return} tree;}
+\DoxyCodeLine{44 \}}
+
+\end{DoxyCode}

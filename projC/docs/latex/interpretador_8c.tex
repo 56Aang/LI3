@@ -1,0 +1,766 @@
+\hypertarget{interpretador_8c}{}\doxysection{Referência ao ficheiro src/interpretador.c}
+\label{interpretador_8c}\index{src/interpretador.c@{src/interpretador.c}}
+
+
+Ficheiro que contém a A\+PI relativa à implementação do interpretador.  
+
+
+{\ttfamily \#include \char`\"{}../include/interpretador.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}time.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{interpretador_8c_a12ea0d85f0b044ed349fd9f668cd0a99}\label{interpretador_8c_a12ea0d85f0b044ed349fd9f668cd0a99}} 
+\#define {\bfseries clients\+\_\+path\+\_\+default}~\char`\"{}dados/Clientes.\+txt\char`\"{}
+\item 
+\mbox{\Hypertarget{interpretador_8c_af0f10ed72c4fc05476cb2162a4f1bbaa}\label{interpretador_8c_af0f10ed72c4fc05476cb2162a4f1bbaa}} 
+\#define {\bfseries products\+\_\+path\+\_\+default}~\char`\"{}dados/Produtos.\+txt\char`\"{}
+\item 
+\mbox{\Hypertarget{interpretador_8c_a7e1c2008fa29b4397813402e316ae243}\label{interpretador_8c_a7e1c2008fa29b4397813402e316ae243}} 
+\#define {\bfseries sales\+\_\+path\+\_\+default}~\char`\"{}dados/Vendas\+\_\+1\+M.\+txt\char`\"{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{interpretador_8c_a867f1d0c104d26a4199182f5c69db95b}{interpreter}} (S\+GV \mbox{\hyperlink{structsgv}{sgv}})
+\begin{DoxyCompactList}\small\item\em Função que vai recebendo os inputs do utilizador, passa-\/os às funções respetivas e retorna o output. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variáveis}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{interpretador_8c_a214bd1a0500f5739ce581a8bcffb518a}\label{interpretador_8c_a214bd1a0500f5739ce581a8bcffb518a}} 
+clock\+\_\+t {\bfseries t1}
+\item 
+\mbox{\Hypertarget{interpretador_8c_ad8b0954c7125fe1ac2d2e5d95a1c3009}\label{interpretador_8c_ad8b0954c7125fe1ac2d2e5d95a1c3009}} 
+clock\+\_\+t {\bfseries t6}
+\item 
+\mbox{\Hypertarget{interpretador_8c_a9dc0deed7315fea2d3d1e590911bd7d2}\label{interpretador_8c_a9dc0deed7315fea2d3d1e590911bd7d2}} 
+clock\+\_\+t {\bfseries t7}
+\item 
+\mbox{\Hypertarget{interpretador_8c_ac021ff0a0b39627e5116fe3371c3fbb5}\label{interpretador_8c_ac021ff0a0b39627e5116fe3371c3fbb5}} 
+clock\+\_\+t {\bfseries t8}
+\item 
+\mbox{\Hypertarget{interpretador_8c_a7899ef09cf34917794840cc3efa22fcc}\label{interpretador_8c_a7899ef09cf34917794840cc3efa22fcc}} 
+clock\+\_\+t {\bfseries t9}
+\item 
+\mbox{\Hypertarget{interpretador_8c_a64b8ac2c59692c414538ffbfad373f77}\label{interpretador_8c_a64b8ac2c59692c414538ffbfad373f77}} 
+clock\+\_\+t {\bfseries t10}
+\item 
+\mbox{\Hypertarget{interpretador_8c_a1df1761b5fe2a32a8f93e0a3bf2cb57b}\label{interpretador_8c_a1df1761b5fe2a32a8f93e0a3bf2cb57b}} 
+clock\+\_\+t {\bfseries t11}
+\item 
+\mbox{\Hypertarget{interpretador_8c_a51075118bc76c939fc38f4de83d8d3b9}\label{interpretador_8c_a51075118bc76c939fc38f4de83d8d3b9}} 
+clock\+\_\+t {\bfseries t12}
+\item 
+\mbox{\Hypertarget{interpretador_8c_a0f285fce5631fbc59e2f6dab5d14632c}\label{interpretador_8c_a0f285fce5631fbc59e2f6dab5d14632c}} 
+double {\bfseries time\+\_\+taken}
+\item 
+\mbox{\Hypertarget{interpretador_8c_a5dc203c224c4a493d0d9baf6c1923b47}\label{interpretador_8c_a5dc203c224c4a493d0d9baf6c1923b47}} 
+char {\bfseries choice} = \textquotesingle{}l\textquotesingle{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Ficheiro que contém a A\+PI relativa à implementação do interpretador. 
+
+
+
+\doxysubsection{Documentação das funções}
+\mbox{\Hypertarget{interpretador_8c_a867f1d0c104d26a4199182f5c69db95b}\label{interpretador_8c_a867f1d0c104d26a4199182f5c69db95b}} 
+\index{interpretador.c@{interpretador.c}!interpreter@{interpreter}}
+\index{interpreter@{interpreter}!interpretador.c@{interpretador.c}}
+\doxysubsubsection{\texorpdfstring{interpreter()}{interpreter()}}
+{\footnotesize\ttfamily int interpreter (\begin{DoxyParamCaption}\item[{S\+GV}]{sgv }\end{DoxyParamCaption})}
+
+
+
+Função que vai recebendo os inputs do utilizador, passa-\/os às funções respetivas e retorna o output. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em sgv} & S\+GV que contém a informação dos módulos. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+int com o output. 
+\end{DoxyReturn}
+
+
+Definido na linha 33 do ficheiro interpretador.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{33                         \{}
+\DoxyCodeLine{34     Q2 q2;}
+\DoxyCodeLine{35     Q3 q3;}
+\DoxyCodeLine{36     Q5 q5;}
+\DoxyCodeLine{37     Q6 q6;}
+\DoxyCodeLine{38     Q7 q7;}
+\DoxyCodeLine{39     Q8 q8;}
+\DoxyCodeLine{40     Q9 q9;}
+\DoxyCodeLine{41     Q10 q10;}
+\DoxyCodeLine{42     Q11 q11;}
+\DoxyCodeLine{43     Q12 q12;}
+\DoxyCodeLine{44     Q13 q13;}
+\DoxyCodeLine{45     \textcolor{keywordtype}{int} num\_auxiliar\_1;}
+\DoxyCodeLine{46     \textcolor{keywordtype}{int} num\_auxiliar\_2;}
+\DoxyCodeLine{47     \textcolor{keywordtype}{int} num\_auxiliar\_3;}
+\DoxyCodeLine{48     \textcolor{keywordtype}{int} filial;}
+\DoxyCodeLine{49     \textcolor{keywordtype}{int} pag;}
+\DoxyCodeLine{50     \textcolor{keywordtype}{int} pagAtual;}
+\DoxyCodeLine{51     \textcolor{keywordtype}{int} total;}
+\DoxyCodeLine{52     \textcolor{keywordtype}{char} char\_aux;}
+\DoxyCodeLine{53     \textcolor{keywordtype}{char} letter;}
+\DoxyCodeLine{54     \textcolor{keywordtype}{char} input[BUFFER];}
+\DoxyCodeLine{55     \textcolor{keywordtype}{char} input2[BUFFER];}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58     Boolean validado;}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60     \textcolor{keywordflow}{while}(1)\{}
+\DoxyCodeLine{61         validado = \mbox{\hyperlink{interface_8c_ac1183805d0deb0ce6f6b7bc89e9f7733}{isSGVvalid}}(\mbox{\hyperlink{structsgv}{sgv}});}
+\DoxyCodeLine{62         \mbox{\hyperlink{vista_8c_aee710994b7db9b0da56cb3aee54a638c}{imprime\_menu}}(choice,validado);}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64         printf(\textcolor{stringliteral}{"> "});}
+\DoxyCodeLine{65         \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"stty raw"}));}
+\DoxyCodeLine{66         \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"stty -\/echo"}));}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68         \textcolor{keywordflow}{while} ((char\_aux = getchar()) != 13) \textcolor{comment}{/* 13 -\/> ENTER */}}
+\DoxyCodeLine{69         \{}
+\DoxyCodeLine{70             \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"stty cooked"}));}
+\DoxyCodeLine{71             \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"stty echo"}));}
+\DoxyCodeLine{72             \textcolor{keywordflow}{if}(\mbox{\hyperlink{interface_8c_ac1183805d0deb0ce6f6b7bc89e9f7733}{isSGVvalid}}(\mbox{\hyperlink{structsgv}{sgv}}));}
+\DoxyCodeLine{73             \mbox{\hyperlink{vista_8c_aee710994b7db9b0da56cb3aee54a638c}{imprime\_menu}}((choice = toupper(char\_aux)),validado);}
+\DoxyCodeLine{74             \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"stty raw"}));}
+\DoxyCodeLine{75             \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"stty -\/echo"}));}
+\DoxyCodeLine{76         \}}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78         \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"stty cooked"}));}
+\DoxyCodeLine{79         \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"stty echo"}));}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82         \textcolor{keywordflow}{if}(choice == \textcolor{charliteral}{'0'})\{}
+\DoxyCodeLine{83             \textcolor{comment}{/*if(system("clear"));*/}}
+\DoxyCodeLine{84             \textcolor{keywordflow}{return} END;}
+\DoxyCodeLine{85         \}}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{87         \textcolor{keywordflow}{if}(choice == \textcolor{charliteral}{'1'} || \mbox{\hyperlink{interface_8c_ac1183805d0deb0ce6f6b7bc89e9f7733}{isSGVvalid}}(\mbox{\hyperlink{structsgv}{sgv}}))\{}
+\DoxyCodeLine{88         \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"clear"}));}
+\DoxyCodeLine{89         \mbox{\hyperlink{vista_8c_a002d8e2f49bca0a5a85cabefc239e0ba}{printchoice}}(choice);}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{91 }
+\DoxyCodeLine{92         \textcolor{keywordflow}{switch} (choice)}
+\DoxyCodeLine{93         \{}
+\DoxyCodeLine{94         \textcolor{keywordflow}{case} \textcolor{charliteral}{'1'}:}
+\DoxyCodeLine{95             loadFromFiles(\mbox{\hyperlink{structsgv}{sgv}});}
+\DoxyCodeLine{96             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{97         \textcolor{keywordflow}{case} \textcolor{charliteral}{'2'}:}
+\DoxyCodeLine{98             printf(\textcolor{stringliteral}{"Letra: "});}
+\DoxyCodeLine{99             \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"stty raw"}));}
+\DoxyCodeLine{100             \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"stty -\/echo"}));}
+\DoxyCodeLine{101             \textcolor{keywordflow}{while}((letter = toupper(getchar())) != 13 \&\& !isalpha(letter))\{}
+\DoxyCodeLine{102                 \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"stty cooked"}));}
+\DoxyCodeLine{103                 \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"clear"}));}
+\DoxyCodeLine{104                 \mbox{\hyperlink{vista_8c_a002d8e2f49bca0a5a85cabefc239e0ba}{printchoice}}(choice);}
+\DoxyCodeLine{105                 LOG\_RED(\textcolor{stringliteral}{"Letra invállida\(\backslash\)n"});}
+\DoxyCodeLine{106                 printf(\textcolor{stringliteral}{"Letra: "});}
+\DoxyCodeLine{107                 \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"stty raw"}));}
+\DoxyCodeLine{108             \}}
+\DoxyCodeLine{109             \textcolor{keywordflow}{if}(letter == 13) \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{110 }
+\DoxyCodeLine{111             q2 = \mbox{\hyperlink{interface_8c_a9317d497e1604b68baabc8442c026de6}{getProductsStartedByLetter}}(\mbox{\hyperlink{structsgv}{sgv}},letter);}
+\DoxyCodeLine{112             num\_auxiliar\_1 = 0;}
+\DoxyCodeLine{113             num\_auxiliar\_2 = NR\_PAG;}
+\DoxyCodeLine{114             num\_auxiliar\_3 = \mbox{\hyperlink{estruturas_8c_a9e0e8c25250d5db37d4ebc1fc743798b}{getNum\_TotalQ2}}(q2);}
+\DoxyCodeLine{115             \textcolor{keywordtype}{char} **d = \mbox{\hyperlink{estruturas_8c_ab259a8bdc7ff97956f3e4d090c75978e}{getLista\_ProdsQ2}}(q2);}
+\DoxyCodeLine{116             \textcolor{keywordflow}{if}(num\_auxiliar\_3\%num\_auxiliar\_2 == 0) pag = num\_auxiliar\_3/num\_auxiliar\_2;}
+\DoxyCodeLine{117             \textcolor{keywordflow}{else} pag = num\_auxiliar\_3/num\_auxiliar\_2 + 1;}
+\DoxyCodeLine{118 }
+\DoxyCodeLine{119             \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"stty cooked"}));}
+\DoxyCodeLine{120             \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"clear"}));}
+\DoxyCodeLine{121             \mbox{\hyperlink{vista_8c_a002d8e2f49bca0a5a85cabefc239e0ba}{printchoice}}(choice);}
+\DoxyCodeLine{122             printf(\textcolor{stringliteral}{"Letra: \%s\%c\%s\(\backslash\)n"},GREEN,letter,RESET);}
+\DoxyCodeLine{123             \mbox{\hyperlink{vista_8c_a6ef36eea57ce53b85195dbe38a20cacc}{querie2Print}}(d, letter,num\_auxiliar\_1,num\_auxiliar\_2,num\_auxiliar\_3,pag);}
+\DoxyCodeLine{124             \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"stty raw"}));}
+\DoxyCodeLine{125             \textcolor{keywordflow}{while} ((char\_aux = toupper(getchar())) != 13) \textcolor{comment}{/* 13 -\/> ENTER */}}
+\DoxyCodeLine{126             \{}
+\DoxyCodeLine{127                 \textcolor{keywordflow}{if}(char\_aux == \textcolor{charliteral}{'2'} \&\& num\_auxiliar\_1 < pag-\/1) num\_auxiliar\_1++;}
+\DoxyCodeLine{128                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(char\_aux == \textcolor{charliteral}{'1'} \&\& num\_auxiliar\_1 > 0) num\_auxiliar\_1-\/-\/;}
+\DoxyCodeLine{129                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(char\_aux == \textcolor{charliteral}{'3'} \&\& num\_auxiliar\_2>NR\_PAG) \{}
+\DoxyCodeLine{130                     num\_auxiliar\_2 -\/= NR\_PAG;}
+\DoxyCodeLine{131                     num\_auxiliar\_1 = 0;}
+\DoxyCodeLine{132                     \textcolor{keywordflow}{if}(num\_auxiliar\_3\%num\_auxiliar\_2 == 0) pag = num\_auxiliar\_3/num\_auxiliar\_2;}
+\DoxyCodeLine{133                     \textcolor{keywordflow}{else} pag = num\_auxiliar\_3/num\_auxiliar\_2 + 1;}
+\DoxyCodeLine{134                 \}}
+\DoxyCodeLine{135                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(char\_aux == \textcolor{charliteral}{'4'} \&\& num\_auxiliar\_2<3*NR\_PAG)\{}
+\DoxyCodeLine{136                     num\_auxiliar\_2 += NR\_PAG;}
+\DoxyCodeLine{137                     num\_auxiliar\_1 = 0;}
+\DoxyCodeLine{138                     \textcolor{keywordflow}{if}(num\_auxiliar\_3\%num\_auxiliar\_2 == 0) pag = num\_auxiliar\_3/num\_auxiliar\_2;}
+\DoxyCodeLine{139                     \textcolor{keywordflow}{else} pag = num\_auxiliar\_3/num\_auxiliar\_2 + 1;}
+\DoxyCodeLine{140                 \}}
+\DoxyCodeLine{141                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(isalpha(char\_aux))\{}
+\DoxyCodeLine{142                     num\_auxiliar\_1 = 0;}
+\DoxyCodeLine{143                     letter = char\_aux;}
+\DoxyCodeLine{144                     \mbox{\hyperlink{estruturas_8c_ae93bb7d4dc2c3b1009ab148785546871}{freeQ2}}(q2);}
+\DoxyCodeLine{145                     q2 = \mbox{\hyperlink{interface_8c_a9317d497e1604b68baabc8442c026de6}{getProductsStartedByLetter}}(\mbox{\hyperlink{structsgv}{sgv}},letter);}
+\DoxyCodeLine{146                     d = \mbox{\hyperlink{estruturas_8c_ab259a8bdc7ff97956f3e4d090c75978e}{getLista\_ProdsQ2}}(q2);}
+\DoxyCodeLine{147                     num\_auxiliar\_3 = \mbox{\hyperlink{estruturas_8c_a9e0e8c25250d5db37d4ebc1fc743798b}{getNum\_TotalQ2}}(q2);}
+\DoxyCodeLine{148                     \textcolor{keywordflow}{if}(num\_auxiliar\_3\%num\_auxiliar\_2 == 0) pag = num\_auxiliar\_3/num\_auxiliar\_2;}
+\DoxyCodeLine{149                     \textcolor{keywordflow}{else} pag = num\_auxiliar\_3/num\_auxiliar\_2 + 1;}
+\DoxyCodeLine{150                 \}}
+\DoxyCodeLine{151                 \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"stty cooked"}));}
+\DoxyCodeLine{152                 \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"clear"}));}
+\DoxyCodeLine{153                 \mbox{\hyperlink{vista_8c_a002d8e2f49bca0a5a85cabefc239e0ba}{printchoice}}(choice);}
+\DoxyCodeLine{154                 printf(\textcolor{stringliteral}{"Letra: \%s\%c\%s\(\backslash\)n"},GREEN,letter,RESET);}
+\DoxyCodeLine{155                 \mbox{\hyperlink{vista_8c_a6ef36eea57ce53b85195dbe38a20cacc}{querie2Print}}(d, letter,num\_auxiliar\_1,num\_auxiliar\_2,num\_auxiliar\_3,pag);}
+\DoxyCodeLine{156                 \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"stty raw"}));}
+\DoxyCodeLine{157 }
+\DoxyCodeLine{158             \}}
+\DoxyCodeLine{159             \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"stty cooked"}));}
+\DoxyCodeLine{160             \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"stty echo"}));}
+\DoxyCodeLine{161             \mbox{\hyperlink{estruturas_8c_ae93bb7d4dc2c3b1009ab148785546871}{freeQ2}}(q2);}
+\DoxyCodeLine{162             \textcolor{keywordflow}{return} RUN;}
+\DoxyCodeLine{163             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{164         \textcolor{keywordflow}{case} \textcolor{charliteral}{'3'}:}
+\DoxyCodeLine{165             \textcolor{keywordflow}{while}(1)\{}
+\DoxyCodeLine{166                 printf(\textcolor{stringliteral}{"Número do produto: "});}
+\DoxyCodeLine{167                 \textcolor{keywordflow}{if}(fgets(input,BUFFER,stdin));}
+\DoxyCodeLine{168                 \textcolor{keywordflow}{if}(input[0] == \textcolor{charliteral}{'\(\backslash\)n'}) \textcolor{keywordflow}{return} RUN;}
+\DoxyCodeLine{169                 strtok(input,\textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)r"});}
+\DoxyCodeLine{170                 upper\_string(input);}
+\DoxyCodeLine{171                 \textcolor{keywordflow}{if}(isalpha(input[0]) \&\& isalpha(input[1]) \&\& isdigit(input[2]) \&\& isdigit(input[3]) \&\& isdigit(input[4]) \&\& isdigit(input[5]) \&\& input[6] == \textcolor{charliteral}{'\(\backslash\)0'} \&\& \mbox{\hyperlink{interface_8c_aea5b6fad6b04a78cfb6871b9a8e2f870}{existeSGVProduto}}(\mbox{\hyperlink{structsgv}{sgv}},input))\{}
+\DoxyCodeLine{172                     \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"clear"}));}
+\DoxyCodeLine{173                     \mbox{\hyperlink{vista_8c_a002d8e2f49bca0a5a85cabefc239e0ba}{printchoice}}(choice);}
+\DoxyCodeLine{174                     printf(\textcolor{stringliteral}{"Número do produto: \%s\%s\%s\(\backslash\)n"},GREEN,input,RESET);}
+\DoxyCodeLine{175                     printf(\textcolor{stringliteral}{"Mês: "});}
+\DoxyCodeLine{176 }
+\DoxyCodeLine{177                     \textcolor{keywordflow}{while}(fgets(input2,BUFFER,stdin))\{}
+\DoxyCodeLine{178                         \textcolor{keywordflow}{if}(input2[0] == \textcolor{charliteral}{'\(\backslash\)n'}) \textcolor{keywordflow}{return} RUN;}
+\DoxyCodeLine{179                         num\_auxiliar\_2 = atoi(input2);}
+\DoxyCodeLine{180                         \textcolor{keywordflow}{if}(num\_auxiliar\_2>0 \&\& num\_auxiliar\_2<13)\textcolor{keywordflow}{break};}
+\DoxyCodeLine{181                         \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"clear"}));}
+\DoxyCodeLine{182                         \mbox{\hyperlink{vista_8c_a002d8e2f49bca0a5a85cabefc239e0ba}{printchoice}}(choice);}
+\DoxyCodeLine{183                         printf(\textcolor{stringliteral}{"Número do produto: \%s\%s\%s\(\backslash\)n"},GREEN,input,RESET);}
+\DoxyCodeLine{184                         LOG\_RED(\textcolor{stringliteral}{"Mês inválido\(\backslash\)n"});}
+\DoxyCodeLine{185                         printf(\textcolor{stringliteral}{"Mês: "});}
+\DoxyCodeLine{186                     \}}
+\DoxyCodeLine{187                     \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"clear"}));}
+\DoxyCodeLine{188                     \mbox{\hyperlink{vista_8c_a002d8e2f49bca0a5a85cabefc239e0ba}{printchoice}}(choice);}
+\DoxyCodeLine{189                     printf(\textcolor{stringliteral}{"Número do produto: \%s\%s\%s\(\backslash\)n"},GREEN,input,RESET);}
+\DoxyCodeLine{190                     printf(\textcolor{stringliteral}{"Mês: \%s\%d\%s\(\backslash\)n"},GREEN,num\_auxiliar\_2,RESET);}
+\DoxyCodeLine{191                     q3 = \mbox{\hyperlink{interface_8c_aef1b7d9c3f3fc367be2e17937bcbf4f8}{getProductSalesAndProfit}}(\mbox{\hyperlink{structsgv}{sgv}}, upper\_string(input), num\_auxiliar\_2);}
+\DoxyCodeLine{192                     \textcolor{keywordtype}{int} qt\_nq = \mbox{\hyperlink{estruturas_8c_a091bc27f06eb37f65306a188e24fe712}{getQt\_NQ3}}(q3);}
+\DoxyCodeLine{193                     \textcolor{keywordtype}{float} fat\_nq = \mbox{\hyperlink{estruturas_8c_a75b6e26a697fc6a042b69630cc50dc8f}{getFat\_NQ3}}(q3);}
+\DoxyCodeLine{194                     \textcolor{keywordtype}{int} qt\_pq = \mbox{\hyperlink{estruturas_8c_a86c58f60f5b15e13a6f44bdf1e7e058a}{getQt\_PQ3}}(q3);}
+\DoxyCodeLine{195                     \textcolor{keywordtype}{float} fat\_pq = \mbox{\hyperlink{estruturas_8c_a8d63c3baf11a777aee5af2979038f9be}{getFat\_PQ3}}(q3);}
+\DoxyCodeLine{196                     \mbox{\hyperlink{vista_8c_ad6755af4f022a35e7995c2a155afa32d}{querie3Print}}(qt\_nq,fat\_nq,qt\_pq,fat\_pq,input,num\_auxiliar\_2);}
+\DoxyCodeLine{197                     free(q3);}
+\DoxyCodeLine{198                 \}}
+\DoxyCodeLine{199                 \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{200                     \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"clear"}));}
+\DoxyCodeLine{201                     \mbox{\hyperlink{vista_8c_a002d8e2f49bca0a5a85cabefc239e0ba}{printchoice}}(choice);}
+\DoxyCodeLine{202                     LOG\_RED(\textcolor{stringliteral}{"Número de produto inválido\(\backslash\)n"});}
+\DoxyCodeLine{203                 \}}
+\DoxyCodeLine{204 }
+\DoxyCodeLine{205             \}}
+\DoxyCodeLine{206             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{207         \textcolor{keywordflow}{case} \textcolor{charliteral}{'4'}:}
+\DoxyCodeLine{208             printf(\textcolor{stringliteral}{"Global ( '0' ) ou Filial ( Refira a Filial): "});}
+\DoxyCodeLine{209             \textcolor{keywordflow}{while}(1)\{}
+\DoxyCodeLine{210                 \textcolor{keywordflow}{if}(fgets(input,BUFFER,stdin));}
+\DoxyCodeLine{211                 \textcolor{keywordflow}{if}(input[0] == \textcolor{charliteral}{'\(\backslash\)n'}) \textcolor{keywordflow}{return} RUN;}
+\DoxyCodeLine{212                 \textcolor{keywordflow}{if}(isdigit(input[0]))\{}
+\DoxyCodeLine{213                     filial = atoi(input);}
+\DoxyCodeLine{214                     \textcolor{keywordflow}{if}(filial >= 0 \&\& filial <= FILIAL) \textcolor{keywordflow}{break};}
+\DoxyCodeLine{215                 \}}
+\DoxyCodeLine{216                 \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"clear"}));}
+\DoxyCodeLine{217                 \mbox{\hyperlink{vista_8c_a002d8e2f49bca0a5a85cabefc239e0ba}{printchoice}}(choice);}
+\DoxyCodeLine{218                 LOG\_RED(\textcolor{stringliteral}{"Número inválido; <enter> para sair\(\backslash\)n"});}
+\DoxyCodeLine{219                 printf(\textcolor{stringliteral}{"Global ( '0' ) ou Filial ( Refira a Filial): "});}
+\DoxyCodeLine{220             \}}
+\DoxyCodeLine{221             pagAtual = 0;}
+\DoxyCodeLine{222             num\_auxiliar\_2 = NR\_PAG;}
+\DoxyCodeLine{223             q2 = \mbox{\hyperlink{interface_8c_a4a1d87be5ff63c03ec5dd25fa3262450}{getProductsNeverBought}}(\mbox{\hyperlink{structsgv}{sgv}},filial);}
+\DoxyCodeLine{224             \textcolor{keywordtype}{char} **c = \mbox{\hyperlink{estruturas_8c_ab259a8bdc7ff97956f3e4d090c75978e}{getLista\_ProdsQ2}}(q2);}
+\DoxyCodeLine{225             total = \mbox{\hyperlink{estruturas_8c_a9e0e8c25250d5db37d4ebc1fc743798b}{getNum\_TotalQ2}}(q2);}
+\DoxyCodeLine{226             \textcolor{keywordflow}{if}(total\%num\_auxiliar\_2 == 0) pag = total/num\_auxiliar\_2;}
+\DoxyCodeLine{227             \textcolor{keywordflow}{else} pag = total/num\_auxiliar\_2 + 1;}
+\DoxyCodeLine{228 }
+\DoxyCodeLine{229             \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"clear"}));}
+\DoxyCodeLine{230             \mbox{\hyperlink{vista_8c_a803889df15e4a424dd0870965d3b5360}{querie4Print}}(filial,c,total,pagAtual, num\_auxiliar\_2,pag);}
+\DoxyCodeLine{231             \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"stty raw"}));}
+\DoxyCodeLine{232             \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"stty -\/echo"}));}
+\DoxyCodeLine{233 }
+\DoxyCodeLine{234             \textcolor{keywordflow}{while} ((char\_aux = toupper(getchar())) != 13 \&\& char\_aux != \textcolor{charliteral}{'Q'}) \{\textcolor{comment}{/* 13 -\/> ENTER */}}
+\DoxyCodeLine{235                 \textcolor{keywordflow}{if}(char\_aux == \textcolor{charliteral}{'1'} \&\& pagAtual > 0) pagAtual-\/-\/;}
+\DoxyCodeLine{236                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(char\_aux == \textcolor{charliteral}{'2'} \&\& pagAtual < pag-\/1) pagAtual++;}
+\DoxyCodeLine{237                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(char\_aux == \textcolor{charliteral}{'3'} \&\& num\_auxiliar\_2>NR\_PAG) \{}
+\DoxyCodeLine{238                     num\_auxiliar\_2-\/=NR\_PAG;}
+\DoxyCodeLine{239                     pagAtual = 0;}
+\DoxyCodeLine{240                     \textcolor{keywordflow}{if}(total\%num\_auxiliar\_2 == 0) pag = total/num\_auxiliar\_2;}
+\DoxyCodeLine{241                     \textcolor{keywordflow}{else} pag = total/num\_auxiliar\_2 + 1;}
+\DoxyCodeLine{242                 \}}
+\DoxyCodeLine{243                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(char\_aux == \textcolor{charliteral}{'4'} \&\& num\_auxiliar\_2<3*NR\_PAG) \{}
+\DoxyCodeLine{244                     num\_auxiliar\_2+=NR\_PAG;}
+\DoxyCodeLine{245                     pagAtual = 0;}
+\DoxyCodeLine{246                     \textcolor{keywordflow}{if}(total\%num\_auxiliar\_2 == 0) pag = total/num\_auxiliar\_2;}
+\DoxyCodeLine{247                     \textcolor{keywordflow}{else} pag = total/num\_auxiliar\_2 + 1;}
+\DoxyCodeLine{248                 \}}
+\DoxyCodeLine{249                 \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"stty cooked"}));}
+\DoxyCodeLine{250                 \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"clear"}));}
+\DoxyCodeLine{251 }
+\DoxyCodeLine{252                 \mbox{\hyperlink{vista_8c_a803889df15e4a424dd0870965d3b5360}{querie4Print}}(filial,c,total,pagAtual, num\_auxiliar\_2,pag);}
+\DoxyCodeLine{253                 \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"stty raw"}));}
+\DoxyCodeLine{254             \}}
+\DoxyCodeLine{255             \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"stty cooked"}));}
+\DoxyCodeLine{256             \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"stty echo"}));}
+\DoxyCodeLine{257             \mbox{\hyperlink{estruturas_8c_ae93bb7d4dc2c3b1009ab148785546871}{freeQ2}}(q2);}
+\DoxyCodeLine{258             \textcolor{keywordflow}{if}(char\_aux == \textcolor{charliteral}{'Q'}) \textcolor{keywordflow}{return} RUN;}
+\DoxyCodeLine{259             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{260         \textcolor{keywordflow}{case} \textcolor{charliteral}{'5'}:}
+\DoxyCodeLine{261             \textcolor{comment}{/*querie5();*/}}
+\DoxyCodeLine{262             pagAtual = 0;}
+\DoxyCodeLine{263             num\_auxiliar\_2 = NR\_PAG;}
+\DoxyCodeLine{264             q5 = \mbox{\hyperlink{interface_8c_a12a6163687e4d2d29131a240a9808540}{getClientsOffAllBranches}}(\mbox{\hyperlink{structsgv}{sgv}});}
+\DoxyCodeLine{265             \textcolor{keywordtype}{char} **a = \mbox{\hyperlink{estruturas_8c_abc1fdb5c81669ebbd85128fae87d3b61}{getLista\_ClientesQ5}}(q5);}
+\DoxyCodeLine{266             total = \mbox{\hyperlink{estruturas_8c_a9ae516a9240011b7f6a88bf126504875}{getNum\_TotalQ5}}(q5);}
+\DoxyCodeLine{267             \textcolor{keywordflow}{if}(total\%num\_auxiliar\_2 == 0) pag = total/num\_auxiliar\_2;}
+\DoxyCodeLine{268             \textcolor{keywordflow}{else} pag = total/num\_auxiliar\_2 + 1;}
+\DoxyCodeLine{269 }
+\DoxyCodeLine{270             \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"clear"}));}
+\DoxyCodeLine{271             \mbox{\hyperlink{vista_8c_a002d8e2f49bca0a5a85cabefc239e0ba}{printchoice}}(choice);}
+\DoxyCodeLine{272             \mbox{\hyperlink{vista_8c_ae14724d03166a737f0c67241846a8c4b}{querie5Print}}(a,total,pagAtual,num\_auxiliar\_2,pag);}
+\DoxyCodeLine{273             \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"stty raw"}));}
+\DoxyCodeLine{274             \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"stty -\/echo"}));}
+\DoxyCodeLine{275             \textcolor{keywordflow}{while} ((char\_aux = toupper(getchar())) != 13 \&\& char\_aux != \textcolor{charliteral}{'Q'}) \{\textcolor{comment}{/* 13 -\/> ENTER */}}
+\DoxyCodeLine{276                 \textcolor{keywordflow}{if}(char\_aux == \textcolor{charliteral}{'1'} \&\& pagAtual > 0) pagAtual-\/-\/;}
+\DoxyCodeLine{277                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(char\_aux == \textcolor{charliteral}{'2'} \&\& pagAtual < pag-\/1) pagAtual++;}
+\DoxyCodeLine{278                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(char\_aux == \textcolor{charliteral}{'3'} \&\& num\_auxiliar\_2>NR\_PAG) \{}
+\DoxyCodeLine{279                     num\_auxiliar\_2-\/=NR\_PAG;}
+\DoxyCodeLine{280                     pagAtual = 0;}
+\DoxyCodeLine{281                     \textcolor{keywordflow}{if}(total\%num\_auxiliar\_2 == 0) pag = total/num\_auxiliar\_2;}
+\DoxyCodeLine{282                     \textcolor{keywordflow}{else} pag = total/num\_auxiliar\_2 + 1;}
+\DoxyCodeLine{283                 \}}
+\DoxyCodeLine{284                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(char\_aux == \textcolor{charliteral}{'4'} \&\& num\_auxiliar\_2<3*NR\_PAG) \{}
+\DoxyCodeLine{285                     num\_auxiliar\_2+=NR\_PAG;}
+\DoxyCodeLine{286                     pagAtual = 0;}
+\DoxyCodeLine{287                     \textcolor{keywordflow}{if}(total\%num\_auxiliar\_2 == 0) pag = total/num\_auxiliar\_2;}
+\DoxyCodeLine{288                     \textcolor{keywordflow}{else} pag = total/num\_auxiliar\_2 + 1;}
+\DoxyCodeLine{289                 \}}
+\DoxyCodeLine{290                 \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"stty cooked"}));}
+\DoxyCodeLine{291                 \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"clear"}));}
+\DoxyCodeLine{292                 \mbox{\hyperlink{vista_8c_a002d8e2f49bca0a5a85cabefc239e0ba}{printchoice}}(choice);}
+\DoxyCodeLine{293                 \mbox{\hyperlink{vista_8c_ae14724d03166a737f0c67241846a8c4b}{querie5Print}}(a,total,pagAtual,num\_auxiliar\_2,pag);}
+\DoxyCodeLine{294                 \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"stty raw"}));}
+\DoxyCodeLine{295             \}}
+\DoxyCodeLine{296             \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"stty cooked"}));}
+\DoxyCodeLine{297             \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"stty echo"}));}
+\DoxyCodeLine{298             \mbox{\hyperlink{estruturas_8c_a2657e49721819be2c973324b7f4b1fb6}{freeQ5}}(q5);}
+\DoxyCodeLine{299             \textcolor{keywordflow}{if}(char\_aux == \textcolor{charliteral}{'Q'}) \textcolor{keywordflow}{return} RUN;}
+\DoxyCodeLine{300             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{301         \textcolor{keywordflow}{case} \textcolor{charliteral}{'6'}:}
+\DoxyCodeLine{302             t6 = clock();}
+\DoxyCodeLine{303             q6 = \mbox{\hyperlink{interface_8c_a2a4624f046ebc2609ce4fa1697c832da}{getClientsAndProductsNeverBoughtCount}}(\mbox{\hyperlink{structsgv}{sgv}});}
+\DoxyCodeLine{304             t6 = clock() -\/ t6;}
+\DoxyCodeLine{305             num\_auxiliar\_1 = \mbox{\hyperlink{estruturas_8c_a20dc4a41aafa3eacdf5d260cbfa7b546}{getNumProdsQ6}}(q6);}
+\DoxyCodeLine{306             num\_auxiliar\_2 = \mbox{\hyperlink{estruturas_8c_adfbb57b62820a71863070c7fdacb4071}{getNumClientessQ6}}(q6);}
+\DoxyCodeLine{307             \mbox{\hyperlink{vista_8c_a7aa4f4e77c2d4a5e673ddf2e33519db9}{querie6Print}}(num\_auxiliar\_1,num\_auxiliar\_2);}
+\DoxyCodeLine{308             free(q6);}
+\DoxyCodeLine{309             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{310         \textcolor{keywordflow}{case} \textcolor{charliteral}{'7'}:}
+\DoxyCodeLine{311             \textcolor{keywordflow}{while}(1)\{}
+\DoxyCodeLine{312                 printf(\textcolor{stringliteral}{"Número do cliente: "});}
+\DoxyCodeLine{313                 \textcolor{keywordflow}{if}(fgets(input,BUFFER,stdin));}
+\DoxyCodeLine{314                 \textcolor{keywordflow}{if}(input[0] == \textcolor{charliteral}{'\(\backslash\)n'}) \textcolor{keywordflow}{return} RUN;}
+\DoxyCodeLine{315                 strtok(input,\textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)r"});}
+\DoxyCodeLine{316                 upper\_string(input);}
+\DoxyCodeLine{317 }
+\DoxyCodeLine{318                 \textcolor{keywordflow}{if}(!(isalpha(input[0]) \&\& isdigit(input[1]) \&\& isdigit(input[1]) \&\& isdigit(input[3]) \&\& isdigit(input[4]) \&\& input[5] == \textcolor{charliteral}{'\(\backslash\)0'} \&\& \mbox{\hyperlink{interface_8c_ac110c60d516b3e88b0258b682d595e37}{existeSGVCliente}}(\mbox{\hyperlink{structsgv}{sgv}},input)))\{}
+\DoxyCodeLine{319                     \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"clear"}));}
+\DoxyCodeLine{320                     \mbox{\hyperlink{vista_8c_a002d8e2f49bca0a5a85cabefc239e0ba}{printchoice}}(choice);}
+\DoxyCodeLine{321                     LOG\_RED(\textcolor{stringliteral}{"Número de cliente inválido\(\backslash\)n"});}
+\DoxyCodeLine{322                 \}}
+\DoxyCodeLine{323                 \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{324                     \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"clear"}));}
+\DoxyCodeLine{325                     \mbox{\hyperlink{vista_8c_a002d8e2f49bca0a5a85cabefc239e0ba}{printchoice}}(choice);}
+\DoxyCodeLine{326                     printf(\textcolor{stringliteral}{"Número do cliente: \%s\%s\%s\(\backslash\)n"},GREEN,input,RESET);}
+\DoxyCodeLine{327                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{328                 \}}
+\DoxyCodeLine{329             \}}
+\DoxyCodeLine{330             t7 = clock();}
+\DoxyCodeLine{331             q7 = \mbox{\hyperlink{interface_8c_a44987d4ab3920bd87edcf2b26dacabb4}{getProductsBoughtByClient}}(\mbox{\hyperlink{structsgv}{sgv}},input);}
+\DoxyCodeLine{332             t7 = clock() -\/ t7;}
+\DoxyCodeLine{333             pag = 1;}
+\DoxyCodeLine{334             \mbox{\hyperlink{vista_8c_ae2033f3070439b200da45e117345687b}{querie7Print}}(q7,pag-\/1);}
+\DoxyCodeLine{335             \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"stty raw"}));}
+\DoxyCodeLine{336             \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"stty -\/echo"}));}
+\DoxyCodeLine{337             \textcolor{keywordflow}{while}((char\_aux = toupper(getchar())) != 13 \&\& char\_aux != \textcolor{charliteral}{'Q'})\{}
+\DoxyCodeLine{338                 \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"clear"}));}
+\DoxyCodeLine{339                 \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"stty cooked"}));}
+\DoxyCodeLine{340                 \mbox{\hyperlink{vista_8c_a002d8e2f49bca0a5a85cabefc239e0ba}{printchoice}}(choice);}
+\DoxyCodeLine{341                 printf(\textcolor{stringliteral}{"Número do cliente: \%s\%s\%s\(\backslash\)n"},GREEN,input,RESET);}
+\DoxyCodeLine{342                 \textcolor{keywordflow}{if}(char\_aux == \textcolor{charliteral}{'1'} \&\& pag > 1) pag-\/-\/;}
+\DoxyCodeLine{343                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(char\_aux == \textcolor{charliteral}{'2'} \&\& pag < 3) pag++;}
+\DoxyCodeLine{344 }
+\DoxyCodeLine{345                 \mbox{\hyperlink{vista_8c_ae2033f3070439b200da45e117345687b}{querie7Print}}(q7,pag-\/1);}
+\DoxyCodeLine{346                 \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"stty raw"}));}
+\DoxyCodeLine{347             \}}
+\DoxyCodeLine{348             \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"stty cooked"}));}
+\DoxyCodeLine{349             \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"stty echo"}));}
+\DoxyCodeLine{350             free(q7);}
+\DoxyCodeLine{351             \textcolor{keywordflow}{if}(char\_aux == \textcolor{charliteral}{'Q'}) \textcolor{keywordflow}{return} RUN;}
+\DoxyCodeLine{352             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{353         \textcolor{keywordflow}{case} \textcolor{charliteral}{'8'}:}
+\DoxyCodeLine{354             \textcolor{keywordflow}{while} (1)}
+\DoxyCodeLine{355             \{}
+\DoxyCodeLine{356                 printf(\textcolor{stringliteral}{"Mês 1: "});}
+\DoxyCodeLine{357                 \textcolor{keywordflow}{if}(scanf(\textcolor{stringliteral}{"\%d"},\&num\_auxiliar\_2));}
+\DoxyCodeLine{358                 getchar();}
+\DoxyCodeLine{359                 \textcolor{keywordflow}{if}(num\_auxiliar\_2 < 1 || num\_auxiliar\_2 > 12) \{}
+\DoxyCodeLine{360                     \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"clear"}));}
+\DoxyCodeLine{361                     \mbox{\hyperlink{vista_8c_a002d8e2f49bca0a5a85cabefc239e0ba}{printchoice}}(\textcolor{charliteral}{'8'});}
+\DoxyCodeLine{362                     LOG\_RED(\textcolor{stringliteral}{"mês inválido\(\backslash\)n"});}
+\DoxyCodeLine{363                 \}}
+\DoxyCodeLine{364                 \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{365                     \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"clear"}));}
+\DoxyCodeLine{366                     \mbox{\hyperlink{vista_8c_a002d8e2f49bca0a5a85cabefc239e0ba}{printchoice}}(\textcolor{charliteral}{'8'});}
+\DoxyCodeLine{367                     printf(\textcolor{stringliteral}{"\%sMês 1: \%d\%s\(\backslash\)n"},GREEN,num\_auxiliar\_2,RESET);}
+\DoxyCodeLine{368                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{369                 \}}
+\DoxyCodeLine{370             \}}
+\DoxyCodeLine{371             \textcolor{keywordflow}{while} (1)}
+\DoxyCodeLine{372             \{}
+\DoxyCodeLine{373                 printf(\textcolor{stringliteral}{"Mês 2: "});}
+\DoxyCodeLine{374                 \textcolor{keywordflow}{if}(scanf(\textcolor{stringliteral}{"\%d"},\&num\_auxiliar\_1));}
+\DoxyCodeLine{375                 getchar();}
+\DoxyCodeLine{376                 \textcolor{keywordflow}{if}(num\_auxiliar\_1 < 1 || num\_auxiliar\_1 > 12 || num\_auxiliar\_1<num\_auxiliar\_2) \{}
+\DoxyCodeLine{377                     \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"clear"}));}
+\DoxyCodeLine{378                     \mbox{\hyperlink{vista_8c_a002d8e2f49bca0a5a85cabefc239e0ba}{printchoice}}(\textcolor{charliteral}{'8'});}
+\DoxyCodeLine{379                     LOG\_RED(\textcolor{stringliteral}{"mês inválido\(\backslash\)n"});}
+\DoxyCodeLine{380                     printf(\textcolor{stringliteral}{"\%sMês 1: \%d\%s\(\backslash\)n"},GREEN,num\_auxiliar\_2,RESET);}
+\DoxyCodeLine{381                 \}}
+\DoxyCodeLine{382                 \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{383                     \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"clear"}));}
+\DoxyCodeLine{384                     \mbox{\hyperlink{vista_8c_a002d8e2f49bca0a5a85cabefc239e0ba}{printchoice}}(\textcolor{charliteral}{'8'});}
+\DoxyCodeLine{385                     printf(\textcolor{stringliteral}{"\%sMês 1: \%d\%s\(\backslash\)n"},GREEN,num\_auxiliar\_2,RESET);}
+\DoxyCodeLine{386                     printf(\textcolor{stringliteral}{"\%sMês 2: \%d\%s\(\backslash\)n"},GREEN,num\_auxiliar\_1,RESET);}
+\DoxyCodeLine{387                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{388                 \}}
+\DoxyCodeLine{389             \}}
+\DoxyCodeLine{390             t8 = clock();}
+\DoxyCodeLine{391             q8 = \mbox{\hyperlink{interface_8c_a6565a3fdd8b6a31373655d05e07b047a}{getSalesAndProfit}}(\mbox{\hyperlink{structsgv}{sgv}},num\_auxiliar\_2,num\_auxiliar\_1);}
+\DoxyCodeLine{392             t8 = clock() -\/ t8;}
+\DoxyCodeLine{393             \mbox{\hyperlink{vista_8c_a95b5daa8bd552583c215cea62c851c5a}{querie8Print}}(num\_auxiliar\_2,num\_auxiliar\_1,q8);}
+\DoxyCodeLine{394             free(q8);}
+\DoxyCodeLine{395             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{396         \textcolor{keywordflow}{case} \textcolor{charliteral}{'9'}:}
+\DoxyCodeLine{397             \textcolor{comment}{/*querie9();*/}}
+\DoxyCodeLine{398             \textcolor{keywordflow}{while}(1)\{}
+\DoxyCodeLine{399                 printf(\textcolor{stringliteral}{"Número do Produto: "});}
+\DoxyCodeLine{400                 \textcolor{keywordflow}{if}(fgets(input,BUFFER,stdin));}
+\DoxyCodeLine{401                 \textcolor{keywordflow}{if}(input[0] == \textcolor{charliteral}{'\(\backslash\)n'}) \textcolor{keywordflow}{return} RUN;}
+\DoxyCodeLine{402                 strtok(input,\textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)r"});}
+\DoxyCodeLine{403                 upper\_string(input);}
+\DoxyCodeLine{404                 \textcolor{keywordflow}{if}(isalpha(input[0]) \&\& isalpha(input[1]) \&\& isdigit(input[2]) \&\& isdigit(input[3]) \&\& isdigit(input[4]) \&\& isdigit(input[5]) \&\& input[6] == \textcolor{charliteral}{'\(\backslash\)0'} \&\& \mbox{\hyperlink{interface_8c_aea5b6fad6b04a78cfb6871b9a8e2f870}{existeSGVProduto}}(\mbox{\hyperlink{structsgv}{sgv}},input))\{}
+\DoxyCodeLine{405                     \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"clear"}));}
+\DoxyCodeLine{406                     \mbox{\hyperlink{vista_8c_a002d8e2f49bca0a5a85cabefc239e0ba}{printchoice}}(choice);}
+\DoxyCodeLine{407                     printf(\textcolor{stringliteral}{"Número do Produto: \%s\%s\%s\(\backslash\)n"},GREEN,input,RESET);}
+\DoxyCodeLine{408                     printf(\textcolor{stringliteral}{"Filial: "});}
+\DoxyCodeLine{409                     \textcolor{keywordflow}{while}(fgets(input2,BUFFER,stdin))\{}
+\DoxyCodeLine{410                         \textcolor{keywordflow}{if}(input2[0] == \textcolor{charliteral}{'\(\backslash\)n'}) \textcolor{keywordflow}{return} RUN;}
+\DoxyCodeLine{411                         num\_auxiliar\_1 = atoi(input2);}
+\DoxyCodeLine{412                         \textcolor{keywordflow}{if}(num\_auxiliar\_1 > 0 \&\& num\_auxiliar\_1 < FILIAL+1)\{}
+\DoxyCodeLine{413                             \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"clear"}));}
+\DoxyCodeLine{414                             \mbox{\hyperlink{vista_8c_a002d8e2f49bca0a5a85cabefc239e0ba}{printchoice}}(choice);}
+\DoxyCodeLine{415                             printf(\textcolor{stringliteral}{"Número do Produto: \%s\%s\%s\(\backslash\)n"},GREEN,input,RESET);}
+\DoxyCodeLine{416                             printf(\textcolor{stringliteral}{"Filial: \%s\%d\%s\(\backslash\)n"},GREEN,num\_auxiliar\_1,RESET);}
+\DoxyCodeLine{417                             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{418                         \}}
+\DoxyCodeLine{419                         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{420                             \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"clear"}));}
+\DoxyCodeLine{421                             \mbox{\hyperlink{vista_8c_a002d8e2f49bca0a5a85cabefc239e0ba}{printchoice}}(choice);}
+\DoxyCodeLine{422                             printf(\textcolor{stringliteral}{"Número do Produto: \%s\%s\%s\(\backslash\)n"},GREEN,input,RESET);}
+\DoxyCodeLine{423                             LOG\_RED(\textcolor{stringliteral}{"Filial inválida\(\backslash\)n"});}
+\DoxyCodeLine{424                             printf(\textcolor{stringliteral}{"Filial: "});}
+\DoxyCodeLine{425                         \}}
+\DoxyCodeLine{426                     \}}
+\DoxyCodeLine{427                     t9 = clock();}
+\DoxyCodeLine{428                     q9 = \mbox{\hyperlink{interface_8c_a64de436cdf84b48f05143ab00ab4988f}{getProductBuyers}}(\mbox{\hyperlink{structsgv}{sgv}},input,num\_auxiliar\_1);}
+\DoxyCodeLine{429                     t9 = clock() -\/ t9;}
+\DoxyCodeLine{430 }
+\DoxyCodeLine{431                     num\_auxiliar\_2 = \mbox{\hyperlink{estruturas_8c_a961f7422c1e722b50e8fab6ff4a021b8}{getTotalNQ9}}(q9);}
+\DoxyCodeLine{432                     \textcolor{keywordtype}{char} **n = \mbox{\hyperlink{estruturas_8c_ac049e518de65a922b035648adbca3011}{getLista\_ProdsNQ9}}(q9);}
+\DoxyCodeLine{433                     num\_auxiliar\_3 = \mbox{\hyperlink{estruturas_8c_a524f34f450aeea4e6642d82ccba84083}{getTotalPQ9}}(q9);}
+\DoxyCodeLine{434                     \textcolor{keywordtype}{char} **p = \mbox{\hyperlink{estruturas_8c_aa3ec0d05af285be17b3fae819737c1c5}{getLista\_ProdsPQ9}}(q9);}
+\DoxyCodeLine{435 }
+\DoxyCodeLine{436                     \mbox{\hyperlink{vista_8c_ac8df5655804e3a57f1c3310302614390}{querie9Print}}(n,num\_auxiliar\_2,p,num\_auxiliar\_3);}
+\DoxyCodeLine{437 }
+\DoxyCodeLine{438                     \mbox{\hyperlink{estruturas_8c_a4bdcf1cfe0759894da006eb85ff9ddf8}{freeQ9}}(q9);}
+\DoxyCodeLine{439                 \}}
+\DoxyCodeLine{440                 \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{441                     \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"clear"}));}
+\DoxyCodeLine{442                     \mbox{\hyperlink{vista_8c_a002d8e2f49bca0a5a85cabefc239e0ba}{printchoice}}(choice);}
+\DoxyCodeLine{443                     LOG\_RED(\textcolor{stringliteral}{"Número de Produto inválido\(\backslash\)n"});}
+\DoxyCodeLine{444                 \}}
+\DoxyCodeLine{445             \}}
+\DoxyCodeLine{446             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{447         \textcolor{keywordflow}{case} \textcolor{charliteral}{'A'}:}
+\DoxyCodeLine{448             \textcolor{comment}{/*querie10();*/}}
+\DoxyCodeLine{449             \textcolor{keywordflow}{while}(1)\{}
+\DoxyCodeLine{450                 printf(\textcolor{stringliteral}{"Número do Cliente: "});}
+\DoxyCodeLine{451                 \textcolor{keywordflow}{if}(fgets(input,BUFFER,stdin));}
+\DoxyCodeLine{452                 \textcolor{keywordflow}{if}(input[0] == \textcolor{charliteral}{'\(\backslash\)n'}) \textcolor{keywordflow}{return} RUN;}
+\DoxyCodeLine{453                 strtok(input,\textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)r"});}
+\DoxyCodeLine{454                 upper\_string(input);}
+\DoxyCodeLine{455                 \textcolor{keywordflow}{if}(isalpha(input[0]) \&\& isdigit(input[1]) \&\& isdigit(input[2]) \&\& isdigit(input[3]) \&\& isdigit(input[4]) \&\& input[5] == \textcolor{charliteral}{'\(\backslash\)0'} \&\& \mbox{\hyperlink{interface_8c_ac110c60d516b3e88b0258b682d595e37}{existeSGVCliente}}(\mbox{\hyperlink{structsgv}{sgv}},input))\{}
+\DoxyCodeLine{456                     \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"clear"}));}
+\DoxyCodeLine{457                     \mbox{\hyperlink{vista_8c_a002d8e2f49bca0a5a85cabefc239e0ba}{printchoice}}(choice);}
+\DoxyCodeLine{458                     printf(\textcolor{stringliteral}{"Número do Cliente: \%s\%s\%s\(\backslash\)n"},GREEN,input,RESET);}
+\DoxyCodeLine{459                     printf(\textcolor{stringliteral}{"Mês: "});}
+\DoxyCodeLine{460                     \textcolor{keywordflow}{while}(fgets(input2,BUFFER,stdin))\{}
+\DoxyCodeLine{461                         \textcolor{keywordflow}{if}(input2[0] == \textcolor{charliteral}{'\(\backslash\)n'}) \textcolor{keywordflow}{return} RUN;}
+\DoxyCodeLine{462                         num\_auxiliar\_1 = atoi(input2);}
+\DoxyCodeLine{463                         \textcolor{keywordflow}{if}(num\_auxiliar\_1 > 0 \&\& num\_auxiliar\_1 < MESES+1)\{}
+\DoxyCodeLine{464                             \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"clear"}));}
+\DoxyCodeLine{465                             \mbox{\hyperlink{vista_8c_a002d8e2f49bca0a5a85cabefc239e0ba}{printchoice}}(choice);}
+\DoxyCodeLine{466                             printf(\textcolor{stringliteral}{"Número do Cliente: \%s\%s\%s\(\backslash\)n"},GREEN,input,RESET);}
+\DoxyCodeLine{467                             printf(\textcolor{stringliteral}{"Mês: \%s\%d\%s\(\backslash\)n"},GREEN,num\_auxiliar\_1,RESET);}
+\DoxyCodeLine{468                             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{469                         \}}
+\DoxyCodeLine{470                         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{471                             \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"clear"}));}
+\DoxyCodeLine{472                             \mbox{\hyperlink{vista_8c_a002d8e2f49bca0a5a85cabefc239e0ba}{printchoice}}(choice);}
+\DoxyCodeLine{473                             printf(\textcolor{stringliteral}{"Número do Cliente: \%s\%s\%s\(\backslash\)n"},GREEN,input,RESET);}
+\DoxyCodeLine{474                             LOG\_RED(\textcolor{stringliteral}{"Mês inválido\(\backslash\)n"});}
+\DoxyCodeLine{475                             printf(\textcolor{stringliteral}{"Mês: "});}
+\DoxyCodeLine{476                         \}}
+\DoxyCodeLine{477                     \}}
+\DoxyCodeLine{478                     t10 = clock();}
+\DoxyCodeLine{479                     q10 = \mbox{\hyperlink{interface_8c_a4afe8a4f5eb0e013085e642a5a998e7c}{getClientFavoriteProducts}}(\mbox{\hyperlink{structsgv}{sgv}},input,num\_auxiliar\_1);}
+\DoxyCodeLine{480                     \mbox{\hyperlink{estruturas_8c_ab8e76cc797a94c81f1565859e2d52206}{sortAndGetQ10}}(q10);}
+\DoxyCodeLine{481                     t10 = clock() -\/ t10;}
+\DoxyCodeLine{482                     \mbox{\hyperlink{vista_8c_a13cc68a0168e95eb48e2dd9298b6b866}{querie10Print}}(q10,num\_auxiliar\_1);}
+\DoxyCodeLine{483                     \mbox{\hyperlink{estruturas_8c_ad45b8bac42cd5987cf34b07bf43b5cb1}{freeQ10}}(q10);}
+\DoxyCodeLine{484                 \}}
+\DoxyCodeLine{485                 \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{486                     \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"clear"}));}
+\DoxyCodeLine{487                     \mbox{\hyperlink{vista_8c_a002d8e2f49bca0a5a85cabefc239e0ba}{printchoice}}(choice);}
+\DoxyCodeLine{488                     LOG\_RED(\textcolor{stringliteral}{"Número de Cliente inválido\(\backslash\)n"});}
+\DoxyCodeLine{489                 \}}
+\DoxyCodeLine{490 }
+\DoxyCodeLine{491             \}}
+\DoxyCodeLine{492 }
+\DoxyCodeLine{493             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{494         \textcolor{keywordflow}{case} \textcolor{charliteral}{'B'}:}
+\DoxyCodeLine{495             \textcolor{comment}{/*querie11();*/}}
+\DoxyCodeLine{496             printf(\textcolor{stringliteral}{"Número de Produtos a apresentar: "});}
+\DoxyCodeLine{497             \textcolor{keywordflow}{while}(1)\{}
+\DoxyCodeLine{498                 \textcolor{keywordflow}{if}(fgets(input,BUFFER,stdin));}
+\DoxyCodeLine{499                 \textcolor{keywordflow}{if}(input[0] == \textcolor{charliteral}{'\(\backslash\)n'}) \textcolor{keywordflow}{return} RUN;}
+\DoxyCodeLine{500                 strtok(input,\textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)r"});}
+\DoxyCodeLine{501                 \textcolor{keywordtype}{int} i;}
+\DoxyCodeLine{502                 \textcolor{keywordtype}{int} \textcolor{keywordtype}{boolean} = 1;}
+\DoxyCodeLine{503                 \textcolor{keywordflow}{for}(i=0;i<strlen(input) \&\& boolean ;i++) \textcolor{keywordflow}{if}(!isdigit(input[i])) \textcolor{keywordtype}{boolean} = 0;}
+\DoxyCodeLine{504                 \textcolor{keywordflow}{if}(\textcolor{keywordtype}{boolean})\{}
+\DoxyCodeLine{505                     num\_auxiliar\_1 = atoi(input);}
+\DoxyCodeLine{506                     \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"clear"}));}
+\DoxyCodeLine{507                     \mbox{\hyperlink{vista_8c_a002d8e2f49bca0a5a85cabefc239e0ba}{printchoice}}(choice);}
+\DoxyCodeLine{508                     printf(\textcolor{stringliteral}{"Número de Produtos a apresentar: \%d\(\backslash\)n"},num\_auxiliar\_1);}
+\DoxyCodeLine{509                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{510                 \}}
+\DoxyCodeLine{511                 \textcolor{keywordflow}{else}}
+\DoxyCodeLine{512                 \{}
+\DoxyCodeLine{513                     \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"clear"}));}
+\DoxyCodeLine{514                     \mbox{\hyperlink{vista_8c_a002d8e2f49bca0a5a85cabefc239e0ba}{printchoice}}(choice);}
+\DoxyCodeLine{515                     LOG\_RED(\textcolor{stringliteral}{"Número introduzido inválido\(\backslash\)n"});}
+\DoxyCodeLine{516                     printf(\textcolor{stringliteral}{"Número de Produtos a apresentar: "});}
+\DoxyCodeLine{517                 \}}
+\DoxyCodeLine{518 }
+\DoxyCodeLine{519             \}}
+\DoxyCodeLine{520             t11 = clock();}
+\DoxyCodeLine{521             q11 = \mbox{\hyperlink{interface_8c_a0b8274230dfe854c8410d4f728a10206}{getTopSelledProducts}}(\mbox{\hyperlink{structsgv}{sgv}},num\_auxiliar\_1);}
+\DoxyCodeLine{522             t11 = clock() -\/ t11;}
+\DoxyCodeLine{523 }
+\DoxyCodeLine{524             pagAtual = 0;}
+\DoxyCodeLine{525             num\_auxiliar\_2 = 10;}
+\DoxyCodeLine{526             num\_auxiliar\_3 = \mbox{\hyperlink{estruturas_8c_a805ae53be14f2f04772ddeffe0bd9b44}{getNum\_TotalQ11}}(q11);}
+\DoxyCodeLine{527 }
+\DoxyCodeLine{528             total = (num\_auxiliar\_1 > num\_auxiliar\_3) ? num\_auxiliar\_3 : num\_auxiliar\_1;}
+\DoxyCodeLine{529 }
+\DoxyCodeLine{530             \textcolor{keywordflow}{if}(total\%num\_auxiliar\_2 == 0) pag = total/num\_auxiliar\_2;}
+\DoxyCodeLine{531             \textcolor{keywordflow}{else} pag = total/num\_auxiliar\_2 + 1;}
+\DoxyCodeLine{532             \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"clear"}));}
+\DoxyCodeLine{533             \mbox{\hyperlink{vista_8c_a002d8e2f49bca0a5a85cabefc239e0ba}{printchoice}}(choice);}
+\DoxyCodeLine{534             \mbox{\hyperlink{vista_8c_ae0242056a4cf004d82dc6616b7e3acdd}{querie11Print}}(q11,total,pagAtual,num\_auxiliar\_2,pag);}
+\DoxyCodeLine{535             \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"stty raw"}));}
+\DoxyCodeLine{536             \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"stty -\/echo"}));}
+\DoxyCodeLine{537             \textcolor{keywordflow}{while} ((char\_aux = toupper(getchar())) != 13 \&\& char\_aux != \textcolor{charliteral}{'Q'}) \{\textcolor{comment}{/* 13 -\/> ENTER */}}
+\DoxyCodeLine{538                 \textcolor{keywordflow}{if}(char\_aux == \textcolor{charliteral}{'1'} \&\& pagAtual > 0) pagAtual-\/-\/;}
+\DoxyCodeLine{539                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(char\_aux == \textcolor{charliteral}{'2'} \&\& pagAtual < pag-\/1) pagAtual++;}
+\DoxyCodeLine{540                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(char\_aux == \textcolor{charliteral}{'3'} \&\& num\_auxiliar\_2>10) \{}
+\DoxyCodeLine{541                     num\_auxiliar\_2-\/=10;}
+\DoxyCodeLine{542                     pagAtual = 0;}
+\DoxyCodeLine{543                     \textcolor{keywordflow}{if}(total\%num\_auxiliar\_2 == 0) pag = total/num\_auxiliar\_2;}
+\DoxyCodeLine{544                     \textcolor{keywordflow}{else} pag = total/num\_auxiliar\_2 + 1;}
+\DoxyCodeLine{545                 \}}
+\DoxyCodeLine{546                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(char\_aux == \textcolor{charliteral}{'4'} \&\& num\_auxiliar\_2<3*10) \{}
+\DoxyCodeLine{547                     num\_auxiliar\_2+=10;}
+\DoxyCodeLine{548                     pagAtual = 0;}
+\DoxyCodeLine{549                     \textcolor{keywordflow}{if}(total\%num\_auxiliar\_2 == 0) pag = total/num\_auxiliar\_2;}
+\DoxyCodeLine{550                     \textcolor{keywordflow}{else} pag = total/num\_auxiliar\_2 + 1;}
+\DoxyCodeLine{551                 \}}
+\DoxyCodeLine{552                 \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"stty cooked"}));}
+\DoxyCodeLine{553                 \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"clear"}));}
+\DoxyCodeLine{554                 \mbox{\hyperlink{vista_8c_a002d8e2f49bca0a5a85cabefc239e0ba}{printchoice}}(choice);}
+\DoxyCodeLine{555                 \mbox{\hyperlink{vista_8c_ae0242056a4cf004d82dc6616b7e3acdd}{querie11Print}}(q11,total,pagAtual,num\_auxiliar\_2,pag);}
+\DoxyCodeLine{556                 \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"stty raw"}));}
+\DoxyCodeLine{557             \}}
+\DoxyCodeLine{558             \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"stty cooked"}));}
+\DoxyCodeLine{559             \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"stty echo"}));}
+\DoxyCodeLine{560 }
+\DoxyCodeLine{561 }
+\DoxyCodeLine{562 }
+\DoxyCodeLine{563             \mbox{\hyperlink{estruturas_8c_a8416b600cef53dfe3a52d5240c439aad}{freeQ11}}(q11);}
+\DoxyCodeLine{564             \textcolor{keywordflow}{if}(char\_aux == \textcolor{charliteral}{'Q'}) \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{565             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{566         \textcolor{keywordflow}{case} \textcolor{charliteral}{'C'}:}
+\DoxyCodeLine{567             \textcolor{comment}{/*querie12();*/}}
+\DoxyCodeLine{568             \textcolor{keywordflow}{while}(1)\{}
+\DoxyCodeLine{569                 printf(\textcolor{stringliteral}{"Número do Cliente: "});}
+\DoxyCodeLine{570                 \textcolor{keywordflow}{if}(fgets(input,BUFFER,stdin));}
+\DoxyCodeLine{571                 \textcolor{keywordflow}{if}(input[0] == \textcolor{charliteral}{'\(\backslash\)n'}) \textcolor{keywordflow}{return} RUN;}
+\DoxyCodeLine{572                 strtok(input,\textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)r"});}
+\DoxyCodeLine{573                 upper\_string(input);}
+\DoxyCodeLine{574                 \textcolor{keywordflow}{if}(isalpha(input[0]) \&\& isdigit(input[1]) \&\& isdigit(input[2]) \&\& isdigit(input[3]) \&\& isdigit(input[4]) \&\& input[5] == \textcolor{charliteral}{'\(\backslash\)0'} \&\& \mbox{\hyperlink{interface_8c_ac110c60d516b3e88b0258b682d595e37}{existeSGVCliente}}(\mbox{\hyperlink{structsgv}{sgv}},input))\{}
+\DoxyCodeLine{575                     \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"clear"}));}
+\DoxyCodeLine{576                     \mbox{\hyperlink{vista_8c_a002d8e2f49bca0a5a85cabefc239e0ba}{printchoice}}(choice);}
+\DoxyCodeLine{577                     printf(\textcolor{stringliteral}{"Número do Cliente: \%s\%s\%s\(\backslash\)n"},GREEN,input,RESET);}
+\DoxyCodeLine{578                     printf(\textcolor{stringliteral}{"Número de Produtos a apresentar: "});}
+\DoxyCodeLine{579                     \textcolor{keywordflow}{while}(fgets(input2,BUFFER,stdin))\{}
+\DoxyCodeLine{580                         \textcolor{keywordflow}{if}(input2[0] == \textcolor{charliteral}{'\(\backslash\)n'}) \textcolor{keywordflow}{return} RUN;}
+\DoxyCodeLine{581                         strtok(input2,\textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)r"});}
+\DoxyCodeLine{582                         \textcolor{keywordtype}{int} i;}
+\DoxyCodeLine{583                         \textcolor{keywordtype}{int} \textcolor{keywordtype}{boolean} = 1;}
+\DoxyCodeLine{584                         \textcolor{keywordflow}{for}(i=0;i<strlen(input2);i++) \textcolor{keywordflow}{if}(!isdigit(input2[i])) \textcolor{keywordtype}{boolean} = 0;}
+\DoxyCodeLine{585                         \textcolor{keywordflow}{if}(\textcolor{keywordtype}{boolean})\{}
+\DoxyCodeLine{586                             num\_auxiliar\_1 = atoi(input2);}
+\DoxyCodeLine{587                             \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"clear"}));}
+\DoxyCodeLine{588                             \mbox{\hyperlink{vista_8c_a002d8e2f49bca0a5a85cabefc239e0ba}{printchoice}}(choice);}
+\DoxyCodeLine{589                             printf(\textcolor{stringliteral}{"Número do Cliente: \%s\%s\%s\(\backslash\)n"},GREEN,input,RESET);}
+\DoxyCodeLine{590                             printf(\textcolor{stringliteral}{"Número de Produtos a apresentar: \%s\%d\%s\(\backslash\)n"},GREEN,num\_auxiliar\_1,RESET);}
+\DoxyCodeLine{591                             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{592                         \}}
+\DoxyCodeLine{593                         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{594                             \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"clear"}));}
+\DoxyCodeLine{595                             \mbox{\hyperlink{vista_8c_a002d8e2f49bca0a5a85cabefc239e0ba}{printchoice}}(choice);}
+\DoxyCodeLine{596                             printf(\textcolor{stringliteral}{"Número do Cliente: \%s\%s\%s\(\backslash\)n"},GREEN,input,RESET);}
+\DoxyCodeLine{597                             LOG\_RED(\textcolor{stringliteral}{"Número inválido\(\backslash\)n"});}
+\DoxyCodeLine{598                             printf(\textcolor{stringliteral}{"Número de Produtos a apresentar: "});}
+\DoxyCodeLine{599                         \}}
+\DoxyCodeLine{600                     \}}
+\DoxyCodeLine{601 }
+\DoxyCodeLine{602 }
+\DoxyCodeLine{603                     t12 = clock();}
+\DoxyCodeLine{604                     q12 = \mbox{\hyperlink{interface_8c_ade07fddcdb86a6494fb7fd0e13182f97}{getClientTopProfitProducts}}(\mbox{\hyperlink{structsgv}{sgv}},input,num\_auxiliar\_1);}
+\DoxyCodeLine{605                     t12 = clock() -\/ t12;}
+\DoxyCodeLine{606 }
+\DoxyCodeLine{607                     pagAtual = 0;}
+\DoxyCodeLine{608                     num\_auxiliar\_2 = 15;}
+\DoxyCodeLine{609                     num\_auxiliar\_3 = \mbox{\hyperlink{estruturas_8c_a176478e1727c80f13fbd06fb706489fd}{getNum\_TotalQ12}}(q12);}
+\DoxyCodeLine{610                     total = (num\_auxiliar\_1 > num\_auxiliar\_3) ? num\_auxiliar\_3 : num\_auxiliar\_1;}
+\DoxyCodeLine{611 }
+\DoxyCodeLine{612                     \textcolor{keywordflow}{if}(total\%num\_auxiliar\_2 == 0) pag = total/num\_auxiliar\_2;}
+\DoxyCodeLine{613                     \textcolor{keywordflow}{else} pag = total/num\_auxiliar\_2 + 1;}
+\DoxyCodeLine{614                     \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"clear"}));}
+\DoxyCodeLine{615                     \mbox{\hyperlink{vista_8c_a002d8e2f49bca0a5a85cabefc239e0ba}{printchoice}}(choice);}
+\DoxyCodeLine{616                     \mbox{\hyperlink{vista_8c_ad12d472f236a225cf7946e2dc47bdac8}{querie12Print}}(q12,total,pagAtual,num\_auxiliar\_2,pag);}
+\DoxyCodeLine{617                     \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"stty raw"}));}
+\DoxyCodeLine{618                     \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"stty -\/echo"}));}
+\DoxyCodeLine{619                     \textcolor{keywordflow}{while} ((char\_aux = toupper(getchar())) != 13 \&\& char\_aux != \textcolor{charliteral}{'Q'}) \{\textcolor{comment}{/* 13 -\/> ENTER */}}
+\DoxyCodeLine{620                         \textcolor{keywordflow}{if}(char\_aux == \textcolor{charliteral}{'1'} \&\& pagAtual > 0) pagAtual-\/-\/;}
+\DoxyCodeLine{621                         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(char\_aux == \textcolor{charliteral}{'2'} \&\& pagAtual < pag-\/1) pagAtual++;}
+\DoxyCodeLine{622                         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(char\_aux == \textcolor{charliteral}{'3'} \&\& num\_auxiliar\_2>15) \{}
+\DoxyCodeLine{623                             num\_auxiliar\_2-\/=15;}
+\DoxyCodeLine{624                             pagAtual = 0;}
+\DoxyCodeLine{625                             \textcolor{keywordflow}{if}(total\%num\_auxiliar\_2 == 0) pag = total/num\_auxiliar\_2;}
+\DoxyCodeLine{626                             \textcolor{keywordflow}{else} pag = total/num\_auxiliar\_2 + 1;}
+\DoxyCodeLine{627                         \}}
+\DoxyCodeLine{628                         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(char\_aux == \textcolor{charliteral}{'4'} \&\& num\_auxiliar\_2<4*15) \{}
+\DoxyCodeLine{629                             num\_auxiliar\_2+=15;}
+\DoxyCodeLine{630                             pagAtual = 0;}
+\DoxyCodeLine{631                             \textcolor{keywordflow}{if}(total\%num\_auxiliar\_2 == 0) pag = total/num\_auxiliar\_2;}
+\DoxyCodeLine{632                             \textcolor{keywordflow}{else} pag = total/num\_auxiliar\_2 + 1;}
+\DoxyCodeLine{633                         \}}
+\DoxyCodeLine{634                         \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"stty cooked"}));}
+\DoxyCodeLine{635                         \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"clear"}));}
+\DoxyCodeLine{636                         \mbox{\hyperlink{vista_8c_a002d8e2f49bca0a5a85cabefc239e0ba}{printchoice}}(choice);}
+\DoxyCodeLine{637                         \mbox{\hyperlink{vista_8c_ad12d472f236a225cf7946e2dc47bdac8}{querie12Print}}(q12,total,pagAtual,num\_auxiliar\_2,pag);}
+\DoxyCodeLine{638                         \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"stty raw"}));}
+\DoxyCodeLine{639                     \}}
+\DoxyCodeLine{640                     \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"stty cooked"}));}
+\DoxyCodeLine{641                     \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"stty echo"}));}
+\DoxyCodeLine{642 }
+\DoxyCodeLine{643                     \mbox{\hyperlink{estruturas_8c_a35ab1d82b5e76bdd0ffb864544fb3420}{freeQ12}}(q12);}
+\DoxyCodeLine{644                     \textcolor{keywordflow}{if} (char\_aux == \textcolor{charliteral}{'Q'}) \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{645                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{646                 \}}
+\DoxyCodeLine{647                 \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{648                     \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"clear"}));}
+\DoxyCodeLine{649                     \mbox{\hyperlink{vista_8c_a002d8e2f49bca0a5a85cabefc239e0ba}{printchoice}}(choice);}
+\DoxyCodeLine{650                     LOG\_RED(\textcolor{stringliteral}{"Número de Cliente inválido\(\backslash\)n"});}
+\DoxyCodeLine{651                 \}}
+\DoxyCodeLine{652             \}}
+\DoxyCodeLine{653 }
+\DoxyCodeLine{654 }
+\DoxyCodeLine{655             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{656         \textcolor{keywordflow}{case} \textcolor{charliteral}{'D'}:}
+\DoxyCodeLine{657             \textcolor{comment}{/*querie13();*/}}
+\DoxyCodeLine{658             q13 = \mbox{\hyperlink{interface_8c_a5e8b275d70dd3b53c77c8bec2d476b3a}{getCurrentFilesInfo}}(\mbox{\hyperlink{structsgv}{sgv}});}
+\DoxyCodeLine{659             \mbox{\hyperlink{vista_8c_a0b912b5091fd172417d1bef0dc9e1675}{querie13Print}}(q13);}
+\DoxyCodeLine{660             \mbox{\hyperlink{estruturas_8c_ae94dda05ff7b7786b3fa2f879cbcaef1}{free\_Q13}}(q13);}
+\DoxyCodeLine{661             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{662         \textcolor{keywordflow}{case} \textcolor{charliteral}{'T'}:}
+\DoxyCodeLine{663             time\_taken = ((double)t1)/CLOCKS\_PER\_SEC;}
+\DoxyCodeLine{664             printf(\textcolor{stringliteral}{"Query1: Load: \%f seconds\(\backslash\)n"},time\_taken);}
+\DoxyCodeLine{665 }
+\DoxyCodeLine{666             time\_taken = ((double)t6)/CLOCKS\_PER\_SEC;}
+\DoxyCodeLine{667             printf(\textcolor{stringliteral}{"Query6: Load: \%f seconds\(\backslash\)n"},time\_taken);}
+\DoxyCodeLine{668 }
+\DoxyCodeLine{669             time\_taken = ((double)t7)/CLOCKS\_PER\_SEC;}
+\DoxyCodeLine{670             printf(\textcolor{stringliteral}{"Query7: Load: \%f seconds\(\backslash\)n"},time\_taken);}
+\DoxyCodeLine{671 }
+\DoxyCodeLine{672             time\_taken = ((double)t8)/CLOCKS\_PER\_SEC;}
+\DoxyCodeLine{673             printf(\textcolor{stringliteral}{"Query8: Load: \%f seconds\(\backslash\)n"},time\_taken);}
+\DoxyCodeLine{674 }
+\DoxyCodeLine{675             time\_taken = ((double)t9)/CLOCKS\_PER\_SEC;}
+\DoxyCodeLine{676             printf(\textcolor{stringliteral}{"Query9: Load: \%f seconds\(\backslash\)n"},time\_taken);}
+\DoxyCodeLine{677 }
+\DoxyCodeLine{678             time\_taken = ((double)t10)/CLOCKS\_PER\_SEC;}
+\DoxyCodeLine{679             printf(\textcolor{stringliteral}{"Query10: Load: \%f seconds\(\backslash\)n"},time\_taken);}
+\DoxyCodeLine{680 }
+\DoxyCodeLine{681             time\_taken = ((double)t11)/CLOCKS\_PER\_SEC;}
+\DoxyCodeLine{682             printf(\textcolor{stringliteral}{"Query11: Load: \%f seconds\(\backslash\)n"},time\_taken);}
+\DoxyCodeLine{683 }
+\DoxyCodeLine{684             time\_taken = ((double)t12)/CLOCKS\_PER\_SEC;}
+\DoxyCodeLine{685             printf(\textcolor{stringliteral}{"Query12: Load: \%f seconds\(\backslash\)n"},time\_taken);}
+\DoxyCodeLine{686             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{687         \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{688             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{689         \}}
+\DoxyCodeLine{690         printf(\textcolor{stringliteral}{"Press \%s<enter>\%s to exit "},RED,RESET);}
+\DoxyCodeLine{691         getchar();}
+\DoxyCodeLine{692 }
+\DoxyCodeLine{693 }
+\DoxyCodeLine{694         \}}
+\DoxyCodeLine{695         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{696         \{}
+\DoxyCodeLine{697             \textcolor{keywordflow}{if}(system(\textcolor{stringliteral}{"clear"}));}
+\DoxyCodeLine{698             LOG\_RED(\textcolor{stringliteral}{"Ainda não carregou ficheiros\(\backslash\)n<enter>\(\backslash\)n"});}
+\DoxyCodeLine{699             getchar();}
+\DoxyCodeLine{700         \}}
+\DoxyCodeLine{701 }
+\DoxyCodeLine{702     \}}
+\DoxyCodeLine{703 }
+\DoxyCodeLine{704     \textcolor{keywordflow}{return} RUN;}
+\DoxyCodeLine{705 \}}
+
+\end{DoxyCode}

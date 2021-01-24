@@ -1,0 +1,841 @@
+\hypertarget{interface_8c}{}\doxysection{Referência ao ficheiro src/interface.c}
+\label{interface_8c}\index{src/interface.c@{src/interface.c}}
+
+
+Ficheiro que contém a A\+PI relativa à implementação da interface.  
+
+
+{\ttfamily \#include \char`\"{}../include/interface.\+h\char`\"{}}\newline
+\doxysubsection*{Estruturas de Dados}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structsgv}{sgv}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+S\+GV \mbox{\hyperlink{interface_8c_a14c3840c38c574667ca887b40c5250bb}{init\+S\+GV}} ()
+\begin{DoxyCompactList}\small\item\em Função que inicializa o S\+GV. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_8c_a7527694a42981c525dade1439705c706}{destroy\+S\+GV}} (S\+GV \mbox{\hyperlink{structsgv}{sgv}})
+\begin{DoxyCompactList}\small\item\em Função que destrói o S\+GV, libertando o espaço da memória por ele ocupado. \end{DoxyCompactList}\item 
+Boolean \mbox{\hyperlink{interface_8c_ac1183805d0deb0ce6f6b7bc89e9f7733}{is\+S\+G\+Vvalid}} (S\+GV \mbox{\hyperlink{structsgv}{sgv}})
+\begin{DoxyCompactList}\small\item\em Função que verifica se o S\+GV é válido. \end{DoxyCompactList}\item 
+S\+GV \mbox{\hyperlink{interface_8c_a5032b9f328a40f0b1863d8e7ec753134}{load\+S\+G\+V\+From\+Files}} (S\+GV \mbox{\hyperlink{structsgv}{sgv}}, char $\ast$clients\+File\+Path, char $\ast$products\+File\+Path, char $\ast$sales\+File\+Path, F\+I\+LE $\ast$f, F\+I\+LE $\ast$g, F\+I\+LE $\ast$h)
+\begin{DoxyCompactList}\small\item\em Função que carrega o conteúdo dos ficheiros para os respetivos catálogos. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{interface_8c_a31f3854f578e505a96b6052f3080df80}{get\+Total\+Prod\+S\+GV}} (S\+GV \mbox{\hyperlink{structsgv}{sgv}})
+\begin{DoxyCompactList}\small\item\em Função que retorna o a quantidade total de produtos do S\+GV. \end{DoxyCompactList}\item 
+Boolean \mbox{\hyperlink{interface_8c_ac110c60d516b3e88b0258b682d595e37}{existe\+S\+G\+V\+Cliente}} (S\+GV \mbox{\hyperlink{structsgv}{sgv}}, char $\ast$\mbox{\hyperlink{structcliente}{cliente}})
+\begin{DoxyCompactList}\small\item\em Função que verifica se um dado cliente existe no S\+GV. \end{DoxyCompactList}\item 
+Boolean \mbox{\hyperlink{interface_8c_aea5b6fad6b04a78cfb6871b9a8e2f870}{existe\+S\+G\+V\+Produto}} (S\+GV \mbox{\hyperlink{structsgv}{sgv}}, char $\ast$\mbox{\hyperlink{structproduto}{produto}})
+\begin{DoxyCompactList}\small\item\em Função que verifica se um dado produto existe no S\+GV. \end{DoxyCompactList}\item 
+Q2 \mbox{\hyperlink{interface_8c_a9317d497e1604b68baabc8442c026de6}{get\+Products\+Started\+By\+Letter}} (S\+GV \mbox{\hyperlink{structsgv}{sgv}}, char letter)
+\begin{DoxyCompactList}\small\item\em Função que retorna uma estrutura com os produtos começados por uma certa letra. \end{DoxyCompactList}\item 
+Q3 \mbox{\hyperlink{interface_8c_aef1b7d9c3f3fc367be2e17937bcbf4f8}{get\+Product\+Sales\+And\+Profit}} (S\+GV \mbox{\hyperlink{structsgv}{sgv}}, char $\ast$product, int month)
+\begin{DoxyCompactList}\small\item\em Função que retorna o número de vendas e a faturação de um determinado produto num determinado mês. \end{DoxyCompactList}\item 
+Q2 \mbox{\hyperlink{interface_8c_a4a1d87be5ff63c03ec5dd25fa3262450}{get\+Products\+Never\+Bought}} (S\+GV \mbox{\hyperlink{structsgv}{sgv}}, int branch\+ID)
+\begin{DoxyCompactList}\small\item\em Função que retorna uma estrutura com os produtos de uma certa filial que nunca foram comprados. \end{DoxyCompactList}\item 
+Q5 \mbox{\hyperlink{interface_8c_a12a6163687e4d2d29131a240a9808540}{get\+Clients\+Off\+All\+Branches}} (S\+GV \mbox{\hyperlink{structsgv}{sgv}})
+\begin{DoxyCompactList}\small\item\em Função que retorna uma estrutura com os clientes que realizaram compras em todas as filiais. \end{DoxyCompactList}\item 
+Q6 \mbox{\hyperlink{interface_8c_a2a4624f046ebc2609ce4fa1697c832da}{get\+Clients\+And\+Products\+Never\+Bought\+Count}} (S\+GV \mbox{\hyperlink{structsgv}{sgv}})
+\begin{DoxyCompactList}\small\item\em Função que retorna uma estrutura com o número de clientes que não efetuaram compras e o número de produtos não comprados. \end{DoxyCompactList}\item 
+Q7 \mbox{\hyperlink{interface_8c_a44987d4ab3920bd87edcf2b26dacabb4}{get\+Products\+Bought\+By\+Client}} (S\+GV \mbox{\hyperlink{structsgv}{sgv}}, char $\ast$client\+ID)
+\begin{DoxyCompactList}\small\item\em Função que retorna o número total de produtos comprados por um determinado cliente. \end{DoxyCompactList}\item 
+Q8 \mbox{\hyperlink{interface_8c_a6565a3fdd8b6a31373655d05e07b047a}{get\+Sales\+And\+Profit}} (S\+GV \mbox{\hyperlink{structsgv}{sgv}}, int min\+Month, int max\+Month)
+\begin{DoxyCompactList}\small\item\em Função que retorna uma estrutura com o número total de vendas e o total faturado num intervalo fechado de meses. \end{DoxyCompactList}\item 
+Q9 \mbox{\hyperlink{interface_8c_a64de436cdf84b48f05143ab00ab4988f}{get\+Product\+Buyers}} (S\+GV \mbox{\hyperlink{structsgv}{sgv}}, char $\ast$product\+ID, int branch)
+\begin{DoxyCompactList}\small\item\em Função que retorna uma estrutura com os códigos e com o número total de clientes que efetuaram a compra de um dado produto numa certa filial. \end{DoxyCompactList}\item 
+Q10 \mbox{\hyperlink{interface_8c_a4afe8a4f5eb0e013085e642a5a998e7c}{get\+Client\+Favorite\+Products}} (S\+GV \mbox{\hyperlink{structsgv}{sgv}}, char $\ast$client\+ID, int month)
+\begin{DoxyCompactList}\small\item\em Função que retorna uma estrutura com os produtos mais comprados, em quantidade, por um cliente num dado mês, por ordem decrescente. \end{DoxyCompactList}\item 
+Q11 \mbox{\hyperlink{interface_8c_a0b8274230dfe854c8410d4f728a10206}{get\+Top\+Selled\+Products}} (S\+GV \mbox{\hyperlink{structsgv}{sgv}}, int limit)
+\begin{DoxyCompactList}\small\item\em Função que retorna uma estrutura com a lista de produtos mais vendidos em todo o ano, o número total de clientes e o número total de unidades vendidas, filial a filial. \end{DoxyCompactList}\item 
+Q12 \mbox{\hyperlink{interface_8c_ade07fddcdb86a6494fb7fd0e13182f97}{get\+Client\+Top\+Profit\+Products}} (S\+GV \mbox{\hyperlink{structsgv}{sgv}}, char $\ast$client\+ID, int limit)
+\begin{DoxyCompactList}\small\item\em Função que retorna uma estrutura com os códigos de um produto em que um certo cliente gastou mais dinheiro. \end{DoxyCompactList}\item 
+Q13 \mbox{\hyperlink{interface_8c_a5e8b275d70dd3b53c77c8bec2d476b3a}{get\+Current\+Files\+Info}} (S\+GV \mbox{\hyperlink{structsgv}{sgv}})
+\begin{DoxyCompactList}\small\item\em Função que retorna uma estrutura com o resultado da leitura dos ficheiros na query 1. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Ficheiro que contém a A\+PI relativa à implementação da interface. 
+
+
+
+\doxysubsection{Documentação das funções}
+\mbox{\Hypertarget{interface_8c_a7527694a42981c525dade1439705c706}\label{interface_8c_a7527694a42981c525dade1439705c706}} 
+\index{interface.c@{interface.c}!destroySGV@{destroySGV}}
+\index{destroySGV@{destroySGV}!interface.c@{interface.c}}
+\doxysubsubsection{\texorpdfstring{destroySGV()}{destroySGV()}}
+{\footnotesize\ttfamily void destroy\+S\+GV (\begin{DoxyParamCaption}\item[{S\+GV}]{sgv }\end{DoxyParamCaption})}
+
+
+
+Função que destrói o S\+GV, libertando o espaço da memória por ele ocupado. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em sgv} & S\+GV que contém a informação dos módulos. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 43 do ficheiro interface.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{43                         \{}
+\DoxyCodeLine{44     \mbox{\hyperlink{clientes_8c_aff6903a09752ec30e03653dbb090062d}{free\_Clientes}}(\mbox{\hyperlink{structsgv}{sgv}}-\/>clientes,NULL);}
+\DoxyCodeLine{45     \mbox{\hyperlink{produtos_8c_a8f0e144585124999fc2f992536886b91}{free\_Produtos}}(\mbox{\hyperlink{structsgv}{sgv}}-\/>produtos,NULL);}
+\DoxyCodeLine{46     \mbox{\hyperlink{faturacao_8c_abc7f1720453f963ee1335e88c5ff1d32}{free\_Faturacao}}(\mbox{\hyperlink{structsgv}{sgv}}-\/>faturacao);}
+\DoxyCodeLine{47     \mbox{\hyperlink{filial_8c_a6e68f36cbad6aac2f9db8dfba4a5ac9a}{free\_Filial\_Clientes}}(\mbox{\hyperlink{structsgv}{sgv}}-\/>f\_clientes);}
+\DoxyCodeLine{48     \mbox{\hyperlink{filial_8c_a6b7a5a7c61edeb160390f46406f100a9}{free\_Filial\_Produtos}}(\mbox{\hyperlink{structsgv}{sgv}}-\/>f\_produtos);}
+\DoxyCodeLine{49     free(\mbox{\hyperlink{structsgv}{sgv}});}
+\DoxyCodeLine{50 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{interface_8c_ac110c60d516b3e88b0258b682d595e37}\label{interface_8c_ac110c60d516b3e88b0258b682d595e37}} 
+\index{interface.c@{interface.c}!existeSGVCliente@{existeSGVCliente}}
+\index{existeSGVCliente@{existeSGVCliente}!interface.c@{interface.c}}
+\doxysubsubsection{\texorpdfstring{existeSGVCliente()}{existeSGVCliente()}}
+{\footnotesize\ttfamily Boolean existe\+S\+G\+V\+Cliente (\begin{DoxyParamCaption}\item[{S\+GV}]{sgv,  }\item[{char $\ast$}]{cliente }\end{DoxyParamCaption})}
+
+
+
+Função que verifica se um dado cliente existe no S\+GV. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em sgv} & S\+GV que contém a informação dos módulos. \\
+\hline
+{\em cliente} & char$\ast$ a ser procurado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Boolean com o resultado. 
+\end{DoxyReturn}
+
+
+Definido na linha 226 do ficheiro interface.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{226                                                 \{}
+\DoxyCodeLine{227   \textcolor{keywordflow}{return} \mbox{\hyperlink{clientes_8c_aa1605360028ceae03157e2a53b9d30e4}{existe\_cliente}}(\mbox{\hyperlink{structsgv}{sgv}}-\/>clientes,\mbox{\hyperlink{structcliente}{cliente}});}
+\DoxyCodeLine{228 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{interface_8c_aea5b6fad6b04a78cfb6871b9a8e2f870}\label{interface_8c_aea5b6fad6b04a78cfb6871b9a8e2f870}} 
+\index{interface.c@{interface.c}!existeSGVProduto@{existeSGVProduto}}
+\index{existeSGVProduto@{existeSGVProduto}!interface.c@{interface.c}}
+\doxysubsubsection{\texorpdfstring{existeSGVProduto()}{existeSGVProduto()}}
+{\footnotesize\ttfamily Boolean existe\+S\+G\+V\+Produto (\begin{DoxyParamCaption}\item[{S\+GV}]{sgv,  }\item[{char $\ast$}]{produto }\end{DoxyParamCaption})}
+
+
+
+Função que verifica se um dado produto existe no S\+GV. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em sgv} & S\+GV que contém a informação dos módulos. \\
+\hline
+{\em produto} & char$\ast$ a ser procurado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Boolean com o resultado. 
+\end{DoxyReturn}
+
+
+Definido na linha 236 do ficheiro interface.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{236                                                 \{}
+\DoxyCodeLine{237   \textcolor{keywordflow}{return} \mbox{\hyperlink{produtos_8c_af0fd73116e6edc32695fe9f3d42f91df}{existe\_produto}}(\mbox{\hyperlink{structsgv}{sgv}}-\/>produtos,\mbox{\hyperlink{structproduto}{produto}});}
+\DoxyCodeLine{238 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{interface_8c_a4afe8a4f5eb0e013085e642a5a998e7c}\label{interface_8c_a4afe8a4f5eb0e013085e642a5a998e7c}} 
+\index{interface.c@{interface.c}!getClientFavoriteProducts@{getClientFavoriteProducts}}
+\index{getClientFavoriteProducts@{getClientFavoriteProducts}!interface.c@{interface.c}}
+\doxysubsubsection{\texorpdfstring{getClientFavoriteProducts()}{getClientFavoriteProducts()}}
+{\footnotesize\ttfamily Q10 get\+Client\+Favorite\+Products (\begin{DoxyParamCaption}\item[{S\+GV}]{sgv,  }\item[{char $\ast$}]{client\+ID,  }\item[{int}]{month }\end{DoxyParamCaption})}
+
+
+
+Função que retorna uma estrutura com os produtos mais comprados, em quantidade, por um cliente num dado mês, por ordem decrescente. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em sgv} & S\+GV que contém a informação dos módulos. \\
+\hline
+{\em client\+ID} & char que indica o cliente do qual pretendemos obter a informação. \\
+\hline
+{\em month} & int que indica o mês. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+q Q10 estrutura com os resultados pretendidos. 
+\end{DoxyReturn}
+
+
+Definido na linha 370 do ficheiro interface.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{370                                                                  \{}
+\DoxyCodeLine{371   Q10 q = \mbox{\hyperlink{estruturas_8c_aa08fa5336ceabb37b057a600c90108c0}{init\_Q10}}(\mbox{\hyperlink{interface_8c_a31f3854f578e505a96b6052f3080df80}{getTotalProdSGV}}(\mbox{\hyperlink{structsgv}{sgv}}));}
+\DoxyCodeLine{372   \mbox{\hyperlink{filial_8c_a1da4d732385c5fa7a6dd39233be07051}{produtos\_favoritos\_cliente}}(\mbox{\hyperlink{structsgv}{sgv}}-\/>f\_clientes,clientID,month,q);}
+\DoxyCodeLine{373   \textcolor{keywordflow}{return} q;}
+\DoxyCodeLine{374 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{interface_8c_a2a4624f046ebc2609ce4fa1697c832da}\label{interface_8c_a2a4624f046ebc2609ce4fa1697c832da}} 
+\index{interface.c@{interface.c}!getClientsAndProductsNeverBoughtCount@{getClientsAndProductsNeverBoughtCount}}
+\index{getClientsAndProductsNeverBoughtCount@{getClientsAndProductsNeverBoughtCount}!interface.c@{interface.c}}
+\doxysubsubsection{\texorpdfstring{getClientsAndProductsNeverBoughtCount()}{getClientsAndProductsNeverBoughtCount()}}
+{\footnotesize\ttfamily Q6 get\+Clients\+And\+Products\+Never\+Bought\+Count (\begin{DoxyParamCaption}\item[{S\+GV}]{sgv }\end{DoxyParamCaption})}
+
+
+
+Função que retorna uma estrutura com o número de clientes que não efetuaram compras e o número de produtos não comprados. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em sgv} & S\+GV que contém a informação dos módulos. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+q Q6 estrutura com os resultados obtidos. 
+\end{DoxyReturn}
+
+
+Definido na linha 306 do ficheiro interface.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{306                                                  \{}
+\DoxyCodeLine{307   Q6 q = \mbox{\hyperlink{estruturas_8c_a326f73d7aaf537a118b4fd22b35bacad}{init\_Q6}}();}
+\DoxyCodeLine{308   \mbox{\hyperlink{faturacao_8c_a26497d662e20b7f28f114a416d12b1d4}{produtos\_nao\_comprados\_num}}(\mbox{\hyperlink{structsgv}{sgv}}-\/>faturacao,q);}
+\DoxyCodeLine{309   \mbox{\hyperlink{filial_8c_a323e7fb9b4ea086a3ef28d111f4e9a11}{produtos\_nao\_comprados\_num\_filial}}(\mbox{\hyperlink{structsgv}{sgv}}-\/>f\_clientes,q);}
+\DoxyCodeLine{310   \textcolor{keywordflow}{return} q;}
+\DoxyCodeLine{311 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{interface_8c_a12a6163687e4d2d29131a240a9808540}\label{interface_8c_a12a6163687e4d2d29131a240a9808540}} 
+\index{interface.c@{interface.c}!getClientsOffAllBranches@{getClientsOffAllBranches}}
+\index{getClientsOffAllBranches@{getClientsOffAllBranches}!interface.c@{interface.c}}
+\doxysubsubsection{\texorpdfstring{getClientsOffAllBranches()}{getClientsOffAllBranches()}}
+{\footnotesize\ttfamily Q5 get\+Clients\+Off\+All\+Branches (\begin{DoxyParamCaption}\item[{S\+GV}]{sgv }\end{DoxyParamCaption})}
+
+
+
+Função que retorna uma estrutura com os clientes que realizaram compras em todas as filiais. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em sgv} & S\+GV que contém a informação dos módulos. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+q Q5 estrutura com os clientes pretendidos. 
+\end{DoxyReturn}
+
+
+Definido na linha 293 do ficheiro interface.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{293                                     \{}
+\DoxyCodeLine{294   Q5 q = \mbox{\hyperlink{estruturas_8c_a7ff451b69b1193f6205abef6b36cb9f2}{init\_Q5}}(\mbox{\hyperlink{interface_8c_a31f3854f578e505a96b6052f3080df80}{getTotalProdSGV}}(\mbox{\hyperlink{structsgv}{sgv}}));}
+\DoxyCodeLine{295   \mbox{\hyperlink{filial_8c_ac893a66e15da4ac4f8a54259680e792b}{clientes\_todas\_filiais}}(\mbox{\hyperlink{structsgv}{sgv}}-\/>f\_clientes,q);}
+\DoxyCodeLine{296   \textcolor{keywordflow}{return} q;}
+\DoxyCodeLine{297 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{interface_8c_ade07fddcdb86a6494fb7fd0e13182f97}\label{interface_8c_ade07fddcdb86a6494fb7fd0e13182f97}} 
+\index{interface.c@{interface.c}!getClientTopProfitProducts@{getClientTopProfitProducts}}
+\index{getClientTopProfitProducts@{getClientTopProfitProducts}!interface.c@{interface.c}}
+\doxysubsubsection{\texorpdfstring{getClientTopProfitProducts()}{getClientTopProfitProducts()}}
+{\footnotesize\ttfamily Q12 get\+Client\+Top\+Profit\+Products (\begin{DoxyParamCaption}\item[{S\+GV}]{sgv,  }\item[{char $\ast$}]{client\+ID,  }\item[{int}]{limit }\end{DoxyParamCaption})}
+
+
+
+Função que retorna uma estrutura com os códigos de um produto em que um certo cliente gastou mais dinheiro. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em sgv} & S\+GV que contém a informação dos módulos. \\
+\hline
+{\em client\+ID} & char$\ast$ do qual se pretende obter a informação. \\
+\hline
+{\em limit} & int que é o limite de produtos que a estrutura tem. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+q Q12 estrutura com os resultados obtidos. 
+\end{DoxyReturn}
+
+
+Definido na linha 401 do ficheiro interface.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{401                                                                    \{}
+\DoxyCodeLine{402   Q12 q = \mbox{\hyperlink{estruturas_8c_a754154c6f99b222d8bf98ee3b3e58b47}{init\_Q12}}(\mbox{\hyperlink{interface_8c_a31f3854f578e505a96b6052f3080df80}{getTotalProdSGV}}(\mbox{\hyperlink{structsgv}{sgv}}));}
+\DoxyCodeLine{403   \mbox{\hyperlink{filial_8c_afbd224a180cd33a159cfe11b54d138f9}{produtosMaisCarosQ12}}(\mbox{\hyperlink{structsgv}{sgv}}-\/>f\_clientes,clientID,q);}
+\DoxyCodeLine{404   \mbox{\hyperlink{estruturas_8c_ae1b6abc1d4907a928d52d2de7be09c3a}{sortAndGetQ12}}(q);}
+\DoxyCodeLine{405   \textcolor{keywordflow}{return} q;}
+\DoxyCodeLine{406 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{interface_8c_a5e8b275d70dd3b53c77c8bec2d476b3a}\label{interface_8c_a5e8b275d70dd3b53c77c8bec2d476b3a}} 
+\index{interface.c@{interface.c}!getCurrentFilesInfo@{getCurrentFilesInfo}}
+\index{getCurrentFilesInfo@{getCurrentFilesInfo}!interface.c@{interface.c}}
+\doxysubsubsection{\texorpdfstring{getCurrentFilesInfo()}{getCurrentFilesInfo()}}
+{\footnotesize\ttfamily Q13 get\+Current\+Files\+Info (\begin{DoxyParamCaption}\item[{S\+GV}]{sgv }\end{DoxyParamCaption})}
+
+
+
+Função que retorna uma estrutura com o resultado da leitura dos ficheiros na query 1. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em sgv} & S\+GV que contém a informação dos módulos. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+q Q13 estrutura com os produtos mais vendidos. 
+\end{DoxyReturn}
+
+
+Definido na linha 415 do ficheiro interface.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{415                                 \{}
+\DoxyCodeLine{416     Q13 q = \mbox{\hyperlink{estruturas_8c_a40348610ddfb3b978c4ba8c7999625d7}{init\_Q13}}();}
+\DoxyCodeLine{417     \mbox{\hyperlink{estruturas_8c_a70c5f541cf5b168d8b3851e828813e6a}{setQ\_Clientes13}}(q,\mbox{\hyperlink{structsgv}{sgv}}-\/>quantidade\_clientes);}
+\DoxyCodeLine{418     \mbox{\hyperlink{estruturas_8c_ad70fe37354f2c1d041dd6303bf55046c}{setQ\_Produtos13}}(q,\mbox{\hyperlink{structsgv}{sgv}}-\/>quantidade\_produtos);}
+\DoxyCodeLine{419     \mbox{\hyperlink{estruturas_8c_a8d1c23caf932f5e80f165b5fe5d49111}{setV\_Validas13}}(q,\mbox{\hyperlink{structsgv}{sgv}}-\/>vendas\_validas);}
+\DoxyCodeLine{420     \mbox{\hyperlink{estruturas_8c_a4c4b00824bb825a5b96699b114a4b518}{setV\_Totais13}}(q,\mbox{\hyperlink{structsgv}{sgv}}-\/>vendas\_totais);}
+\DoxyCodeLine{421     \textcolor{keywordtype}{char} *clientes = malloc(BUFFER * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));}
+\DoxyCodeLine{422     \textcolor{keywordtype}{char} *produtos = malloc(BUFFER * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));}
+\DoxyCodeLine{423     \textcolor{keywordtype}{char} *sales = malloc(BUFFER * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));}
+\DoxyCodeLine{424     strcpy(clientes,\mbox{\hyperlink{structsgv}{sgv}}-\/>clients\_File\_Path);}
+\DoxyCodeLine{425     strcpy(produtos,\mbox{\hyperlink{structsgv}{sgv}}-\/>products\_File\_Path);}
+\DoxyCodeLine{426     strcpy(sales,\mbox{\hyperlink{structsgv}{sgv}}-\/>sales\_File\_Path);}
+\DoxyCodeLine{427     \mbox{\hyperlink{estruturas_8c_ab4557190adbc6318f72a7b75c18b1060}{setClients\_Path13}}(q,clientes);}
+\DoxyCodeLine{428     \mbox{\hyperlink{estruturas_8c_a08cbcfcc3d7fc1306d5c55e3fb52628a}{setProducts\_Path13}}(q,produtos);}
+\DoxyCodeLine{429     \mbox{\hyperlink{estruturas_8c_a7df59ab6bcb1b50841edb6afa82b5d6c}{setSales\_Path13}}(q,sales);}
+\DoxyCodeLine{430     \textcolor{keywordflow}{return} q;}
+\DoxyCodeLine{431 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{interface_8c_a64de436cdf84b48f05143ab00ab4988f}\label{interface_8c_a64de436cdf84b48f05143ab00ab4988f}} 
+\index{interface.c@{interface.c}!getProductBuyers@{getProductBuyers}}
+\index{getProductBuyers@{getProductBuyers}!interface.c@{interface.c}}
+\doxysubsubsection{\texorpdfstring{getProductBuyers()}{getProductBuyers()}}
+{\footnotesize\ttfamily Q9 get\+Product\+Buyers (\begin{DoxyParamCaption}\item[{S\+GV}]{sgv,  }\item[{char $\ast$}]{product\+ID,  }\item[{int}]{branch }\end{DoxyParamCaption})}
+
+
+
+Função que retorna uma estrutura com os códigos e com o número total de clientes que efetuaram a compra de um dado produto numa certa filial. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em sgv} & S\+GV que contém a informação dos módulos. \\
+\hline
+{\em product\+ID} & char$\ast$ que indica o produto do qual pretendemos obter a informação. \\
+\hline
+{\em branch} & int que indica a filial. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+q Q9 estrutura com os resultados obtidos. 
+\end{DoxyReturn}
+
+
+Definido na linha 355 do ficheiro interface.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{355                                                          \{}
+\DoxyCodeLine{356   Q9 q = \mbox{\hyperlink{estruturas_8c_ae7e431264b18ffb3bc4d0818749d4f85}{init\_Q9}}(\mbox{\hyperlink{interface_8c_a31f3854f578e505a96b6052f3080df80}{getTotalProdSGV}}(\mbox{\hyperlink{structsgv}{sgv}}));}
+\DoxyCodeLine{357   \mbox{\hyperlink{filial_8c_ab52ea1316abba2849b9fb71416f61cca}{lista\_produtos\_comprados\_filial}}(q,\mbox{\hyperlink{structsgv}{sgv}}-\/>f\_produtos,productID,branch);}
+\DoxyCodeLine{358   \textcolor{keywordflow}{return} q;}
+\DoxyCodeLine{359 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{interface_8c_aef1b7d9c3f3fc367be2e17937bcbf4f8}\label{interface_8c_aef1b7d9c3f3fc367be2e17937bcbf4f8}} 
+\index{interface.c@{interface.c}!getProductSalesAndProfit@{getProductSalesAndProfit}}
+\index{getProductSalesAndProfit@{getProductSalesAndProfit}!interface.c@{interface.c}}
+\doxysubsubsection{\texorpdfstring{getProductSalesAndProfit()}{getProductSalesAndProfit()}}
+{\footnotesize\ttfamily Q3 get\+Product\+Sales\+And\+Profit (\begin{DoxyParamCaption}\item[{S\+GV}]{sgv,  }\item[{char $\ast$}]{product,  }\item[{int}]{month }\end{DoxyParamCaption})}
+
+
+
+Função que retorna o número de vendas e a faturação de um determinado produto num determinado mês. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em sgv} & S\+GV que contém a informação dos módulos. \\
+\hline
+{\em product} & char$\ast$ do qual se pretende obter a informação. \\
+\hline
+{\em month} & int do qual se pretende obter a informação. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+q Q3 estrutura com os resultados pretendidos. 
+\end{DoxyReturn}
+
+
+Definido na linha 262 do ficheiro interface.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{262                                                               \{}
+\DoxyCodeLine{263   Q3 q = \mbox{\hyperlink{estruturas_8c_ae07ea144b7cbd11836f9288387fa7678}{init\_Q3}}();}
+\DoxyCodeLine{264   \textcolor{keywordflow}{if}(\mbox{\hyperlink{produtos_8c_af0fd73116e6edc32695fe9f3d42f91df}{existe\_produto}}(\mbox{\hyperlink{structsgv}{sgv}}-\/>produtos,product))\{}
+\DoxyCodeLine{265     \mbox{\hyperlink{faturacao_8c_a2aba6ae247ab5660d7d6bca7c45c24ea}{get\_NVendas\_Mes\_Faturacao}}(\mbox{\hyperlink{structsgv}{sgv}}-\/>faturacao,product,month,q);}
+\DoxyCodeLine{266     \mbox{\hyperlink{faturacao_8c_a82a1bff71e58ef2648cce6bbfe59bef3}{get\_Fat\_Mes\_Faturacao}}(\mbox{\hyperlink{structsgv}{sgv}}-\/>faturacao,product,month,q);}
+\DoxyCodeLine{267   \}}
+\DoxyCodeLine{268   \textcolor{keywordflow}{return} q;}
+\DoxyCodeLine{269 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{interface_8c_a44987d4ab3920bd87edcf2b26dacabb4}\label{interface_8c_a44987d4ab3920bd87edcf2b26dacabb4}} 
+\index{interface.c@{interface.c}!getProductsBoughtByClient@{getProductsBoughtByClient}}
+\index{getProductsBoughtByClient@{getProductsBoughtByClient}!interface.c@{interface.c}}
+\doxysubsubsection{\texorpdfstring{getProductsBoughtByClient()}{getProductsBoughtByClient()}}
+{\footnotesize\ttfamily Q7 get\+Products\+Bought\+By\+Client (\begin{DoxyParamCaption}\item[{S\+GV}]{sgv,  }\item[{char $\ast$}]{client\+ID }\end{DoxyParamCaption})}
+
+
+
+Função que retorna o número total de produtos comprados por um determinado cliente. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em sgv} & S\+GV que contém a informação dos módulos. \\
+\hline
+{\em client\+ID} & char$\ast$ do qual se pretende obter a informação. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+q Q7 estrutura com o número total de produtos. 
+\end{DoxyReturn}
+
+
+Definido na linha 321 do ficheiro interface.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{321                                                      \{}
+\DoxyCodeLine{322   Q7 q = \mbox{\hyperlink{estruturas_8c_ab190d1e77a7bf1e6d7ebdb6f5b9187f5}{init\_Q7}}();}
+\DoxyCodeLine{323   \mbox{\hyperlink{filial_8c_aa5347695e52cae9f93b727ea933f43d0}{quantidade\_compras\_cliente}}(\mbox{\hyperlink{structsgv}{sgv}}-\/>f\_clientes,clientID,q);}
+\DoxyCodeLine{324   \textcolor{keywordflow}{return} q;}
+\DoxyCodeLine{325 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{interface_8c_a4a1d87be5ff63c03ec5dd25fa3262450}\label{interface_8c_a4a1d87be5ff63c03ec5dd25fa3262450}} 
+\index{interface.c@{interface.c}!getProductsNeverBought@{getProductsNeverBought}}
+\index{getProductsNeverBought@{getProductsNeverBought}!interface.c@{interface.c}}
+\doxysubsubsection{\texorpdfstring{getProductsNeverBought()}{getProductsNeverBought()}}
+{\footnotesize\ttfamily Q2 get\+Products\+Never\+Bought (\begin{DoxyParamCaption}\item[{S\+GV}]{sgv,  }\item[{int}]{branch\+ID }\end{DoxyParamCaption})}
+
+
+
+Função que retorna uma estrutura com os produtos de uma certa filial que nunca foram comprados. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em sgv} & S\+GV que contém a informação dos módulos. \\
+\hline
+{\em branch\+ID} & int que indica a filial. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+q Q2 estrutura com os resultados obtidos. 
+\end{DoxyReturn}
+
+
+Definido na linha 279 do ficheiro interface.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{279                                                 \{}
+\DoxyCodeLine{280   Q2 q = \mbox{\hyperlink{estruturas_8c_a4f78a342418e7557703855977d27d61a}{init\_Q2}}(\mbox{\hyperlink{interface_8c_a31f3854f578e505a96b6052f3080df80}{getTotalProdSGV}}(\mbox{\hyperlink{structsgv}{sgv}}));}
+\DoxyCodeLine{281   \textcolor{keywordflow}{if}(branchID == 0) \mbox{\hyperlink{faturacao_8c_a1a1452f4ea1cfd17ee3bca24b786ac05}{produtos\_nao\_comprados}}(\mbox{\hyperlink{structsgv}{sgv}}-\/>faturacao,q);}
+\DoxyCodeLine{282   \textcolor{keywordflow}{else} \mbox{\hyperlink{filial_8c_aaf0b804e595f9bc786067a5eecbd2368}{produtos\_nao\_comprados\_filial}}(\mbox{\hyperlink{structsgv}{sgv}}-\/>f\_produtos,branchID,q);}
+\DoxyCodeLine{283   \textcolor{keywordflow}{return} q;}
+\DoxyCodeLine{284 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{interface_8c_a9317d497e1604b68baabc8442c026de6}\label{interface_8c_a9317d497e1604b68baabc8442c026de6}} 
+\index{interface.c@{interface.c}!getProductsStartedByLetter@{getProductsStartedByLetter}}
+\index{getProductsStartedByLetter@{getProductsStartedByLetter}!interface.c@{interface.c}}
+\doxysubsubsection{\texorpdfstring{getProductsStartedByLetter()}{getProductsStartedByLetter()}}
+{\footnotesize\ttfamily Q2 get\+Products\+Started\+By\+Letter (\begin{DoxyParamCaption}\item[{S\+GV}]{sgv,  }\item[{char}]{letter }\end{DoxyParamCaption})}
+
+
+
+Função que retorna uma estrutura com os produtos começados por uma certa letra. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em sgv} & S\+GV que contém a informação dos módulos. \\
+\hline
+{\em letter} & char pela qual os produtos devem começar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+q Q2 estrutura com os produtos. 
+\end{DoxyReturn}
+
+
+Definido na linha 247 do ficheiro interface.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{247                                                    \{}
+\DoxyCodeLine{248     Q2 q = \mbox{\hyperlink{estruturas_8c_a4f78a342418e7557703855977d27d61a}{init\_Q2}}(\mbox{\hyperlink{interface_8c_a31f3854f578e505a96b6052f3080df80}{getTotalProdSGV}}(\mbox{\hyperlink{structsgv}{sgv}}));}
+\DoxyCodeLine{249     \mbox{\hyperlink{produtos_8c_adb85007b50b37825753d228a26bfe70c}{imprime\_produtos\_letra}}(\mbox{\hyperlink{structsgv}{sgv}}-\/>produtos, letter, q);}
+\DoxyCodeLine{250     \textcolor{keywordflow}{return} q;}
+\DoxyCodeLine{251 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{interface_8c_a6565a3fdd8b6a31373655d05e07b047a}\label{interface_8c_a6565a3fdd8b6a31373655d05e07b047a}} 
+\index{interface.c@{interface.c}!getSalesAndProfit@{getSalesAndProfit}}
+\index{getSalesAndProfit@{getSalesAndProfit}!interface.c@{interface.c}}
+\doxysubsubsection{\texorpdfstring{getSalesAndProfit()}{getSalesAndProfit()}}
+{\footnotesize\ttfamily Q8 get\+Sales\+And\+Profit (\begin{DoxyParamCaption}\item[{S\+GV}]{sgv,  }\item[{int}]{min\+Month,  }\item[{int}]{max\+Month }\end{DoxyParamCaption})}
+
+
+
+Função que retorna uma estrutura com o número total de vendas e o total faturado num intervalo fechado de meses. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em sgv} & S\+GV que contém a informação dos módulos. \\
+\hline
+{\em int} & min\+Month primeiro mês do intervalo. \\
+\hline
+{\em int} & max\+Month último mês do intervalo. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+q Q8 estrutura com os resultados pretendidos. 
+\end{DoxyReturn}
+
+
+Definido na linha 336 do ficheiro interface.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{336                                                          \{}
+\DoxyCodeLine{337   Q8 q = \mbox{\hyperlink{estruturas_8c_a62c7951790fd4d1888d8b91775d42507}{init\_Q8}}();}
+\DoxyCodeLine{338 }
+\DoxyCodeLine{339   \mbox{\hyperlink{faturacao_8c_ae69a924d20ab0f5944ee71a42685644f}{get\_NVendas\_Faturacao\_EntreMeses}}(\mbox{\hyperlink{structsgv}{sgv}}-\/>faturacao,minMonth,maxMonth,q);}
+\DoxyCodeLine{340 }
+\DoxyCodeLine{341   \mbox{\hyperlink{faturacao_8c_a5554c5f0230bda76be4824d7e7c4f8ea}{get\_Fat\_Faturacao\_EntreMeses}}(\mbox{\hyperlink{structsgv}{sgv}}-\/>faturacao,minMonth,maxMonth,q);}
+\DoxyCodeLine{342 }
+\DoxyCodeLine{343   \textcolor{keywordflow}{return} q;}
+\DoxyCodeLine{344 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{interface_8c_a0b8274230dfe854c8410d4f728a10206}\label{interface_8c_a0b8274230dfe854c8410d4f728a10206}} 
+\index{interface.c@{interface.c}!getTopSelledProducts@{getTopSelledProducts}}
+\index{getTopSelledProducts@{getTopSelledProducts}!interface.c@{interface.c}}
+\doxysubsubsection{\texorpdfstring{getTopSelledProducts()}{getTopSelledProducts()}}
+{\footnotesize\ttfamily Q11 get\+Top\+Selled\+Products (\begin{DoxyParamCaption}\item[{S\+GV}]{sgv,  }\item[{int}]{limit }\end{DoxyParamCaption})}
+
+
+
+Função que retorna uma estrutura com a lista de produtos mais vendidos em todo o ano, o número total de clientes e o número total de unidades vendidas, filial a filial. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em sgv} & S\+GV que contém a informação dos módulos. \\
+\hline
+{\em limit} & int que determina quantos produtos a estrutura vai ter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+q Q11 estrutura com os produtos mais vendidos. 
+\end{DoxyReturn}
+
+
+Definido na linha 384 do ficheiro interface.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{384                                             \{}
+\DoxyCodeLine{385   Q11 q = \mbox{\hyperlink{estruturas_8c_a083b5ba28f8cd400e9577d217b5651ad}{init\_Q11}}(\mbox{\hyperlink{interface_8c_a31f3854f578e505a96b6052f3080df80}{getTotalProdSGV}}(\mbox{\hyperlink{structsgv}{sgv}}));}
+\DoxyCodeLine{386   \mbox{\hyperlink{faturacao_8c_a1e3719cc2978d5d216267585dd0d4d77}{produtosMaisCompradosQ11}}(\mbox{\hyperlink{structsgv}{sgv}}-\/>faturacao,q);}
+\DoxyCodeLine{387   \mbox{\hyperlink{estruturas_8c_ad283e416672cf5a4f33f45360f8cb3c7}{sortAndGetQ11}}(q);}
+\DoxyCodeLine{388   \mbox{\hyperlink{filial_8c_a3ed5610efa2fb41ca5f6e4e041672118}{defineNClientes}}(\mbox{\hyperlink{structsgv}{sgv}}-\/>f\_produtos,q,limit);}
+\DoxyCodeLine{389   \textcolor{keywordflow}{return} q;}
+\DoxyCodeLine{390 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{interface_8c_a31f3854f578e505a96b6052f3080df80}\label{interface_8c_a31f3854f578e505a96b6052f3080df80}} 
+\index{interface.c@{interface.c}!getTotalProdSGV@{getTotalProdSGV}}
+\index{getTotalProdSGV@{getTotalProdSGV}!interface.c@{interface.c}}
+\doxysubsubsection{\texorpdfstring{getTotalProdSGV()}{getTotalProdSGV()}}
+{\footnotesize\ttfamily int get\+Total\+Prod\+S\+GV (\begin{DoxyParamCaption}\item[{S\+GV}]{sgv }\end{DoxyParamCaption})}
+
+
+
+Função que retorna o a quantidade total de produtos do S\+GV. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em sgv} & S\+GV que contém a informação dos módulos. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+int com o número total de produtos. 
+\end{DoxyReturn}
+
+
+Definido na linha 216 do ficheiro interface.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{216                             \{}
+\DoxyCodeLine{217   \textcolor{keywordflow}{return} \mbox{\hyperlink{structsgv}{sgv}}-\/>quantidade\_produtos;}
+\DoxyCodeLine{218 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{interface_8c_a14c3840c38c574667ca887b40c5250bb}\label{interface_8c_a14c3840c38c574667ca887b40c5250bb}} 
+\index{interface.c@{interface.c}!initSGV@{initSGV}}
+\index{initSGV@{initSGV}!interface.c@{interface.c}}
+\doxysubsubsection{\texorpdfstring{initSGV()}{initSGV()}}
+{\footnotesize\ttfamily S\+GV init\+S\+GV (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função que inicializa o S\+GV. 
+
+\begin{DoxyReturn}{Retorna}
+S\+GV inicializado. 
+\end{DoxyReturn}
+
+
+Definido na linha 28 do ficheiro interface.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{28              \{}
+\DoxyCodeLine{29     SGV \mbox{\hyperlink{structsgv}{sgv}} = malloc(\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} \mbox{\hyperlink{structsgv}{sgv}}));}
+\DoxyCodeLine{30     \mbox{\hyperlink{structsgv}{sgv}}-\/>clientes = \mbox{\hyperlink{clientes_8c_a4ce68937a14a9c16e98beeac9d9c393b}{init\_clientes\_catalog}}();}
+\DoxyCodeLine{31     \mbox{\hyperlink{structsgv}{sgv}}-\/>produtos = \mbox{\hyperlink{produtos_8c_a52029881f2d159cca61633df55736bba}{init\_produtos\_catalog}}();}
+\DoxyCodeLine{32     \mbox{\hyperlink{structsgv}{sgv}}-\/>faturacao = \mbox{\hyperlink{faturacao_8c_ae7d33e0cc1704b65d8bc45f5a6bba511}{init\_faturacao\_catalogo}}();}
+\DoxyCodeLine{33     \mbox{\hyperlink{structsgv}{sgv}}-\/>f\_clientes = \mbox{\hyperlink{filial_8c_ab32bfe5fe29208cbd961b06ff8ef49f3}{init\_filial\_clientes}}();}
+\DoxyCodeLine{34     \mbox{\hyperlink{structsgv}{sgv}}-\/>f\_produtos = \mbox{\hyperlink{filial_8c_a497ea2c43a261a3fdba1af1f998211ed}{init\_filial\_produtos}}();}
+\DoxyCodeLine{35     \mbox{\hyperlink{structsgv}{sgv}}-\/>valido = 0;}
+\DoxyCodeLine{36     \textcolor{keywordflow}{return} \mbox{\hyperlink{structsgv}{sgv}};}
+\DoxyCodeLine{37 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{interface_8c_ac1183805d0deb0ce6f6b7bc89e9f7733}\label{interface_8c_ac1183805d0deb0ce6f6b7bc89e9f7733}} 
+\index{interface.c@{interface.c}!isSGVvalid@{isSGVvalid}}
+\index{isSGVvalid@{isSGVvalid}!interface.c@{interface.c}}
+\doxysubsubsection{\texorpdfstring{isSGVvalid()}{isSGVvalid()}}
+{\footnotesize\ttfamily Boolean is\+S\+G\+Vvalid (\begin{DoxyParamCaption}\item[{S\+GV}]{sgv }\end{DoxyParamCaption})}
+
+
+
+Função que verifica se o S\+GV é válido. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em sgv} & S\+GV que contém a informação dos módulos. \\
+\hline
+{\em Boolean} & com o resultado. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 57 do ficheiro interface.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{57                            \{}
+\DoxyCodeLine{58   \textcolor{keywordflow}{if}(\mbox{\hyperlink{structsgv}{sgv}}) \textcolor{keywordflow}{return} \mbox{\hyperlink{structsgv}{sgv}}-\/>valido;}
+\DoxyCodeLine{59   \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{60 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{interface_8c_a5032b9f328a40f0b1863d8e7ec753134}\label{interface_8c_a5032b9f328a40f0b1863d8e7ec753134}} 
+\index{interface.c@{interface.c}!loadSGVFromFiles@{loadSGVFromFiles}}
+\index{loadSGVFromFiles@{loadSGVFromFiles}!interface.c@{interface.c}}
+\doxysubsubsection{\texorpdfstring{loadSGVFromFiles()}{loadSGVFromFiles()}}
+{\footnotesize\ttfamily S\+GV load\+S\+G\+V\+From\+Files (\begin{DoxyParamCaption}\item[{S\+GV}]{sgv,  }\item[{char $\ast$}]{clients\+File\+Path,  }\item[{char $\ast$}]{products\+File\+Path,  }\item[{char $\ast$}]{sales\+File\+Path,  }\item[{F\+I\+LE $\ast$}]{f,  }\item[{F\+I\+LE $\ast$}]{g,  }\item[{F\+I\+LE $\ast$}]{h }\end{DoxyParamCaption})}
+
+
+
+Função que carrega o conteúdo dos ficheiros para os respetivos catálogos. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em sgv} & S\+GV que contém a informação dos módulos. \\
+\hline
+{\em clients\+File\+Path} & char $\ast$ que contém o caminho para o ficheiro dos clientes. \\
+\hline
+{\em produtcs\+File\+Path} & char $\ast$ que contém o caminho para o ficheiro dos produtos. \\
+\hline
+{\em sales\+File\+Path} & char $\ast$ que contém o caminho para o ficheiro das vendas. \\
+\hline
+{\em f} & F\+I\+L\+E$\ast$ onde se vai escrever a informação do ficheiro dos clientes. \\
+\hline
+{\em g} & F\+I\+L\+E$\ast$ onde se vai escrever a informação do ficheiro dos produtos. \\
+\hline
+{\em h} & F\+I\+L\+E$\ast$ onde se vai escrever a informação do ficheiro das vendas. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+S\+GV com o conteúdo dos ficheiros carregado. 
+\end{DoxyReturn}
+
+
+Definido na linha 75 do ficheiro interface.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{75                                                                                                                         \{}
+\DoxyCodeLine{76     \textcolor{keywordflow}{if} (\mbox{\hyperlink{structsgv}{sgv}}-\/>valido) \{}
+\DoxyCodeLine{77       \mbox{\hyperlink{interface_8c_a7527694a42981c525dade1439705c706}{destroySGV}}(\mbox{\hyperlink{structsgv}{sgv}});}
+\DoxyCodeLine{78       \mbox{\hyperlink{structsgv}{sgv}} = \mbox{\hyperlink{interface_8c_a14c3840c38c574667ca887b40c5250bb}{initSGV}}(\mbox{\hyperlink{structsgv}{sgv}});}
+\DoxyCodeLine{79     \}}
+\DoxyCodeLine{80     \textcolor{keywordtype}{int} i=0, j=0, k=0 , count = 0;}
+\DoxyCodeLine{81     Produto prod;}
+\DoxyCodeLine{82     Cliente e;}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{84     strcpy(\mbox{\hyperlink{structsgv}{sgv}}-\/>clients\_File\_Path,clientsFilePath);}
+\DoxyCodeLine{85     strcpy(\mbox{\hyperlink{structsgv}{sgv}}-\/>products\_File\_Path,productsFilePath);}
+\DoxyCodeLine{86     strcpy(\mbox{\hyperlink{structsgv}{sgv}}-\/>sales\_File\_Path,salesFilePath);}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{88     \textcolor{comment}{/*Inicialização do catálogo dos clientes*/}}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{90         e = \mbox{\hyperlink{clientes_8c_a5f0cc74d03bcef2cf08ede6a6c82e413}{cria\_Cliente}}();}
+\DoxyCodeLine{91         \textcolor{keywordtype}{char} cli\_code[8];}
+\DoxyCodeLine{92         \textcolor{keywordtype}{char} *token;}
+\DoxyCodeLine{93         \textcolor{keywordflow}{while}(fgets(cli\_code,8,f))\{}
+\DoxyCodeLine{94             token = strtok(cli\_code,\textcolor{stringliteral}{"\(\backslash\)r\(\backslash\)n"});}
+\DoxyCodeLine{95             \textcolor{keywordflow}{if}(isalpha(token[0]) \&\& isdigit(token[1]) \&\& isdigit(token[2]) \&\& isdigit(token[3]) \&\& isdigit(token[4]))\{}
+\DoxyCodeLine{96             e = \mbox{\hyperlink{clientes_8c_a955d8669b906641755247a9d0c05f5ff}{altera\_Cliente}}(e,token);}
+\DoxyCodeLine{97             \mbox{\hyperlink{structsgv}{sgv}}-\/>clientes = \mbox{\hyperlink{clientes_8c_ab79e0e920fc19de6cd7278bb0e3f282c}{insere\_cliente}}(\mbox{\hyperlink{structsgv}{sgv}}-\/>clientes,e);}
+\DoxyCodeLine{98             \mbox{\hyperlink{structsgv}{sgv}}-\/>f\_clientes = \mbox{\hyperlink{filial_8c_af748ef77906df2597c4bdc2698ab807c}{cria\_Filial\_Clientes}}(\mbox{\hyperlink{structsgv}{sgv}}-\/>f\_clientes, e);}
+\DoxyCodeLine{99             i++;}
+\DoxyCodeLine{100           \}}
+\DoxyCodeLine{101         \}}
+\DoxyCodeLine{102         \mbox{\hyperlink{structsgv}{sgv}}-\/>quantidade\_clientes = i;}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{104         \textcolor{comment}{/*Fecho dos ficheiro previamente lido*/}}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{106         \mbox{\hyperlink{clientes_8c_a329568d1883aca127fc8025cd20f0419}{free\_c}}(e);}
+\DoxyCodeLine{107         fclose(f);}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{109 }
+\DoxyCodeLine{110     \textcolor{comment}{/*Inicialização do catálogo dos produtos*/}}
+\DoxyCodeLine{111 }
+\DoxyCodeLine{112         prod = \mbox{\hyperlink{produtos_8c_aec6b2a2c90828104c6586f94d9cfac10}{cria\_Produto}}();}
+\DoxyCodeLine{113         \textcolor{keywordtype}{char} prod\_code[9];}
+\DoxyCodeLine{114         \textcolor{keywordtype}{char} *token2;}
+\DoxyCodeLine{115 }
+\DoxyCodeLine{116         \textcolor{keywordflow}{while}(fgets(prod\_code,9,g))\{}
+\DoxyCodeLine{117             token2 = strtok(prod\_code,\textcolor{stringliteral}{"\(\backslash\)r\(\backslash\)n"});}
+\DoxyCodeLine{118             \textcolor{keywordflow}{if}(isalpha(token2[0]) \&\& isalpha(token2[1]) \&\& isdigit(token2[2]) \&\& isdigit(token2[3]) \&\& isdigit(token2[4]) \&\& isdigit(token2[5]))\{}
+\DoxyCodeLine{119             prod = \mbox{\hyperlink{produtos_8c_ae70317f8df268459befb125a4355b8c5}{altera\_Produto}}(prod,token2);}
+\DoxyCodeLine{120             \mbox{\hyperlink{structsgv}{sgv}}-\/>produtos = \mbox{\hyperlink{produtos_8c_a1b1c7bd6e4b89da7cb54463380a86d37}{insere\_produto}}(\mbox{\hyperlink{structsgv}{sgv}}-\/>produtos,prod);}
+\DoxyCodeLine{121             \mbox{\hyperlink{structsgv}{sgv}}-\/>faturacao = \mbox{\hyperlink{faturacao_8c_a8df5bebac86ad8e47477b8a46b371c3e}{insere\_faturacao}}(\mbox{\hyperlink{structsgv}{sgv}}-\/>faturacao,prod,NULL);}
+\DoxyCodeLine{122             \mbox{\hyperlink{structsgv}{sgv}}-\/>f\_produtos = \mbox{\hyperlink{filial_8c_a68e9aeba6cf2841ffae5e08cf1bc4b9b}{cria\_Filial\_Produtos}}(\mbox{\hyperlink{structsgv}{sgv}}-\/>f\_produtos,prod);}
+\DoxyCodeLine{123             j++;}
+\DoxyCodeLine{124             \}}
+\DoxyCodeLine{125         \}}
+\DoxyCodeLine{126         \mbox{\hyperlink{structsgv}{sgv}}-\/>quantidade\_produtos = j;}
+\DoxyCodeLine{127 }
+\DoxyCodeLine{128         \textcolor{comment}{/*Fecho dos ficheiro previamente lido*/}}
+\DoxyCodeLine{129         \mbox{\hyperlink{produtos_8c_a67678f17e9e88b791e53182199cf5f38}{free\_p}}(prod);}
+\DoxyCodeLine{130         fclose(g);}
+\DoxyCodeLine{131 }
+\DoxyCodeLine{132 }
+\DoxyCodeLine{133     \textcolor{comment}{/*Inicialização do catálogo de faturação*/}}
+\DoxyCodeLine{134 }
+\DoxyCodeLine{135 }
+\DoxyCodeLine{136         \textcolor{keywordtype}{char} *p; \textcolor{comment}{/*Código do produto*/}}
+\DoxyCodeLine{137         \textcolor{keywordtype}{double} preco; \textcolor{comment}{/*Preço da venda*/}}
+\DoxyCodeLine{138         \textcolor{keywordtype}{int} qt; \textcolor{comment}{/*Quantidade da venda*/}}
+\DoxyCodeLine{139         \textcolor{keywordtype}{char} *tipo\_compra; \textcolor{comment}{/*Tipo da compra, Normal(N) ou Promoção(P)*/}}
+\DoxyCodeLine{140         \textcolor{keywordtype}{char} *c; \textcolor{comment}{/*Código do cliente*/}}
+\DoxyCodeLine{141         \textcolor{keywordtype}{int} mes; \textcolor{comment}{/*Mês da venda*/}}
+\DoxyCodeLine{142         \textcolor{keywordtype}{int} filial; \textcolor{comment}{/*Filial responsável pela venda*/}}
+\DoxyCodeLine{143         \textcolor{keywordtype}{char} *string, *string2; \textcolor{comment}{/*Guarda a linha da venda*/}}
+\DoxyCodeLine{144         \textcolor{keywordtype}{char} token3[BUFFER];}
+\DoxyCodeLine{145         e = \mbox{\hyperlink{clientes_8c_a5f0cc74d03bcef2cf08ede6a6c82e413}{cria\_Cliente}}();}
+\DoxyCodeLine{146         prod = \mbox{\hyperlink{produtos_8c_aec6b2a2c90828104c6586f94d9cfac10}{cria\_Produto}}();}
+\DoxyCodeLine{147 }
+\DoxyCodeLine{148         \textcolor{keywordflow}{while} (fgets(token3, BUFFER, h)) \{}
+\DoxyCodeLine{149             string2 = \textcolor{keywordtype}{string} = strdup(token3);}
+\DoxyCodeLine{150 }
+\DoxyCodeLine{151             p = strsep(\&\textcolor{keywordtype}{string},\textcolor{stringliteral}{" "});}
+\DoxyCodeLine{152             prod = \mbox{\hyperlink{produtos_8c_ae70317f8df268459befb125a4355b8c5}{altera\_Produto}}(prod,p);}
+\DoxyCodeLine{153 }
+\DoxyCodeLine{154 }
+\DoxyCodeLine{155             preco = (double)atof(strsep(\&\textcolor{keywordtype}{string},\textcolor{stringliteral}{" "}));}
+\DoxyCodeLine{156 }
+\DoxyCodeLine{157 }
+\DoxyCodeLine{158             qt = atoi(strsep(\&\textcolor{keywordtype}{string},\textcolor{stringliteral}{" "}));}
+\DoxyCodeLine{159 }
+\DoxyCodeLine{160 }
+\DoxyCodeLine{161             tipo\_compra = strsep(\&\textcolor{keywordtype}{string},\textcolor{stringliteral}{" "});}
+\DoxyCodeLine{162 }
+\DoxyCodeLine{163 }
+\DoxyCodeLine{164             c = strsep(\&\textcolor{keywordtype}{string},\textcolor{stringliteral}{" "});}
+\DoxyCodeLine{165             e = \mbox{\hyperlink{clientes_8c_a955d8669b906641755247a9d0c05f5ff}{altera\_Cliente}}(e,c);}
+\DoxyCodeLine{166 }
+\DoxyCodeLine{167 }
+\DoxyCodeLine{168             mes = atoi(strsep(\&\textcolor{keywordtype}{string},\textcolor{stringliteral}{" "}));}
+\DoxyCodeLine{169 }
+\DoxyCodeLine{170 }
+\DoxyCodeLine{171             filial = atoi(strsep(\&\textcolor{keywordtype}{string},\textcolor{stringliteral}{"\(\backslash\)n"}));}
+\DoxyCodeLine{172 }
+\DoxyCodeLine{173 }
+\DoxyCodeLine{174             \textcolor{comment}{/*Validação das vendas, caso encontre o código de cliente e o código de produto*/}}
+\DoxyCodeLine{175             \textcolor{keywordflow}{if}(\mbox{\hyperlink{clientes_8c_aa1605360028ceae03157e2a53b9d30e4}{existe\_cliente}}(\mbox{\hyperlink{structsgv}{sgv}}-\/>clientes,c) \&\& \mbox{\hyperlink{produtos_8c_af0fd73116e6edc32695fe9f3d42f91df}{existe\_produto}}(\mbox{\hyperlink{structsgv}{sgv}}-\/>produtos,p))\{}
+\DoxyCodeLine{176 }
+\DoxyCodeLine{177               \textcolor{comment}{/*Insere na estrutura de filial organizada por clientes*/}}
+\DoxyCodeLine{178               \mbox{\hyperlink{structsgv}{sgv}}-\/>f\_clientes = \mbox{\hyperlink{filial_8c_abd728e46551e8d0a8a66fc9fa39683f7}{altera\_Filial\_Cliente}}(\mbox{\hyperlink{structsgv}{sgv}}-\/>f\_clientes, e, prod, mes, qt, preco, filial);}
+\DoxyCodeLine{179 }
+\DoxyCodeLine{180 }
+\DoxyCodeLine{181               \textcolor{comment}{/*/Insere na estrutura filial organizada por produtos*/}}
+\DoxyCodeLine{182               \mbox{\hyperlink{structsgv}{sgv}}-\/>f\_produtos = \mbox{\hyperlink{filial_8c_aedfe7662609b1eadfa34656ea5f49d50}{altera\_Filial\_Produto}}(\mbox{\hyperlink{structsgv}{sgv}}-\/>f\_produtos, e, prod, mes, qt, preco, filial, tipo\_compra[0]);}
+\DoxyCodeLine{183 }
+\DoxyCodeLine{184 }
+\DoxyCodeLine{185               \textcolor{comment}{/*Insere na estrutura todas as informações na linha da venda previamente copiadas*/}}
+\DoxyCodeLine{186 }
+\DoxyCodeLine{187 }
+\DoxyCodeLine{188               \mbox{\hyperlink{structsgv}{sgv}}-\/>faturacao = \mbox{\hyperlink{faturacao_8c_a5b382a89fee7d02eb3855f94e7822bd5}{altera\_Faturacao}}(\mbox{\hyperlink{structsgv}{sgv}}-\/>faturacao,prod,mes,filial,tipo\_compra[0],preco,qt);}
+\DoxyCodeLine{189               count++;}
+\DoxyCodeLine{190 }
+\DoxyCodeLine{191 }
+\DoxyCodeLine{192             \}}
+\DoxyCodeLine{193             free(string2);}
+\DoxyCodeLine{194             k++;}
+\DoxyCodeLine{195         \}}
+\DoxyCodeLine{196 }
+\DoxyCodeLine{197 }
+\DoxyCodeLine{198 }
+\DoxyCodeLine{199         \mbox{\hyperlink{structsgv}{sgv}}-\/>vendas\_validas = count;}
+\DoxyCodeLine{200         \mbox{\hyperlink{structsgv}{sgv}}-\/>vendas\_totais = k;}
+\DoxyCodeLine{201 }
+\DoxyCodeLine{202         \textcolor{comment}{/*Fecho dos ficheiro previamente lido*/}}
+\DoxyCodeLine{203         \mbox{\hyperlink{clientes_8c_a329568d1883aca127fc8025cd20f0419}{free\_c}}(e);}
+\DoxyCodeLine{204         \mbox{\hyperlink{produtos_8c_a67678f17e9e88b791e53182199cf5f38}{free\_p}}(prod);}
+\DoxyCodeLine{205         fclose(h);}
+\DoxyCodeLine{206         \mbox{\hyperlink{structsgv}{sgv}}-\/>valido = 1;}
+\DoxyCodeLine{207 }
+\DoxyCodeLine{208     \textcolor{keywordflow}{return} \mbox{\hyperlink{structsgv}{sgv}};}
+\DoxyCodeLine{209 \}}
+
+\end{DoxyCode}

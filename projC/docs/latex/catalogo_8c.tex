@@ -1,0 +1,294 @@
+\hypertarget{catalogo_8c}{}\doxysection{Referência ao ficheiro src/catalogo.c}
+\label{catalogo_8c}\index{src/catalogo.c@{src/catalogo.c}}
+
+
+Ficheiro que contém a A\+PI relativa à implementação de catálogos.  
+
+
+{\ttfamily \#include \char`\"{}../include/catalogo.\+h\char`\"{}}\newline
+\doxysubsection*{Estruturas de Dados}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcatalogo}{catalogo}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+Catalogo \mbox{\hyperlink{catalogo_8c_a5add1241036a95c143d5cb5d8e5e7fe5}{init\+\_\+\+Catalogo}} ()
+\begin{DoxyCompactList}\small\item\em Função que inicializa um novo catálogo. \end{DoxyCompactList}\item 
+Boolean \mbox{\hyperlink{catalogo_8c_a93fc716391dc53901dc2dbff97e75da1}{existe\+\_\+\+Catalogo}} (Catalogo \mbox{\hyperlink{structcatalogo}{catalogo}}, char $\ast$key)
+\begin{DoxyCompactList}\small\item\em Função que verifica se existe uma key num catálogo. \end{DoxyCompactList}\item 
+Estrutura \mbox{\hyperlink{catalogo_8c_a2ed88930f3b18c3f107506ef3170508d}{get\+\_\+\+Cat\+\_\+struct}} (Catalogo c, char $\ast$key)
+\begin{DoxyCompactList}\small\item\em Função que devolve a estrutura associada a uma key de um catálogo que lhe é passada como argumento. \end{DoxyCompactList}\item 
+Catalogo \mbox{\hyperlink{catalogo_8c_a63d5cf63479a790b0f74a7bfa0dcd10a}{insere\+\_\+\+Catalogo}} (Catalogo c, char $\ast$key, void $\ast$estrutura)
+\begin{DoxyCompactList}\small\item\em Função que insere no catálogo tendo como referência de posicionamento um char$\ast$ key. \end{DoxyCompactList}\item 
+Catalogo \mbox{\hyperlink{catalogo_8c_acc5f085d5be2ccd45505eff9015e27db}{altera\+\_\+\+Catalogo}} (Catalogo c, char $\ast$key, void $\ast$estrutura)
+\begin{DoxyCompactList}\small\item\em Função que altera uma estrutura no catálogo tendo como referência de posicionamento um char$\ast$ key. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{catalogo_8c_aa40131c98313b4683617cd1757f7ea66}{free\+\_\+\+Catalogo}} (Catalogo cat, Funcao f)
+\begin{DoxyCompactList}\small\item\em Função com o objetivo de limpar da memória um dado catálogo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{catalogo_8c_a00844e192fa3f0c5afc710d9da7c2c83}{imprime\+\_\+\+Catalogo}} (Catalogo cat)
+\begin{DoxyCompactList}\small\item\em Função que imprime um catálogo. \end{DoxyCompactList}\item 
+A\+VL \mbox{\hyperlink{catalogo_8c_a551505c19cd86f02ff31019e350df2a6}{catalogo\+\_\+get\+A\+VL}} (Catalogo cat, int index)
+\begin{DoxyCompactList}\small\item\em Função que devolve a A\+VL que se encontra numa determinada posição do array. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Ficheiro que contém a A\+PI relativa à implementação de catálogos. 
+
+
+
+\doxysubsection{Documentação das funções}
+\mbox{\Hypertarget{catalogo_8c_acc5f085d5be2ccd45505eff9015e27db}\label{catalogo_8c_acc5f085d5be2ccd45505eff9015e27db}} 
+\index{catalogo.c@{catalogo.c}!altera\_Catalogo@{altera\_Catalogo}}
+\index{altera\_Catalogo@{altera\_Catalogo}!catalogo.c@{catalogo.c}}
+\doxysubsubsection{\texorpdfstring{altera\_Catalogo()}{altera\_Catalogo()}}
+{\footnotesize\ttfamily Catalogo altera\+\_\+\+Catalogo (\begin{DoxyParamCaption}\item[{Catalogo}]{c,  }\item[{char $\ast$}]{key,  }\item[{void $\ast$}]{estrutura }\end{DoxyParamCaption})}
+
+
+
+Função que altera uma estrutura no catálogo tendo como referência de posicionamento um char$\ast$ key. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em c} & Catalogo que vai ser alterado. \\
+\hline
+{\em key} & char$\ast$ que indica o local onde altera. \\
+\hline
+{\em estrutura} & Conteúdo/\+Estrutura que vai alterar a existente. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+catálogo atualizado. 
+\end{DoxyReturn}
+
+
+Definido na linha 69 do ficheiro catalogo.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{69                                                                 \{}
+\DoxyCodeLine{70    \textcolor{keywordtype}{int} i = key[0] -\/ \textcolor{charliteral}{'A'};}
+\DoxyCodeLine{71    c-\/>indice[i] = \mbox{\hyperlink{avl_8c_a28030a6963aec8fe11604cee697ef155}{atualiza\_avl}}(c-\/>indice[i],key,estrutura);}
+\DoxyCodeLine{72    \textcolor{keywordflow}{return} c;}
+\DoxyCodeLine{73 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{catalogo_8c_a551505c19cd86f02ff31019e350df2a6}\label{catalogo_8c_a551505c19cd86f02ff31019e350df2a6}} 
+\index{catalogo.c@{catalogo.c}!catalogo\_getAVL@{catalogo\_getAVL}}
+\index{catalogo\_getAVL@{catalogo\_getAVL}!catalogo.c@{catalogo.c}}
+\doxysubsubsection{\texorpdfstring{catalogo\_getAVL()}{catalogo\_getAVL()}}
+{\footnotesize\ttfamily A\+VL catalogo\+\_\+get\+A\+VL (\begin{DoxyParamCaption}\item[{Catalogo}]{cat,  }\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Função que devolve a A\+VL que se encontra numa determinada posição do array. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em cat} & Catalogo onde se procura. \\
+\hline
+{\em index} & int que determina a posição do array. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+A\+VL que se encontra nessa posição do array. 
+\end{DoxyReturn}
+
+
+Definido na linha 103 do ficheiro catalogo.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{103                                             \{}
+\DoxyCodeLine{104   \textcolor{keywordflow}{return} cat-\/>indice[index];}
+\DoxyCodeLine{105 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{catalogo_8c_a93fc716391dc53901dc2dbff97e75da1}\label{catalogo_8c_a93fc716391dc53901dc2dbff97e75da1}} 
+\index{catalogo.c@{catalogo.c}!existe\_Catalogo@{existe\_Catalogo}}
+\index{existe\_Catalogo@{existe\_Catalogo}!catalogo.c@{catalogo.c}}
+\doxysubsubsection{\texorpdfstring{existe\_Catalogo()}{existe\_Catalogo()}}
+{\footnotesize\ttfamily Boolean existe\+\_\+\+Catalogo (\begin{DoxyParamCaption}\item[{Catalogo}]{catalogo,  }\item[{char $\ast$}]{key }\end{DoxyParamCaption})}
+
+
+
+Função que verifica se existe uma key num catálogo. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em catalogo} & Catalogo onde a existência é verificada. \\
+\hline
+{\em key} & $\ast$char a procurar no array. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Boolean com o resultado. 
+\end{DoxyReturn}
+
+
+Definido na linha 32 do ficheiro catalogo.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{32                                                       \{}
+\DoxyCodeLine{33    \textcolor{keywordtype}{int} index = key[0] -\/ \textcolor{charliteral}{'A'};}
+\DoxyCodeLine{34    Boolean existe = \mbox{\hyperlink{avl_8c_a8fddc39a0bdd4496fe33e6b48a167c95}{avl\_lookUp}}(\mbox{\hyperlink{structcatalogo}{catalogo}}-\/>indice[index],key);}
+\DoxyCodeLine{35    \textcolor{keywordflow}{return} existe;}
+\DoxyCodeLine{36 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{catalogo_8c_aa40131c98313b4683617cd1757f7ea66}\label{catalogo_8c_aa40131c98313b4683617cd1757f7ea66}} 
+\index{catalogo.c@{catalogo.c}!free\_Catalogo@{free\_Catalogo}}
+\index{free\_Catalogo@{free\_Catalogo}!catalogo.c@{catalogo.c}}
+\doxysubsubsection{\texorpdfstring{free\_Catalogo()}{free\_Catalogo()}}
+{\footnotesize\ttfamily void free\+\_\+\+Catalogo (\begin{DoxyParamCaption}\item[{Catalogo}]{cat,  }\item[{Funcao}]{f }\end{DoxyParamCaption})}
+
+
+
+Função com o objetivo de limpar da memória um dado catálogo. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em cat} & Catalogo a limpar da memória. \\
+\hline
+{\em f} & Funcao que liberta a memória da estrutura associada. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 80 do ficheiro catalogo.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{80                                           \{}
+\DoxyCodeLine{81    \textcolor{keywordtype}{int} i;}
+\DoxyCodeLine{82    \textcolor{keywordflow}{for}(i = 0;i<NR\_LETRAS;i++)}
+\DoxyCodeLine{83       \mbox{\hyperlink{avl_8c_a79d17c2e6df846c93b8a5743cd025735}{avl\_free}}(cat-\/>indice[i],f);}
+\DoxyCodeLine{84    free(cat);}
+\DoxyCodeLine{85 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{catalogo_8c_a2ed88930f3b18c3f107506ef3170508d}\label{catalogo_8c_a2ed88930f3b18c3f107506ef3170508d}} 
+\index{catalogo.c@{catalogo.c}!get\_Cat\_struct@{get\_Cat\_struct}}
+\index{get\_Cat\_struct@{get\_Cat\_struct}!catalogo.c@{catalogo.c}}
+\doxysubsubsection{\texorpdfstring{get\_Cat\_struct()}{get\_Cat\_struct()}}
+{\footnotesize\ttfamily Estrutura get\+\_\+\+Cat\+\_\+struct (\begin{DoxyParamCaption}\item[{Catalogo}]{c,  }\item[{char $\ast$}]{key }\end{DoxyParamCaption})}
+
+
+
+Função que devolve a estrutura associada a uma key de um catálogo que lhe é passada como argumento. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em c} & Catalogo de onde será devolvida a estrutura. \\
+\hline
+{\em key} & $\ast$char indicando o valor a procurar onde estará associada a estrutura. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void$\ast$ com apontador para a estrutura ou N\+U\+LL caso a mesma nao se encontre lá. 
+\end{DoxyReturn}
+
+
+Definido na linha 44 do ficheiro catalogo.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{44                                                \{}
+\DoxyCodeLine{45    \textcolor{keywordtype}{int} index = key[0] -\/ \textcolor{charliteral}{'A'};}
+\DoxyCodeLine{46    \textcolor{keywordflow}{return} \mbox{\hyperlink{avl_8c_a9c63fca5348576aa37364760756f565e}{avl\_getEstrutura}}(c-\/>indice[index],key);}
+\DoxyCodeLine{47 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{catalogo_8c_a00844e192fa3f0c5afc710d9da7c2c83}\label{catalogo_8c_a00844e192fa3f0c5afc710d9da7c2c83}} 
+\index{catalogo.c@{catalogo.c}!imprime\_Catalogo@{imprime\_Catalogo}}
+\index{imprime\_Catalogo@{imprime\_Catalogo}!catalogo.c@{catalogo.c}}
+\doxysubsubsection{\texorpdfstring{imprime\_Catalogo()}{imprime\_Catalogo()}}
+{\footnotesize\ttfamily void imprime\+\_\+\+Catalogo (\begin{DoxyParamCaption}\item[{Catalogo}]{cat }\end{DoxyParamCaption})}
+
+
+
+Função que imprime um catálogo. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em cat} & Catalogo a imprimir. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 91 do ficheiro catalogo.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{91                                    \{}
+\DoxyCodeLine{92    \textcolor{keywordtype}{int} i;}
+\DoxyCodeLine{93    \textcolor{keywordflow}{for}(i = 0; i<NR\_LETRAS;i++)}
+\DoxyCodeLine{94       \mbox{\hyperlink{avl_8c_a6bf7ed43f3cf1c72b56ec0e18fcda525}{imprime\_AVL\_String}}(cat-\/>indice[i]);}
+\DoxyCodeLine{95 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{catalogo_8c_a5add1241036a95c143d5cb5d8e5e7fe5}\label{catalogo_8c_a5add1241036a95c143d5cb5d8e5e7fe5}} 
+\index{catalogo.c@{catalogo.c}!init\_Catalogo@{init\_Catalogo}}
+\index{init\_Catalogo@{init\_Catalogo}!catalogo.c@{catalogo.c}}
+\doxysubsubsection{\texorpdfstring{init\_Catalogo()}{init\_Catalogo()}}
+{\footnotesize\ttfamily Catalogo init\+\_\+\+Catalogo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função que inicializa um novo catálogo. 
+
+\begin{DoxyReturn}{Retorna}
+Novo catálogo nulo. 
+\end{DoxyReturn}
+
+
+Definido na linha 17 do ficheiro catalogo.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{17                          \{}
+\DoxyCodeLine{18   Catalogo cat = (Catalogo) malloc(\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} \mbox{\hyperlink{structcatalogo}{catalogo}}));}
+\DoxyCodeLine{19   \textcolor{keywordtype}{int} i;}
+\DoxyCodeLine{20   \textcolor{keywordflow}{for}(i = 0; i < NR\_LETRAS; i++) \{}
+\DoxyCodeLine{21       cat-\/>indice[i] = \mbox{\hyperlink{avl_8c_a12edfb9dbe827acf6f4eadc70cf84c44}{initAVL}}();}
+\DoxyCodeLine{22   \}}
+\DoxyCodeLine{23   \textcolor{keywordflow}{return} cat;}
+\DoxyCodeLine{24 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{catalogo_8c_a63d5cf63479a790b0f74a7bfa0dcd10a}\label{catalogo_8c_a63d5cf63479a790b0f74a7bfa0dcd10a}} 
+\index{catalogo.c@{catalogo.c}!insere\_Catalogo@{insere\_Catalogo}}
+\index{insere\_Catalogo@{insere\_Catalogo}!catalogo.c@{catalogo.c}}
+\doxysubsubsection{\texorpdfstring{insere\_Catalogo()}{insere\_Catalogo()}}
+{\footnotesize\ttfamily Catalogo insere\+\_\+\+Catalogo (\begin{DoxyParamCaption}\item[{Catalogo}]{c,  }\item[{char $\ast$}]{key,  }\item[{void $\ast$}]{estrutura }\end{DoxyParamCaption})}
+
+
+
+Função que insere no catálogo tendo como referência de posicionamento um char$\ast$ key. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em c} & Catalogo onde insere. \\
+\hline
+{\em key} & char$\ast$ que indica o local onde inserir. \\
+\hline
+{\em estrutura} & Conteúdo/\+Estrutura a inserir. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+catálogo com a nova estrutura adicionada. 
+\end{DoxyReturn}
+
+
+Definido na linha 56 do ficheiro catalogo.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{56                                                                  \{}
+\DoxyCodeLine{57    \textcolor{keywordtype}{int} i = key[0] -\/ \textcolor{charliteral}{'A'};}
+\DoxyCodeLine{58    c-\/>indice[i] = \mbox{\hyperlink{avl_8c_a1dec82bcbce333d16733ecf7344d378b}{avl\_insert}}(c-\/>indice[i],key,estrutura);}
+\DoxyCodeLine{59    \textcolor{keywordflow}{return} c;}
+\DoxyCodeLine{60 \}}
+
+\end{DoxyCode}

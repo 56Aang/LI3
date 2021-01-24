@@ -1,0 +1,535 @@
+\hypertarget{produtos_8c}{}\doxysection{Referência ao ficheiro src/produtos.c}
+\label{produtos_8c}\index{src/produtos.c@{src/produtos.c}}
+
+
+Ficheiro que contém a A\+PI relativa à implementação dos produtos.  
+
+
+{\ttfamily \#include \char`\"{}../include/produtos.\+h\char`\"{}}\newline
+\doxysubsection*{Estruturas de Dados}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structproduto}{produto}}
+\item 
+struct \mbox{\hyperlink{structcatalogo__produtos}{catalogo\+\_\+produtos}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+Produto \mbox{\hyperlink{produtos_8c_aec6b2a2c90828104c6586f94d9cfac10}{cria\+\_\+\+Produto}} ()
+\begin{DoxyCompactList}\small\item\em Função que cria um produto. \end{DoxyCompactList}\item 
+Produto \mbox{\hyperlink{produtos_8c_ae70317f8df268459befb125a4355b8c5}{altera\+\_\+\+Produto}} (Produto p, char $\ast$e)
+\begin{DoxyCompactList}\small\item\em Função que altera um produto. \end{DoxyCompactList}\item 
+Produtos\+\_\+\+Catalog \mbox{\hyperlink{produtos_8c_a52029881f2d159cca61633df55736bba}{init\+\_\+produtos\+\_\+catalog}} ()
+\begin{DoxyCompactList}\small\item\em Função que inicializa um catálogo de produtos. \end{DoxyCompactList}\item 
+Boolean \mbox{\hyperlink{produtos_8c_af0fd73116e6edc32695fe9f3d42f91df}{existe\+\_\+produto}} (Produtos\+\_\+\+Catalog c, char $\ast$key)
+\begin{DoxyCompactList}\small\item\em Função que verifica se um produto existe. \end{DoxyCompactList}\item 
+Produtos\+\_\+\+Catalog \mbox{\hyperlink{produtos_8c_a1b1c7bd6e4b89da7cb54463380a86d37}{insere\+\_\+produto}} (Produtos\+\_\+\+Catalog cat, Produto p)
+\begin{DoxyCompactList}\small\item\em Função que insere um produto num catálogos de produto. \end{DoxyCompactList}\item 
+Produtos\+\_\+\+Catalog \mbox{\hyperlink{produtos_8c_a14127657c369d1f22bb7c7cd4cafe27d}{insere\+\_\+\+Produtos\+\_\+\+Catalogo}} (Produtos\+\_\+\+Catalog cat, Produto p, void $\ast$Estrutura)
+\begin{DoxyCompactList}\small\item\em Função que insere no produto de um catálogo uma estrutura. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{produtos_8c_a8f0e144585124999fc2f992536886b91}{free\+\_\+\+Produtos}} (Produtos\+\_\+\+Catalog cat, Funcao f)
+\begin{DoxyCompactList}\small\item\em Função que liberta da memória o espaço ocupado por um catálogo de produtos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{produtos_8c_a439702d2ffb94554057d38a80db3e5c9}{imprime\+\_\+\+Produtos}} (Produtos\+\_\+\+Catalog cat)
+\begin{DoxyCompactList}\small\item\em Função que imprime os produtos. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{produtos_8c_a41fd3a5ec4fda805f937ed25bcbe5750}{get\+Produto\+Code}} (Produto p)
+\begin{DoxyCompactList}\small\item\em Função que retorna o código de um produto. \end{DoxyCompactList}\item 
+Estrutura \mbox{\hyperlink{produtos_8c_aa08eb3f4ae710696ee450d776e9b26dc}{get\+\_\+product\+\_\+struct}} (Produtos\+\_\+\+Catalog cat, Produto p)
+\begin{DoxyCompactList}\small\item\em Função que devolve a estrutura associada a um produto de um catálogo que lhe é passado como argumento. \end{DoxyCompactList}\item 
+Produtos\+\_\+\+Catalog \mbox{\hyperlink{produtos_8c_a1bd74964b4557d593105d00dcb5d4607}{altera\+\_\+\+Catalogo\+\_\+\+Produtos}} (Produtos\+\_\+\+Catalog cat, Produto p, void $\ast$Estrutura)
+\begin{DoxyCompactList}\small\item\em Função que altera uma determinada estrutura dando um catálogo de produtos e um produto como argumentos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{produtos_8c_a67678f17e9e88b791e53182199cf5f38}{free\+\_\+p}} (Produto p)
+\begin{DoxyCompactList}\small\item\em Função que liberta da memória o espaço ocupado por um produto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{produtos_8c_a238606f095842e415b501f252087ff17}{percorre\+\_\+\+Nodo\+\_\+\+Produtos\+\_\+\+Q2}} (N\+O\+DO tree, Q2 q)
+\begin{DoxyCompactList}\small\item\em Função que percorre o nodo de cada árvore, de forma inorder, obtendo a string que lá está inserida e colocando-\/a na estrutura auxiliar Q2. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{produtos_8c_a8579e035b71e06d3be5abf7d5e739557}{percorre\+\_\+\+A\+V\+L\+\_\+\+Produtos\+\_\+\+Q2}} (A\+VL tree, Q2 q)
+\begin{DoxyCompactList}\small\item\em Função que percorre uma A\+VL. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{produtos_8c_adb85007b50b37825753d228a26bfe70c}{imprime\+\_\+produtos\+\_\+letra}} (Produtos\+\_\+\+Catalog cat, char letra, Q2 q)
+\begin{DoxyCompactList}\small\item\em Função que insere numa estrutura auxiliar Q2 as strings dos produtos e o número total dos produtos começados pela letra dada. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Ficheiro que contém a A\+PI relativa à implementação dos produtos. 
+
+
+
+\doxysubsection{Documentação das funções}
+\mbox{\Hypertarget{produtos_8c_a1bd74964b4557d593105d00dcb5d4607}\label{produtos_8c_a1bd74964b4557d593105d00dcb5d4607}} 
+\index{produtos.c@{produtos.c}!altera\_Catalogo\_Produtos@{altera\_Catalogo\_Produtos}}
+\index{altera\_Catalogo\_Produtos@{altera\_Catalogo\_Produtos}!produtos.c@{produtos.c}}
+\doxysubsubsection{\texorpdfstring{altera\_Catalogo\_Produtos()}{altera\_Catalogo\_Produtos()}}
+{\footnotesize\ttfamily Produtos\+\_\+\+Catalog altera\+\_\+\+Catalogo\+\_\+\+Produtos (\begin{DoxyParamCaption}\item[{Produtos\+\_\+\+Catalog}]{cat,  }\item[{Produto}]{p,  }\item[{void $\ast$}]{Estrutura }\end{DoxyParamCaption})}
+
+
+
+Função que altera uma determinada estrutura dando um catálogo de produtos e um produto como argumentos. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em cat} & Produtos\+\_\+\+Catalog onde se vai alterar. \\
+\hline
+{\em p} & Produto onde se vai alterar. \\
+\hline
+{\em Estrutura} & void$\ast$ que vai ser introduzida \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Produtos\+\_\+\+Catalogo com a estrutra do produto alterada. 
+\end{DoxyReturn}
+
+
+Definido na linha 138 do ficheiro produtos.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{138                                                                                              \{}
+\DoxyCodeLine{139   \textcolor{keywordtype}{char} *aux = \mbox{\hyperlink{produtos_8c_a41fd3a5ec4fda805f937ed25bcbe5750}{getProdutoCode}}(p);}
+\DoxyCodeLine{140   cat-\/>catalogo = \mbox{\hyperlink{catalogo_8c_acc5f085d5be2ccd45505eff9015e27db}{altera\_Catalogo}}(cat-\/>catalogo,aux,Estrutura);}
+\DoxyCodeLine{141   free(aux);}
+\DoxyCodeLine{142   \textcolor{keywordflow}{return} cat;}
+\DoxyCodeLine{143 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{produtos_8c_ae70317f8df268459befb125a4355b8c5}\label{produtos_8c_ae70317f8df268459befb125a4355b8c5}} 
+\index{produtos.c@{produtos.c}!altera\_Produto@{altera\_Produto}}
+\index{altera\_Produto@{altera\_Produto}!produtos.c@{produtos.c}}
+\doxysubsubsection{\texorpdfstring{altera\_Produto()}{altera\_Produto()}}
+{\footnotesize\ttfamily Produto altera\+\_\+\+Produto (\begin{DoxyParamCaption}\item[{Produto}]{p,  }\item[{char $\ast$}]{e }\end{DoxyParamCaption})}
+
+
+
+Função que altera um produto. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em p} & Produto a ser alterado. \\
+\hline
+{\em e} & char$\ast$ novo código do produto. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+novo produto criado. 
+\end{DoxyReturn}
+
+
+Definido na linha 33 do ficheiro produtos.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{33                                           \{}
+\DoxyCodeLine{34     \textcolor{keywordflow}{if}(p-\/>n\_produto)\{}
+\DoxyCodeLine{35         free(p-\/>n\_produto);}
+\DoxyCodeLine{36     \}}
+\DoxyCodeLine{37     p-\/>n\_produto = malloc((strlen(e) + 1) * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));}
+\DoxyCodeLine{38     strcpy(p-\/>n\_produto,e);}
+\DoxyCodeLine{39     \textcolor{keywordflow}{return} p;}
+\DoxyCodeLine{40 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{produtos_8c_aec6b2a2c90828104c6586f94d9cfac10}\label{produtos_8c_aec6b2a2c90828104c6586f94d9cfac10}} 
+\index{produtos.c@{produtos.c}!cria\_Produto@{cria\_Produto}}
+\index{cria\_Produto@{cria\_Produto}!produtos.c@{produtos.c}}
+\doxysubsubsection{\texorpdfstring{cria\_Produto()}{cria\_Produto()}}
+{\footnotesize\ttfamily Produto cria\+\_\+\+Produto (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função que cria um produto. 
+
+\begin{DoxyReturn}{Retorna}
+novo produto criado. 
+\end{DoxyReturn}
+
+
+Definido na linha 21 do ficheiro produtos.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{21                        \{}
+\DoxyCodeLine{22     Produto p = (Produto) malloc(\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} \mbox{\hyperlink{structproduto}{produto}}));}
+\DoxyCodeLine{23     p-\/>n\_produto = NULL;}
+\DoxyCodeLine{24     \textcolor{keywordflow}{return} p;}
+\DoxyCodeLine{25 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{produtos_8c_af0fd73116e6edc32695fe9f3d42f91df}\label{produtos_8c_af0fd73116e6edc32695fe9f3d42f91df}} 
+\index{produtos.c@{produtos.c}!existe\_produto@{existe\_produto}}
+\index{existe\_produto@{existe\_produto}!produtos.c@{produtos.c}}
+\doxysubsubsection{\texorpdfstring{existe\_produto()}{existe\_produto()}}
+{\footnotesize\ttfamily Boolean existe\+\_\+produto (\begin{DoxyParamCaption}\item[{Produtos\+\_\+\+Catalog}]{c,  }\item[{char $\ast$}]{key }\end{DoxyParamCaption})}
+
+
+
+Função que verifica se um produto existe. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em c} & Produtos\+\_\+\+Catalog onde procura. \\
+\hline
+{\em key} & char$\ast$ utilizado como referência de procura. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Boolean com o resultado. 
+\end{DoxyReturn}
+
+
+Definido na linha 58 do ficheiro produtos.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{58                                                      \{}
+\DoxyCodeLine{59     \textcolor{keywordflow}{return} \mbox{\hyperlink{catalogo_8c_a93fc716391dc53901dc2dbff97e75da1}{existe\_Catalogo}}(c-\/>catalogo,key);}
+\DoxyCodeLine{60 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{produtos_8c_a67678f17e9e88b791e53182199cf5f38}\label{produtos_8c_a67678f17e9e88b791e53182199cf5f38}} 
+\index{produtos.c@{produtos.c}!free\_p@{free\_p}}
+\index{free\_p@{free\_p}!produtos.c@{produtos.c}}
+\doxysubsubsection{\texorpdfstring{free\_p()}{free\_p()}}
+{\footnotesize\ttfamily void free\+\_\+p (\begin{DoxyParamCaption}\item[{Produto}]{p }\end{DoxyParamCaption})}
+
+
+
+Função que liberta da memória o espaço ocupado por um produto. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em p} & Produto a ser libertado. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 149 do ficheiro produtos.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{149                       \{}
+\DoxyCodeLine{150     \textcolor{keywordflow}{if}(p)\{}
+\DoxyCodeLine{151         \textcolor{keywordflow}{if}(p-\/>n\_produto)}
+\DoxyCodeLine{152             free(p-\/>n\_produto);}
+\DoxyCodeLine{153         free(p);}
+\DoxyCodeLine{154     \}}
+\DoxyCodeLine{155 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{produtos_8c_a8f0e144585124999fc2f992536886b91}\label{produtos_8c_a8f0e144585124999fc2f992536886b91}} 
+\index{produtos.c@{produtos.c}!free\_Produtos@{free\_Produtos}}
+\index{free\_Produtos@{free\_Produtos}!produtos.c@{produtos.c}}
+\doxysubsubsection{\texorpdfstring{free\_Produtos()}{free\_Produtos()}}
+{\footnotesize\ttfamily void free\+\_\+\+Produtos (\begin{DoxyParamCaption}\item[{Produtos\+\_\+\+Catalog}]{cat,  }\item[{Funcao}]{f }\end{DoxyParamCaption})}
+
+
+
+Função que liberta da memória o espaço ocupado por um catálogo de produtos. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em cat} & Produtos\+\_\+\+Catalog a ser limpo da memória. \\
+\hline
+{\em f} & Funcao que liberta a memória da estrutura associada. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 94 do ficheiro produtos.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{94                                                   \{}
+\DoxyCodeLine{95     \mbox{\hyperlink{catalogo_8c_aa40131c98313b4683617cd1757f7ea66}{free\_Catalogo}}(cat-\/>catalogo,f);}
+\DoxyCodeLine{96     free(cat);}
+\DoxyCodeLine{97 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{produtos_8c_aa08eb3f4ae710696ee450d776e9b26dc}\label{produtos_8c_aa08eb3f4ae710696ee450d776e9b26dc}} 
+\index{produtos.c@{produtos.c}!get\_product\_struct@{get\_product\_struct}}
+\index{get\_product\_struct@{get\_product\_struct}!produtos.c@{produtos.c}}
+\doxysubsubsection{\texorpdfstring{get\_product\_struct()}{get\_product\_struct()}}
+{\footnotesize\ttfamily Estrutura get\+\_\+product\+\_\+struct (\begin{DoxyParamCaption}\item[{Produtos\+\_\+\+Catalog}]{cat,  }\item[{Produto}]{p }\end{DoxyParamCaption})}
+
+
+
+Função que devolve a estrutura associada a um produto de um catálogo que lhe é passado como argumento. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em cat} & Produtos\+\_\+\+Catalog de onde será devolvida a estrutura. \\
+\hline
+{\em p} & Produto indicando o produto a procurar onde estará associada a estrutura. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Estrutura ou N\+U\+LL caso a mesma nao se encontre lá. 
+\end{DoxyReturn}
+
+
+Definido na linha 124 do ficheiro produtos.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{124                                                                \{}
+\DoxyCodeLine{125     \textcolor{keywordtype}{char} *aux = \mbox{\hyperlink{produtos_8c_a41fd3a5ec4fda805f937ed25bcbe5750}{getProdutoCode}}(p);}
+\DoxyCodeLine{126     Estrutura a = \mbox{\hyperlink{catalogo_8c_a2ed88930f3b18c3f107506ef3170508d}{get\_Cat\_struct}} (cat-\/>catalogo, aux);}
+\DoxyCodeLine{127     free(aux);}
+\DoxyCodeLine{128     \textcolor{keywordflow}{return} a;}
+\DoxyCodeLine{129 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{produtos_8c_a41fd3a5ec4fda805f937ed25bcbe5750}\label{produtos_8c_a41fd3a5ec4fda805f937ed25bcbe5750}} 
+\index{produtos.c@{produtos.c}!getProdutoCode@{getProdutoCode}}
+\index{getProdutoCode@{getProdutoCode}!produtos.c@{produtos.c}}
+\doxysubsubsection{\texorpdfstring{getProdutoCode()}{getProdutoCode()}}
+{\footnotesize\ttfamily char$\ast$ get\+Produto\+Code (\begin{DoxyParamCaption}\item[{Produto}]{p }\end{DoxyParamCaption})}
+
+
+
+Função que retorna o código de um produto. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em p} & Produto do qual se pretende obter o código. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+char$\ast$ com o código do produto. 
+\end{DoxyReturn}
+
+
+Definido na linha 112 do ficheiro produtos.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{112                                \{}
+\DoxyCodeLine{113   \textcolor{keywordtype}{char} *aux = malloc(\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char})*(strlen(p-\/>n\_produto)+1));}
+\DoxyCodeLine{114   strcpy(aux,p-\/>n\_produto);}
+\DoxyCodeLine{115   \textcolor{keywordflow}{return} aux;}
+\DoxyCodeLine{116 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{produtos_8c_a439702d2ffb94554057d38a80db3e5c9}\label{produtos_8c_a439702d2ffb94554057d38a80db3e5c9}} 
+\index{produtos.c@{produtos.c}!imprime\_Produtos@{imprime\_Produtos}}
+\index{imprime\_Produtos@{imprime\_Produtos}!produtos.c@{produtos.c}}
+\doxysubsubsection{\texorpdfstring{imprime\_Produtos()}{imprime\_Produtos()}}
+{\footnotesize\ttfamily void imprime\+\_\+\+Produtos (\begin{DoxyParamCaption}\item[{Produtos\+\_\+\+Catalog}]{cat }\end{DoxyParamCaption})}
+
+
+
+Função que imprime os produtos. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em cat} & Produtos\+\_\+\+Catalog onde se encontram os produtos a ser impressos. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 103 do ficheiro produtos.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{103                                            \{}
+\DoxyCodeLine{104     \mbox{\hyperlink{catalogo_8c_a00844e192fa3f0c5afc710d9da7c2c83}{imprime\_Catalogo}}(cat-\/>catalogo);}
+\DoxyCodeLine{105 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{produtos_8c_adb85007b50b37825753d228a26bfe70c}\label{produtos_8c_adb85007b50b37825753d228a26bfe70c}} 
+\index{produtos.c@{produtos.c}!imprime\_produtos\_letra@{imprime\_produtos\_letra}}
+\index{imprime\_produtos\_letra@{imprime\_produtos\_letra}!produtos.c@{produtos.c}}
+\doxysubsubsection{\texorpdfstring{imprime\_produtos\_letra()}{imprime\_produtos\_letra()}}
+{\footnotesize\ttfamily void imprime\+\_\+produtos\+\_\+letra (\begin{DoxyParamCaption}\item[{Produtos\+\_\+\+Catalog}]{cat,  }\item[{char}]{letra,  }\item[{Q2}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que insere numa estrutura auxiliar Q2 as strings dos produtos e o número total dos produtos começados pela letra dada. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em cat} & Produtos\+\_\+\+Catalog que contém os produtos. \\
+\hline
+{\em letra} & char pela qual são iniciados os produtos que se pretende imprimir. \\
+\hline
+{\em q} & Q2 de onde obtemos as informações. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 196 do ficheiro produtos.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{196                                                                    \{}
+\DoxyCodeLine{197   AVL auxiliar;}
+\DoxyCodeLine{198   \textcolor{keywordtype}{int} index = letra -\/ \textcolor{charliteral}{'A'};}
+\DoxyCodeLine{199   auxiliar = \mbox{\hyperlink{catalogo_8c_a551505c19cd86f02ff31019e350df2a6}{catalogo\_getAVL}}(cat-\/>catalogo,index);}
+\DoxyCodeLine{200   \mbox{\hyperlink{produtos_8c_a8579e035b71e06d3be5abf7d5e739557}{percorre\_AVL\_Produtos\_Q2}}(auxiliar,q);}
+\DoxyCodeLine{201   \textcolor{keywordtype}{int} aux = \mbox{\hyperlink{avl_8c_a785a0f5acefc1cd1085f1eb65fff5c43}{avl\_getTamanho}}(auxiliar);}
+\DoxyCodeLine{202   \mbox{\hyperlink{estruturas_8c_a89139245dabf3f29938430bb633be51d}{setNum\_totalQ2}}(aux,q);}
+\DoxyCodeLine{203 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{produtos_8c_a52029881f2d159cca61633df55736bba}\label{produtos_8c_a52029881f2d159cca61633df55736bba}} 
+\index{produtos.c@{produtos.c}!init\_produtos\_catalog@{init\_produtos\_catalog}}
+\index{init\_produtos\_catalog@{init\_produtos\_catalog}!produtos.c@{produtos.c}}
+\doxysubsubsection{\texorpdfstring{init\_produtos\_catalog()}{init\_produtos\_catalog()}}
+{\footnotesize\ttfamily Produtos\+\_\+\+Catalog init\+\_\+produtos\+\_\+catalog (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função que inicializa um catálogo de produtos. 
+
+\begin{DoxyReturn}{Retorna}
+Produtos\+\_\+\+Catalog inicializado. 
+\end{DoxyReturn}
+
+
+Definido na linha 46 do ficheiro produtos.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{46                                         \{}
+\DoxyCodeLine{47     Produtos\_Catalog \textcolor{keyword}{new} = malloc(\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} \mbox{\hyperlink{structcatalogo__produtos}{catalogo\_produtos}}));}
+\DoxyCodeLine{48     \textcolor{keyword}{new}-\/>catalogo = \mbox{\hyperlink{catalogo_8c_a5add1241036a95c143d5cb5d8e5e7fe5}{init\_Catalogo}}();}
+\DoxyCodeLine{49     \textcolor{keywordflow}{return} \textcolor{keyword}{new};}
+\DoxyCodeLine{50 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{produtos_8c_a1b1c7bd6e4b89da7cb54463380a86d37}\label{produtos_8c_a1b1c7bd6e4b89da7cb54463380a86d37}} 
+\index{produtos.c@{produtos.c}!insere\_produto@{insere\_produto}}
+\index{insere\_produto@{insere\_produto}!produtos.c@{produtos.c}}
+\doxysubsubsection{\texorpdfstring{insere\_produto()}{insere\_produto()}}
+{\footnotesize\ttfamily Produtos\+\_\+\+Catalog insere\+\_\+produto (\begin{DoxyParamCaption}\item[{Produtos\+\_\+\+Catalog}]{cat,  }\item[{Produto}]{p }\end{DoxyParamCaption})}
+
+
+
+Função que insere um produto num catálogos de produto. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em cat} & Produtos\+\_\+\+Catalog onde vai inserir o produto. \\
+\hline
+{\em p} & Produto a ser inserido. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Produtos\+\_\+\+Catalog com o produto inserido. 
+\end{DoxyReturn}
+
+
+Definido na linha 68 do ficheiro produtos.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{68                                                                 \{}
+\DoxyCodeLine{69     \textcolor{keywordtype}{char} *aux = \mbox{\hyperlink{produtos_8c_a41fd3a5ec4fda805f937ed25bcbe5750}{getProdutoCode}}(p);}
+\DoxyCodeLine{70     cat-\/>catalogo = \mbox{\hyperlink{catalogo_8c_a63d5cf63479a790b0f74a7bfa0dcd10a}{insere\_Catalogo}}(cat-\/>catalogo,aux,NULL);}
+\DoxyCodeLine{71     free(aux);}
+\DoxyCodeLine{72     \textcolor{keywordflow}{return} cat;}
+\DoxyCodeLine{73 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{produtos_8c_a14127657c369d1f22bb7c7cd4cafe27d}\label{produtos_8c_a14127657c369d1f22bb7c7cd4cafe27d}} 
+\index{produtos.c@{produtos.c}!insere\_Produtos\_Catalogo@{insere\_Produtos\_Catalogo}}
+\index{insere\_Produtos\_Catalogo@{insere\_Produtos\_Catalogo}!produtos.c@{produtos.c}}
+\doxysubsubsection{\texorpdfstring{insere\_Produtos\_Catalogo()}{insere\_Produtos\_Catalogo()}}
+{\footnotesize\ttfamily Produtos\+\_\+\+Catalog insere\+\_\+\+Produtos\+\_\+\+Catalogo (\begin{DoxyParamCaption}\item[{Produtos\+\_\+\+Catalog}]{cat,  }\item[{Produto}]{p,  }\item[{void $\ast$}]{Estrutura }\end{DoxyParamCaption})}
+
+
+
+Função que insere no produto de um catálogo uma estrutura. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em cat} & Produtos\+\_\+\+Catalog onde se vai inserir. \\
+\hline
+{\em p} & Produto onde se vai inserir. \\
+\hline
+{\em Estrutura} & void$\ast$ a ser inserida. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Produtos\+\_\+\+Catalog com a estrutura inserida. 
+\end{DoxyReturn}
+
+
+Definido na linha 82 do ficheiro produtos.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{82                                                                                             \{}
+\DoxyCodeLine{83     \textcolor{keywordtype}{char} *aux = \mbox{\hyperlink{produtos_8c_a41fd3a5ec4fda805f937ed25bcbe5750}{getProdutoCode}}(p);}
+\DoxyCodeLine{84     cat-\/>catalogo = \mbox{\hyperlink{catalogo_8c_a63d5cf63479a790b0f74a7bfa0dcd10a}{insere\_Catalogo}}(cat-\/>catalogo,aux, Estrutura);}
+\DoxyCodeLine{85     free(aux);}
+\DoxyCodeLine{86     \textcolor{keywordflow}{return} cat;}
+\DoxyCodeLine{87 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{produtos_8c_a8579e035b71e06d3be5abf7d5e739557}\label{produtos_8c_a8579e035b71e06d3be5abf7d5e739557}} 
+\index{produtos.c@{produtos.c}!percorre\_AVL\_Produtos\_Q2@{percorre\_AVL\_Produtos\_Q2}}
+\index{percorre\_AVL\_Produtos\_Q2@{percorre\_AVL\_Produtos\_Q2}!produtos.c@{produtos.c}}
+\doxysubsubsection{\texorpdfstring{percorre\_AVL\_Produtos\_Q2()}{percorre\_AVL\_Produtos\_Q2()}}
+{\footnotesize\ttfamily void percorre\+\_\+\+A\+V\+L\+\_\+\+Produtos\+\_\+\+Q2 (\begin{DoxyParamCaption}\item[{A\+VL}]{tree,  }\item[{Q2}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que percorre uma A\+VL. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em tree} & A\+VL que é percorrida. \\
+\hline
+{\em q} & Q2 onde inserimos a informação. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 184 do ficheiro produtos.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{184                                              \{}
+\DoxyCodeLine{185   NODO f = \mbox{\hyperlink{avl_8c_af568e679a8db439de3758447f23b86e2}{getNodo}}(tree);}
+\DoxyCodeLine{186   \mbox{\hyperlink{produtos_8c_a238606f095842e415b501f252087ff17}{percorre\_Nodo\_Produtos\_Q2}}(f,q);}
+\DoxyCodeLine{187   \mbox{\hyperlink{avl_8c_ab7e925aeda628a2fb80ed170c192c3c4}{free\_Nodo}}(f);}
+\DoxyCodeLine{188 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{produtos_8c_a238606f095842e415b501f252087ff17}\label{produtos_8c_a238606f095842e415b501f252087ff17}} 
+\index{produtos.c@{produtos.c}!percorre\_Nodo\_Produtos\_Q2@{percorre\_Nodo\_Produtos\_Q2}}
+\index{percorre\_Nodo\_Produtos\_Q2@{percorre\_Nodo\_Produtos\_Q2}!produtos.c@{produtos.c}}
+\doxysubsubsection{\texorpdfstring{percorre\_Nodo\_Produtos\_Q2()}{percorre\_Nodo\_Produtos\_Q2()}}
+{\footnotesize\ttfamily void percorre\+\_\+\+Nodo\+\_\+\+Produtos\+\_\+\+Q2 (\begin{DoxyParamCaption}\item[{N\+O\+DO}]{tree,  }\item[{Q2}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que percorre o nodo de cada árvore, de forma inorder, obtendo a string que lá está inserida e colocando-\/a na estrutura auxiliar Q2. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em tree} & N\+O\+DO a percorrer. \\
+\hline
+{\em q} & Q2 onde se vai inserir as strings. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 164 do ficheiro produtos.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{164                                                \{}
+\DoxyCodeLine{165   \textcolor{keywordflow}{if}(tree==NULL) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{166   NODO esq = \mbox{\hyperlink{avl_8c_aac6e354b6a9d07b76313a36c510c9f10}{getNodoEsq}}(tree);}
+\DoxyCodeLine{167   \mbox{\hyperlink{produtos_8c_a238606f095842e415b501f252087ff17}{percorre\_Nodo\_Produtos\_Q2}}(esq,q);}
+\DoxyCodeLine{168   \mbox{\hyperlink{avl_8c_ab7e925aeda628a2fb80ed170c192c3c4}{free\_Nodo}}(esq);}
+\DoxyCodeLine{169 }
+\DoxyCodeLine{170   \textcolor{keywordtype}{char}* prod = \mbox{\hyperlink{avl_8c_a5804b8d40ea06fecc2ecd97415a6c18c}{getString}}(tree);}
+\DoxyCodeLine{171   \mbox{\hyperlink{estruturas_8c_a55dfe0c3e3dc5cc8ce80bad1bd26f7ae}{insere\_ProdQ2}}(prod,q);}
+\DoxyCodeLine{172   free(prod);}
+\DoxyCodeLine{173 }
+\DoxyCodeLine{174   NODO dir = \mbox{\hyperlink{avl_8c_a5c9e707dfc9a11ffe65746c91b5111ba}{getNodoDir}}(tree);}
+\DoxyCodeLine{175   \mbox{\hyperlink{produtos_8c_a238606f095842e415b501f252087ff17}{percorre\_Nodo\_Produtos\_Q2}}(dir,q);}
+\DoxyCodeLine{176   \mbox{\hyperlink{avl_8c_ab7e925aeda628a2fb80ed170c192c3c4}{free\_Nodo}}(dir);}
+\DoxyCodeLine{177 \}}
+
+\end{DoxyCode}

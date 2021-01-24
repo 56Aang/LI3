@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ProjC LI3 - grupo 2: Código-Fonte de src/catalogo.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ProjC LI3 - grupo 2
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Localizar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Localizar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">catalogo.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="catalogo_8c.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;../include/catalogo.h&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">/* Estrutura que contém um array em que cada indíce é um apontador para uma AVL.*/</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="structcatalogo.html">    9</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structcatalogo.html">catalogo</a> {</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;   AVL indice[NR_LETRAS];</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;};</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="catalogo_8c.html#a5add1241036a95c143d5cb5d8e5e7fe5">   17</a></span>&#160;Catalogo <a class="code" href="catalogo_8c.html#a5add1241036a95c143d5cb5d8e5e7fe5">init_Catalogo</a>() {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  Catalogo cat = (Catalogo) malloc(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structcatalogo.html">catalogo</a>));</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <span class="keywordtype">int</span> i;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keywordflow">for</span>(i = 0; i &lt; NR_LETRAS; i++) {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;      cat-&gt;indice[i] = <a class="code" href="avl_8c.html#a12edfb9dbe827acf6f4eadc70cf84c44">initAVL</a>();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  }</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keywordflow">return</span> cat;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="catalogo_8c.html#a93fc716391dc53901dc2dbff97e75da1">   32</a></span>&#160;Boolean <a class="code" href="catalogo_8c.html#a93fc716391dc53901dc2dbff97e75da1">existe_Catalogo</a>(Catalogo <a class="code" href="structcatalogo.html">catalogo</a>, <span class="keywordtype">char</span>* key) {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;   <span class="keywordtype">int</span> index = key[0] - <span class="charliteral">&#39;A&#39;</span>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;   Boolean existe = <a class="code" href="avl_8c.html#a8fddc39a0bdd4496fe33e6b48a167c95">avl_lookUp</a>(<a class="code" href="structcatalogo.html">catalogo</a>-&gt;indice[index],key);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;   <span class="keywordflow">return</span> existe;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="catalogo_8c.html#a2ed88930f3b18c3f107506ef3170508d">   44</a></span>&#160;Estrutura <a class="code" href="catalogo_8c.html#a2ed88930f3b18c3f107506ef3170508d">get_Cat_struct</a>(Catalogo c, <span class="keywordtype">char</span>* key){</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;   <span class="keywordtype">int</span> index = key[0] - <span class="charliteral">&#39;A&#39;</span>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;   <span class="keywordflow">return</span> <a class="code" href="avl_8c.html#a9c63fca5348576aa37364760756f565e">avl_getEstrutura</a>(c-&gt;indice[index],key);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="catalogo_8c.html#a63d5cf63479a790b0f74a7bfa0dcd10a">   56</a></span>&#160;Catalogo <a class="code" href="catalogo_8c.html#a63d5cf63479a790b0f74a7bfa0dcd10a">insere_Catalogo</a>(Catalogo c, <span class="keywordtype">char</span>* key, <span class="keywordtype">void</span> * estrutura){</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;   <span class="keywordtype">int</span> i = key[0] - <span class="charliteral">&#39;A&#39;</span>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;   c-&gt;indice[i] = <a class="code" href="avl_8c.html#a1dec82bcbce333d16733ecf7344d378b">avl_insert</a>(c-&gt;indice[i],key,estrutura);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;   <span class="keywordflow">return</span> c;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="catalogo_8c.html#acc5f085d5be2ccd45505eff9015e27db">   69</a></span>&#160;Catalogo <a class="code" href="catalogo_8c.html#acc5f085d5be2ccd45505eff9015e27db">altera_Catalogo</a>(Catalogo c, <span class="keywordtype">char</span>* key, <span class="keywordtype">void</span>* estrutura){</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;   <span class="keywordtype">int</span> i = key[0] - <span class="charliteral">&#39;A&#39;</span>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;   c-&gt;indice[i] = <a class="code" href="avl_8c.html#a28030a6963aec8fe11604cee697ef155">atualiza_avl</a>(c-&gt;indice[i],key,estrutura);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;   <span class="keywordflow">return</span> c;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="catalogo_8c.html#aa40131c98313b4683617cd1757f7ea66">   80</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="catalogo_8c.html#aa40131c98313b4683617cd1757f7ea66">free_Catalogo</a>(Catalogo cat, Funcao f){</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;   <span class="keywordtype">int</span> i;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;   <span class="keywordflow">for</span>(i = 0;i&lt;NR_LETRAS;i++)</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;      <a class="code" href="avl_8c.html#a79d17c2e6df846c93b8a5743cd025735">avl_free</a>(cat-&gt;indice[i],f);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;   free(cat);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="catalogo_8c.html#a00844e192fa3f0c5afc710d9da7c2c83">   91</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="catalogo_8c.html#a00844e192fa3f0c5afc710d9da7c2c83">imprime_Catalogo</a>(Catalogo cat){</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;   <span class="keywordtype">int</span> i;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;   <span class="keywordflow">for</span>(i = 0; i&lt;NR_LETRAS;i++)</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;      <a class="code" href="avl_8c.html#a6bf7ed43f3cf1c72b56ec0e18fcda525">imprime_AVL_String</a>(cat-&gt;indice[i]);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="catalogo_8c.html#a551505c19cd86f02ff31019e350df2a6">  103</a></span>&#160;AVL <a class="code" href="catalogo_8c.html#a551505c19cd86f02ff31019e350df2a6">catalogo_getAVL</a>(Catalogo cat, <span class="keywordtype">int</span> index){</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <span class="keywordflow">return</span> cat-&gt;indice[index];</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="acatalogo_8c_html_a00844e192fa3f0c5afc710d9da7c2c83"><div class="ttname"><a href="catalogo_8c.html#a00844e192fa3f0c5afc710d9da7c2c83">imprime_Catalogo</a></div><div class="ttdeci">void imprime_Catalogo(Catalogo cat)</div><div class="ttdoc">Função que imprime um catálogo.</div><div class="ttdef"><b>Definition:</b> <a href="catalogo_8c_source.html#l00091">catalogo.c:91</a></div></div>
+<div class="ttc" id="aavl_8c_html_a12edfb9dbe827acf6f4eadc70cf84c44"><div class="ttname"><a href="avl_8c.html#a12edfb9dbe827acf6f4eadc70cf84c44">initAVL</a></div><div class="ttdeci">AVL initAVL()</div><div class="ttdoc">Função que inicializa uma nova AVL.</div><div class="ttdef"><b>Definition:</b> <a href="avl_8c_source.html#l00039">avl.c:39</a></div></div>
+<div class="ttc" id="aavl_8c_html_a6bf7ed43f3cf1c72b56ec0e18fcda525"><div class="ttname"><a href="avl_8c.html#a6bf7ed43f3cf1c72b56ec0e18fcda525">imprime_AVL_String</a></div><div class="ttdeci">void imprime_AVL_String(AVL tree)</div><div class="ttdoc">Função que imprime todas as Strings da AVL.</div><div class="ttdef"><b>Definition:</b> <a href="avl_8c_source.html#l00468">avl.c:468</a></div></div>
+<div class="ttc" id="acatalogo_8c_html_acc5f085d5be2ccd45505eff9015e27db"><div class="ttname"><a href="catalogo_8c.html#acc5f085d5be2ccd45505eff9015e27db">altera_Catalogo</a></div><div class="ttdeci">Catalogo altera_Catalogo(Catalogo c, char *key, void *estrutura)</div><div class="ttdoc">Função que altera uma estrutura no catálogo tendo como referência de posicionamento um char* key.</div><div class="ttdef"><b>Definition:</b> <a href="catalogo_8c_source.html#l00069">catalogo.c:69</a></div></div>
+<div class="ttc" id="acatalogo_8c_html_a2ed88930f3b18c3f107506ef3170508d"><div class="ttname"><a href="catalogo_8c.html#a2ed88930f3b18c3f107506ef3170508d">get_Cat_struct</a></div><div class="ttdeci">Estrutura get_Cat_struct(Catalogo c, char *key)</div><div class="ttdoc">Função que devolve a estrutura associada a uma key de um catálogo que lhe é passada como argumento.</div><div class="ttdef"><b>Definition:</b> <a href="catalogo_8c_source.html#l00044">catalogo.c:44</a></div></div>
+<div class="ttc" id="acatalogo_8c_html_a5add1241036a95c143d5cb5d8e5e7fe5"><div class="ttname"><a href="catalogo_8c.html#a5add1241036a95c143d5cb5d8e5e7fe5">init_Catalogo</a></div><div class="ttdeci">Catalogo init_Catalogo()</div><div class="ttdoc">Função que inicializa um novo catálogo.</div><div class="ttdef"><b>Definition:</b> <a href="catalogo_8c_source.html#l00017">catalogo.c:17</a></div></div>
+<div class="ttc" id="aavl_8c_html_a28030a6963aec8fe11604cee697ef155"><div class="ttname"><a href="avl_8c.html#a28030a6963aec8fe11604cee697ef155">atualiza_avl</a></div><div class="ttdeci">AVL atualiza_avl(AVL tree, char *value, Estrutura estrutura)</div><div class="ttdoc">Função que insere uma nova estrutura na arvore tree tendo como referência de posicionamento um char* ...</div><div class="ttdef"><b>Definition:</b> <a href="avl_8c_source.html#l00053">avl.c:53</a></div></div>
+<div class="ttc" id="acatalogo_8c_html_a63d5cf63479a790b0f74a7bfa0dcd10a"><div class="ttname"><a href="catalogo_8c.html#a63d5cf63479a790b0f74a7bfa0dcd10a">insere_Catalogo</a></div><div class="ttdeci">Catalogo insere_Catalogo(Catalogo c, char *key, void *estrutura)</div><div class="ttdoc">Função que insere no catálogo tendo como referência de posicionamento um char* key.</div><div class="ttdef"><b>Definition:</b> <a href="catalogo_8c_source.html#l00056">catalogo.c:56</a></div></div>
+<div class="ttc" id="aavl_8c_html_a8fddc39a0bdd4496fe33e6b48a167c95"><div class="ttname"><a href="avl_8c.html#a8fddc39a0bdd4496fe33e6b48a167c95">avl_lookUp</a></div><div class="ttdeci">Boolean avl_lookUp(AVL tree, Valor value)</div><div class="ttdoc">Função que devolve um Boolean referente a ter encontrado ou não na AVL o Valor value.</div><div class="ttdef"><b>Definition:</b> <a href="avl_8c_source.html#l00077">avl.c:77</a></div></div>
+<div class="ttc" id="aavl_8c_html_a9c63fca5348576aa37364760756f565e"><div class="ttname"><a href="avl_8c.html#a9c63fca5348576aa37364760756f565e">avl_getEstrutura</a></div><div class="ttdeci">Estrutura avl_getEstrutura(AVL node, Valor value)</div><div class="ttdoc">Função que devolve a estrutura associada a um nodo de uma AVL passada como argumento.</div><div class="ttdef"><b>Definition:</b> <a href="avl_8c_source.html#l00110">avl.c:110</a></div></div>
+<div class="ttc" id="aavl_8c_html_a1dec82bcbce333d16733ecf7344d378b"><div class="ttname"><a href="avl_8c.html#a1dec82bcbce333d16733ecf7344d378b">avl_insert</a></div><div class="ttdeci">AVL avl_insert(AVL tree, Valor key, Estrutura estrutura)</div><div class="ttdoc">Função que insere na arvore tree tendo como referência de posicionamento um char*.</div><div class="ttdef"><b>Definition:</b> <a href="avl_8c_source.html#l00065">avl.c:65</a></div></div>
+<div class="ttc" id="acatalogo_8c_html_aa40131c98313b4683617cd1757f7ea66"><div class="ttname"><a href="catalogo_8c.html#aa40131c98313b4683617cd1757f7ea66">free_Catalogo</a></div><div class="ttdeci">void free_Catalogo(Catalogo cat, Funcao f)</div><div class="ttdoc">Função com o objetivo de limpar da memória um dado catálogo.</div><div class="ttdef"><b>Definition:</b> <a href="catalogo_8c_source.html#l00080">catalogo.c:80</a></div></div>
+<div class="ttc" id="astructcatalogo_html"><div class="ttname"><a href="structcatalogo.html">catalogo</a></div><div class="ttdef"><b>Definition:</b> <a href="catalogo_8c_source.html#l00009">catalogo.c:9</a></div></div>
+<div class="ttc" id="aavl_8c_html_a79d17c2e6df846c93b8a5743cd025735"><div class="ttname"><a href="avl_8c.html#a79d17c2e6df846c93b8a5743cd025735">avl_free</a></div><div class="ttdeci">void avl_free(AVL nodo, Funcao f)</div><div class="ttdoc">Função com o objetivo de limpar da memória uma dada AVL.</div><div class="ttdef"><b>Definition:</b> <a href="avl_8c_source.html#l00210">avl.c:210</a></div></div>
+<div class="ttc" id="acatalogo_8c_html_a93fc716391dc53901dc2dbff97e75da1"><div class="ttname"><a href="catalogo_8c.html#a93fc716391dc53901dc2dbff97e75da1">existe_Catalogo</a></div><div class="ttdeci">Boolean existe_Catalogo(Catalogo catalogo, char *key)</div><div class="ttdoc">Função que verifica se existe uma key num catálogo.</div><div class="ttdef"><b>Definition:</b> <a href="catalogo_8c_source.html#l00032">catalogo.c:32</a></div></div>
+<div class="ttc" id="acatalogo_8c_html_a551505c19cd86f02ff31019e350df2a6"><div class="ttname"><a href="catalogo_8c.html#a551505c19cd86f02ff31019e350df2a6">catalogo_getAVL</a></div><div class="ttdeci">AVL catalogo_getAVL(Catalogo cat, int index)</div><div class="ttdoc">Função que devolve a AVL que se encontra numa determinada posição do array.</div><div class="ttdef"><b>Definition:</b> <a href="catalogo_8c_source.html#l00103">catalogo.c:103</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

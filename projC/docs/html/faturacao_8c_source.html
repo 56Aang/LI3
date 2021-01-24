@@ -1,0 +1,457 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ProjC LI3 - grupo 2: Código-Fonte de src/faturacao.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ProjC LI3 - grupo 2
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Localizar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Localizar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">faturacao.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="faturacao_8c.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;../include/faturacao.h&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="structcatalogo__faturacao.html">    8</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structcatalogo__faturacao.html">catalogo_faturacao</a>{</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  Catalogo <a class="code" href="structcatalogo.html">catalogo</a>;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;};</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="structfat__info.html">   12</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structfat__info.html">fat_info</a>{</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <span class="comment">/*Modo -&gt; N = 0 &amp; P = 1*/</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <span class="keywordtype">double</span> fat[MODO][FILIAL][MESES]; <span class="comment">/*Faturação por mes/filial/modo*/</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <span class="keywordtype">int</span> qtd[MODO][FILIAL][MESES]; <span class="comment">/*Quantidade por mes/filial/modo*/</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <span class="keywordtype">int</span> n_vendas[MODO][FILIAL][MESES]; <span class="comment">/*Quantidade total de vendas registadas por mes/filial/modo*/</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <span class="keywordtype">int</span> qtd_total[FILIAL];</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;};</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="faturacao_8c.html#ab3e6f99c70abaa24016477bdea48eab0">   31</a></span>&#160;Faturacao_Catalog <a class="code" href="faturacao_8c.html#ab3e6f99c70abaa24016477bdea48eab0">cria_Faturacao</a>(Faturacao_Catalog cat, Produto p, <span class="keywordtype">int</span> mes,<span class="keywordtype">int</span> filial, <span class="keywordtype">char</span> modo, <span class="keywordtype">double</span> preco,<span class="keywordtype">int</span> qtd){</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  f_info f = <a class="code" href="faturacao_8c.html#ab1adca20729d2bfe315fb76c8fe8985f">init_Info_Faturacao</a>();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keywordtype">int</span> m=0;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keywordflow">if</span>(modo == <span class="charliteral">&#39;P&#39;</span>) m=1;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  f-&gt;fat[m][filial-1][mes-1] += qtd * preco;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  f-&gt;qtd[m][filial-1][mes-1] += qtd;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  f-&gt;n_vendas[m][filial-1][mes-1]++;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  f-&gt;qtd_total[filial-1] += qtd;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  cat = <a class="code" href="faturacao_8c.html#a8df5bebac86ad8e47477b8a46b371c3e">insere_faturacao</a>(cat,p,f);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keywordflow">return</span> cat;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="faturacao_8c.html#a5b382a89fee7d02eb3855f94e7822bd5">   54</a></span>&#160;Faturacao_Catalog <a class="code" href="faturacao_8c.html#a5b382a89fee7d02eb3855f94e7822bd5">altera_Faturacao</a>(Faturacao_Catalog cat,Produto p,<span class="keywordtype">int</span> mes,<span class="keywordtype">int</span> filial, <span class="keywordtype">char</span> modo, <span class="keywordtype">double</span> preco,<span class="keywordtype">int</span> qtd){</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keywordtype">char</span> *aux = <a class="code" href="produtos_8c.html#a41fd3a5ec4fda805f937ed25bcbe5750">getProdutoCode</a>(p);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  f_info f = <a class="code" href="catalogo_8c.html#a2ed88930f3b18c3f107506ef3170508d">get_Cat_struct</a>(cat-&gt;catalogo,aux);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keywordflow">if</span> (f == NULL) f = <a class="code" href="faturacao_8c.html#ab1adca20729d2bfe315fb76c8fe8985f">init_Info_Faturacao</a>();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keywordtype">int</span> m=0;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keywordflow">if</span>(modo == <span class="charliteral">&#39;P&#39;</span>) m=1;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  f-&gt;fat[m][filial-1][mes-1] += qtd * preco;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  f-&gt;qtd[m][filial-1][mes-1] += qtd;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  f-&gt;n_vendas[m][filial-1][mes-1]++;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  f-&gt;qtd_total[filial-1] += qtd;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  cat-&gt;catalogo = <a class="code" href="catalogo_8c.html#acc5f085d5be2ccd45505eff9015e27db">altera_Catalogo</a>(cat-&gt;catalogo,aux,f);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  free(aux);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keywordflow">return</span> cat;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="faturacao_8c.html#a9cdd16c7cbef5e648fd6ad5cb0cb3605">   75</a></span>&#160;Estrutura <a class="code" href="faturacao_8c.html#a9cdd16c7cbef5e648fd6ad5cb0cb3605">get_Fat_struct</a>(Faturacao_Catalog cat, Produto p){</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="keywordtype">char</span> *aux = <a class="code" href="produtos_8c.html#a41fd3a5ec4fda805f937ed25bcbe5750">getProdutoCode</a>(p);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  Estrutura a = <a class="code" href="catalogo_8c.html#a2ed88930f3b18c3f107506ef3170508d">get_Cat_struct</a>(cat-&gt;catalogo,aux);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  free(aux);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keywordflow">return</span> a;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="faturacao_8c.html#ab1adca20729d2bfe315fb76c8fe8985f">   86</a></span>&#160;f_info <a class="code" href="faturacao_8c.html#ab1adca20729d2bfe315fb76c8fe8985f">init_Info_Faturacao</a>(){</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  f_info f = (f_info) malloc((<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structfat__info.html">fat_info</a>)));</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="keywordtype">int</span> i,j,k;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <span class="keywordflow">for</span>(i=0 ; i&lt;MODO ; i++)</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordflow">for</span>(j=0 ; j&lt;FILIAL ; j++){</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        f-&gt;qtd_total[j] = 0;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordflow">for</span>(k=0 ; k&lt;MESES ; k++){</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;          f-&gt;fat[i][j][k] = 0;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;          f-&gt;qtd[i][j][k] = 0;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;          f-&gt;n_vendas[i][j][k] = 0;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        }</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    }</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <span class="keywordflow">return</span> f;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;}</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="faturacao_8c.html#ae7d33e0cc1704b65d8bc45f5a6bba511">  105</a></span>&#160;Faturacao_Catalog <a class="code" href="faturacao_8c.html#ae7d33e0cc1704b65d8bc45f5a6bba511">init_faturacao_catalogo</a>(){</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  Faturacao_Catalog <span class="keyword">new</span> = malloc(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structcatalogo__faturacao.html">catalogo_faturacao</a>));</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  <span class="keyword">new</span>-&gt;catalogo = <a class="code" href="catalogo_8c.html#a5add1241036a95c143d5cb5d8e5e7fe5">init_Catalogo</a>();</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">new</span>;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;}</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="faturacao_8c.html#a1c33cc0d11ce825aa8c0014d9f7faecf">  117</a></span>&#160;Boolean <a class="code" href="faturacao_8c.html#a1c33cc0d11ce825aa8c0014d9f7faecf">existe_faturacao</a>(Faturacao_Catalog cat, Produto p){</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <span class="keywordtype">char</span> *aux = <a class="code" href="produtos_8c.html#a41fd3a5ec4fda805f937ed25bcbe5750">getProdutoCode</a>(p);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  Boolean a = <a class="code" href="catalogo_8c.html#a93fc716391dc53901dc2dbff97e75da1">existe_Catalogo</a>(cat-&gt;catalogo,aux);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  free(aux);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  <span class="keywordflow">return</span> a;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;}</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
+<div class="line"><a name="l00131"></a><span class="lineno"><a class="line" href="faturacao_8c.html#a8df5bebac86ad8e47477b8a46b371c3e">  131</a></span>&#160;Faturacao_Catalog <a class="code" href="faturacao_8c.html#a8df5bebac86ad8e47477b8a46b371c3e">insere_faturacao</a>(Faturacao_Catalog cat,Produto p, <span class="keywordtype">void</span> * estrutura){</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  <span class="keywordtype">char</span> *aux = <a class="code" href="produtos_8c.html#a41fd3a5ec4fda805f937ed25bcbe5750">getProdutoCode</a>(p);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  cat-&gt;catalogo = <a class="code" href="catalogo_8c.html#a63d5cf63479a790b0f74a7bfa0dcd10a">insere_Catalogo</a>(cat-&gt;catalogo,aux,estrutura);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  free(aux);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  <span class="keywordflow">return</span> cat;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;}</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
+<div class="line"><a name="l00143"></a><span class="lineno"><a class="line" href="faturacao_8c.html#abc7f1720453f963ee1335e88c5ff1d32">  143</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="faturacao_8c.html#abc7f1720453f963ee1335e88c5ff1d32">free_Faturacao</a>(Faturacao_Catalog cat){</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;  <a class="code" href="catalogo_8c.html#aa40131c98313b4683617cd1757f7ea66">free_Catalogo</a>(cat-&gt;catalogo,free);</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;  free(cat);</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;}</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
+<div class="line"><a name="l00152"></a><span class="lineno"><a class="line" href="faturacao_8c.html#a434a13e579209e1424ea8b9941d582e1">  152</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="faturacao_8c.html#a434a13e579209e1424ea8b9941d582e1">imprime_Faturacao</a>(Faturacao_Catalog cat){</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  <a class="code" href="catalogo_8c.html#a00844e192fa3f0c5afc710d9da7c2c83">imprime_Catalogo</a>(cat-&gt;catalogo);</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;}</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; </div>
+<div class="line"><a name="l00162"></a><span class="lineno"><a class="line" href="faturacao_8c.html#a9953fb35fe71d69681f164f226ac7d09">  162</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="faturacao_8c.html#a9953fb35fe71d69681f164f226ac7d09">getQtTotalFat</a>(f_info f, <span class="keywordtype">int</span> filial){</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  <span class="keywordtype">int</span> a = f-&gt;qtd_total[filial];</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  <span class="keywordflow">return</span> a;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;}</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="comment">/*----------------------------------QUERIE3----------------------------------*/</span></div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
+<div class="line"><a name="l00177"></a><span class="lineno"><a class="line" href="faturacao_8c.html#a2aba6ae247ab5660d7d6bca7c45c24ea">  177</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="faturacao_8c.html#a2aba6ae247ab5660d7d6bca7c45c24ea">get_NVendas_Mes_Faturacao</a>(Faturacao_Catalog f, <span class="keywordtype">char</span>* product, <span class="keywordtype">int</span> month, Q3 q){</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;  <span class="keywordtype">int</span> i,aux1=0,aux2=0;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;  f_info fat = <a class="code" href="catalogo_8c.html#a2ed88930f3b18c3f107506ef3170508d">get_Cat_struct</a>(f-&gt;catalogo,product);</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;  <span class="keywordflow">for</span>(i=0;i&lt;FILIAL;i++){</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    aux1 += fat-&gt;n_vendas[0][i][month-1];</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    aux2 += fat-&gt;n_vendas[1][i][month-1];</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  }</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;  <a class="code" href="estruturas_8c.html#ae7ddfc6c12a3175edafa3f58f95b0b6a">setQt_NQ3</a>(aux1,q);</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;  <a class="code" href="estruturas_8c.html#a350838bc921f8e756fc5867488b40318">setQt_PQ3</a>(aux2,q);</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;}</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160; </div>
+<div class="line"><a name="l00195"></a><span class="lineno"><a class="line" href="faturacao_8c.html#a82a1bff71e58ef2648cce6bbfe59bef3">  195</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="faturacao_8c.html#a82a1bff71e58ef2648cce6bbfe59bef3">get_Fat_Mes_Faturacao</a>(Faturacao_Catalog f, <span class="keywordtype">char</span>* product, <span class="keywordtype">int</span> month, Q3 q){</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;  <span class="keywordtype">double</span> aux1=0,aux2=0;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;  f_info fat = <a class="code" href="catalogo_8c.html#a2ed88930f3b18c3f107506ef3170508d">get_Cat_struct</a>(f-&gt;catalogo,product);</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;  <span class="keywordtype">int</span> i;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;  <span class="keywordflow">for</span>(i=0;i&lt;FILIAL;i++){</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    aux1 += fat-&gt;fat[0][i][month-1];</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    aux2 += fat-&gt;fat[1][i][month-1];</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;  }</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;  <a class="code" href="estruturas_8c.html#a029be7affe21b7c0f6a660b4f1859fff">setFat_NQ3</a>(aux1,q);</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;  <a class="code" href="estruturas_8c.html#af16b3ade4c87b1b81b3b0771fdb4078f">setFat_PQ3</a>(aux2,q);</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;}</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160; </div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160; </div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160; </div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160; </div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;<span class="comment">/*----------------------------------QUERIE4----------------------------------*/</span></div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160; </div>
+<div class="line"><a name="l00218"></a><span class="lineno"><a class="line" href="faturacao_8c.html#a6afa4518f550620edfa6e87565eb464c">  218</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="faturacao_8c.html#a6afa4518f550620edfa6e87565eb464c">percorre_NODO_Fat_Q4</a>(NODO tree, Q2 q, <span class="keywordtype">int</span> *aux){</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;  <span class="keywordflow">if</span> (tree == NULL) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;  NODO esq = <a class="code" href="avl_8c.html#aac6e354b6a9d07b76313a36c510c9f10">getNodoEsq</a>(tree);</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;  <a class="code" href="faturacao_8c.html#a6afa4518f550620edfa6e87565eb464c">percorre_NODO_Fat_Q4</a>(esq,q,aux);</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;  <a class="code" href="avl_8c.html#ab7e925aeda628a2fb80ed170c192c3c4">free_Nodo</a>(esq);</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;  f_info f = (f_info) <a class="code" href="avl_8c.html#a948222e5aea0bc2696faf0a9ed64afe7">getCont</a>(tree);</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;  <span class="keywordtype">char</span>* prod = <a class="code" href="avl_8c.html#a5804b8d40ea06fecc2ecd97415a6c18c">getString</a>(tree);</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;  <span class="keywordflow">if</span>(f==NULL){</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <a class="code" href="estruturas_8c.html#a55dfe0c3e3dc5cc8ce80bad1bd26f7ae">insere_ProdQ2</a>(prod,q);</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    (*aux)++;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;  }</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;  free(prod);</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;  NODO dir;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;  dir = <a class="code" href="avl_8c.html#a5c9e707dfc9a11ffe65746c91b5111ba">getNodoDir</a>(tree);</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;  <a class="code" href="faturacao_8c.html#a6afa4518f550620edfa6e87565eb464c">percorre_NODO_Fat_Q4</a>(dir,q,aux);</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;  <a class="code" href="avl_8c.html#ab7e925aeda628a2fb80ed170c192c3c4">free_Nodo</a>(dir);</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160; </div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;}</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160; </div>
+<div class="line"><a name="l00243"></a><span class="lineno"><a class="line" href="faturacao_8c.html#aa646dd001c3cf1975b9318e75ca5eb3f">  243</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="faturacao_8c.html#aa646dd001c3cf1975b9318e75ca5eb3f">percorre_AVL_Fat_Q4</a>(AVL tree, Q2 q, <span class="keywordtype">int</span> *aux){</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;  NODO f = <a class="code" href="avl_8c.html#af568e679a8db439de3758447f23b86e2">getNodo</a>(tree);</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;  <a class="code" href="faturacao_8c.html#a6afa4518f550620edfa6e87565eb464c">percorre_NODO_Fat_Q4</a>(f,q,aux);</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;  <a class="code" href="avl_8c.html#ab7e925aeda628a2fb80ed170c192c3c4">free_Nodo</a>(f);</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;}</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160; </div>
+<div class="line"><a name="l00254"></a><span class="lineno"><a class="line" href="faturacao_8c.html#a1a1452f4ea1cfd17ee3bca24b786ac05">  254</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="faturacao_8c.html#a1a1452f4ea1cfd17ee3bca24b786ac05">produtos_nao_comprados</a>(Faturacao_Catalog f, Q2 q){</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;  <span class="keywordtype">int</span> k,aux=0;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;  AVL auxiliar;</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;  <span class="keywordflow">for</span>(k=0;k&lt;NR_LETRAS;k++){</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    auxiliar = <a class="code" href="catalogo_8c.html#a551505c19cd86f02ff31019e350df2a6">catalogo_getAVL</a>(f-&gt;catalogo,k);</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    <a class="code" href="faturacao_8c.html#aa646dd001c3cf1975b9318e75ca5eb3f">percorre_AVL_Fat_Q4</a>(auxiliar,q,&amp;aux);</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;  }</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;  <a class="code" href="estruturas_8c.html#a89139245dabf3f29938430bb633be51d">setNum_totalQ2</a>(aux,q);</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;}</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160; </div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;<span class="comment">/*----------------------------------QUERIE6----------------------------------*/</span></div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160; </div>
+<div class="line"><a name="l00272"></a><span class="lineno"><a class="line" href="faturacao_8c.html#a3a487295f78f04996bdaaee24d7fea0e">  272</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="faturacao_8c.html#a3a487295f78f04996bdaaee24d7fea0e">percorre_NODO_Fat_Q6</a>(NODO tree, Q6 q, <span class="keywordtype">int</span> *aux){</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;  <span class="keywordflow">if</span> (tree == NULL) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;  NODO esq = <a class="code" href="avl_8c.html#aac6e354b6a9d07b76313a36c510c9f10">getNodoEsq</a>(tree);</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;  <a class="code" href="faturacao_8c.html#a3a487295f78f04996bdaaee24d7fea0e">percorre_NODO_Fat_Q6</a>(esq,q,aux);</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;  <a class="code" href="avl_8c.html#ab7e925aeda628a2fb80ed170c192c3c4">free_Nodo</a>(esq);</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160; </div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;  NODO dir;</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;  dir = <a class="code" href="avl_8c.html#a5c9e707dfc9a11ffe65746c91b5111ba">getNodoDir</a>(tree);</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;  <a class="code" href="faturacao_8c.html#a3a487295f78f04996bdaaee24d7fea0e">percorre_NODO_Fat_Q6</a>(dir,q,aux);</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;  <a class="code" href="avl_8c.html#ab7e925aeda628a2fb80ed170c192c3c4">free_Nodo</a>(dir);</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160; </div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;  f_info f = (f_info) <a class="code" href="avl_8c.html#a948222e5aea0bc2696faf0a9ed64afe7">getCont</a>(tree);</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;  <span class="keywordflow">if</span>(f==NULL) (*aux)++;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;}</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160; </div>
+<div class="line"><a name="l00293"></a><span class="lineno"><a class="line" href="faturacao_8c.html#adfad6bec368267fd2fdcddba3adfaa00">  293</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="faturacao_8c.html#adfad6bec368267fd2fdcddba3adfaa00">percorre_AVL_Fat_Q6</a>(AVL tree, Q6 q, <span class="keywordtype">int</span> *aux){</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;  NODO f = <a class="code" href="avl_8c.html#af568e679a8db439de3758447f23b86e2">getNodo</a>(tree);</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;  <a class="code" href="faturacao_8c.html#a3a487295f78f04996bdaaee24d7fea0e">percorre_NODO_Fat_Q6</a>(f,q,aux);</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;  <a class="code" href="avl_8c.html#ab7e925aeda628a2fb80ed170c192c3c4">free_Nodo</a>(f);</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;}</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160; </div>
+<div class="line"><a name="l00304"></a><span class="lineno"><a class="line" href="faturacao_8c.html#a26497d662e20b7f28f114a416d12b1d4">  304</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="faturacao_8c.html#a26497d662e20b7f28f114a416d12b1d4">produtos_nao_comprados_num</a>(Faturacao_Catalog f, Q6 q){</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;  <span class="keywordtype">int</span> k,aux=0;</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;  AVL auxiliar;</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;  <span class="keywordflow">for</span>(k=0;k&lt;NR_LETRAS;k++){</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    auxiliar = <a class="code" href="catalogo_8c.html#a551505c19cd86f02ff31019e350df2a6">catalogo_getAVL</a>(f-&gt;catalogo,k);</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    <a class="code" href="faturacao_8c.html#adfad6bec368267fd2fdcddba3adfaa00">percorre_AVL_Fat_Q6</a>(auxiliar,q,&amp;aux);</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;  }</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;  <a class="code" href="estruturas_8c.html#a7b486f143ae7d234e9c519a2d18f627f">setNumProdsQ6</a>(q,aux);</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;}</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160; </div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;<span class="comment">/*----------------------------------QUERIE8----------------------------------*/</span></div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160; </div>
+<div class="line"><a name="l00324"></a><span class="lineno"><a class="line" href="faturacao_8c.html#ad95375f300444d3d0bc6a7b6818bcd78">  324</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="faturacao_8c.html#ad95375f300444d3d0bc6a7b6818bcd78">percorre_NODO_NVendas_Q8</a>(NODO tree,<span class="keywordtype">int</span> m1, <span class="keywordtype">int</span> m2, <span class="keywordtype">int</span> *total, Q8 q) {</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    <span class="keywordtype">int</span> j, k, i;</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    <span class="keywordflow">if</span> (tree == NULL) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    NODO esq = <a class="code" href="avl_8c.html#aac6e354b6a9d07b76313a36c510c9f10">getNodoEsq</a>(tree);</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    <a class="code" href="faturacao_8c.html#ad95375f300444d3d0bc6a7b6818bcd78">percorre_NODO_NVendas_Q8</a>(esq, m1, m2, total,q);</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    <a class="code" href="avl_8c.html#ab7e925aeda628a2fb80ed170c192c3c4">free_Nodo</a>(esq);</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    NODO dir;</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    dir = <a class="code" href="avl_8c.html#a5c9e707dfc9a11ffe65746c91b5111ba">getNodoDir</a>(tree);</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    <a class="code" href="faturacao_8c.html#ad95375f300444d3d0bc6a7b6818bcd78">percorre_NODO_NVendas_Q8</a>(dir, m1, m2, total,q);</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    <a class="code" href="avl_8c.html#ab7e925aeda628a2fb80ed170c192c3c4">free_Nodo</a>(dir);</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    f_info f = (f_info) <a class="code" href="avl_8c.html#a948222e5aea0bc2696faf0a9ed64afe7">getCont</a>(tree);</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    <span class="keywordflow">if</span> (f == NULL) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160; </div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    <span class="keywordflow">for</span> (i = 0; i &lt; MODO; i++) {</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;        <span class="keywordflow">for</span> (j = 0; j &lt; FILIAL; j++) {</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;            <span class="keywordflow">for</span> (k = m1-1; k &lt; m2; k++) {</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;                *total += f-&gt;n_vendas[i][j][k];</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;            }</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;        }</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    }</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160; </div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;}</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160; </div>
+<div class="line"><a name="l00355"></a><span class="lineno"><a class="line" href="faturacao_8c.html#a354a63798caf81b77f59bba49ea82cf4">  355</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="faturacao_8c.html#a354a63798caf81b77f59bba49ea82cf4">percorre_AVL_NVendas_Q8</a>(AVL auxiliar,<span class="keywordtype">int</span> m1,<span class="keywordtype">int</span> m2,<span class="keywordtype">int</span> *total, Q8 q){</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;  NODO f = <a class="code" href="avl_8c.html#af568e679a8db439de3758447f23b86e2">getNodo</a>(auxiliar);</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;  <a class="code" href="faturacao_8c.html#ad95375f300444d3d0bc6a7b6818bcd78">percorre_NODO_NVendas_Q8</a>(f,m1,m2,total,q);</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;  <a class="code" href="avl_8c.html#ab7e925aeda628a2fb80ed170c192c3c4">free_Nodo</a>(f);</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;}</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160; </div>
+<div class="line"><a name="l00368"></a><span class="lineno"><a class="line" href="faturacao_8c.html#ae69a924d20ab0f5944ee71a42685644f">  368</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="faturacao_8c.html#ae69a924d20ab0f5944ee71a42685644f">get_NVendas_Faturacao_EntreMeses</a>(Faturacao_Catalog f, <span class="keywordtype">int</span> m1, <span class="keywordtype">int</span> m2, Q8 q){</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;  <span class="keywordtype">int</span> k;</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;  <span class="keywordtype">int</span> total=0;</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;  AVL auxiliar;</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;  <span class="keywordflow">for</span>(k=0;k&lt;NR_LETRAS;k++){</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    auxiliar = <a class="code" href="catalogo_8c.html#a551505c19cd86f02ff31019e350df2a6">catalogo_getAVL</a>(f-&gt;catalogo,k);</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    <a class="code" href="faturacao_8c.html#a354a63798caf81b77f59bba49ea82cf4">percorre_AVL_NVendas_Q8</a>(auxiliar,m1,m2,&amp;total,q);</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;  }</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;  <a class="code" href="estruturas_8c.html#ad0bb18f7237bbfe9aee55bd7d5b32415">setNVendas_Q8</a>(total,q);</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;}</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160; </div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160; </div>
+<div class="line"><a name="l00388"></a><span class="lineno"><a class="line" href="faturacao_8c.html#acdb0ce7aba7975474d51bbbb9e1a4023">  388</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="faturacao_8c.html#acdb0ce7aba7975474d51bbbb9e1a4023">percorre_NODO_Fat_Q8</a>(NODO tree,<span class="keywordtype">int</span> m1, <span class="keywordtype">int</span> m2, <span class="keywordtype">double</span> *total, Q8 q){</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;  <span class="keywordtype">int</span> i,j,k;</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;  <span class="keywordflow">if</span>(tree==NULL) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;  NODO esq = <a class="code" href="avl_8c.html#aac6e354b6a9d07b76313a36c510c9f10">getNodoEsq</a>(tree);</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;  <a class="code" href="faturacao_8c.html#acdb0ce7aba7975474d51bbbb9e1a4023">percorre_NODO_Fat_Q8</a>(esq,m1,m2,total,q);</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;  <a class="code" href="avl_8c.html#ab7e925aeda628a2fb80ed170c192c3c4">free_Nodo</a>(esq);</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;  NODO dir;</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;  dir = <a class="code" href="avl_8c.html#a5c9e707dfc9a11ffe65746c91b5111ba">getNodoDir</a>(tree);</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;  <a class="code" href="faturacao_8c.html#acdb0ce7aba7975474d51bbbb9e1a4023">percorre_NODO_Fat_Q8</a>(dir,m1,m2,total,q);</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;  <a class="code" href="avl_8c.html#ab7e925aeda628a2fb80ed170c192c3c4">free_Nodo</a>(dir);</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;  f_info f = (f_info) <a class="code" href="avl_8c.html#a948222e5aea0bc2696faf0a9ed64afe7">getCont</a>(tree);</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;  <span class="keywordflow">if</span>(f==NULL) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160; </div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;  <span class="keywordflow">for</span>(i=0;i&lt;MODO;i++){</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;    <span class="keywordflow">for</span>(j=0;j&lt;FILIAL;j++){</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;      <span class="keywordflow">for</span>(k=m1-1;k&lt;m2;k++){</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;        *total += f-&gt;fat[i][j][k];</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;      }</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;    }</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;  }</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;}</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160; </div>
+<div class="line"><a name="l00418"></a><span class="lineno"><a class="line" href="faturacao_8c.html#a731e4e35037ffe662c768e5bffd844e9">  418</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="faturacao_8c.html#a731e4e35037ffe662c768e5bffd844e9">percorre_AVL_Fat_Q8</a>(AVL auxiliar,<span class="keywordtype">int</span> m1, <span class="keywordtype">int</span> m2,<span class="keywordtype">double</span> *total, Q8 q){</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;  NODO f = <a class="code" href="avl_8c.html#af568e679a8db439de3758447f23b86e2">getNodo</a>(auxiliar);</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;  <a class="code" href="faturacao_8c.html#acdb0ce7aba7975474d51bbbb9e1a4023">percorre_NODO_Fat_Q8</a>(f,m1,m2,total,q);</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;  <a class="code" href="avl_8c.html#ab7e925aeda628a2fb80ed170c192c3c4">free_Nodo</a>(f);</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;}</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160; </div>
+<div class="line"><a name="l00431"></a><span class="lineno"><a class="line" href="faturacao_8c.html#a5554c5f0230bda76be4824d7e7c4f8ea">  431</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="faturacao_8c.html#a5554c5f0230bda76be4824d7e7c4f8ea">get_Fat_Faturacao_EntreMeses</a>(Faturacao_Catalog f, <span class="keywordtype">int</span> m1, <span class="keywordtype">int</span> m2, Q8 q){</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;  <span class="keywordtype">int</span> k;</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;  <span class="keywordtype">double</span> total=0;</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;  AVL auxiliar;</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;  <span class="keywordflow">for</span>(k=0;k&lt;NR_LETRAS;k++){</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;    auxiliar = <a class="code" href="catalogo_8c.html#a551505c19cd86f02ff31019e350df2a6">catalogo_getAVL</a>(f-&gt;catalogo,k);</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;    <a class="code" href="faturacao_8c.html#a731e4e35037ffe662c768e5bffd844e9">percorre_AVL_Fat_Q8</a>(auxiliar,m1,m2,&amp;total,q);</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;  }</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;  <a class="code" href="estruturas_8c.html#ae5f3bba421573d83341b22ad44722815">setFat_Q8</a>(total,q);</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;}</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160; </div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160; </div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;<span class="comment">/*----------------------------------QUERIE11----------------------------------*/</span></div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160; </div>
+<div class="line"><a name="l00450"></a><span class="lineno"><a class="line" href="faturacao_8c.html#afeb2e8b288e2622dd2819dc6f137e7d5">  450</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="faturacao_8c.html#afeb2e8b288e2622dd2819dc6f137e7d5">percorre_NODO_Fat_Q11</a>(NODO tree, Q11 q){</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;  <span class="keywordflow">if</span>(tree==NULL) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;  NODO esq = <a class="code" href="avl_8c.html#aac6e354b6a9d07b76313a36c510c9f10">getNodoEsq</a>(tree);</div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;  <a class="code" href="faturacao_8c.html#afeb2e8b288e2622dd2819dc6f137e7d5">percorre_NODO_Fat_Q11</a>(esq,q);</div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;  <a class="code" href="avl_8c.html#ab7e925aeda628a2fb80ed170c192c3c4">free_Nodo</a>(esq);</div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160; </div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;  f_info aux = <a class="code" href="avl_8c.html#a948222e5aea0bc2696faf0a9ed64afe7">getCont</a>(tree);</div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;  <span class="keywordtype">char</span>* <a class="code" href="structproduto.html">produto</a>;</div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;  <span class="keywordflow">if</span>(aux==NULL);</div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;  <span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;    <a class="code" href="structproduto.html">produto</a> = <a class="code" href="avl_8c.html#a5804b8d40ea06fecc2ecd97415a6c18c">getString</a>(tree);</div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;    <span class="keywordtype">int</span> i;</div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;    <span class="keywordtype">int</span> qt[FILIAL];</div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;    <span class="keywordflow">for</span>(i=0;i&lt;FILIAL;i++){</div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;      qt[i] = <a class="code" href="faturacao_8c.html#a9953fb35fe71d69681f164f226ac7d09">getQtTotalFat</a>(aux,i);</div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;    }</div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;    <a class="code" href="estruturas_8c.html#a8a4021930dd4dd73ce5da02f3324ecf7">insere_ProdInfoQ11</a>(q,<a class="code" href="structproduto.html">produto</a>,qt);</div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;    free(<a class="code" href="structproduto.html">produto</a>);</div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;  }</div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160; </div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;  NODO dir = <a class="code" href="avl_8c.html#a5c9e707dfc9a11ffe65746c91b5111ba">getNodoDir</a>(tree);</div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;  <a class="code" href="faturacao_8c.html#afeb2e8b288e2622dd2819dc6f137e7d5">percorre_NODO_Fat_Q11</a>(dir,q);</div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;  <a class="code" href="avl_8c.html#ab7e925aeda628a2fb80ed170c192c3c4">free_Nodo</a>(dir);</div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;}</div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160; </div>
+<div class="line"><a name="l00480"></a><span class="lineno"><a class="line" href="faturacao_8c.html#af767925f1b2eccbb2da9f76705d20fdf">  480</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="faturacao_8c.html#af767925f1b2eccbb2da9f76705d20fdf">percorre_AVL_Fat_Q11</a>(AVL tree, Q11 q){</div>
+<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;  NODO f = <a class="code" href="avl_8c.html#af568e679a8db439de3758447f23b86e2">getNodo</a>(tree);</div>
+<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;  <a class="code" href="faturacao_8c.html#afeb2e8b288e2622dd2819dc6f137e7d5">percorre_NODO_Fat_Q11</a>(f,q);</div>
+<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;  <a class="code" href="avl_8c.html#ab7e925aeda628a2fb80ed170c192c3c4">free_Nodo</a>(f);</div>
+<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;}</div>
+<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160; </div>
+<div class="line"><a name="l00491"></a><span class="lineno"><a class="line" href="faturacao_8c.html#a1e3719cc2978d5d216267585dd0d4d77">  491</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="faturacao_8c.html#a1e3719cc2978d5d216267585dd0d4d77">produtosMaisCompradosQ11</a>(Faturacao_Catalog f, Q11 q){</div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;  <span class="keywordtype">int</span> j;</div>
+<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;  AVL auxiliar;</div>
+<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;  <span class="keywordflow">for</span>(j=0;j&lt;NR_LETRAS;j++){</div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;    auxiliar = <a class="code" href="catalogo_8c.html#a551505c19cd86f02ff31019e350df2a6">catalogo_getAVL</a>(f-&gt;catalogo,j);</div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;    <a class="code" href="faturacao_8c.html#af767925f1b2eccbb2da9f76705d20fdf">percorre_AVL_Fat_Q11</a>(auxiliar,q);</div>
+<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;  }</div>
+<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="afaturacao_8c_html_ad95375f300444d3d0bc6a7b6818bcd78"><div class="ttname"><a href="faturacao_8c.html#ad95375f300444d3d0bc6a7b6818bcd78">percorre_NODO_NVendas_Q8</a></div><div class="ttdeci">void percorre_NODO_NVendas_Q8(NODO tree, int m1, int m2, int *total, Q8 q)</div><div class="ttdoc">Função que percorre os nodos da AVL.</div><div class="ttdef"><b>Definition:</b> <a href="faturacao_8c_source.html#l00324">faturacao.c:324</a></div></div>
+<div class="ttc" id="afaturacao_8c_html_afeb2e8b288e2622dd2819dc6f137e7d5"><div class="ttname"><a href="faturacao_8c.html#afeb2e8b288e2622dd2819dc6f137e7d5">percorre_NODO_Fat_Q11</a></div><div class="ttdeci">void percorre_NODO_Fat_Q11(NODO tree, Q11 q)</div><div class="ttdoc">Função que percorre os nodos da AVL.</div><div class="ttdef"><b>Definition:</b> <a href="faturacao_8c_source.html#l00450">faturacao.c:450</a></div></div>
+<div class="ttc" id="aavl_8c_html_a948222e5aea0bc2696faf0a9ed64afe7"><div class="ttname"><a href="avl_8c.html#a948222e5aea0bc2696faf0a9ed64afe7">getCont</a></div><div class="ttdeci">void * getCont(NODO n)</div><div class="ttdoc">Função que dado um NODO retorna o seu contéudo.</div><div class="ttdef"><b>Definition:</b> <a href="avl_8c_source.html#l00201">avl.c:201</a></div></div>
+<div class="ttc" id="aavl_8c_html_ab7e925aeda628a2fb80ed170c192c3c4"><div class="ttname"><a href="avl_8c.html#ab7e925aeda628a2fb80ed170c192c3c4">free_Nodo</a></div><div class="ttdeci">void free_Nodo(NODO node)</div><div class="ttdoc">Função que limpa da memória um dado NODO.</div><div class="ttdef"><b>Definition:</b> <a href="avl_8c_source.html#l00446">avl.c:446</a></div></div>
+<div class="ttc" id="acatalogo_8c_html_a00844e192fa3f0c5afc710d9da7c2c83"><div class="ttname"><a href="catalogo_8c.html#a00844e192fa3f0c5afc710d9da7c2c83">imprime_Catalogo</a></div><div class="ttdeci">void imprime_Catalogo(Catalogo cat)</div><div class="ttdoc">Função que imprime um catálogo.</div><div class="ttdef"><b>Definition:</b> <a href="catalogo_8c_source.html#l00091">catalogo.c:91</a></div></div>
+<div class="ttc" id="aestruturas_8c_html_a029be7affe21b7c0f6a660b4f1859fff"><div class="ttname"><a href="estruturas_8c.html#a029be7affe21b7c0f6a660b4f1859fff">setFat_NQ3</a></div><div class="ttdeci">void setFat_NQ3(double n, Q3 q)</div><div class="ttdoc">Função que estabelece o total faturado em modo normal.</div><div class="ttdef"><b>Definition:</b> <a href="estruturas_8c_source.html#l00173">estruturas.c:173</a></div></div>
+<div class="ttc" id="aavl_8c_html_af568e679a8db439de3758447f23b86e2"><div class="ttname"><a href="avl_8c.html#af568e679a8db439de3758447f23b86e2">getNodo</a></div><div class="ttdeci">NODO getNodo(AVL a)</div><div class="ttdoc">Função que dada uma AVL retorna o nodo da sua raiz.</div><div class="ttdef"><b>Definition:</b> <a href="avl_8c_source.html#l00128">avl.c:128</a></div></div>
+<div class="ttc" id="afaturacao_8c_html_a8df5bebac86ad8e47477b8a46b371c3e"><div class="ttname"><a href="faturacao_8c.html#a8df5bebac86ad8e47477b8a46b371c3e">insere_faturacao</a></div><div class="ttdeci">Faturacao_Catalog insere_faturacao(Faturacao_Catalog cat, Produto p, void *estrutura)</div><div class="ttdoc">Função que insere no produto de um catálogo uma estrutura.</div><div class="ttdef"><b>Definition:</b> <a href="faturacao_8c_source.html#l00131">faturacao.c:131</a></div></div>
+<div class="ttc" id="aestruturas_8c_html_a89139245dabf3f29938430bb633be51d"><div class="ttname"><a href="estruturas_8c.html#a89139245dabf3f29938430bb633be51d">setNum_totalQ2</a></div><div class="ttdeci">void setNum_totalQ2(int n, Q2 q)</div><div class="ttdoc">Função que fixa o número total de elementos dentro da estrutura.</div><div class="ttdef"><b>Definition:</b> <a href="estruturas_8c_source.html#l00076">estruturas.c:76</a></div></div>
+<div class="ttc" id="acatalogo_8c_html_acc5f085d5be2ccd45505eff9015e27db"><div class="ttname"><a href="catalogo_8c.html#acc5f085d5be2ccd45505eff9015e27db">altera_Catalogo</a></div><div class="ttdeci">Catalogo altera_Catalogo(Catalogo c, char *key, void *estrutura)</div><div class="ttdoc">Função que altera uma estrutura no catálogo tendo como referência de posicionamento um char* key.</div><div class="ttdef"><b>Definition:</b> <a href="catalogo_8c_source.html#l00069">catalogo.c:69</a></div></div>
+<div class="ttc" id="afaturacao_8c_html_a434a13e579209e1424ea8b9941d582e1"><div class="ttname"><a href="faturacao_8c.html#a434a13e579209e1424ea8b9941d582e1">imprime_Faturacao</a></div><div class="ttdeci">void imprime_Faturacao(Faturacao_Catalog cat)</div><div class="ttdoc">Função que imprime a faturação.</div><div class="ttdef"><b>Definition:</b> <a href="faturacao_8c_source.html#l00152">faturacao.c:152</a></div></div>
+<div class="ttc" id="acatalogo_8c_html_a2ed88930f3b18c3f107506ef3170508d"><div class="ttname"><a href="catalogo_8c.html#a2ed88930f3b18c3f107506ef3170508d">get_Cat_struct</a></div><div class="ttdeci">Estrutura get_Cat_struct(Catalogo c, char *key)</div><div class="ttdoc">Função que devolve a estrutura associada a uma key de um catálogo que lhe é passada como argumento.</div><div class="ttdef"><b>Definition:</b> <a href="catalogo_8c_source.html#l00044">catalogo.c:44</a></div></div>
+<div class="ttc" id="acatalogo_8c_html_a5add1241036a95c143d5cb5d8e5e7fe5"><div class="ttname"><a href="catalogo_8c.html#a5add1241036a95c143d5cb5d8e5e7fe5">init_Catalogo</a></div><div class="ttdeci">Catalogo init_Catalogo()</div><div class="ttdoc">Função que inicializa um novo catálogo.</div><div class="ttdef"><b>Definition:</b> <a href="catalogo_8c_source.html#l00017">catalogo.c:17</a></div></div>
+<div class="ttc" id="afaturacao_8c_html_a26497d662e20b7f28f114a416d12b1d4"><div class="ttname"><a href="faturacao_8c.html#a26497d662e20b7f28f114a416d12b1d4">produtos_nao_comprados_num</a></div><div class="ttdeci">void produtos_nao_comprados_num(Faturacao_Catalog f, Q6 q)</div><div class="ttdoc">Função que insere numa estrutura o total de produtos que não foram comprados.</div><div class="ttdef"><b>Definition:</b> <a href="faturacao_8c_source.html#l00304">faturacao.c:304</a></div></div>
+<div class="ttc" id="afaturacao_8c_html_a1e3719cc2978d5d216267585dd0d4d77"><div class="ttname"><a href="faturacao_8c.html#a1e3719cc2978d5d216267585dd0d4d77">produtosMaisCompradosQ11</a></div><div class="ttdeci">void produtosMaisCompradosQ11(Faturacao_Catalog f, Q11 q)</div><div class="ttdoc">Função que insere numa estrutura o código dos produtos bem como a sua quantidade comprada.</div><div class="ttdef"><b>Definition:</b> <a href="faturacao_8c_source.html#l00491">faturacao.c:491</a></div></div>
+<div class="ttc" id="astructproduto_html"><div class="ttname"><a href="structproduto.html">produto</a></div><div class="ttdef"><b>Definition:</b> <a href="produtos_8c_source.html#l00009">produtos.c:9</a></div></div>
+<div class="ttc" id="afaturacao_8c_html_a82a1bff71e58ef2648cce6bbfe59bef3"><div class="ttname"><a href="faturacao_8c.html#a82a1bff71e58ef2648cce6bbfe59bef3">get_Fat_Mes_Faturacao</a></div><div class="ttdeci">void get_Fat_Mes_Faturacao(Faturacao_Catalog f, char *product, int month, Q3 q)</div><div class="ttdoc">Função insere numa estrutura o total faturado de um certo produto realizadas num dado mês.</div><div class="ttdef"><b>Definition:</b> <a href="faturacao_8c_source.html#l00195">faturacao.c:195</a></div></div>
+<div class="ttc" id="acatalogo_8c_html_a63d5cf63479a790b0f74a7bfa0dcd10a"><div class="ttname"><a href="catalogo_8c.html#a63d5cf63479a790b0f74a7bfa0dcd10a">insere_Catalogo</a></div><div class="ttdeci">Catalogo insere_Catalogo(Catalogo c, char *key, void *estrutura)</div><div class="ttdoc">Função que insere no catálogo tendo como referência de posicionamento um char* key.</div><div class="ttdef"><b>Definition:</b> <a href="catalogo_8c_source.html#l00056">catalogo.c:56</a></div></div>
+<div class="ttc" id="aavl_8c_html_aac6e354b6a9d07b76313a36c510c9f10"><div class="ttname"><a href="avl_8c.html#aac6e354b6a9d07b76313a36c510c9f10">getNodoEsq</a></div><div class="ttdeci">NODO getNodoEsq(NODO n)</div><div class="ttdoc">Função que dado um NODO retorna o nodo á sua esquerda.</div><div class="ttdef"><b>Definition:</b> <a href="avl_8c_source.html#l00149">avl.c:149</a></div></div>
+<div class="ttc" id="afaturacao_8c_html_ab3e6f99c70abaa24016477bdea48eab0"><div class="ttname"><a href="faturacao_8c.html#ab3e6f99c70abaa24016477bdea48eab0">cria_Faturacao</a></div><div class="ttdeci">Faturacao_Catalog cria_Faturacao(Faturacao_Catalog cat, Produto p, int mes, int filial, char modo, double preco, int qtd)</div><div class="ttdoc">Função que cria um catálogo da faturação, inserindo informação no mesmo.</div><div class="ttdef"><b>Definition:</b> <a href="faturacao_8c_source.html#l00031">faturacao.c:31</a></div></div>
+<div class="ttc" id="aestruturas_8c_html_ad0bb18f7237bbfe9aee55bd7d5b32415"><div class="ttname"><a href="estruturas_8c.html#ad0bb18f7237bbfe9aee55bd7d5b32415">setNVendas_Q8</a></div><div class="ttdeci">void setNVendas_Q8(int n, Q8 q)</div><div class="ttdoc">Função que estabelece a quantidade total de vendas registadas.</div><div class="ttdef"><b>Definition:</b> <a href="estruturas_8c_source.html#l00429">estruturas.c:429</a></div></div>
+<div class="ttc" id="aavl_8c_html_a5804b8d40ea06fecc2ecd97415a6c18c"><div class="ttname"><a href="avl_8c.html#a5804b8d40ea06fecc2ecd97415a6c18c">getString</a></div><div class="ttdeci">char * getString(NODO n)</div><div class="ttdoc">Função que dado um NODO retorna uma copia da sua string.</div><div class="ttdef"><b>Definition:</b> <a href="avl_8c_source.html#l00189">avl.c:189</a></div></div>
+<div class="ttc" id="aestruturas_8c_html_ae7ddfc6c12a3175edafa3f58f95b0b6a"><div class="ttname"><a href="estruturas_8c.html#ae7ddfc6c12a3175edafa3f58f95b0b6a">setQt_NQ3</a></div><div class="ttdeci">void setQt_NQ3(int n, Q3 q)</div><div class="ttdoc">Função que estabelece a quantidade total de vendas registas em modo Normal.</div><div class="ttdef"><b>Definition:</b> <a href="estruturas_8c_source.html#l00137">estruturas.c:137</a></div></div>
+<div class="ttc" id="aestruturas_8c_html_a55dfe0c3e3dc5cc8ce80bad1bd26f7ae"><div class="ttname"><a href="estruturas_8c.html#a55dfe0c3e3dc5cc8ce80bad1bd26f7ae">insere_ProdQ2</a></div><div class="ttdeci">void insere_ProdQ2(char *key, Q2 q)</div><div class="ttdoc">Função que insere na estrutura um código de produto.</div><div class="ttdef"><b>Definition:</b> <a href="estruturas_8c_source.html#l00085">estruturas.c:85</a></div></div>
+<div class="ttc" id="afaturacao_8c_html_a5554c5f0230bda76be4824d7e7c4f8ea"><div class="ttname"><a href="faturacao_8c.html#a5554c5f0230bda76be4824d7e7c4f8ea">get_Fat_Faturacao_EntreMeses</a></div><div class="ttdeci">void get_Fat_Faturacao_EntreMeses(Faturacao_Catalog f, int m1, int m2, Q8 q)</div><div class="ttdoc">Função que insere numa estrutura o total faturado num intervalo de meses.</div><div class="ttdef"><b>Definition:</b> <a href="faturacao_8c_source.html#l00431">faturacao.c:431</a></div></div>
+<div class="ttc" id="aestruturas_8c_html_a350838bc921f8e756fc5867488b40318"><div class="ttname"><a href="estruturas_8c.html#a350838bc921f8e756fc5867488b40318">setQt_PQ3</a></div><div class="ttdeci">void setQt_PQ3(int n, Q3 q)</div><div class="ttdoc">Função que estabelece a quantidade total de vendas registas em modo promocional.</div><div class="ttdef"><b>Definition:</b> <a href="estruturas_8c_source.html#l00155">estruturas.c:155</a></div></div>
+<div class="ttc" id="afaturacao_8c_html_ae7d33e0cc1704b65d8bc45f5a6bba511"><div class="ttname"><a href="faturacao_8c.html#ae7d33e0cc1704b65d8bc45f5a6bba511">init_faturacao_catalogo</a></div><div class="ttdeci">Faturacao_Catalog init_faturacao_catalogo()</div><div class="ttdoc">Função que inicializa o catálogo da faturação.</div><div class="ttdef"><b>Definition:</b> <a href="faturacao_8c_source.html#l00105">faturacao.c:105</a></div></div>
+<div class="ttc" id="afaturacao_8c_html_a2aba6ae247ab5660d7d6bca7c45c24ea"><div class="ttname"><a href="faturacao_8c.html#a2aba6ae247ab5660d7d6bca7c45c24ea">get_NVendas_Mes_Faturacao</a></div><div class="ttdeci">void get_NVendas_Mes_Faturacao(Faturacao_Catalog f, char *product, int month, Q3 q)</div><div class="ttdoc">Função insere numa estrutura o número de vendas de um certo produto realizadas num dado mês.</div><div class="ttdef"><b>Definition:</b> <a href="faturacao_8c_source.html#l00177">faturacao.c:177</a></div></div>
+<div class="ttc" id="astructcatalogo__faturacao_html"><div class="ttname"><a href="structcatalogo__faturacao.html">catalogo_faturacao</a></div><div class="ttdef"><b>Definition:</b> <a href="faturacao_8c_source.html#l00008">faturacao.c:8</a></div></div>
+<div class="ttc" id="afaturacao_8c_html_abc7f1720453f963ee1335e88c5ff1d32"><div class="ttname"><a href="faturacao_8c.html#abc7f1720453f963ee1335e88c5ff1d32">free_Faturacao</a></div><div class="ttdeci">void free_Faturacao(Faturacao_Catalog cat)</div><div class="ttdoc">Função que liberta da memória o espaço ocupado por um catálogo da faturação.</div><div class="ttdef"><b>Definition:</b> <a href="faturacao_8c_source.html#l00143">faturacao.c:143</a></div></div>
+<div class="ttc" id="afaturacao_8c_html_acdb0ce7aba7975474d51bbbb9e1a4023"><div class="ttname"><a href="faturacao_8c.html#acdb0ce7aba7975474d51bbbb9e1a4023">percorre_NODO_Fat_Q8</a></div><div class="ttdeci">void percorre_NODO_Fat_Q8(NODO tree, int m1, int m2, double *total, Q8 q)</div><div class="ttdoc">Função que percorre os nodos da AVL.</div><div class="ttdef"><b>Definition:</b> <a href="faturacao_8c_source.html#l00388">faturacao.c:388</a></div></div>
+<div class="ttc" id="afaturacao_8c_html_af767925f1b2eccbb2da9f76705d20fdf"><div class="ttname"><a href="faturacao_8c.html#af767925f1b2eccbb2da9f76705d20fdf">percorre_AVL_Fat_Q11</a></div><div class="ttdeci">void percorre_AVL_Fat_Q11(AVL tree, Q11 q)</div><div class="ttdoc">Função que percorre uma AVL.</div><div class="ttdef"><b>Definition:</b> <a href="faturacao_8c_source.html#l00480">faturacao.c:480</a></div></div>
+<div class="ttc" id="aestruturas_8c_html_a8a4021930dd4dd73ce5da02f3324ecf7"><div class="ttname"><a href="estruturas_8c.html#a8a4021930dd4dd73ce5da02f3324ecf7">insere_ProdInfoQ11</a></div><div class="ttdeci">void insere_ProdInfoQ11(Q11 q, char *p, int qt[])</div><div class="ttdoc">Função que insere na estrutura um código produto e a quantidade total comprada desse produto.</div><div class="ttdef"><b>Definition:</b> <a href="estruturas_8c_source.html#l00839">estruturas.c:839</a></div></div>
+<div class="ttc" id="afaturacao_8c_html_adfad6bec368267fd2fdcddba3adfaa00"><div class="ttname"><a href="faturacao_8c.html#adfad6bec368267fd2fdcddba3adfaa00">percorre_AVL_Fat_Q6</a></div><div class="ttdeci">void percorre_AVL_Fat_Q6(AVL tree, Q6 q, int *aux)</div><div class="ttdoc">Função que percorre uma AVL.</div><div class="ttdef"><b>Definition:</b> <a href="faturacao_8c_source.html#l00293">faturacao.c:293</a></div></div>
+<div class="ttc" id="afaturacao_8c_html_ae69a924d20ab0f5944ee71a42685644f"><div class="ttname"><a href="faturacao_8c.html#ae69a924d20ab0f5944ee71a42685644f">get_NVendas_Faturacao_EntreMeses</a></div><div class="ttdeci">void get_NVendas_Faturacao_EntreMeses(Faturacao_Catalog f, int m1, int m2, Q8 q)</div><div class="ttdoc">Função que insere numa estrutura o total de vendas registadas num intervalo de meses.</div><div class="ttdef"><b>Definition:</b> <a href="faturacao_8c_source.html#l00368">faturacao.c:368</a></div></div>
+<div class="ttc" id="acatalogo_8c_html_aa40131c98313b4683617cd1757f7ea66"><div class="ttname"><a href="catalogo_8c.html#aa40131c98313b4683617cd1757f7ea66">free_Catalogo</a></div><div class="ttdeci">void free_Catalogo(Catalogo cat, Funcao f)</div><div class="ttdoc">Função com o objetivo de limpar da memória um dado catálogo.</div><div class="ttdef"><b>Definition:</b> <a href="catalogo_8c_source.html#l00080">catalogo.c:80</a></div></div>
+<div class="ttc" id="afaturacao_8c_html_a3a487295f78f04996bdaaee24d7fea0e"><div class="ttname"><a href="faturacao_8c.html#a3a487295f78f04996bdaaee24d7fea0e">percorre_NODO_Fat_Q6</a></div><div class="ttdeci">void percorre_NODO_Fat_Q6(NODO tree, Q6 q, int *aux)</div><div class="ttdoc">Função que percorre os nodos da AVL.</div><div class="ttdef"><b>Definition:</b> <a href="faturacao_8c_source.html#l00272">faturacao.c:272</a></div></div>
+<div class="ttc" id="afaturacao_8c_html_a6afa4518f550620edfa6e87565eb464c"><div class="ttname"><a href="faturacao_8c.html#a6afa4518f550620edfa6e87565eb464c">percorre_NODO_Fat_Q4</a></div><div class="ttdeci">void percorre_NODO_Fat_Q4(NODO tree, Q2 q, int *aux)</div><div class="ttdoc">Função que percorre os nodos da AVL.</div><div class="ttdef"><b>Definition:</b> <a href="faturacao_8c_source.html#l00218">faturacao.c:218</a></div></div>
+<div class="ttc" id="aprodutos_8c_html_a41fd3a5ec4fda805f937ed25bcbe5750"><div class="ttname"><a href="produtos_8c.html#a41fd3a5ec4fda805f937ed25bcbe5750">getProdutoCode</a></div><div class="ttdeci">char * getProdutoCode(Produto p)</div><div class="ttdoc">Função que retorna o código de um produto.</div><div class="ttdef"><b>Definition:</b> <a href="produtos_8c_source.html#l00112">produtos.c:112</a></div></div>
+<div class="ttc" id="afaturacao_8c_html_a9cdd16c7cbef5e648fd6ad5cb0cb3605"><div class="ttname"><a href="faturacao_8c.html#a9cdd16c7cbef5e648fd6ad5cb0cb3605">get_Fat_struct</a></div><div class="ttdeci">Estrutura get_Fat_struct(Faturacao_Catalog cat, Produto p)</div><div class="ttdoc">Função que devolve a estrutura associada a um produto de um catálogo que lhe é passado como argumento...</div><div class="ttdef"><b>Definition:</b> <a href="faturacao_8c_source.html#l00075">faturacao.c:75</a></div></div>
+<div class="ttc" id="aestruturas_8c_html_a7b486f143ae7d234e9c519a2d18f627f"><div class="ttname"><a href="estruturas_8c.html#a7b486f143ae7d234e9c519a2d18f627f">setNumProdsQ6</a></div><div class="ttdeci">void setNumProdsQ6(Q6 q, int n)</div><div class="ttdoc">Função que estabelece o número de produtos.</div><div class="ttdef"><b>Definition:</b> <a href="estruturas_8c_source.html#l00335">estruturas.c:335</a></div></div>
+<div class="ttc" id="aavl_8c_html_a5c9e707dfc9a11ffe65746c91b5111ba"><div class="ttname"><a href="avl_8c.html#a5c9e707dfc9a11ffe65746c91b5111ba">getNodoDir</a></div><div class="ttdeci">NODO getNodoDir(NODO n)</div><div class="ttdoc">Função que dado um NODO retorna o nodo á sua direita.</div><div class="ttdef"><b>Definition:</b> <a href="avl_8c_source.html#l00169">avl.c:169</a></div></div>
+<div class="ttc" id="afaturacao_8c_html_a5b382a89fee7d02eb3855f94e7822bd5"><div class="ttname"><a href="faturacao_8c.html#a5b382a89fee7d02eb3855f94e7822bd5">altera_Faturacao</a></div><div class="ttdeci">Faturacao_Catalog altera_Faturacao(Faturacao_Catalog cat, Produto p, int mes, int filial, char modo, double preco, int qtd)</div><div class="ttdoc">Função que altera o catálogo da faturação.</div><div class="ttdef"><b>Definition:</b> <a href="faturacao_8c_source.html#l00054">faturacao.c:54</a></div></div>
+<div class="ttc" id="afaturacao_8c_html_a9953fb35fe71d69681f164f226ac7d09"><div class="ttname"><a href="faturacao_8c.html#a9953fb35fe71d69681f164f226ac7d09">getQtTotalFat</a></div><div class="ttdeci">int getQtTotalFat(f_info f, int filial)</div><div class="ttdoc">Função que retorna a quantidade total de produtos por filial.</div><div class="ttdef"><b>Definition:</b> <a href="faturacao_8c_source.html#l00162">faturacao.c:162</a></div></div>
+<div class="ttc" id="aestruturas_8c_html_ae5f3bba421573d83341b22ad44722815"><div class="ttname"><a href="estruturas_8c.html#ae5f3bba421573d83341b22ad44722815">setFat_Q8</a></div><div class="ttdeci">void setFat_Q8(double n, Q8 q)</div><div class="ttdoc">Função que estabelece o total faturado.</div><div class="ttdef"><b>Definition:</b> <a href="estruturas_8c_source.html#l00447">estruturas.c:447</a></div></div>
+<div class="ttc" id="astructcatalogo_html"><div class="ttname"><a href="structcatalogo.html">catalogo</a></div><div class="ttdef"><b>Definition:</b> <a href="catalogo_8c_source.html#l00009">catalogo.c:9</a></div></div>
+<div class="ttc" id="afaturacao_8c_html_aa646dd001c3cf1975b9318e75ca5eb3f"><div class="ttname"><a href="faturacao_8c.html#aa646dd001c3cf1975b9318e75ca5eb3f">percorre_AVL_Fat_Q4</a></div><div class="ttdeci">void percorre_AVL_Fat_Q4(AVL tree, Q2 q, int *aux)</div><div class="ttdoc">Função que percorre uma AVL.</div><div class="ttdef"><b>Definition:</b> <a href="faturacao_8c_source.html#l00243">faturacao.c:243</a></div></div>
+<div class="ttc" id="afaturacao_8c_html_a1c33cc0d11ce825aa8c0014d9f7faecf"><div class="ttname"><a href="faturacao_8c.html#a1c33cc0d11ce825aa8c0014d9f7faecf">existe_faturacao</a></div><div class="ttdeci">Boolean existe_faturacao(Faturacao_Catalog cat, Produto p)</div><div class="ttdoc">Função que verifica se existe, dado um produto, uma certa faturação a ele associada.</div><div class="ttdef"><b>Definition:</b> <a href="faturacao_8c_source.html#l00117">faturacao.c:117</a></div></div>
+<div class="ttc" id="aestruturas_8c_html_af16b3ade4c87b1b81b3b0771fdb4078f"><div class="ttname"><a href="estruturas_8c.html#af16b3ade4c87b1b81b3b0771fdb4078f">setFat_PQ3</a></div><div class="ttdeci">void setFat_PQ3(double n, Q3 q)</div><div class="ttdoc">Função que estabelece o total faturado em modo promocional.</div><div class="ttdef"><b>Definition:</b> <a href="estruturas_8c_source.html#l00191">estruturas.c:191</a></div></div>
+<div class="ttc" id="astructfat__info_html"><div class="ttname"><a href="structfat__info.html">fat_info</a></div><div class="ttdef"><b>Definition:</b> <a href="faturacao_8c_source.html#l00012">faturacao.c:12</a></div></div>
+<div class="ttc" id="afaturacao_8c_html_a1a1452f4ea1cfd17ee3bca24b786ac05"><div class="ttname"><a href="faturacao_8c.html#a1a1452f4ea1cfd17ee3bca24b786ac05">produtos_nao_comprados</a></div><div class="ttdeci">void produtos_nao_comprados(Faturacao_Catalog f, Q2 q)</div><div class="ttdoc">Função que insere numa estrutura o total e o código dos produtos que não foram comprados globalmente.</div><div class="ttdef"><b>Definition:</b> <a href="faturacao_8c_source.html#l00254">faturacao.c:254</a></div></div>
+<div class="ttc" id="afaturacao_8c_html_a731e4e35037ffe662c768e5bffd844e9"><div class="ttname"><a href="faturacao_8c.html#a731e4e35037ffe662c768e5bffd844e9">percorre_AVL_Fat_Q8</a></div><div class="ttdeci">void percorre_AVL_Fat_Q8(AVL auxiliar, int m1, int m2, double *total, Q8 q)</div><div class="ttdoc">Função que percorre uma AVL.</div><div class="ttdef"><b>Definition:</b> <a href="faturacao_8c_source.html#l00418">faturacao.c:418</a></div></div>
+<div class="ttc" id="afaturacao_8c_html_a354a63798caf81b77f59bba49ea82cf4"><div class="ttname"><a href="faturacao_8c.html#a354a63798caf81b77f59bba49ea82cf4">percorre_AVL_NVendas_Q8</a></div><div class="ttdeci">void percorre_AVL_NVendas_Q8(AVL auxiliar, int m1, int m2, int *total, Q8 q)</div><div class="ttdoc">Função que percorre uma AVL.</div><div class="ttdef"><b>Definition:</b> <a href="faturacao_8c_source.html#l00355">faturacao.c:355</a></div></div>
+<div class="ttc" id="acatalogo_8c_html_a93fc716391dc53901dc2dbff97e75da1"><div class="ttname"><a href="catalogo_8c.html#a93fc716391dc53901dc2dbff97e75da1">existe_Catalogo</a></div><div class="ttdeci">Boolean existe_Catalogo(Catalogo catalogo, char *key)</div><div class="ttdoc">Função que verifica se existe uma key num catálogo.</div><div class="ttdef"><b>Definition:</b> <a href="catalogo_8c_source.html#l00032">catalogo.c:32</a></div></div>
+<div class="ttc" id="afaturacao_8c_html_ab1adca20729d2bfe315fb76c8fe8985f"><div class="ttname"><a href="faturacao_8c.html#ab1adca20729d2bfe315fb76c8fe8985f">init_Info_Faturacao</a></div><div class="ttdeci">f_info init_Info_Faturacao()</div><div class="ttdoc">Função que inicializa a informação da faturação.</div><div class="ttdef"><b>Definition:</b> <a href="faturacao_8c_source.html#l00086">faturacao.c:86</a></div></div>
+<div class="ttc" id="acatalogo_8c_html_a551505c19cd86f02ff31019e350df2a6"><div class="ttname"><a href="catalogo_8c.html#a551505c19cd86f02ff31019e350df2a6">catalogo_getAVL</a></div><div class="ttdeci">AVL catalogo_getAVL(Catalogo cat, int index)</div><div class="ttdoc">Função que devolve a AVL que se encontra numa determinada posição do array.</div><div class="ttdef"><b>Definition:</b> <a href="catalogo_8c_source.html#l00103">catalogo.c:103</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

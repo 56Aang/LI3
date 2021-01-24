@@ -1,0 +1,774 @@
+\hypertarget{vista_8c}{}\doxysection{Referência ao ficheiro src/vista.c}
+\label{vista_8c}\index{src/vista.c@{src/vista.c}}
+
+
+Ficheiro que contém a A\+PI relativa à implementação da vista.  
+
+
+{\ttfamily \#include \char`\"{}../include/vista.\+h\char`\"{}}\newline
+\doxysubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{vista_8c_a002d8e2f49bca0a5a85cabefc239e0ba}{printchoice}} (char c)
+\begin{DoxyCompactList}\small\item\em Função que imprime a escolha do utilizador. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{vista_8c_a6ef36eea57ce53b85195dbe38a20cacc}{querie2\+Print}} (char $\ast$$\ast$a, char aux, int i, int f, int num, int pag)
+\begin{DoxyCompactList}\small\item\em Função que imprime os resultados da Query 2. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{vista_8c_ad6755af4f022a35e7995c2a155afa32d}{querie3\+Print}} (int qt\+\_\+nq, float fat\+\_\+nq, int qt\+\_\+pq, float fat\+\_\+pq, char $\ast$product, int month)
+\begin{DoxyCompactList}\small\item\em Função que imprime os resultados da Query 3. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{vista_8c_a803889df15e4a424dd0870965d3b5360}{querie4\+Print}} (int filial, char $\ast$$\ast$a, int total, int atual, int prod\+Por\+Pag, int totalpag)
+\begin{DoxyCompactList}\small\item\em Função que imprime os resultados da Query 4. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{vista_8c_ae14724d03166a737f0c67241846a8c4b}{querie5\+Print}} (char $\ast$$\ast$a, int total, int atual, int prod\+Por\+Pag, int totalpag)
+\begin{DoxyCompactList}\small\item\em Função que imprime os resultados da Query 5. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{vista_8c_a7aa4f4e77c2d4a5e673ddf2e33519db9}{querie6\+Print}} (int prod, int c)
+\begin{DoxyCompactList}\small\item\em Função que imprime os resultados da Query 6. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{vista_8c_ae2033f3070439b200da45e117345687b}{querie7\+Print}} (Q7 q, int n)
+\begin{DoxyCompactList}\small\item\em Função que imprime os resultados da Query 7. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{vista_8c_a95b5daa8bd552583c215cea62c851c5a}{querie8\+Print}} (int month1, int month2, Q8 q)
+\begin{DoxyCompactList}\small\item\em Função que imprime os resultados da Query 8. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{vista_8c_ac8df5655804e3a57f1c3310302614390}{querie9\+Print}} (char $\ast$$\ast$n, int totaln, char $\ast$$\ast$p, int totalp)
+\begin{DoxyCompactList}\small\item\em Função que imprime os resultados da Query 9. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{vista_8c_a13cc68a0168e95eb48e2dd9298b6b866}{querie10\+Print}} (Q10 q, int mes)
+\begin{DoxyCompactList}\small\item\em Função que imprime os resultados da Query 10. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{vista_8c_ae0242056a4cf004d82dc6616b7e3acdd}{querie11\+Print}} (Q11 q, int total, int atual, int code\+Por\+Pag, int total\+Pag)
+\begin{DoxyCompactList}\small\item\em Função que imprime os resultados da Query 11. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{vista_8c_ad12d472f236a225cf7946e2dc47bdac8}{querie12\+Print}} (Q12 q, int total, int atual, int code\+Por\+Pag, int total\+Pag)
+\begin{DoxyCompactList}\small\item\em Função que imprime os resultados da Query 12. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{vista_8c_a0b912b5091fd172417d1bef0dc9e1675}{querie13\+Print}} (Q13 q)
+\begin{DoxyCompactList}\small\item\em Função que imprime os resultados da Query 13. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{vista_8c_aee710994b7db9b0da56cb3aee54a638c}{imprime\+\_\+menu}} (char n, Boolean v)
+\begin{DoxyCompactList}\small\item\em Função que imprime o menú correspondente ao estado atual. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Ficheiro que contém a A\+PI relativa à implementação da vista. 
+
+
+
+\doxysubsection{Documentação das funções}
+\mbox{\Hypertarget{vista_8c_aee710994b7db9b0da56cb3aee54a638c}\label{vista_8c_aee710994b7db9b0da56cb3aee54a638c}} 
+\index{vista.c@{vista.c}!imprime\_menu@{imprime\_menu}}
+\index{imprime\_menu@{imprime\_menu}!vista.c@{vista.c}}
+\doxysubsubsection{\texorpdfstring{imprime\_menu()}{imprime\_menu()}}
+{\footnotesize\ttfamily void imprime\+\_\+menu (\begin{DoxyParamCaption}\item[{char}]{n,  }\item[{Boolean}]{v }\end{DoxyParamCaption})}
+
+
+
+Função que imprime o menú correspondente ao estado atual. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em n} & Opção escolhida pelo Utilizador. \\
+\hline
+{\em v} & Boolean que indica se o estado está carregado, ou não. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 427 do ficheiro vista.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{427                                     \{}
+\DoxyCodeLine{428     printLogo();}
+\DoxyCodeLine{429     \textcolor{keywordflow}{switch} (n)}
+\DoxyCodeLine{430     \{}
+\DoxyCodeLine{431     \textcolor{keywordflow}{case} \textcolor{charliteral}{'0'}:}
+\DoxyCodeLine{432         imprime\_menu0();}
+\DoxyCodeLine{433         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{434     \textcolor{keywordflow}{case} \textcolor{charliteral}{'1'}:}
+\DoxyCodeLine{435         imprime\_menu1();}
+\DoxyCodeLine{436         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{437     \textcolor{keywordflow}{case} \textcolor{charliteral}{'2'}:}
+\DoxyCodeLine{438         imprime\_menu2(v);}
+\DoxyCodeLine{439         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{440     \textcolor{keywordflow}{case} \textcolor{charliteral}{'3'}:}
+\DoxyCodeLine{441         imprime\_menu3(v);}
+\DoxyCodeLine{442         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{443     \textcolor{keywordflow}{case} \textcolor{charliteral}{'4'}:}
+\DoxyCodeLine{444         imprime\_menu4(v);}
+\DoxyCodeLine{445         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{446     \textcolor{keywordflow}{case} \textcolor{charliteral}{'5'}:}
+\DoxyCodeLine{447         imprime\_menu5(v);}
+\DoxyCodeLine{448         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{449     \textcolor{keywordflow}{case} \textcolor{charliteral}{'6'}:}
+\DoxyCodeLine{450         imprime\_menu6(v);}
+\DoxyCodeLine{451         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{452     \textcolor{keywordflow}{case} \textcolor{charliteral}{'7'}:}
+\DoxyCodeLine{453         imprime\_menu7(v);}
+\DoxyCodeLine{454         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{455     \textcolor{keywordflow}{case} \textcolor{charliteral}{'8'}:}
+\DoxyCodeLine{456         imprime\_menu8(v);}
+\DoxyCodeLine{457         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{458     \textcolor{keywordflow}{case} \textcolor{charliteral}{'9'}:}
+\DoxyCodeLine{459         imprime\_menu9(v);}
+\DoxyCodeLine{460         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{461     \textcolor{keywordflow}{case} \textcolor{charliteral}{'A'}:}
+\DoxyCodeLine{462         imprime\_menu10(v);}
+\DoxyCodeLine{463         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{464     \textcolor{keywordflow}{case} \textcolor{charliteral}{'B'}:}
+\DoxyCodeLine{465         imprime\_menu11(v);}
+\DoxyCodeLine{466         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{467     \textcolor{keywordflow}{case} \textcolor{charliteral}{'C'}:}
+\DoxyCodeLine{468         imprime\_menu12(v);}
+\DoxyCodeLine{469         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{470     \textcolor{keywordflow}{case} \textcolor{charliteral}{'D'}:}
+\DoxyCodeLine{471         imprime\_menu13(v);}
+\DoxyCodeLine{472         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{473 }
+\DoxyCodeLine{474     \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{475         imprime\_menuNONE();}
+\DoxyCodeLine{476         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{477     \}}
+\DoxyCodeLine{478 }
+\DoxyCodeLine{479 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{vista_8c_a002d8e2f49bca0a5a85cabefc239e0ba}\label{vista_8c_a002d8e2f49bca0a5a85cabefc239e0ba}} 
+\index{vista.c@{vista.c}!printchoice@{printchoice}}
+\index{printchoice@{printchoice}!vista.c@{vista.c}}
+\doxysubsubsection{\texorpdfstring{printchoice()}{printchoice()}}
+{\footnotesize\ttfamily void printchoice (\begin{DoxyParamCaption}\item[{char}]{c }\end{DoxyParamCaption})}
+
+
+
+Função que imprime a escolha do utilizador. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em c} & Escolha do utilizador. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 29 do ficheiro vista.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{29                         \{}
+\DoxyCodeLine{30     \textcolor{keywordflow}{switch} (c)}
+\DoxyCodeLine{31     \{}
+\DoxyCodeLine{32     \textcolor{keywordflow}{case} \textcolor{charliteral}{'1'}:}
+\DoxyCodeLine{33         LOG\_GREEN(\textcolor{stringliteral}{"1  • Ler Ficheiros;\(\backslash\)n"});}
+\DoxyCodeLine{34         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{35     \textcolor{keywordflow}{case} \textcolor{charliteral}{'2'}:}
+\DoxyCodeLine{36         LOG\_GREEN(\textcolor{stringliteral}{"2  • Lista e nº total de produtos começados por uma dada letra | <Letra>;\(\backslash\)n"});}
+\DoxyCodeLine{37         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{38     \textcolor{keywordflow}{case} \textcolor{charliteral}{'3'}:}
+\DoxyCodeLine{39         LOG\_GREEN(\textcolor{stringliteral}{"3  • Apresentar número total de vendas e total faturado num mês com um dado produto, N e/ou P | <Produto> <Mes>;\(\backslash\)n"});}
+\DoxyCodeLine{40         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{41     \textcolor{keywordflow}{case} \textcolor{charliteral}{'4'}:}
+\DoxyCodeLine{42         LOG\_GREEN(\textcolor{stringliteral}{"4  • Lista Ordenada dos códigos dos produtos que ninguém comprou | <Total>/<Filial>:\(\backslash\)n"});}
+\DoxyCodeLine{43         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{44     \textcolor{keywordflow}{case} \textcolor{charliteral}{'5'}:}
+\DoxyCodeLine{45         LOG\_GREEN(\textcolor{stringliteral}{"5  • Lista ordenada de Clientes que realizaram compras em todas as filiais;\(\backslash\)n"});}
+\DoxyCodeLine{46         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{47     \textcolor{keywordflow}{case} \textcolor{charliteral}{'6'}:}
+\DoxyCodeLine{48         LOG\_GREEN(\textcolor{stringliteral}{"6  • Número de Clientes registados que não realizaram compras e Produtos que ninguém comprou;\(\backslash\)n"});}
+\DoxyCodeLine{49         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{50     \textcolor{keywordflow}{case} \textcolor{charliteral}{'7'}:}
+\DoxyCodeLine{51         LOG\_GREEN(\textcolor{stringliteral}{"7  • Número total de Produtos comprados por um dado Cliente | <Cliente>;\(\backslash\)n"});}
+\DoxyCodeLine{52         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{53     \textcolor{keywordflow}{case} \textcolor{charliteral}{'8'}:}
+\DoxyCodeLine{54         LOG\_GREEN(\textcolor{stringliteral}{"8  • Determinar o Total de Vendas registadas e Total Faturado num intervalo de tempo | <Mês / Mẽs>;\(\backslash\)n"});}
+\DoxyCodeLine{55         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{56     \textcolor{keywordflow}{case} \textcolor{charliteral}{'9'}:}
+\DoxyCodeLine{57         LOG\_GREEN(\textcolor{stringliteral}{"9  • Lista dos Clientes que compraram um certo produto/N/P | <Produto> <Filial>;\(\backslash\)n"});}
+\DoxyCodeLine{58         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{59     \textcolor{keywordflow}{case} \textcolor{charliteral}{'A'}:}
+\DoxyCodeLine{60         LOG\_GREEN(\textcolor{stringliteral}{"A • Lista de Produtos mais comprados (quantidade) | <Cliente> <Mês>;\(\backslash\)n"});}
+\DoxyCodeLine{61         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{62     \textcolor{keywordflow}{case} \textcolor{charliteral}{'B'}:}
+\DoxyCodeLine{63         LOG\_GREEN(\textcolor{stringliteral}{"B • Lista dos N Produtos mais vendidos | <N>;\(\backslash\)n"});}
+\DoxyCodeLine{64         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{65     \textcolor{keywordflow}{case} \textcolor{charliteral}{'C'}:}
+\DoxyCodeLine{66         LOG\_GREEN(\textcolor{stringliteral}{"C • Lista dos N Produtos em que mais gastou dinheiro | <Cliente>;\(\backslash\)n"});}
+\DoxyCodeLine{67         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{68     \textcolor{keywordflow}{case} \textcolor{charliteral}{'D'}:}
+\DoxyCodeLine{69         LOG\_GREEN(\textcolor{stringliteral}{"D • Apresentar resultados da leitura;\(\backslash\)n"});}
+\DoxyCodeLine{70         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{71     \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{72         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{73     \}}
+\DoxyCodeLine{74 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{vista_8c_a13cc68a0168e95eb48e2dd9298b6b866}\label{vista_8c_a13cc68a0168e95eb48e2dd9298b6b866}} 
+\index{vista.c@{vista.c}!querie10Print@{querie10Print}}
+\index{querie10Print@{querie10Print}!vista.c@{vista.c}}
+\doxysubsubsection{\texorpdfstring{querie10Print()}{querie10Print()}}
+{\footnotesize\ttfamily void querie10\+Print (\begin{DoxyParamCaption}\item[{Q10}]{q,  }\item[{int}]{mes }\end{DoxyParamCaption})}
+
+
+
+Função que imprime os resultados da Query 10. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Estrutura que contém os resultados da Query 10. \\
+\hline
+{\em mes} & Mês introduzido pelo utilizador. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 327 do ficheiro vista.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{327                                  \{}
+\DoxyCodeLine{328     \textcolor{keywordtype}{int} i,k;}
+\DoxyCodeLine{329     \textcolor{keywordtype}{char} *meses[MESES] = \{\textcolor{stringliteral}{"JANEIRO"},\textcolor{stringliteral}{"FEVEREIRO"},\textcolor{stringliteral}{"MARÇO"},\textcolor{stringliteral}{"ABRIL"},\textcolor{stringliteral}{"MAIO"},\textcolor{stringliteral}{"JUNHO"},\textcolor{stringliteral}{"JULHO"},\textcolor{stringliteral}{"AGOSTO"},\textcolor{stringliteral}{"SETEMBRO"},\textcolor{stringliteral}{"OUTUBRO"},\textcolor{stringliteral}{"NOVEMBRO"},\textcolor{stringliteral}{"DEZEMBRO"}\};}
+\DoxyCodeLine{330     \textcolor{keywordtype}{int} r = 9 -\/ (strlen(meses[mes-\/1])/2);}
+\DoxyCodeLine{331     \textcolor{keywordtype}{int} total = \mbox{\hyperlink{estruturas_8c_a6f05465cd9a94e92dfdaa1d5992337de}{getNum\_TotalQ10}}(q);}
+\DoxyCodeLine{332     printf(\textcolor{stringliteral}{"\(\backslash\)n"});}
+\DoxyCodeLine{333     imprime\_espacos(r);}
+\DoxyCodeLine{334     printf(\textcolor{stringliteral}{"\%s\%s\%s\(\backslash\)n"},YELLOW,meses[mes-\/1],RESET);}
+\DoxyCodeLine{335     printf(\textcolor{stringliteral}{"┌────────┬────────┐\(\backslash\)n"});}
+\DoxyCodeLine{336     \textcolor{keywordflow}{for}(i=0;i<total;i++)\{}
+\DoxyCodeLine{337         k = \mbox{\hyperlink{estruturas_8c_a1d3e4709419d16264e02e7105ed9181e}{getQ10QtdProduto}}(q,i);}
+\DoxyCodeLine{338         \textcolor{keywordflow}{if}(k>=0 \&\& k <10)printf(\textcolor{stringliteral}{"│ \%s\%s\%s │\%5d   │\(\backslash\)n"},BOLDCYAN,\mbox{\hyperlink{estruturas_8c_a57cfaedb9154ebefa017793d7e9069fb}{getProdutoQ10}}(q,i),RESET,k);}
+\DoxyCodeLine{339         \textcolor{keywordflow}{else} printf(\textcolor{stringliteral}{"│ \%s\%s\%s │\%5d   │\(\backslash\)n"},BOLDCYAN,\mbox{\hyperlink{estruturas_8c_a57cfaedb9154ebefa017793d7e9069fb}{getProdutoQ10}}(q,i),RESET,k);}
+\DoxyCodeLine{340         \textcolor{keywordflow}{if}(i < total-\/1)}
+\DoxyCodeLine{341             printf(\textcolor{stringliteral}{"├────────┼────────┤\(\backslash\)n"});}
+\DoxyCodeLine{342     \}}
+\DoxyCodeLine{343     printf(\textcolor{stringliteral}{"└────────┴────────┘\(\backslash\)n"});}
+\DoxyCodeLine{344 }
+\DoxyCodeLine{345 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{vista_8c_ae0242056a4cf004d82dc6616b7e3acdd}\label{vista_8c_ae0242056a4cf004d82dc6616b7e3acdd}} 
+\index{vista.c@{vista.c}!querie11Print@{querie11Print}}
+\index{querie11Print@{querie11Print}!vista.c@{vista.c}}
+\doxysubsubsection{\texorpdfstring{querie11Print()}{querie11Print()}}
+{\footnotesize\ttfamily void querie11\+Print (\begin{DoxyParamCaption}\item[{Q11}]{q,  }\item[{int}]{total,  }\item[{int}]{atual,  }\item[{int}]{code\+Por\+Pag,  }\item[{int}]{total\+Pag }\end{DoxyParamCaption})}
+
+
+
+Função que imprime os resultados da Query 11. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Estrutura que contém os resultados da Query 11. \\
+\hline
+{\em total} & Número máximo de elementos. \\
+\hline
+{\em atual} & Página atual onde o Utilizador se encontra. \\
+\hline
+{\em code\+Por\+Pag} & Número de elementos por página. \\
+\hline
+{\em totalpag} & Número total de páginas. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 355 do ficheiro vista.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{355                                                                            \{}
+\DoxyCodeLine{356     \textcolor{keywordtype}{int} i = atual +1;}
+\DoxyCodeLine{357     \textcolor{keywordtype}{int} k = codePorPag;}
+\DoxyCodeLine{358     atual *= codePorPag;}
+\DoxyCodeLine{359     codePorPag+=atual;}
+\DoxyCodeLine{360     \textcolor{keywordtype}{int} col;}
+\DoxyCodeLine{361     printf(\textcolor{stringliteral}{"\(\backslash\)n\%s\%s\%s\(\backslash\)n"},YELLOW,\textcolor{stringliteral}{"RESULTADOS QUERIE11"},RESET);}
+\DoxyCodeLine{362     \textcolor{keywordflow}{for}(;atual<codePorPag \&\& atual < total;atual++)\{}
+\DoxyCodeLine{363         printf(\textcolor{stringliteral}{"\%sCode:\%s \%-\/8s \%sn\_buyers:\%s \%-\/4d "},BOLDCYAN,RESET,\mbox{\hyperlink{estruturas_8c_af12a469a69c68fd7efda71a42dc34ce2}{getProdutoQ11}}(q,atual),BOLDCYAN,RESET, \mbox{\hyperlink{estruturas_8c_ab4523ae1c16694bf756f2d780383702a}{getQ11NClientes}}(q,atual));}
+\DoxyCodeLine{364         \textcolor{keywordflow}{for}(col = 0; col<FILIAL; col++)}
+\DoxyCodeLine{365             printf(\textcolor{stringliteral}{"\%sn\_sold\_f\%d:\%s \%-\/7d"},BOLDCYAN,col+1,RESET,\mbox{\hyperlink{estruturas_8c_a65320ba6ef2a1991f71ea5262b1d623f}{getQtdFilialQ11}}(q,atual,col));}
+\DoxyCodeLine{366         printf(\textcolor{stringliteral}{"\%sn\_sold\_total:\%s \%-\/6d\(\backslash\)n"},BOLDCYAN,RESET,\mbox{\hyperlink{estruturas_8c_a145e619612a0a6eb2941c817df3f2477}{getQ11QtdProduto}}(q,atual));}
+\DoxyCodeLine{367     \}}
+\DoxyCodeLine{368     printf(\textcolor{stringliteral}{"\(\backslash\)n\%45d/\%d(\%d)\(\backslash\)n"},i,totalPag,k);}
+\DoxyCodeLine{369     printf(\textcolor{stringliteral}{"\%57s\(\backslash\)n"},\textcolor{stringliteral}{"1 <-\/ previous || 2 -\/> next"});}
+\DoxyCodeLine{370     printf(\textcolor{stringliteral}{"\%32s \%s(-\/)\%s clients || 4 -\/> \%s(+)\%s clients\(\backslash\)n"},\textcolor{stringliteral}{"3 <-\/"},RED,RESET,RED,RESET);}
+\DoxyCodeLine{371     printf(\textcolor{stringliteral}{"\%47sq\%s -\/> exit\(\backslash\)n"},RED,RESET);}
+\DoxyCodeLine{372 }
+\DoxyCodeLine{373 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{vista_8c_ad12d472f236a225cf7946e2dc47bdac8}\label{vista_8c_ad12d472f236a225cf7946e2dc47bdac8}} 
+\index{vista.c@{vista.c}!querie12Print@{querie12Print}}
+\index{querie12Print@{querie12Print}!vista.c@{vista.c}}
+\doxysubsubsection{\texorpdfstring{querie12Print()}{querie12Print()}}
+{\footnotesize\ttfamily void querie12\+Print (\begin{DoxyParamCaption}\item[{Q12}]{q,  }\item[{int}]{total,  }\item[{int}]{atual,  }\item[{int}]{code\+Por\+Pag,  }\item[{int}]{total\+Pag }\end{DoxyParamCaption})}
+
+
+
+Função que imprime os resultados da Query 12. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Estrutura que contém os resultados da Query 12. \\
+\hline
+{\em total} & Número máximo de elementos. \\
+\hline
+{\em atual} & Página atual onde o Utilizador se encontra. \\
+\hline
+{\em code\+Por\+Pag} & Número de elementos por página. \\
+\hline
+{\em totalpag} & Número total de páginas. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 383 do ficheiro vista.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{383                                                                             \{}
+\DoxyCodeLine{384     \textcolor{keywordtype}{int} i = atual +1;}
+\DoxyCodeLine{385     \textcolor{keywordtype}{int} k = codePorPag;}
+\DoxyCodeLine{386     atual *= codePorPag;}
+\DoxyCodeLine{387     codePorPag+=atual;}
+\DoxyCodeLine{388     \textcolor{keywordtype}{int} col;}
+\DoxyCodeLine{389     printf(\textcolor{stringliteral}{"\(\backslash\)n\%s\%s\%s\(\backslash\)n"},YELLOW,\textcolor{stringliteral}{"RESULTADOS QUERIE12"},RESET);}
+\DoxyCodeLine{390     \textcolor{keywordflow}{for}(;atual<codePorPag \&\& atual < total;)\{}
+\DoxyCodeLine{391         \textcolor{keywordflow}{for}(col = 0; col<3 \&\& atual < codePorPag \&\& atual < total;atual++, col++)}
+\DoxyCodeLine{392             printf(\textcolor{stringliteral}{"│ \%s\%s\%s -\/ \%-\/14f "},BOLDCYAN,\mbox{\hyperlink{estruturas_8c_ad3d2034aa97a5afb1c0272e0c1b63551}{getProdutoQ12}}(q,atual),RESET,\mbox{\hyperlink{estruturas_8c_a498e3df7c9234cdc0e63ac3db2da4f30}{getQ12Faturado}}(q,atual));}
+\DoxyCodeLine{393         printf(\textcolor{stringliteral}{"│\(\backslash\)n"});}
+\DoxyCodeLine{394     \}}
+\DoxyCodeLine{395     printf(\textcolor{stringliteral}{"\(\backslash\)n\%44d/\%d(\%d)\(\backslash\)n"},i,totalPag,k);}
+\DoxyCodeLine{396     printf(\textcolor{stringliteral}{"\%56s\(\backslash\)n"},\textcolor{stringliteral}{"1 <-\/ previous || 2 -\/> next"});}
+\DoxyCodeLine{397     printf(\textcolor{stringliteral}{"\%31s \%s(-\/)\%s clients || 4 -\/> \%s(+)\%s clients\(\backslash\)n"},\textcolor{stringliteral}{"3 <-\/"},RED,RESET,RED,RESET);}
+\DoxyCodeLine{398     printf(\textcolor{stringliteral}{"\%46sq\%s -\/> exit\(\backslash\)n"},RED,RESET);}
+\DoxyCodeLine{399 }
+\DoxyCodeLine{400 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{vista_8c_a0b912b5091fd172417d1bef0dc9e1675}\label{vista_8c_a0b912b5091fd172417d1bef0dc9e1675}} 
+\index{vista.c@{vista.c}!querie13Print@{querie13Print}}
+\index{querie13Print@{querie13Print}!vista.c@{vista.c}}
+\doxysubsubsection{\texorpdfstring{querie13Print()}{querie13Print()}}
+{\footnotesize\ttfamily void querie13\+Print (\begin{DoxyParamCaption}\item[{Q13}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que imprime os resultados da Query 13. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Estrutura que contém os resultados da Query 13. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 406 do ficheiro vista.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{406                          \{}
+\DoxyCodeLine{407     \textcolor{keywordtype}{char} *c = \mbox{\hyperlink{estruturas_8c_ab349add45eb17f31d012046c6490baa4}{getClients\_Path13}}(q);}
+\DoxyCodeLine{408     \textcolor{keywordtype}{char} *p = \mbox{\hyperlink{estruturas_8c_a8292aa0fa9f2fa68a02313919955e378}{getProducts\_Path13}}(q);}
+\DoxyCodeLine{409     \textcolor{keywordtype}{char} *s = \mbox{\hyperlink{estruturas_8c_a742ce0fe2aaee2ae7b10684439bc9b9b}{getSales\_Path13}}(q);}
+\DoxyCodeLine{410     printf(\textcolor{stringliteral}{"\(\backslash\)n\%s\%47s\%s\(\backslash\)n"},BOLDCYAN,\textcolor{stringliteral}{"RESULTADOS QUERIE13"},RESET);}
+\DoxyCodeLine{411     printf(\textcolor{stringliteral}{"┌───────────────────────────────────────────────────────────────────────────────┐\(\backslash\)n"});}
+\DoxyCodeLine{412     printf(\textcolor{stringliteral}{"│ Quantidade total de clientes-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\%s\%-\/40d\%s│\(\backslash\)n"},GREEN,\mbox{\hyperlink{estruturas_8c_ac1231409ac765d1718310ffbf44d795d}{getQ\_Clientes13}}(q),RESET);}
+\DoxyCodeLine{413     printf(\textcolor{stringliteral}{"│ Quantidade total de produtos-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\%s\%-\/40d\%s│\(\backslash\)n"},GREEN,\mbox{\hyperlink{estruturas_8c_abf02af50107fe7bda8e35d148f2c38f0}{getQ\_Produtos13}}(q),RESET);}
+\DoxyCodeLine{414     printf(\textcolor{stringliteral}{"│ Quantidade total de vendas válidas-\/-\/-\/-\/\%s\%-\/40d\%s│\(\backslash\)n"},GREEN,\mbox{\hyperlink{estruturas_8c_a148617c2ee477178285f803ca55a7b73}{getV\_Validas13}}(q),RESET);}
+\DoxyCodeLine{415     printf(\textcolor{stringliteral}{"│ Quantidade total de vendas lidas-\/-\/-\/-\/-\/-\/\%s\%-\/40d\%s│\(\backslash\)n"},GREEN,\mbox{\hyperlink{estruturas_8c_acb05b1690473b9bae2d2daeb6e272973}{getV\_Totais13}}(q),RESET);}
+\DoxyCodeLine{416     printf(\textcolor{stringliteral}{"│ Ficheiro lido dos Clientes-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\%s\%-\/40s\%s│\(\backslash\)n"},GREEN,c,RESET);}
+\DoxyCodeLine{417     printf(\textcolor{stringliteral}{"│ Ficheiro lido dos Produtos-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\%s\%-\/40s\%s│\(\backslash\)n"},GREEN,p,RESET);}
+\DoxyCodeLine{418     printf(\textcolor{stringliteral}{"│ Ficheiro lido das Vendas-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\%s\%-\/40s\%s│\(\backslash\)n"},GREEN,s,RESET);}
+\DoxyCodeLine{419     printf(\textcolor{stringliteral}{"└───────────────────────────────────────────────────────────────────────────────┘\(\backslash\)n"});}
+\DoxyCodeLine{420 }
+\DoxyCodeLine{421 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{vista_8c_a6ef36eea57ce53b85195dbe38a20cacc}\label{vista_8c_a6ef36eea57ce53b85195dbe38a20cacc}} 
+\index{vista.c@{vista.c}!querie2Print@{querie2Print}}
+\index{querie2Print@{querie2Print}!vista.c@{vista.c}}
+\doxysubsubsection{\texorpdfstring{querie2Print()}{querie2Print()}}
+{\footnotesize\ttfamily void querie2\+Print (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{a,  }\item[{char}]{aux,  }\item[{int}]{i,  }\item[{int}]{f,  }\item[{int}]{num,  }\item[{int}]{pag }\end{DoxyParamCaption})}
+
+
+
+Função que imprime os resultados da Query 2. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em a} & Lista de Produtos começados pela letra dada pelo Utilizador. \\
+\hline
+{\em aux} & Letra dada pelo Utilizador. \\
+\hline
+{\em i} & Página atual onde o Utilizador se encontra. \\
+\hline
+{\em f} & Número de produtos por página. \\
+\hline
+{\em num} & Total de elementos no array de Produtos. \\
+\hline
+{\em pag} & Número total de páginas. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 104 do ficheiro vista.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{104                                                                     \{}
+\DoxyCodeLine{105     \textcolor{keywordtype}{int} atual = i + 1;}
+\DoxyCodeLine{106     \textcolor{keywordtype}{int} k = f;}
+\DoxyCodeLine{107     i = i * f;}
+\DoxyCodeLine{108     f = i + f;}
+\DoxyCodeLine{109     \textcolor{keywordtype}{int} col;}
+\DoxyCodeLine{110   printf(\textcolor{stringliteral}{"\(\backslash\)n\%s\%42s\%s\(\backslash\)n"},BOLDCYAN,\textcolor{stringliteral}{"RESULTADOS QUERIE2"},RESET);}
+\DoxyCodeLine{111   \textcolor{keywordflow}{for}(;i<f \&\& i<num;)\{}
+\DoxyCodeLine{112     \textcolor{keywordflow}{for}(col=0;col<6 \&\& i<f \&\& i<num; i++,col++)}
+\DoxyCodeLine{113         printf(\textcolor{stringliteral}{"| \%s | "}, a[i]);}
+\DoxyCodeLine{114     puts(\textcolor{stringliteral}{"\(\backslash\)n"});}
+\DoxyCodeLine{115   \}}
+\DoxyCodeLine{116 }
+\DoxyCodeLine{117   printf(\textcolor{stringliteral}{"\%32d/\%d(\%d)\(\backslash\)n"},atual,pag,k);}
+\DoxyCodeLine{118   printf(\textcolor{stringliteral}{"\%153s\(\backslash\)n"},\textcolor{stringliteral}{"┌──────────────────────────────────────────────┐"});}
+\DoxyCodeLine{119   printf(\textcolor{stringliteral}{"\%46s\%c :   \%s\%-\/7d\%s│\(\backslash\)n"},\textcolor{stringliteral}{"│ TOTAL DE PRODUTOS COMEÇADOS POR "}, aux,GREEN,num,RESET);}
+\DoxyCodeLine{120   printf(\textcolor{stringliteral}{"\%153s\(\backslash\)n"},\textcolor{stringliteral}{"└──────────────────────────────────────────────┘"});}
+\DoxyCodeLine{121   printf(\textcolor{stringliteral}{"\%44s\(\backslash\)n"},\textcolor{stringliteral}{"1 <-\/ previous || 2 -\/> next"});}
+\DoxyCodeLine{122   printf(\textcolor{stringliteral}{"\%19s \%s(-\/)\%s clients || 4 -\/> \%s(+)\%s clients\(\backslash\)n"},\textcolor{stringliteral}{"3 <-\/"},RED,RESET,RED,RESET);}
+\DoxyCodeLine{123 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{vista_8c_ad6755af4f022a35e7995c2a155afa32d}\label{vista_8c_ad6755af4f022a35e7995c2a155afa32d}} 
+\index{vista.c@{vista.c}!querie3Print@{querie3Print}}
+\index{querie3Print@{querie3Print}!vista.c@{vista.c}}
+\doxysubsubsection{\texorpdfstring{querie3Print()}{querie3Print()}}
+{\footnotesize\ttfamily void querie3\+Print (\begin{DoxyParamCaption}\item[{int}]{qt\+\_\+nq,  }\item[{float}]{fat\+\_\+nq,  }\item[{int}]{qt\+\_\+pq,  }\item[{float}]{fat\+\_\+pq,  }\item[{char $\ast$}]{product,  }\item[{int}]{month }\end{DoxyParamCaption})}
+
+
+
+Função que imprime os resultados da Query 3. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em qt\+\_\+nq} & Vendas registadas em regime Normal. \\
+\hline
+{\em fat\+\_\+nq} & Faturação total em regime Normal. \\
+\hline
+{\em qt\+\_\+pq} & Vendas registadas em regime Promocional. \\
+\hline
+{\em fat\+\_\+pq} & Faturação total em regime Promocional. \\
+\hline
+{\em product} & Produto introduzido pelo Utilizador. \\
+\hline
+{\em month} & Mês introduzido pelo Utilizador. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 133 do ficheiro vista.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{133                                                                                              \{}
+\DoxyCodeLine{134     \textcolor{keywordtype}{char} *meses[MESES] = \{\textcolor{stringliteral}{"JANEIRO"},\textcolor{stringliteral}{"FEVEREIRO"},\textcolor{stringliteral}{"MARÇO"},\textcolor{stringliteral}{"ABRIL"},\textcolor{stringliteral}{"MAIO"},\textcolor{stringliteral}{"JUNHO"},\textcolor{stringliteral}{"JULHO"},\textcolor{stringliteral}{"AGOSTO"},\textcolor{stringliteral}{"SETEMBRO"},\textcolor{stringliteral}{"OUTUBRO"},\textcolor{stringliteral}{"NOVEMBRO"},\textcolor{stringliteral}{"DEZEMBRO"}\};}
+\DoxyCodeLine{135 }
+\DoxyCodeLine{136   printf(\textcolor{stringliteral}{"\(\backslash\)n┌───────────────────────RESULTADOS QUERIE3─────────────────────────┐\(\backslash\)n"});}
+\DoxyCodeLine{137 }
+\DoxyCodeLine{138   printf(\textcolor{stringliteral}{"│ -\/> PRODUTO :  \%s\%-\/23s\%sMÊS :  \%s\%-\/21s\%s│\(\backslash\)n"}, RED,product,RESET,RED, meses[month-\/1],RESET);}
+\DoxyCodeLine{139 }
+\DoxyCodeLine{140   printf(\textcolor{stringliteral}{"├──────────────────────────────────────────────────────────────────┤\(\backslash\)n"});}
+\DoxyCodeLine{141 }
+\DoxyCodeLine{142   printf(\textcolor{stringliteral}{"│ -\/> VENDAS REGISTADAS EM REGIME NORMAL:  \%s\%-\/25d\%s│\(\backslash\)n"},GREEN, qt\_nq,RESET);}
+\DoxyCodeLine{143 }
+\DoxyCodeLine{144   printf(\textcolor{stringliteral}{"│ -\/> FATURAÇÃO TOTAL   EM REGIME NORMAL:  \%s\%-\/25f\%s│\(\backslash\)n"}, GREEN,fat\_nq,RESET);}
+\DoxyCodeLine{145 }
+\DoxyCodeLine{146   printf(\textcolor{stringliteral}{"│ -\/> VENDAS REGISTADAS EM REGIME PROMOCIONAL:  \%s\%-\/20d\%s│\(\backslash\)n"}, GREEN,qt\_pq,RESET);}
+\DoxyCodeLine{147 }
+\DoxyCodeLine{148   printf(\textcolor{stringliteral}{"│ -\/> FATURAÇÃO TOTAL   EM REGIME PROMOCIONAL:  \%s\%-\/20f\%s│\(\backslash\)n"}, GREEN,fat\_pq,RESET);}
+\DoxyCodeLine{149 }
+\DoxyCodeLine{150   printf(\textcolor{stringliteral}{"└──────────────────────────────────────────────────────────────────┘\(\backslash\)n"});}
+\DoxyCodeLine{151 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{vista_8c_a803889df15e4a424dd0870965d3b5360}\label{vista_8c_a803889df15e4a424dd0870965d3b5360}} 
+\index{vista.c@{vista.c}!querie4Print@{querie4Print}}
+\index{querie4Print@{querie4Print}!vista.c@{vista.c}}
+\doxysubsubsection{\texorpdfstring{querie4Print()}{querie4Print()}}
+{\footnotesize\ttfamily void querie4\+Print (\begin{DoxyParamCaption}\item[{int}]{filial,  }\item[{char $\ast$$\ast$}]{a,  }\item[{int}]{total,  }\item[{int}]{atual,  }\item[{int}]{prod\+Por\+Pag,  }\item[{int}]{totalpag }\end{DoxyParamCaption})}
+
+
+
+Função que imprime os resultados da Query 4. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em filial} & Escolha do utilizador entre Global, ou Filial. \\
+\hline
+{\em a} & Lista de Produtos não comprados, por filial, ou global. \\
+\hline
+{\em total} & Total de elementos no array de Produtos. \\
+\hline
+{\em atual} & Página atual onde o Utilizador se encontra. \\
+\hline
+{\em prod\+Por\+Pag} & Número de produtos por página. \\
+\hline
+{\em totalpag} & Número total de páginas. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 161 do ficheiro vista.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{161                                                                                            \{}
+\DoxyCodeLine{162     \textcolor{keywordtype}{int} k = prodPorPag;}
+\DoxyCodeLine{163     \textcolor{keywordtype}{int} paginaAtual = atual+1;}
+\DoxyCodeLine{164     atual *= prodPorPag;}
+\DoxyCodeLine{165     prodPorPag += atual;}
+\DoxyCodeLine{166     \textcolor{keywordtype}{int} col=0;}
+\DoxyCodeLine{167     \textcolor{keywordflow}{if}(filial==0) \{}
+\DoxyCodeLine{168         printf(\textcolor{stringliteral}{"\%s\%42s\%s\(\backslash\)n"},BOLDCYAN,\textcolor{stringliteral}{"Resultado Global: "},RESET);}
+\DoxyCodeLine{169         printf(\textcolor{stringliteral}{"\%46s\%s\%d\%s\(\backslash\)n"},\textcolor{stringliteral}{"PRODUTOS NÃO COMPRADOS GLOBAL: "},GREEN,total,RESET);}
+\DoxyCodeLine{170         printf(\textcolor{stringliteral}{"┌────────┬─┬────────┬─┬────────┬─┬────────┬─┬────────┬─┬────────┐\(\backslash\)n"});}
+\DoxyCodeLine{171         \textcolor{keywordflow}{for}(;atual<prodPorPag \&\& atual < total;)\{}
+\DoxyCodeLine{172             \textcolor{keywordflow}{for}(col = 0; col < 6 \&\& atual < prodPorPag \&\& atual < total;atual++,col++)}
+\DoxyCodeLine{173                 printf(\textcolor{stringliteral}{"│ \%s │ "},a[atual]);}
+\DoxyCodeLine{174             \textcolor{keywordflow}{if}(atual<prodPorPag \&\& atual < total) printf(\textcolor{stringliteral}{"\(\backslash\)n│        │ │        │ │        │ │        │ │        │ │        │\(\backslash\)n"});}
+\DoxyCodeLine{175         \}}
+\DoxyCodeLine{176         \textcolor{keywordflow}{for}(;col<6;col++)printf(\textcolor{stringliteral}{"│        │ "});}
+\DoxyCodeLine{177         printf(\textcolor{stringliteral}{"\(\backslash\)n└────────┴─┴────────┴─┴────────┴─┴────────┴─┴────────┴─┴────────┘\(\backslash\)n"});}
+\DoxyCodeLine{178     \}}
+\DoxyCodeLine{179     \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{180         printf(\textcolor{stringliteral}{"\%s\%42s \%d\%s\(\backslash\)n"},BOLDCYAN,\textcolor{stringliteral}{"Resultado da Filial "},filial,RESET);}
+\DoxyCodeLine{181         printf(\textcolor{stringliteral}{"\%46s \%d: \%s\%d\%s\(\backslash\)n"},\textcolor{stringliteral}{"PRODUTOS NÃO COMPRADOS NA FILIAL"},filial,GREEN, total,RESET );}
+\DoxyCodeLine{182 }
+\DoxyCodeLine{183         printf(\textcolor{stringliteral}{"┌────────┬─┬────────┬─┬────────┬─┬────────┬─┬────────┬─┬────────┐\(\backslash\)n"});}
+\DoxyCodeLine{184         \textcolor{keywordflow}{for}(;atual<prodPorPag \&\& atual < total;)\{}
+\DoxyCodeLine{185             \textcolor{keywordflow}{for}(col = 0; col < 6 \&\& atual < prodPorPag \&\& atual < total;atual++,col++)}
+\DoxyCodeLine{186                 printf(\textcolor{stringliteral}{"│ \%s │ "},a[atual]);}
+\DoxyCodeLine{187             \textcolor{keywordflow}{if}(atual<prodPorPag \&\& atual < total) printf(\textcolor{stringliteral}{"\(\backslash\)n│        │ │        │ │        │ │        │ │        │ │        │\(\backslash\)n"});}
+\DoxyCodeLine{188         \}}
+\DoxyCodeLine{189         \textcolor{keywordflow}{for}(;col<6;col++)printf(\textcolor{stringliteral}{"│        │ "});}
+\DoxyCodeLine{190         printf(\textcolor{stringliteral}{"\(\backslash\)n└────────┴─┴────────┴─┴────────┴─┴────────┴─┴────────┴─┴────────┘\(\backslash\)n"});}
+\DoxyCodeLine{191     \}}
+\DoxyCodeLine{192     printf(\textcolor{stringliteral}{"\%32d/\%d(\%d)\(\backslash\)n"},paginaAtual,totalpag,k);}
+\DoxyCodeLine{193     printf(\textcolor{stringliteral}{"\%44s\(\backslash\)n"},\textcolor{stringliteral}{"1 <-\/ previous || 2 -\/> next"});}
+\DoxyCodeLine{194     printf(\textcolor{stringliteral}{"\%19s \%s(-\/)\%s clients || 4 -\/> \%s(+)\%s clients\(\backslash\)n"},\textcolor{stringliteral}{"3 <-\/"},RED,RESET,RED,RESET);}
+\DoxyCodeLine{195     printf(\textcolor{stringliteral}{"\%34sq\%s -\/> exit\(\backslash\)n"},RED,RESET);}
+\DoxyCodeLine{196 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{vista_8c_ae14724d03166a737f0c67241846a8c4b}\label{vista_8c_ae14724d03166a737f0c67241846a8c4b}} 
+\index{vista.c@{vista.c}!querie5Print@{querie5Print}}
+\index{querie5Print@{querie5Print}!vista.c@{vista.c}}
+\doxysubsubsection{\texorpdfstring{querie5Print()}{querie5Print()}}
+{\footnotesize\ttfamily void querie5\+Print (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{a,  }\item[{int}]{total,  }\item[{int}]{atual,  }\item[{int}]{prod\+Por\+Pag,  }\item[{int}]{totalpag }\end{DoxyParamCaption})}
+
+
+
+Função que imprime os resultados da Query 5. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em a} & Lista de Clientes que realizaram compras em todas as filiais. \\
+\hline
+{\em total} & Total de elementos no array de Clientes. \\
+\hline
+{\em atual} & Página atual onde o Utilizador se encontra. \\
+\hline
+{\em prod\+Por\+Pag} & Número de produtos por página. \\
+\hline
+{\em totalpag} & Número total de páginas. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 206 do ficheiro vista.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{206                                                                                \{}
+\DoxyCodeLine{207 }
+\DoxyCodeLine{208     \textcolor{keywordtype}{int} i = atual + 1;}
+\DoxyCodeLine{209     \textcolor{keywordtype}{int} k = prodPorPag;}
+\DoxyCodeLine{210     atual = atual * prodPorPag;}
+\DoxyCodeLine{211     prodPorPag = atual + prodPorPag;}
+\DoxyCodeLine{212     \textcolor{keywordtype}{int} col;}
+\DoxyCodeLine{213   printf(\textcolor{stringliteral}{"\(\backslash\)n\%s\%39s\%s\(\backslash\)n"},BOLDCYAN,\textcolor{stringliteral}{"RESULTADOS QUERIE5"},RESET);}
+\DoxyCodeLine{214   \textcolor{keywordflow}{for}(;atual<prodPorPag \&\& atual<total;)\{}
+\DoxyCodeLine{215     \textcolor{keywordflow}{for}(col=0;col<6 \&\& atual<prodPorPag \&\& atual<total; atual++,col++)}
+\DoxyCodeLine{216         printf(\textcolor{stringliteral}{"| \%s | "}, a[atual]);}
+\DoxyCodeLine{217     puts(\textcolor{stringliteral}{"\(\backslash\)n"});}
+\DoxyCodeLine{218   \}}
+\DoxyCodeLine{219 }
+\DoxyCodeLine{220   printf(\textcolor{stringliteral}{"\%29d/\%d(\%d)\(\backslash\)n"},i,totalpag,k);}
+\DoxyCodeLine{221   printf(\textcolor{stringliteral}{"\%148s\(\backslash\)n"},\textcolor{stringliteral}{"┌──────────────────────────────────────────────┐"});}
+\DoxyCodeLine{222   printf(\textcolor{stringliteral}{"\%26s     :   \%s\%-\/18d\%s│\(\backslash\)n"},\textcolor{stringliteral}{"│ TOTAL DE CLIENTES "},GREEN,total,RESET);}
+\DoxyCodeLine{223   printf(\textcolor{stringliteral}{"\%148s\(\backslash\)n"},\textcolor{stringliteral}{"└──────────────────────────────────────────────┘"});}
+\DoxyCodeLine{224   printf(\textcolor{stringliteral}{"\%41s\(\backslash\)n"},\textcolor{stringliteral}{"1 <-\/ previous || 2 -\/> next"});}
+\DoxyCodeLine{225   printf(\textcolor{stringliteral}{"\%16s \%s(-\/)\%s clients || 4 -\/> \%s(+)\%s clients\(\backslash\)n"},\textcolor{stringliteral}{"3 <-\/"},RED,RESET,RED,RESET);}
+\DoxyCodeLine{226   printf(\textcolor{stringliteral}{"\%31sq\%s -\/> exit\(\backslash\)n"},RED,RESET);}
+\DoxyCodeLine{227 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{vista_8c_a7aa4f4e77c2d4a5e673ddf2e33519db9}\label{vista_8c_a7aa4f4e77c2d4a5e673ddf2e33519db9}} 
+\index{vista.c@{vista.c}!querie6Print@{querie6Print}}
+\index{querie6Print@{querie6Print}!vista.c@{vista.c}}
+\doxysubsubsection{\texorpdfstring{querie6Print()}{querie6Print()}}
+{\footnotesize\ttfamily void querie6\+Print (\begin{DoxyParamCaption}\item[{int}]{prod,  }\item[{int}]{c }\end{DoxyParamCaption})}
+
+
+
+Função que imprime os resultados da Query 6. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em prod} & Número de Produtos que ninguém comprou. \\
+\hline
+{\em c} & Número de Clientes que não realizaram compras. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 234 do ficheiro vista.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{234                                   \{}
+\DoxyCodeLine{235     printf(\textcolor{stringliteral}{"\%153s\(\backslash\)n"},\textcolor{stringliteral}{"┌──────────────────────────────────────────────┐"});}
+\DoxyCodeLine{236     printf(\textcolor{stringliteral}{"         │ Clients : \%s\%-\/10d\%s  | Products : \%s\%-\/10d\%s│\(\backslash\)n"},GREEN,c,RESET,GREEN,prod,RESET);}
+\DoxyCodeLine{237     printf(\textcolor{stringliteral}{"\%153s\(\backslash\)n"},\textcolor{stringliteral}{"└──────────────────────────────────────────────┘"});}
+\DoxyCodeLine{238 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{vista_8c_ae2033f3070439b200da45e117345687b}\label{vista_8c_ae2033f3070439b200da45e117345687b}} 
+\index{vista.c@{vista.c}!querie7Print@{querie7Print}}
+\index{querie7Print@{querie7Print}!vista.c@{vista.c}}
+\doxysubsubsection{\texorpdfstring{querie7Print()}{querie7Print()}}
+{\footnotesize\ttfamily void querie7\+Print (\begin{DoxyParamCaption}\item[{Q7}]{q,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Função que imprime os resultados da Query 7. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Estrutura que contém uma matriz de quantidades por filal/mes. \\
+\hline
+{\em a} & Número da página em que o Utilizador se encontra. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 245 do ficheiro vista.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{245                               \{}
+\DoxyCodeLine{246     \textcolor{keywordtype}{int} i,j=0;}
+\DoxyCodeLine{247     \textcolor{keywordtype}{char} *meses[MESES] = \{JAN,FEB,MAR,APR,MAY,JUN,JUL,AUG,SEP,OCT,NOV,DEC\};}
+\DoxyCodeLine{248 }
+\DoxyCodeLine{249     \textcolor{keywordtype}{char} *nfiliais[FILIAL] = \{\textcolor{stringliteral}{"            \_\_\_    \_              \_         \_ \(\backslash\)n          /'\_\_\_)\_ (\_ )  \_        (\_ )     /' )\(\backslash\)n         | (\_\_ (\_) | | (\_)   \_ \_  | |    (\_, |\(\backslash\)n         | ,\_\_)| | | | | | /'\_` ) | |      | |\(\backslash\)n         | |   | | | | | |( (\_| | | |      | |\(\backslash\)n         (\_)   (\_)(\_\_\_)(\_)`\(\backslash\)\(\backslash\)\_\_,\_)(\_\_\_)     (\_)\(\backslash\)n"},\textcolor{stringliteral}{"            \_\_\_    \_              \_         \_\_   \(\backslash\)n          /'\_\_\_)\_ (\_ )  \_        (\_ )     /'\_\_`\(\backslash\)\(\backslash\) \(\backslash\)n         | (\_\_ (\_) | | (\_)   \_ \_  | |    (\_)  ) )\(\backslash\)n         | ,\_\_)| | | | | | /'\_` ) | |       /' / \(\backslash\)n         | |   | | | | | |( (\_| | | |     /' /( )\(\backslash\)n         (\_)   (\_)(\_\_\_)(\_)`\(\backslash\)\(\backslash\)\_\_,\_)(\_\_\_)   (\_\_\_\_\_/'\(\backslash\)n"},\textcolor{stringliteral}{"            \_\_\_    \_              \_         \_\_\_ \(\backslash\)n          /'\_\_\_)\_ (\_ )  \_        (\_ )     /'\_  )\(\backslash\)n         | (\_\_ (\_) | | (\_)   \_ \_  | |    (\_)\_) |\(\backslash\)n         | ,\_\_)| | | | | | /'\_` ) | |     \_(\_ < \(\backslash\)n         | |   | | | | | |( (\_| | | |    ( )\_) |\(\backslash\)n         (\_)   (\_)(\_\_\_)(\_)`\(\backslash\)\(\backslash\)\_\_,\_)(\_\_\_)   `\(\backslash\)\(\backslash\)\_\_\_\_)\(\backslash\)n"}\};}
+\DoxyCodeLine{250 }
+\DoxyCodeLine{251 }
+\DoxyCodeLine{252     \textcolor{keywordtype}{int} k;}
+\DoxyCodeLine{253 }
+\DoxyCodeLine{254     printf(\textcolor{stringliteral}{"\(\backslash\)n\%s\%37s\%s\(\backslash\)n"},BOLDCYAN,\textcolor{stringliteral}{"RESULTADOS QUERIE7"},RESET);}
+\DoxyCodeLine{255 }
+\DoxyCodeLine{256     printf(\textcolor{stringliteral}{"\%s\(\backslash\)n"},nfiliais[n]);}
+\DoxyCodeLine{257 }
+\DoxyCodeLine{258     \textcolor{keywordflow}{for}(i=0;i<3;i++)\{}
+\DoxyCodeLine{259             printf(\textcolor{stringliteral}{"┌────\%s\%s\%s────┐  ┌────\%s\%s\%s────┐  ┌────\%s\%s\%s────┐  ┌────\%s\%s\%s────┐\(\backslash\)n"},BOLDCYAN,meses[i*3+0],RESET,BOLDCYAN,meses[i*3+1],RESET,BOLDCYAN,meses[i*3+2],RESET,BOLDCYAN,meses[i*3+3],RESET);}
+\DoxyCodeLine{260         \textcolor{keywordflow}{for}(j=0;j<4;j++)\{}
+\DoxyCodeLine{261             k = \mbox{\hyperlink{estruturas_8c_a6de0c29a88ff9fe2c0dbab9caa9e5ec4}{getQt\_FilialQ7}}(q,n,i*3+j);}
+\DoxyCodeLine{262             \textcolor{keywordflow}{if}( k < 10)}
+\DoxyCodeLine{263                 printf(\textcolor{stringliteral}{"│\%6d     │  "},k);}
+\DoxyCodeLine{264             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{265                 printf(\textcolor{stringliteral}{"│\%7d    │  "},k);}
+\DoxyCodeLine{266             \}}
+\DoxyCodeLine{267         printf(\textcolor{stringliteral}{"\(\backslash\)n└───────────┘  └───────────┘  └───────────┘  └───────────┘\(\backslash\)n"});}
+\DoxyCodeLine{268 }
+\DoxyCodeLine{269     \}}
+\DoxyCodeLine{270     printf(\textcolor{stringliteral}{"\%40s\(\backslash\)n"},\textcolor{stringliteral}{"1 <-\/ previous || 2 -\/> next"});}
+\DoxyCodeLine{271     printf(\textcolor{stringliteral}{"\%30sq\%s -\/> exit\(\backslash\)n"},RED,RESET);}
+\DoxyCodeLine{272 }
+\DoxyCodeLine{273 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{vista_8c_a95b5daa8bd552583c215cea62c851c5a}\label{vista_8c_a95b5daa8bd552583c215cea62c851c5a}} 
+\index{vista.c@{vista.c}!querie8Print@{querie8Print}}
+\index{querie8Print@{querie8Print}!vista.c@{vista.c}}
+\doxysubsubsection{\texorpdfstring{querie8Print()}{querie8Print()}}
+{\footnotesize\ttfamily void querie8\+Print (\begin{DoxyParamCaption}\item[{int}]{month1,  }\item[{int}]{month2,  }\item[{Q8}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que imprime os resultados da Query 8. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em month1} & Mês 1, selecionado pelo Utilizador. \\
+\hline
+{\em month2} & Mês 2, selecionado pelo Utilizador. \\
+\hline
+{\em q} & Estrutura com os resultados de vendas totais, e total faturado. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 281 do ficheiro vista.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{281                                                \{}
+\DoxyCodeLine{282   \textcolor{keywordtype}{char} buffer[128];}
+\DoxyCodeLine{283   \textcolor{keywordtype}{int} a;}
+\DoxyCodeLine{284   \textcolor{keywordtype}{char} *meses[MESES] = \{\textcolor{stringliteral}{"JANEIRO"},\textcolor{stringliteral}{"FEVEREIRO"},\textcolor{stringliteral}{"MARÇO"},\textcolor{stringliteral}{"ABRIL"},\textcolor{stringliteral}{"MAIO"},\textcolor{stringliteral}{"JUNHO"},\textcolor{stringliteral}{"JULHO"},\textcolor{stringliteral}{"AGOSTO"},\textcolor{stringliteral}{"SETEMBRO"},\textcolor{stringliteral}{"OUTUBRO"},\textcolor{stringliteral}{"NOVEMBRO"},\textcolor{stringliteral}{"DEZEMBRO"}\};}
+\DoxyCodeLine{285 }
+\DoxyCodeLine{286   printf(\textcolor{stringliteral}{"\(\backslash\)n┌────────────────────────RESULTADOS QUERIE8────────────────────────┐\(\backslash\)n"});}
+\DoxyCodeLine{287   a = sprintf(buffer,\textcolor{stringliteral}{"│ -\/>VALORES ENTRE O MÊS DE \%s-\/-\/\%s-\/-\/\%s E O MÊS DE \%s-\/-\/\%s-\/-\/\%s"},RED,meses[month1-\/1],RESET,RED,meses[month2-\/1],RESET);}
+\DoxyCodeLine{288   printf(\textcolor{stringliteral}{"\%s"},buffer);}
+\DoxyCodeLine{289   \textcolor{keywordflow}{for}(;a<89;a++) printf(\textcolor{stringliteral}{" "});}
+\DoxyCodeLine{290   puts(\textcolor{stringliteral}{"│"});}
+\DoxyCodeLine{291   printf(\textcolor{stringliteral}{"├──────────────────────────────────────────────────────────────────┤\(\backslash\)n"});}
+\DoxyCodeLine{292   a = sprintf(buffer,\textcolor{stringliteral}{"│ -\/> VENDAS REGISTADAS  :  \%s\%d\%s"},GREEN,\mbox{\hyperlink{estruturas_8c_a7297594e6185a277bb88a435b80d2843}{getNVendas\_Q8}}(q),RESET);}
+\DoxyCodeLine{293   printf(\textcolor{stringliteral}{"\%s"},buffer);}
+\DoxyCodeLine{294   \textcolor{keywordflow}{for}(;a<78;a++) printf(\textcolor{stringliteral}{" "});}
+\DoxyCodeLine{295   puts(\textcolor{stringliteral}{"│"});}
+\DoxyCodeLine{296   printf(\textcolor{stringliteral}{"│                                                                  │\(\backslash\)n"});}
+\DoxyCodeLine{297   a = sprintf(buffer,\textcolor{stringliteral}{"│ -\/> FATURAÇÃO TOTAL    :  \%s\%f\%s"}, GREEN,\mbox{\hyperlink{estruturas_8c_a7791862d9be91d9ab89ab507ccb605bc}{getFat\_Q8}}(q),RESET);}
+\DoxyCodeLine{298   printf(\textcolor{stringliteral}{"\%s"},buffer);}
+\DoxyCodeLine{299   \textcolor{keywordflow}{for}(;a<80;a++) printf(\textcolor{stringliteral}{" "});}
+\DoxyCodeLine{300   puts(\textcolor{stringliteral}{"│"});}
+\DoxyCodeLine{301   printf(\textcolor{stringliteral}{"│                                                                  │\(\backslash\)n"});}
+\DoxyCodeLine{302   printf(\textcolor{stringliteral}{"└──────────────────────────────────────────────────────────────────┘\(\backslash\)n"});}
+\DoxyCodeLine{303 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{vista_8c_ac8df5655804e3a57f1c3310302614390}\label{vista_8c_ac8df5655804e3a57f1c3310302614390}} 
+\index{vista.c@{vista.c}!querie9Print@{querie9Print}}
+\index{querie9Print@{querie9Print}!vista.c@{vista.c}}
+\doxysubsubsection{\texorpdfstring{querie9Print()}{querie9Print()}}
+{\footnotesize\ttfamily void querie9\+Print (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{n,  }\item[{int}]{totaln,  }\item[{char $\ast$$\ast$}]{p,  }\item[{int}]{totalp }\end{DoxyParamCaption})}
+
+
+
+Função que imprime os resultados da Query 9. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em n} & Lista de Clientes que compraram o produto em modo N. \\
+\hline
+{\em totaln} & Total de Clientes que compraram o produto em modo N. \\
+\hline
+{\em p} & Lista de Clientes que compraram o produto em modo P. \\
+\hline
+{\em totalp} & Total de Clientes que compraram o produto em modo P. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 312 do ficheiro vista.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{312                                                              \{}
+\DoxyCodeLine{313     printf(\textcolor{stringliteral}{"\(\backslash\)n   \%sModo N(\%s\%d\%s):\%s \(\backslash\)n"},BOLDWHITE,BOLDCYAN,totaln,BOLDWHITE,RESET);}
+\DoxyCodeLine{314     \textcolor{keywordtype}{int} i;}
+\DoxyCodeLine{315     \textcolor{keywordflow}{for}(i=0;i<totaln;i++) printf(\textcolor{stringliteral}{"\%s\%8s\%s\%s\(\backslash\)n"},BOLDCYAN,\textcolor{stringliteral}{":"},RESET,n[i]);}
+\DoxyCodeLine{316     printf(\textcolor{stringliteral}{"   \%sModo P(\%s\%d\%s):\%s \(\backslash\)n"},BOLDWHITE,BOLDCYAN,totalp,BOLDWHITE,RESET);}
+\DoxyCodeLine{317     \textcolor{keywordflow}{for}(i=0;i<totalp;i++) printf(\textcolor{stringliteral}{"\%s\%8s\%s\%s\(\backslash\)n"},BOLDCYAN,\textcolor{stringliteral}{":"},RESET,p[i]);}
+\DoxyCodeLine{318     printf(\textcolor{stringliteral}{"\(\backslash\)n"});}
+\DoxyCodeLine{319 \}}
+
+\end{DoxyCode}

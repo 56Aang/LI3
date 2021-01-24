@@ -1,0 +1,407 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ProjC LI3 - grupo 2: Código-Fonte de src/avl.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ProjC LI3 - grupo 2
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Localizar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Localizar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">avl.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="avl_8c.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;../include/avl.h&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="structnode_a_v_l.html">    8</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structnode_a_v_l.html">nodeAVL</a> {</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keywordtype">char</span>* string;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordtype">void</span> *cont;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordtype">int</span> height;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">struct </span><a class="code" href="structnode_a_v_l.html">nodeAVL</a> *left;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">struct </span><a class="code" href="structnode_a_v_l.html">nodeAVL</a> *right;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;};</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="structavl.html">   16</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structavl.html">avl</a> {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    NODO arvore;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">int</span> avl_tamanho;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;};</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">static</span> <span class="keywordtype">int</span> height(NODO n);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">static</span> <span class="keywordtype">int</span> max(<span class="keywordtype">int</span> a, <span class="keywordtype">int</span> b);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">static</span> <span class="keywordtype">int</span> getBalance(NODO N);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">static</span> Boolean node_lookUp(NODO node, Valor value);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">static</span> NODO newNode(NODO node, Valor info, <span class="keywordtype">void</span> *estrutura);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">static</span> NODO rightRotate(NODO y);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">static</span> NODO leftRotate(NODO x);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">static</span> NODO atualiza_node(NODO node, <span class="keywordtype">char</span>* value, <span class="keywordtype">void</span>* estrutura);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">static</span> NODO node_insert(NODO node, Valor <span class="keywordtype">string</span>, Estrutura estrutura);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">static</span> NODO tree_clone(NODO node, NODO novo);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">static</span> Estrutura node_getEstrutura(NODO node, Valor value);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">static</span> <span class="keywordtype">void</span> tree_free(NODO node, Funcao f);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="avl_8c.html#a12edfb9dbe827acf6f4eadc70cf84c44">   39</a></span>&#160;AVL <a class="code" href="avl_8c.html#a12edfb9dbe827acf6f4eadc70cf84c44">initAVL</a>() {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    AVL tree = malloc(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structavl.html">avl</a>));</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    tree-&gt;arvore = NULL;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    tree-&gt;avl_tamanho = 0;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">return</span> tree;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="avl_8c.html#a28030a6963aec8fe11604cee697ef155">   53</a></span>&#160;AVL <a class="code" href="avl_8c.html#a28030a6963aec8fe11604cee697ef155">atualiza_avl</a>(AVL tree, <span class="keywordtype">char</span>* value, Estrutura estrutura) {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    tree-&gt;arvore = atualiza_node(tree-&gt;arvore,value,estrutura);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">return</span> tree;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="avl_8c.html#a1dec82bcbce333d16733ecf7344d378b">   65</a></span>&#160;AVL <a class="code" href="avl_8c.html#a1dec82bcbce333d16733ecf7344d378b">avl_insert</a>(AVL tree, Valor key, Estrutura estrutura) {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    tree-&gt;arvore = node_insert(tree-&gt;arvore,key,estrutura);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    tree-&gt;avl_tamanho ++;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">return</span> tree;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="avl_8c.html#a8fddc39a0bdd4496fe33e6b48a167c95">   77</a></span>&#160;Boolean <a class="code" href="avl_8c.html#a8fddc39a0bdd4496fe33e6b48a167c95">avl_lookUp</a>(AVL tree, Valor value) {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">if</span>(tree==NULL) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">return</span> node_lookUp(tree-&gt;arvore,value);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="avl_8c.html#a874b3d9374eb0bf5fc57cd3cf57c9704">   87</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="avl_8c.html#a874b3d9374eb0bf5fc57cd3cf57c9704">avl_count</a>(AVL tree) {</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">return</span> tree-&gt;avl_tamanho;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="avl_8c.html#af1c5b01501962cc16f68e5ff9458b5d6">   97</a></span>&#160;AVL <a class="code" href="avl_8c.html#af1c5b01501962cc16f68e5ff9458b5d6">avl_clone</a>(AVL node, AVL novo) {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    novo = (AVL) malloc(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structavl.html">avl</a>));</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    novo-&gt;arvore = tree_clone(node-&gt;arvore,novo-&gt;arvore);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    novo-&gt;avl_tamanho = node-&gt;avl_tamanho;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordflow">return</span> novo;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;}</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="avl_8c.html#a9c63fca5348576aa37364760756f565e">  110</a></span>&#160;Estrutura <a class="code" href="avl_8c.html#a9c63fca5348576aa37364760756f565e">avl_getEstrutura</a>(AVL node, Valor value) {</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordflow">return</span> node_getEstrutura(node-&gt;arvore,value);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;}</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="avl_8c.html#a785a0f5acefc1cd1085f1eb65fff5c43">  119</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="avl_8c.html#a785a0f5acefc1cd1085f1eb65fff5c43">avl_getTamanho</a>(AVL tree){</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  <span class="keywordflow">return</span> tree-&gt;avl_tamanho;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;}</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno"><a class="line" href="avl_8c.html#af568e679a8db439de3758447f23b86e2">  128</a></span>&#160;NODO <a class="code" href="avl_8c.html#af568e679a8db439de3758447f23b86e2">getNodo</a>(AVL a) {</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    NODO novo;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keywordflow">if</span>(a-&gt;arvore) {</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        novo = (NODO) malloc(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structnode_a_v_l.html">nodeAVL</a>));</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        novo-&gt;string = malloc((strlen(a-&gt;arvore-&gt;string)+1)*<span class="keyword">sizeof</span>(<span class="keywordtype">char</span>));</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        strcpy(novo-&gt;string,a-&gt;arvore-&gt;string);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        novo-&gt;cont = a-&gt;arvore-&gt;cont;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        novo-&gt;left = a-&gt;arvore-&gt;left;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        novo-&gt;right = a-&gt;arvore-&gt;right;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    }<span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        novo = NULL;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    }</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="keywordflow">return</span> novo;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;}</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
+<div class="line"><a name="l00149"></a><span class="lineno"><a class="line" href="avl_8c.html#aac6e354b6a9d07b76313a36c510c9f10">  149</a></span>&#160;NODO <a class="code" href="avl_8c.html#aac6e354b6a9d07b76313a36c510c9f10">getNodoEsq</a>(NODO n) {</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    NODO novo;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keywordflow">if</span>(n-&gt;left) {</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        novo = (NODO) malloc(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structnode_a_v_l.html">nodeAVL</a>));</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        novo-&gt;string = malloc((strlen(n-&gt;left-&gt;string)+1)*<span class="keyword">sizeof</span>(<span class="keywordtype">char</span>));</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        strcpy(novo-&gt;string,n-&gt;left-&gt;string);</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        novo-&gt;cont = n-&gt;left-&gt;cont;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        novo-&gt;left = n-&gt;left-&gt;left;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        novo-&gt;right = n-&gt;left-&gt;right;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    }<span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        novo = NULL;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    }</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keywordflow">return</span> novo;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;}</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
+<div class="line"><a name="l00169"></a><span class="lineno"><a class="line" href="avl_8c.html#a5c9e707dfc9a11ffe65746c91b5111ba">  169</a></span>&#160;NODO <a class="code" href="avl_8c.html#a5c9e707dfc9a11ffe65746c91b5111ba">getNodoDir</a>(NODO n) {</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    NODO novo;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keywordflow">if</span>(n-&gt;right) {</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        novo = (NODO) malloc(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structnode_a_v_l.html">nodeAVL</a>));</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        novo-&gt;string = malloc((strlen(n-&gt;right-&gt;string)+1)*<span class="keyword">sizeof</span>(<span class="keywordtype">char</span>));</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        strcpy(novo-&gt;string,n-&gt;right-&gt;string);</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        novo-&gt;cont = n-&gt;right-&gt;cont;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        novo-&gt;left = n-&gt;right-&gt;left;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        novo-&gt;right = n-&gt;right-&gt;right;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    }<span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        novo = NULL;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    }</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keywordflow">return</span> novo;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;}</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160; </div>
+<div class="line"><a name="l00189"></a><span class="lineno"><a class="line" href="avl_8c.html#a5804b8d40ea06fecc2ecd97415a6c18c">  189</a></span>&#160;<span class="keywordtype">char</span>* <a class="code" href="avl_8c.html#a5804b8d40ea06fecc2ecd97415a6c18c">getString</a>(NODO n) {</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="keywordtype">char</span>* novo;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    novo = malloc((strlen(n-&gt;string)+1)*<span class="keyword">sizeof</span>(<span class="keywordtype">char</span>));</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    strcpy(novo,n-&gt;string);</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <span class="keywordflow">return</span> novo;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;}</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160; </div>
+<div class="line"><a name="l00201"></a><span class="lineno"><a class="line" href="avl_8c.html#a948222e5aea0bc2696faf0a9ed64afe7">  201</a></span>&#160;<span class="keywordtype">void</span>* <a class="code" href="avl_8c.html#a948222e5aea0bc2696faf0a9ed64afe7">getCont</a>(NODO n) {</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <span class="keywordflow">return</span> n-&gt;cont;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;}</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160; </div>
+<div class="line"><a name="l00210"></a><span class="lineno"><a class="line" href="avl_8c.html#a79d17c2e6df846c93b8a5743cd025735">  210</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="avl_8c.html#a79d17c2e6df846c93b8a5743cd025735">avl_free</a>(AVL nodo, Funcao f) {</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    tree_free(nodo-&gt;arvore,f);</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    free(nodo);</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;}</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160; </div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;<span class="keyword">static</span> <span class="keywordtype">int</span> height(NODO n) {</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <span class="keywordflow">if</span> (n == NULL)</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="keywordflow">return</span> n-&gt;height;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;}</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160; </div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;<span class="keyword">static</span> <span class="keywordtype">int</span> max(<span class="keywordtype">int</span> a, <span class="keywordtype">int</span> b) {</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <span class="keywordflow">return</span> (a &gt; b)? a : b;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;}</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160; </div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;<span class="keyword">static</span> NODO newNode(NODO node, Valor info, <span class="keywordtype">void</span> *estrutura) {</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    node = (NODO) malloc(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structnode_a_v_l.html">nodeAVL</a>));</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    node-&gt;string = malloc((strlen(info)+1)*<span class="keyword">sizeof</span>(<span class="keywordtype">char</span>));</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    strcpy(node-&gt;string,info);</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    node-&gt;cont = estrutura;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    node-&gt;height = 1;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    node-&gt;left   = NULL;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    node-&gt;right  = NULL;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <span class="keywordflow">return</span> node;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;}</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160; </div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;<span class="keyword">static</span> NODO rightRotate(NODO y) {</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160; </div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    NODO x = y-&gt;left;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    NODO T2 = x-&gt;right;</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160; </div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    x-&gt;right = y;</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    y-&gt;left = T2;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160; </div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    y-&gt;height = max(height(y-&gt;left), height(y-&gt;right))+1;</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    x-&gt;height = max(height(x-&gt;left), height(x-&gt;right))+1;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160; </div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    <span class="keywordflow">return</span> x;</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;}</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160; </div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;<span class="keyword">static</span> NODO leftRotate(NODO x) {</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160; </div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    NODO y = x-&gt;right;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    NODO T2 = y-&gt;left;</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160; </div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    y-&gt;left = x;</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    x-&gt;right = T2;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160; </div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    x-&gt;height = max(height(x-&gt;left), height(x-&gt;right))+1;</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    y-&gt;height = max(height(y-&gt;left), height(y-&gt;right))+1;</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160; </div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    <span class="keywordflow">return</span> y;</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;}</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160; </div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;<span class="keyword">static</span> <span class="keywordtype">int</span> getBalance(NODO N) {</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    <span class="keywordflow">if</span> (N == NULL)</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    <span class="keywordflow">return</span> height(N-&gt;left) - height(N-&gt;right);</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;}</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160; </div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;<span class="keyword">static</span> NODO node_insert(NODO node, Valor info, Estrutura estrutura) {</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    <span class="keywordtype">int</span> balance;</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160; </div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    <span class="keywordflow">if</span>(node != NULL) {</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160; </div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    <span class="keywordflow">if</span> (strcmp(info,node-&gt;string) &lt; 0)</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        node-&gt;left  = node_insert(node-&gt;left, info, estrutura);</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(strcmp(info,node-&gt;string) &gt; 0)</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;        node-&gt;right = node_insert(node-&gt;right, info, estrutura);</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    <span class="keywordflow">else</span> node-&gt;cont = estrutura;</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160; </div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    <span class="comment">/* Atualiza os pesos */</span></div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    node-&gt;height = max(height(node-&gt;left), height(node-&gt;right)) + 1;</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160; </div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    <span class="comment">/* Varifica o balanceamento */</span></div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    balance = getBalance(node);</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160; </div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    <span class="comment">/* Left Left Case */</span></div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    <span class="keywordflow">if</span> (balance &gt; 1 &amp;&amp; strcmp(info,node-&gt;left-&gt;string) &lt; 0) <span class="keywordflow">return</span> rightRotate(node);</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160; </div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    <span class="comment">/* Right Right Case */</span></div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    <span class="keywordflow">if</span> (balance &lt; -1 &amp;&amp; strcmp(info,node-&gt;right-&gt;string) &gt; 0) <span class="keywordflow">return</span> leftRotate(node);</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160; </div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    <span class="comment">/* Left Right Case */</span></div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    <span class="keywordflow">if</span> (balance &gt; 1 &amp;&amp; strcmp(info,node-&gt;left-&gt;string) &gt; 0) {</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;        node-&gt;left =  leftRotate(node-&gt;left);</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;        <span class="keywordflow">return</span> rightRotate(node);</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    }</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;     <span class="comment">/* Right Left Case */</span></div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    <span class="keywordflow">if</span> (balance &lt; -1 &amp;&amp; strcmp(info, node-&gt;right-&gt;string) &lt; 0) {</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;        node-&gt;right = rightRotate(node-&gt;right);</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;        <span class="keywordflow">return</span> leftRotate(node);</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    }</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160; </div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    } <span class="keywordflow">else</span> node = newNode(node,info,estrutura);</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160; </div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;   <span class="keywordflow">return</span> node;</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;}</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160; </div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;<span class="keyword">static</span> Boolean node_lookUp(NODO node, Valor value) {</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;    <span class="keywordtype">int</span> r;</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;    <span class="keywordflow">if</span>(node == NULL) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;        r = strcmp(value,node-&gt;string);</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;        <span class="keywordflow">if</span>(r == 0) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(r &lt; 0) <span class="keywordflow">return</span> node_lookUp(node-&gt;left, value);</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">return</span> node_lookUp(node-&gt;right,value);</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    }</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;}</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160; </div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;<span class="keyword">static</span> NODO tree_clone(NODO node, NODO novo) {</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160; </div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    <span class="keywordflow">if</span>(node) {</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;        novo = malloc(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structnode_a_v_l.html">nodeAVL</a>));</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;        novo-&gt;string = malloc((strlen(node-&gt;string)+1)*<span class="keyword">sizeof</span>(<span class="keywordtype">char</span>));</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;        strcpy(novo-&gt;string,node-&gt;string);</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;        novo-&gt;height = node-&gt;height;</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;        novo-&gt;cont = NULL;</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;        novo-&gt;left = tree_clone(node-&gt;left,novo-&gt;left);</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;        novo-&gt;right = tree_clone(node-&gt;right,novo-&gt;right);</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;    }</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;    <span class="keywordflow">else</span> novo = NULL;</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160; </div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;    <span class="keywordflow">return</span> novo;</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;}</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160; </div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;<span class="keyword">static</span> NODO atualiza_node(NODO node, <span class="keywordtype">char</span>* value, Estrutura estrutura) {</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    <span class="keywordtype">int</span> r;</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    r = strcmp(value,node-&gt;string);</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;    <span class="keywordflow">if</span>(r == 0) {</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;        node-&gt;cont = estrutura;</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;        <span class="keywordflow">return</span> node;</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;    }</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(r &lt; 0) atualiza_node(node-&gt;left, value,estrutura);</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;    <span class="keywordflow">else</span> atualiza_node(node-&gt;right,value,estrutura);</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160; </div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;    <span class="keywordflow">return</span> node;</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;}</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160; </div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;<span class="keyword">static</span> Estrutura node_getEstrutura(NODO node, Valor value) {</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;    <span class="keywordtype">int</span> r;</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;    <span class="keywordflow">if</span>(node == NULL) <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;        r = strcmp(value,node-&gt;string);</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;        <span class="keywordflow">if</span>(r == 0) <span class="keywordflow">return</span> node-&gt;cont;</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(r &lt; 0) <span class="keywordflow">return</span> node_getEstrutura(node-&gt;left, value);</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">return</span> node_getEstrutura(node-&gt;right,value);</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;    }</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;}</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160; </div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;<span class="keyword">static</span> <span class="keywordtype">void</span> tree_free(NODO node, Funcao f) {</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;    <span class="keywordflow">if</span>(node != NULL) {</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;        tree_free(node-&gt;left,f);</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;        tree_free(node-&gt;right,f);</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;        <span class="keywordflow">if</span>(node-&gt;cont != NULL) {</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;            f(node-&gt;cont);</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;        }</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;        free(node-&gt;string);</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;        free(node);</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;    }</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;}</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160; </div>
+<div class="line"><a name="l00446"></a><span class="lineno"><a class="line" href="avl_8c.html#ab7e925aeda628a2fb80ed170c192c3c4">  446</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="avl_8c.html#ab7e925aeda628a2fb80ed170c192c3c4">free_Nodo</a>(NODO node) {</div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;    <span class="keywordflow">if</span>(node != NULL) {</div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;        free(node-&gt;string);</div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;        free(node);</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;    }</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;}</div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160; </div>
+<div class="line"><a name="l00457"></a><span class="lineno"><a class="line" href="avl_8c.html#ac9fb4d6bce6ae1d02ce0e82b10b59945">  457</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="avl_8c.html#ac9fb4d6bce6ae1d02ce0e82b10b59945">imprime_Conteudo_AVL</a>(NODO tree){</div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;    <span class="keywordflow">if</span> (tree == NULL) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;    <a class="code" href="avl_8c.html#ac9fb4d6bce6ae1d02ce0e82b10b59945">imprime_Conteudo_AVL</a>(tree-&gt;left);</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;    printf(<span class="stringliteral">&quot;%s\n&quot;</span>,tree-&gt;string);</div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;    <a class="code" href="avl_8c.html#ac9fb4d6bce6ae1d02ce0e82b10b59945">imprime_Conteudo_AVL</a>(tree-&gt;right);</div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;}</div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160; </div>
+<div class="line"><a name="l00468"></a><span class="lineno"><a class="line" href="avl_8c.html#a6bf7ed43f3cf1c72b56ec0e18fcda525">  468</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="avl_8c.html#a6bf7ed43f3cf1c72b56ec0e18fcda525">imprime_AVL_String</a>(AVL tree){</div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;    <a class="code" href="avl_8c.html#ac9fb4d6bce6ae1d02ce0e82b10b59945">imprime_Conteudo_AVL</a>(tree-&gt;arvore);</div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aavl_8c_html_a948222e5aea0bc2696faf0a9ed64afe7"><div class="ttname"><a href="avl_8c.html#a948222e5aea0bc2696faf0a9ed64afe7">getCont</a></div><div class="ttdeci">void * getCont(NODO n)</div><div class="ttdoc">Função que dado um NODO retorna o seu contéudo.</div><div class="ttdef"><b>Definition:</b> <a href="avl_8c_source.html#l00201">avl.c:201</a></div></div>
+<div class="ttc" id="aavl_8c_html_ab7e925aeda628a2fb80ed170c192c3c4"><div class="ttname"><a href="avl_8c.html#ab7e925aeda628a2fb80ed170c192c3c4">free_Nodo</a></div><div class="ttdeci">void free_Nodo(NODO node)</div><div class="ttdoc">Função que limpa da memória um dado NODO.</div><div class="ttdef"><b>Definition:</b> <a href="avl_8c_source.html#l00446">avl.c:446</a></div></div>
+<div class="ttc" id="aavl_8c_html_af568e679a8db439de3758447f23b86e2"><div class="ttname"><a href="avl_8c.html#af568e679a8db439de3758447f23b86e2">getNodo</a></div><div class="ttdeci">NODO getNodo(AVL a)</div><div class="ttdoc">Função que dada uma AVL retorna o nodo da sua raiz.</div><div class="ttdef"><b>Definition:</b> <a href="avl_8c_source.html#l00128">avl.c:128</a></div></div>
+<div class="ttc" id="aavl_8c_html_a12edfb9dbe827acf6f4eadc70cf84c44"><div class="ttname"><a href="avl_8c.html#a12edfb9dbe827acf6f4eadc70cf84c44">initAVL</a></div><div class="ttdeci">AVL initAVL()</div><div class="ttdoc">Função que inicializa uma nova AVL.</div><div class="ttdef"><b>Definition:</b> <a href="avl_8c_source.html#l00039">avl.c:39</a></div></div>
+<div class="ttc" id="aavl_8c_html_a6bf7ed43f3cf1c72b56ec0e18fcda525"><div class="ttname"><a href="avl_8c.html#a6bf7ed43f3cf1c72b56ec0e18fcda525">imprime_AVL_String</a></div><div class="ttdeci">void imprime_AVL_String(AVL tree)</div><div class="ttdoc">Função que imprime todas as Strings da AVL.</div><div class="ttdef"><b>Definition:</b> <a href="avl_8c_source.html#l00468">avl.c:468</a></div></div>
+<div class="ttc" id="aavl_8c_html_a785a0f5acefc1cd1085f1eb65fff5c43"><div class="ttname"><a href="avl_8c.html#a785a0f5acefc1cd1085f1eb65fff5c43">avl_getTamanho</a></div><div class="ttdeci">int avl_getTamanho(AVL tree)</div><div class="ttdoc">Função que devolve o tamanho de uma AVL.</div><div class="ttdef"><b>Definition:</b> <a href="avl_8c_source.html#l00119">avl.c:119</a></div></div>
+<div class="ttc" id="aavl_8c_html_a28030a6963aec8fe11604cee697ef155"><div class="ttname"><a href="avl_8c.html#a28030a6963aec8fe11604cee697ef155">atualiza_avl</a></div><div class="ttdeci">AVL atualiza_avl(AVL tree, char *value, Estrutura estrutura)</div><div class="ttdoc">Função que insere uma nova estrutura na arvore tree tendo como referência de posicionamento um char* ...</div><div class="ttdef"><b>Definition:</b> <a href="avl_8c_source.html#l00053">avl.c:53</a></div></div>
+<div class="ttc" id="astructnode_a_v_l_html"><div class="ttname"><a href="structnode_a_v_l.html">nodeAVL</a></div><div class="ttdef"><b>Definition:</b> <a href="avl_8c_source.html#l00008">avl.c:8</a></div></div>
+<div class="ttc" id="aavl_8c_html_aac6e354b6a9d07b76313a36c510c9f10"><div class="ttname"><a href="avl_8c.html#aac6e354b6a9d07b76313a36c510c9f10">getNodoEsq</a></div><div class="ttdeci">NODO getNodoEsq(NODO n)</div><div class="ttdoc">Função que dado um NODO retorna o nodo á sua esquerda.</div><div class="ttdef"><b>Definition:</b> <a href="avl_8c_source.html#l00149">avl.c:149</a></div></div>
+<div class="ttc" id="aavl_8c_html_a8fddc39a0bdd4496fe33e6b48a167c95"><div class="ttname"><a href="avl_8c.html#a8fddc39a0bdd4496fe33e6b48a167c95">avl_lookUp</a></div><div class="ttdeci">Boolean avl_lookUp(AVL tree, Valor value)</div><div class="ttdoc">Função que devolve um Boolean referente a ter encontrado ou não na AVL o Valor value.</div><div class="ttdef"><b>Definition:</b> <a href="avl_8c_source.html#l00077">avl.c:77</a></div></div>
+<div class="ttc" id="aavl_8c_html_a5804b8d40ea06fecc2ecd97415a6c18c"><div class="ttname"><a href="avl_8c.html#a5804b8d40ea06fecc2ecd97415a6c18c">getString</a></div><div class="ttdeci">char * getString(NODO n)</div><div class="ttdoc">Função que dado um NODO retorna uma copia da sua string.</div><div class="ttdef"><b>Definition:</b> <a href="avl_8c_source.html#l00189">avl.c:189</a></div></div>
+<div class="ttc" id="aavl_8c_html_a9c63fca5348576aa37364760756f565e"><div class="ttname"><a href="avl_8c.html#a9c63fca5348576aa37364760756f565e">avl_getEstrutura</a></div><div class="ttdeci">Estrutura avl_getEstrutura(AVL node, Valor value)</div><div class="ttdoc">Função que devolve a estrutura associada a um nodo de uma AVL passada como argumento.</div><div class="ttdef"><b>Definition:</b> <a href="avl_8c_source.html#l00110">avl.c:110</a></div></div>
+<div class="ttc" id="aavl_8c_html_a1dec82bcbce333d16733ecf7344d378b"><div class="ttname"><a href="avl_8c.html#a1dec82bcbce333d16733ecf7344d378b">avl_insert</a></div><div class="ttdeci">AVL avl_insert(AVL tree, Valor key, Estrutura estrutura)</div><div class="ttdoc">Função que insere na arvore tree tendo como referência de posicionamento um char*.</div><div class="ttdef"><b>Definition:</b> <a href="avl_8c_source.html#l00065">avl.c:65</a></div></div>
+<div class="ttc" id="astructavl_html"><div class="ttname"><a href="structavl.html">avl</a></div><div class="ttdef"><b>Definition:</b> <a href="avl_8c_source.html#l00016">avl.c:16</a></div></div>
+<div class="ttc" id="aavl_8c_html_ac9fb4d6bce6ae1d02ce0e82b10b59945"><div class="ttname"><a href="avl_8c.html#ac9fb4d6bce6ae1d02ce0e82b10b59945">imprime_Conteudo_AVL</a></div><div class="ttdeci">void imprime_Conteudo_AVL(NODO tree)</div><div class="ttdoc">Função que imprime os nodos da AVL.</div><div class="ttdef"><b>Definition:</b> <a href="avl_8c_source.html#l00457">avl.c:457</a></div></div>
+<div class="ttc" id="aavl_8c_html_a5c9e707dfc9a11ffe65746c91b5111ba"><div class="ttname"><a href="avl_8c.html#a5c9e707dfc9a11ffe65746c91b5111ba">getNodoDir</a></div><div class="ttdeci">NODO getNodoDir(NODO n)</div><div class="ttdoc">Função que dado um NODO retorna o nodo á sua direita.</div><div class="ttdef"><b>Definition:</b> <a href="avl_8c_source.html#l00169">avl.c:169</a></div></div>
+<div class="ttc" id="aavl_8c_html_a79d17c2e6df846c93b8a5743cd025735"><div class="ttname"><a href="avl_8c.html#a79d17c2e6df846c93b8a5743cd025735">avl_free</a></div><div class="ttdeci">void avl_free(AVL nodo, Funcao f)</div><div class="ttdoc">Função com o objetivo de limpar da memória uma dada AVL.</div><div class="ttdef"><b>Definition:</b> <a href="avl_8c_source.html#l00210">avl.c:210</a></div></div>
+<div class="ttc" id="aavl_8c_html_a874b3d9374eb0bf5fc57cd3cf57c9704"><div class="ttname"><a href="avl_8c.html#a874b3d9374eb0bf5fc57cd3cf57c9704">avl_count</a></div><div class="ttdeci">int avl_count(AVL tree)</div><div class="ttdoc">Função que devolve o tamanho (quantidade de nodos) de uma AVL passada como argumento.</div><div class="ttdef"><b>Definition:</b> <a href="avl_8c_source.html#l00087">avl.c:87</a></div></div>
+<div class="ttc" id="aavl_8c_html_af1c5b01501962cc16f68e5ff9458b5d6"><div class="ttname"><a href="avl_8c.html#af1c5b01501962cc16f68e5ff9458b5d6">avl_clone</a></div><div class="ttdeci">AVL avl_clone(AVL node, AVL novo)</div><div class="ttdoc">Função que executa um clone de uma dada AVL.</div><div class="ttdef"><b>Definition:</b> <a href="avl_8c_source.html#l00097">avl.c:97</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

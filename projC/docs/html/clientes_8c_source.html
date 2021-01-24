@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ProjC LI3 - grupo 2: Código-Fonte de src/clientes.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ProjC LI3 - grupo 2
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Localizar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Localizar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">clientes.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="clientes_8c.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;../include/clientes.h&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="structcliente.html">    8</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structcliente.html">cliente</a> {</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  <span class="keywordtype">char</span> *n_cliente;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;};</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="structcatalogo__clientes.html">   12</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structcatalogo__clientes.html">catalogo_clientes</a> {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  Catalogo <a class="code" href="structcatalogo.html">catalogo</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;};</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="clientes_8c.html#a5f0cc74d03bcef2cf08ede6a6c82e413">   20</a></span>&#160;Cliente <a class="code" href="clientes_8c.html#a5f0cc74d03bcef2cf08ede6a6c82e413">cria_Cliente</a>(){</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    Cliente c = (Cliente) malloc(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structcliente.html">cliente</a>));</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    c-&gt;n_cliente = NULL;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordflow">return</span> c;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="clientes_8c.html#a329568d1883aca127fc8025cd20f0419">   30</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="clientes_8c.html#a329568d1883aca127fc8025cd20f0419">free_c</a>(Cliente c){</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">if</span>(c){</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordflow">if</span>(c-&gt;n_cliente)</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            free(c-&gt;n_cliente);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        free(c);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="clientes_8c.html#a955d8669b906641755247a9d0c05f5ff">   44</a></span>&#160;Cliente <a class="code" href="clientes_8c.html#a955d8669b906641755247a9d0c05f5ff">altera_Cliente</a>(Cliente c, <span class="keywordtype">char</span>* e){</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">if</span>(c-&gt;n_cliente){</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        free(c-&gt;n_cliente);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    c-&gt;n_cliente = malloc((strlen(e) + 1) * <span class="keyword">sizeof</span>(<span class="keywordtype">char</span>));</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    strcpy(c-&gt;n_cliente,e);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">return</span> c;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="clientes_8c.html#a4ce68937a14a9c16e98beeac9d9c393b">   57</a></span>&#160;Clientes_Catalog <a class="code" href="clientes_8c.html#a4ce68937a14a9c16e98beeac9d9c393b">init_clientes_catalog</a>(){</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    Clientes_Catalog <span class="keyword">new</span> = malloc(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structcatalogo__clientes.html">catalogo_clientes</a>));</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keyword">new</span>-&gt;catalogo = <a class="code" href="catalogo_8c.html#a5add1241036a95c143d5cb5d8e5e7fe5">init_Catalogo</a>();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">new</span>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="clientes_8c.html#aa1605360028ceae03157e2a53b9d30e4">   69</a></span>&#160;Boolean <a class="code" href="clientes_8c.html#aa1605360028ceae03157e2a53b9d30e4">existe_cliente</a>(Clientes_Catalog cat, <span class="keywordtype">char</span> *key){</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="catalogo_8c.html#a93fc716391dc53901dc2dbff97e75da1">existe_Catalogo</a>(cat-&gt;catalogo,key);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="clientes_8c.html#ab79e0e920fc19de6cd7278bb0e3f282c">   79</a></span>&#160;Clientes_Catalog <a class="code" href="clientes_8c.html#ab79e0e920fc19de6cd7278bb0e3f282c">insere_cliente</a>(Clientes_Catalog cat, Cliente e){</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">char</span> *aux = <a class="code" href="clientes_8c.html#a11ac69b7e3c0edc64e2776a9dc0d12db">getClienteCode</a>(e);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    cat-&gt;catalogo = <a class="code" href="catalogo_8c.html#a63d5cf63479a790b0f74a7bfa0dcd10a">insere_Catalogo</a>(cat-&gt;catalogo,aux,NULL);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    free(aux);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">return</span> cat;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="clientes_8c.html#a053cb24e83ea691e7761c29774f68a94">   93</a></span>&#160;Clientes_Catalog <a class="code" href="clientes_8c.html#a053cb24e83ea691e7761c29774f68a94">insere_Clientes_Catalogo</a> (Clientes_Catalog cat, Cliente e, <span class="keywordtype">void</span>* Estrutura) {</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordtype">char</span> *aux = <a class="code" href="clientes_8c.html#a11ac69b7e3c0edc64e2776a9dc0d12db">getClienteCode</a>(e);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    cat-&gt;catalogo = <a class="code" href="catalogo_8c.html#a63d5cf63479a790b0f74a7bfa0dcd10a">insere_Catalogo</a>(cat-&gt;catalogo,aux, Estrutura);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    free(aux);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">return</span> cat;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;}</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="clientes_8c.html#aff6903a09752ec30e03653dbb090062d">  106</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="clientes_8c.html#aff6903a09752ec30e03653dbb090062d">free_Clientes</a>(Clientes_Catalog cat, Funcao f){</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <a class="code" href="catalogo_8c.html#aa40131c98313b4683617cd1757f7ea66">free_Catalogo</a>(cat-&gt;catalogo,f);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    free(cat);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;}</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="clientes_8c.html#aea87fb3dba1a84e2f72b72445d07f796">  115</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="clientes_8c.html#aea87fb3dba1a84e2f72b72445d07f796">imprime_Clientes</a>(Clientes_Catalog cat){</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <a class="code" href="catalogo_8c.html#a00844e192fa3f0c5afc710d9da7c2c83">imprime_Catalogo</a>(cat-&gt;catalogo);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;}</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
+<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="clientes_8c.html#a11ac69b7e3c0edc64e2776a9dc0d12db">  124</a></span>&#160;<span class="keywordtype">char</span>* <a class="code" href="clientes_8c.html#a11ac69b7e3c0edc64e2776a9dc0d12db">getClienteCode</a>(Cliente e){</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  <span class="keywordtype">char</span> *aux = malloc(<span class="keyword">sizeof</span>(<span class="keywordtype">char</span>)*(strlen(e-&gt;n_cliente)+1));</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  strcpy(aux,e-&gt;n_cliente);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  <span class="keywordflow">return</span> aux;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;}</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
+<div class="line"><a name="l00136"></a><span class="lineno"><a class="line" href="clientes_8c.html#a20860554e851f1ca7364f72a775efeba">  136</a></span>&#160;Estrutura <a class="code" href="clientes_8c.html#a20860554e851f1ca7364f72a775efeba">get_cliente_struct</a> (Clientes_Catalog cat, Cliente c) {</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keywordtype">char</span> *aux = <a class="code" href="clientes_8c.html#a11ac69b7e3c0edc64e2776a9dc0d12db">getClienteCode</a>(c);</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    Estrutura a = <a class="code" href="catalogo_8c.html#a2ed88930f3b18c3f107506ef3170508d">get_Cat_struct</a> (cat-&gt;catalogo, aux);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    free(aux);</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="keywordflow">return</span> a;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;}</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
+<div class="line"><a name="l00150"></a><span class="lineno"><a class="line" href="clientes_8c.html#a7a093cfc4d9f6b350741d34d05e36e66">  150</a></span>&#160;Clientes_Catalog <a class="code" href="clientes_8c.html#a7a093cfc4d9f6b350741d34d05e36e66">altera_Catalogo_Clientes</a>(Clientes_Catalog cat , Cliente e, <span class="keywordtype">void</span> * Estrutura){</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;  <span class="keywordtype">char</span> *aux = <a class="code" href="clientes_8c.html#a11ac69b7e3c0edc64e2776a9dc0d12db">getClienteCode</a>(e);</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;  cat-&gt;catalogo = <a class="code" href="catalogo_8c.html#acc5f085d5be2ccd45505eff9015e27db">altera_Catalogo</a>(cat-&gt;catalogo,aux,Estrutura);</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  free(aux);</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  <span class="keywordflow">return</span> cat;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="acatalogo_8c_html_a00844e192fa3f0c5afc710d9da7c2c83"><div class="ttname"><a href="catalogo_8c.html#a00844e192fa3f0c5afc710d9da7c2c83">imprime_Catalogo</a></div><div class="ttdeci">void imprime_Catalogo(Catalogo cat)</div><div class="ttdoc">Função que imprime um catálogo.</div><div class="ttdef"><b>Definition:</b> <a href="catalogo_8c_source.html#l00091">catalogo.c:91</a></div></div>
+<div class="ttc" id="aclientes_8c_html_a955d8669b906641755247a9d0c05f5ff"><div class="ttname"><a href="clientes_8c.html#a955d8669b906641755247a9d0c05f5ff">altera_Cliente</a></div><div class="ttdeci">Cliente altera_Cliente(Cliente c, char *e)</div><div class="ttdoc">Função que altera o código de um determinado cliente.</div><div class="ttdef"><b>Definition:</b> <a href="clientes_8c_source.html#l00044">clientes.c:44</a></div></div>
+<div class="ttc" id="acatalogo_8c_html_acc5f085d5be2ccd45505eff9015e27db"><div class="ttname"><a href="catalogo_8c.html#acc5f085d5be2ccd45505eff9015e27db">altera_Catalogo</a></div><div class="ttdeci">Catalogo altera_Catalogo(Catalogo c, char *key, void *estrutura)</div><div class="ttdoc">Função que altera uma estrutura no catálogo tendo como referência de posicionamento um char* key.</div><div class="ttdef"><b>Definition:</b> <a href="catalogo_8c_source.html#l00069">catalogo.c:69</a></div></div>
+<div class="ttc" id="acatalogo_8c_html_a2ed88930f3b18c3f107506ef3170508d"><div class="ttname"><a href="catalogo_8c.html#a2ed88930f3b18c3f107506ef3170508d">get_Cat_struct</a></div><div class="ttdeci">Estrutura get_Cat_struct(Catalogo c, char *key)</div><div class="ttdoc">Função que devolve a estrutura associada a uma key de um catálogo que lhe é passada como argumento.</div><div class="ttdef"><b>Definition:</b> <a href="catalogo_8c_source.html#l00044">catalogo.c:44</a></div></div>
+<div class="ttc" id="acatalogo_8c_html_a5add1241036a95c143d5cb5d8e5e7fe5"><div class="ttname"><a href="catalogo_8c.html#a5add1241036a95c143d5cb5d8e5e7fe5">init_Catalogo</a></div><div class="ttdeci">Catalogo init_Catalogo()</div><div class="ttdoc">Função que inicializa um novo catálogo.</div><div class="ttdef"><b>Definition:</b> <a href="catalogo_8c_source.html#l00017">catalogo.c:17</a></div></div>
+<div class="ttc" id="aclientes_8c_html_ab79e0e920fc19de6cd7278bb0e3f282c"><div class="ttname"><a href="clientes_8c.html#ab79e0e920fc19de6cd7278bb0e3f282c">insere_cliente</a></div><div class="ttdeci">Clientes_Catalog insere_cliente(Clientes_Catalog cat, Cliente e)</div><div class="ttdoc">Função que insere um cliente num catálogo.</div><div class="ttdef"><b>Definition:</b> <a href="clientes_8c_source.html#l00079">clientes.c:79</a></div></div>
+<div class="ttc" id="aclientes_8c_html_a5f0cc74d03bcef2cf08ede6a6c82e413"><div class="ttname"><a href="clientes_8c.html#a5f0cc74d03bcef2cf08ede6a6c82e413">cria_Cliente</a></div><div class="ttdeci">Cliente cria_Cliente()</div><div class="ttdoc">Função que cria um novo cliente.</div><div class="ttdef"><b>Definition:</b> <a href="clientes_8c_source.html#l00020">clientes.c:20</a></div></div>
+<div class="ttc" id="acatalogo_8c_html_a63d5cf63479a790b0f74a7bfa0dcd10a"><div class="ttname"><a href="catalogo_8c.html#a63d5cf63479a790b0f74a7bfa0dcd10a">insere_Catalogo</a></div><div class="ttdeci">Catalogo insere_Catalogo(Catalogo c, char *key, void *estrutura)</div><div class="ttdoc">Função que insere no catálogo tendo como referência de posicionamento um char* key.</div><div class="ttdef"><b>Definition:</b> <a href="catalogo_8c_source.html#l00056">catalogo.c:56</a></div></div>
+<div class="ttc" id="aclientes_8c_html_a4ce68937a14a9c16e98beeac9d9c393b"><div class="ttname"><a href="clientes_8c.html#a4ce68937a14a9c16e98beeac9d9c393b">init_clientes_catalog</a></div><div class="ttdeci">Clientes_Catalog init_clientes_catalog()</div><div class="ttdoc">Função que inicia um novo catálogo de clientes.</div><div class="ttdef"><b>Definition:</b> <a href="clientes_8c_source.html#l00057">clientes.c:57</a></div></div>
+<div class="ttc" id="astructcatalogo__clientes_html"><div class="ttname"><a href="structcatalogo__clientes.html">catalogo_clientes</a></div><div class="ttdef"><b>Definition:</b> <a href="clientes_8c_source.html#l00012">clientes.c:12</a></div></div>
+<div class="ttc" id="aclientes_8c_html_a11ac69b7e3c0edc64e2776a9dc0d12db"><div class="ttname"><a href="clientes_8c.html#a11ac69b7e3c0edc64e2776a9dc0d12db">getClienteCode</a></div><div class="ttdeci">char * getClienteCode(Cliente e)</div><div class="ttdoc">Função que obtém o código do cliente.</div><div class="ttdef"><b>Definition:</b> <a href="clientes_8c_source.html#l00124">clientes.c:124</a></div></div>
+<div class="ttc" id="acatalogo_8c_html_aa40131c98313b4683617cd1757f7ea66"><div class="ttname"><a href="catalogo_8c.html#aa40131c98313b4683617cd1757f7ea66">free_Catalogo</a></div><div class="ttdeci">void free_Catalogo(Catalogo cat, Funcao f)</div><div class="ttdoc">Função com o objetivo de limpar da memória um dado catálogo.</div><div class="ttdef"><b>Definition:</b> <a href="catalogo_8c_source.html#l00080">catalogo.c:80</a></div></div>
+<div class="ttc" id="aclientes_8c_html_aff6903a09752ec30e03653dbb090062d"><div class="ttname"><a href="clientes_8c.html#aff6903a09752ec30e03653dbb090062d">free_Clientes</a></div><div class="ttdeci">void free_Clientes(Clientes_Catalog cat, Funcao f)</div><div class="ttdoc">Função com o objetivo de limpar da memória um dado catálogo de clientes.</div><div class="ttdef"><b>Definition:</b> <a href="clientes_8c_source.html#l00106">clientes.c:106</a></div></div>
+<div class="ttc" id="astructcliente_html"><div class="ttname"><a href="structcliente.html">cliente</a></div><div class="ttdef"><b>Definition:</b> <a href="clientes_8c_source.html#l00008">clientes.c:8</a></div></div>
+<div class="ttc" id="astructcatalogo_html"><div class="ttname"><a href="structcatalogo.html">catalogo</a></div><div class="ttdef"><b>Definition:</b> <a href="catalogo_8c_source.html#l00009">catalogo.c:9</a></div></div>
+<div class="ttc" id="aclientes_8c_html_a329568d1883aca127fc8025cd20f0419"><div class="ttname"><a href="clientes_8c.html#a329568d1883aca127fc8025cd20f0419">free_c</a></div><div class="ttdeci">void free_c(Cliente c)</div><div class="ttdoc">Função que limpa da memória o espaço ocupado por um dado cliente.</div><div class="ttdef"><b>Definition:</b> <a href="clientes_8c_source.html#l00030">clientes.c:30</a></div></div>
+<div class="ttc" id="aclientes_8c_html_aa1605360028ceae03157e2a53b9d30e4"><div class="ttname"><a href="clientes_8c.html#aa1605360028ceae03157e2a53b9d30e4">existe_cliente</a></div><div class="ttdeci">Boolean existe_cliente(Clientes_Catalog cat, char *key)</div><div class="ttdoc">Função que verifica se existe um cliente.</div><div class="ttdef"><b>Definition:</b> <a href="clientes_8c_source.html#l00069">clientes.c:69</a></div></div>
+<div class="ttc" id="aclientes_8c_html_aea87fb3dba1a84e2f72b72445d07f796"><div class="ttname"><a href="clientes_8c.html#aea87fb3dba1a84e2f72b72445d07f796">imprime_Clientes</a></div><div class="ttdeci">void imprime_Clientes(Clientes_Catalog cat)</div><div class="ttdoc">Função que imprime os clientes do catálogo de clientes.</div><div class="ttdef"><b>Definition:</b> <a href="clientes_8c_source.html#l00115">clientes.c:115</a></div></div>
+<div class="ttc" id="acatalogo_8c_html_a93fc716391dc53901dc2dbff97e75da1"><div class="ttname"><a href="catalogo_8c.html#a93fc716391dc53901dc2dbff97e75da1">existe_Catalogo</a></div><div class="ttdeci">Boolean existe_Catalogo(Catalogo catalogo, char *key)</div><div class="ttdoc">Função que verifica se existe uma key num catálogo.</div><div class="ttdef"><b>Definition:</b> <a href="catalogo_8c_source.html#l00032">catalogo.c:32</a></div></div>
+<div class="ttc" id="aclientes_8c_html_a7a093cfc4d9f6b350741d34d05e36e66"><div class="ttname"><a href="clientes_8c.html#a7a093cfc4d9f6b350741d34d05e36e66">altera_Catalogo_Clientes</a></div><div class="ttdeci">Clientes_Catalog altera_Catalogo_Clientes(Clientes_Catalog cat, Cliente e, void *Estrutura)</div><div class="ttdoc">Função que altera no catálogo de clientes um cliente juntamente com a estrutura.</div><div class="ttdef"><b>Definition:</b> <a href="clientes_8c_source.html#l00150">clientes.c:150</a></div></div>
+<div class="ttc" id="aclientes_8c_html_a20860554e851f1ca7364f72a775efeba"><div class="ttname"><a href="clientes_8c.html#a20860554e851f1ca7364f72a775efeba">get_cliente_struct</a></div><div class="ttdeci">Estrutura get_cliente_struct(Clientes_Catalog cat, Cliente c)</div><div class="ttdoc">Função que devolve a estrutura associada a um catálogo e a um cliente que lhe são passados como argum...</div><div class="ttdef"><b>Definition:</b> <a href="clientes_8c_source.html#l00136">clientes.c:136</a></div></div>
+<div class="ttc" id="aclientes_8c_html_a053cb24e83ea691e7761c29774f68a94"><div class="ttname"><a href="clientes_8c.html#a053cb24e83ea691e7761c29774f68a94">insere_Clientes_Catalogo</a></div><div class="ttdeci">Clientes_Catalog insere_Clientes_Catalogo(Clientes_Catalog cat, Cliente e, void *Estrutura)</div><div class="ttdoc">Função que insere no catálogo de clientes um cliente juntamente com uma estrutura.</div><div class="ttdef"><b>Definition:</b> <a href="clientes_8c_source.html#l00093">clientes.c:93</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

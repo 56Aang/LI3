@@ -1,0 +1,3339 @@
+\hypertarget{estruturas_8c}{}\doxysection{Referência ao ficheiro src/estruturas.c}
+\label{estruturas_8c}\index{src/estruturas.c@{src/estruturas.c}}
+
+
+Ficheiro que contém a A\+PI relativa à implementação das estruturas.  
+
+
+{\ttfamily \#include \char`\"{}../include/estruturas.\+h\char`\"{}}\newline
+\doxysubsection*{Estruturas de Dados}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structquerie2}{querie2}}
+\item 
+struct \mbox{\hyperlink{structquerie3}{querie3}}
+\item 
+struct \mbox{\hyperlink{structquerie5}{querie5}}
+\item 
+struct \mbox{\hyperlink{structquerie6}{querie6}}
+\item 
+struct \mbox{\hyperlink{structquerie7}{querie7}}
+\item 
+struct \mbox{\hyperlink{structquerie8}{querie8}}
+\item 
+struct \mbox{\hyperlink{structquerie9}{querie9}}
+\item 
+struct \mbox{\hyperlink{structquerie10aux}{querie10aux}}
+\item 
+struct \mbox{\hyperlink{structquerie10}{querie10}}
+\item 
+struct \mbox{\hyperlink{structquerie11aux}{querie11aux}}
+\item 
+struct \mbox{\hyperlink{structquerie11}{querie11}}
+\item 
+struct \mbox{\hyperlink{structquerie12aux}{querie12aux}}
+\item 
+struct \mbox{\hyperlink{structquerie12}{querie12}}
+\item 
+struct \mbox{\hyperlink{structquerie13}{querie13}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Definições de tipos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{estruturas_8c_ae3ddb2c0b278e1c6cc351a5e16f259d8}\label{estruturas_8c_ae3ddb2c0b278e1c6cc351a5e16f259d8}} 
+typedef struct \mbox{\hyperlink{structquerie10aux}{querie10aux}} $\ast$ {\bfseries Q10\+Aux}
+\item 
+\mbox{\Hypertarget{estruturas_8c_ad932413f3fbd745fcece477df147186c}\label{estruturas_8c_ad932413f3fbd745fcece477df147186c}} 
+typedef struct \mbox{\hyperlink{structquerie11aux}{querie11aux}} $\ast$ {\bfseries Q11\+Aux}
+\item 
+\mbox{\Hypertarget{estruturas_8c_a4a2152509cd688c059cab9fee4472e3a}\label{estruturas_8c_a4a2152509cd688c059cab9fee4472e3a}} 
+typedef struct \mbox{\hyperlink{structquerie12aux}{querie12aux}} $\ast$ {\bfseries Q12\+Aux}
+\end{DoxyCompactItemize}
+\doxysubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+Q2 \mbox{\hyperlink{estruturas_8c_a4f78a342418e7557703855977d27d61a}{init\+\_\+\+Q2}} (int n)
+\begin{DoxyCompactList}\small\item\em Função que inicializa a estrutura Q2. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{estruturas_8c_ae93bb7d4dc2c3b1009ab148785546871}{free\+Q2}} (Q2 q)
+\begin{DoxyCompactList}\small\item\em Função que liberta o espaço alocado por uma estrutura Q2. \end{DoxyCompactList}\item 
+char $\ast$$\ast$ \mbox{\hyperlink{estruturas_8c_ab259a8bdc7ff97956f3e4d090c75978e}{get\+Lista\+\_\+\+Prods\+Q2}} (Q2 q)
+\begin{DoxyCompactList}\small\item\em Função que devolve a lista de produtos presente na estrutura. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{estruturas_8c_a9e0e8c25250d5db37d4ebc1fc743798b}{get\+Num\+\_\+\+Total\+Q2}} (Q2 q)
+\begin{DoxyCompactList}\small\item\em Função que devolve o número total de elementos em Q2. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{estruturas_8c_a09455f8e8bb85f74e74c289d7375ac78}{set\+Lista\+\_\+\+Prods\+Q2}} (char $\ast$$\ast$a, Q2 q)
+\begin{DoxyCompactList}\small\item\em Função que estabelece a lista de produtos da estrutura Q2. Caso exista uma previamente, é libertada e substituída. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{estruturas_8c_a89139245dabf3f29938430bb633be51d}{set\+Num\+\_\+total\+Q2}} (int n, Q2 q)
+\begin{DoxyCompactList}\small\item\em Função que fixa o número total de elementos dentro da estrutura. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{estruturas_8c_a55dfe0c3e3dc5cc8ce80bad1bd26f7ae}{insere\+\_\+\+Prod\+Q2}} (char $\ast$key, Q2 q)
+\begin{DoxyCompactList}\small\item\em Função que insere na estrutura um código de produto. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{estruturas_8c_a905cb45656c0f85394eac5c54234e1ed}{get\+Prod\+Q2}} (Q2 q, int i)
+\begin{DoxyCompactList}\small\item\em Função que retorna um produto numa dada posição. \end{DoxyCompactList}\item 
+Q3 \mbox{\hyperlink{estruturas_8c_ae07ea144b7cbd11836f9288387fa7678}{init\+\_\+\+Q3}} ()
+\begin{DoxyCompactList}\small\item\em Função que inicializa a estrutura Q3. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{estruturas_8c_a091bc27f06eb37f65306a188e24fe712}{get\+Qt\+\_\+\+N\+Q3}} (Q3 q)
+\begin{DoxyCompactList}\small\item\em Função que retorna a quantidade total de vendas registas em modo Normal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{estruturas_8c_ae7ddfc6c12a3175edafa3f58f95b0b6a}{set\+Qt\+\_\+\+N\+Q3}} (int n, Q3 q)
+\begin{DoxyCompactList}\small\item\em Função que estabelece a quantidade total de vendas registas em modo Normal. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{estruturas_8c_a86c58f60f5b15e13a6f44bdf1e7e058a}{get\+Qt\+\_\+\+P\+Q3}} (Q3 q)
+\begin{DoxyCompactList}\small\item\em Função que retorna a quantidade total de vendas registas em modo Promocional. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{estruturas_8c_a350838bc921f8e756fc5867488b40318}{set\+Qt\+\_\+\+P\+Q3}} (int n, Q3 q)
+\begin{DoxyCompactList}\small\item\em Função que estabelece a quantidade total de vendas registas em modo promocional. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{estruturas_8c_a75b6e26a697fc6a042b69630cc50dc8f}{get\+Fat\+\_\+\+N\+Q3}} (Q3 q)
+\begin{DoxyCompactList}\small\item\em Função que retorna o total faturado em modo Normal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{estruturas_8c_a029be7affe21b7c0f6a660b4f1859fff}{set\+Fat\+\_\+\+N\+Q3}} (double n, Q3 q)
+\begin{DoxyCompactList}\small\item\em Função que estabelece o total faturado em modo normal. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{estruturas_8c_a8d63c3baf11a777aee5af2979038f9be}{get\+Fat\+\_\+\+P\+Q3}} (Q3 q)
+\begin{DoxyCompactList}\small\item\em Função que retorna o total faturado em modo promocional. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{estruturas_8c_af16b3ade4c87b1b81b3b0771fdb4078f}{set\+Fat\+\_\+\+P\+Q3}} (double n, Q3 q)
+\begin{DoxyCompactList}\small\item\em Função que estabelece o total faturado em modo promocional. \end{DoxyCompactList}\item 
+Q5 \mbox{\hyperlink{estruturas_8c_a7ff451b69b1193f6205abef6b36cb9f2}{init\+\_\+\+Q5}} (int n)
+\begin{DoxyCompactList}\small\item\em Função que inicializa a estrutura Q5. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{estruturas_8c_a2657e49721819be2c973324b7f4b1fb6}{free\+Q5}} (Q5 q)
+\begin{DoxyCompactList}\small\item\em Função que liberta o espaço alocado por uma estrutura Q5. \end{DoxyCompactList}\item 
+char $\ast$$\ast$ \mbox{\hyperlink{estruturas_8c_abc1fdb5c81669ebbd85128fae87d3b61}{get\+Lista\+\_\+\+Clientes\+Q5}} (Q5 q)
+\begin{DoxyCompactList}\small\item\em Função que devolve a lista de clientes presente na estrutura. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{estruturas_8c_adae1bf183249b0be29d2f96224ec73d1}{set\+Lista\+\_\+\+Clientes\+Q5}} (char $\ast$$\ast$a, Q5 q)
+\begin{DoxyCompactList}\small\item\em Função que estabelece a lista de clientes da estrutura Q5. Caso exista uma previamente, é libertada e substituída. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{estruturas_8c_ac4ee86ddb19af3c5e46b2e10dcb9fc8f}{insere\+\_\+\+Cliente\+Q5}} (char $\ast$key, Q5 q)
+\begin{DoxyCompactList}\small\item\em Função que insere na estrutura um código de cliente. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{estruturas_8c_af408459f743bbb053ccccdd324360399}{get\+Cliente\+Q5}} (Q5 q, int i)
+\begin{DoxyCompactList}\small\item\em Função que retorna um cliente numa dada posição. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{estruturas_8c_a9ae516a9240011b7f6a88bf126504875}{get\+Num\+\_\+\+Total\+Q5}} (Q5 q)
+\begin{DoxyCompactList}\small\item\em Função que devolve o número total de elementos em Q5. \end{DoxyCompactList}\item 
+Q6 \mbox{\hyperlink{estruturas_8c_a326f73d7aaf537a118b4fd22b35bacad}{init\+\_\+\+Q6}} ()
+\begin{DoxyCompactList}\small\item\em Função que inicializa a estrutura Q6. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{estruturas_8c_a20dc4a41aafa3eacdf5d260cbfa7b546}{get\+Num\+Prods\+Q6}} (Q6 q)
+\begin{DoxyCompactList}\small\item\em Função que retorna a quantidade de produtos. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{estruturas_8c_adfbb57b62820a71863070c7fdacb4071}{get\+Num\+Clientess\+Q6}} (Q6 q)
+\begin{DoxyCompactList}\small\item\em Função que retorna a quantidade de clientes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{estruturas_8c_a7b486f143ae7d234e9c519a2d18f627f}{set\+Num\+Prods\+Q6}} (Q6 q, int n)
+\begin{DoxyCompactList}\small\item\em Função que estabelece o número de produtos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{estruturas_8c_a2e15d8a1596e4fd5d59eea9412ac0f6a}{set\+Num\+Clientes\+Q6}} (Q6 q, int n)
+\begin{DoxyCompactList}\small\item\em Função que estabelece o número de produtos. \end{DoxyCompactList}\item 
+Q7 \mbox{\hyperlink{estruturas_8c_ab190d1e77a7bf1e6d7ebdb6f5b9187f5}{init\+\_\+\+Q7}} ()
+\begin{DoxyCompactList}\small\item\em Função que inicializa a estrutura Q7. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{estruturas_8c_a6de0c29a88ff9fe2c0dbab9caa9e5ec4}{get\+Qt\+\_\+\+Filial\+Q7}} (Q7 q, int i, int j)
+\begin{DoxyCompactList}\small\item\em Função que retorna a quantidade total comprada numa dada filial, num dado mês. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{estruturas_8c_a6296c506821d0c6a5edbf2f3e8caf708}{set\+Qt\+\_\+\+Filial\+Q7}} (Q7 q, int n, int i, int j)
+\begin{DoxyCompactList}\small\item\em Função que estabelece a quantidade total comprada numa dada filial, num dado mês. \end{DoxyCompactList}\item 
+Q8 \mbox{\hyperlink{estruturas_8c_a62c7951790fd4d1888d8b91775d42507}{init\+\_\+\+Q8}} ()
+\begin{DoxyCompactList}\small\item\em Função que inicializa a estrutura Q8. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{estruturas_8c_a7297594e6185a277bb88a435b80d2843}{get\+N\+Vendas\+\_\+\+Q8}} (Q8 q)
+\begin{DoxyCompactList}\small\item\em Função que retorna a quantidade total de vendas registadas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{estruturas_8c_ad0bb18f7237bbfe9aee55bd7d5b32415}{set\+N\+Vendas\+\_\+\+Q8}} (int n, Q8 q)
+\begin{DoxyCompactList}\small\item\em Função que estabelece a quantidade total de vendas registadas. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{estruturas_8c_a7791862d9be91d9ab89ab507ccb605bc}{get\+Fat\+\_\+\+Q8}} (Q8 q)
+\begin{DoxyCompactList}\small\item\em Função que retorna o total faturado. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{estruturas_8c_ae5f3bba421573d83341b22ad44722815}{set\+Fat\+\_\+\+Q8}} (double n, Q8 q)
+\begin{DoxyCompactList}\small\item\em Função que estabelece o total faturado. \end{DoxyCompactList}\item 
+Q9 \mbox{\hyperlink{estruturas_8c_ae7e431264b18ffb3bc4d0818749d4f85}{init\+\_\+\+Q9}} (int n)
+\begin{DoxyCompactList}\small\item\em Função que inicializa a estrutura Q9. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{estruturas_8c_a4bdcf1cfe0759894da006eb85ff9ddf8}{free\+Q9}} (Q9 q)
+\begin{DoxyCompactList}\small\item\em Função que liberta o espaço alocado por uma estrutura Q9. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{estruturas_8c_a961f7422c1e722b50e8fab6ff4a021b8}{get\+Total\+N\+Q9}} (Q9 q)
+\begin{DoxyCompactList}\small\item\em Função que retorna a quantidade total clientes que compraram em modo Normal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{estruturas_8c_a936b77cd07a68b7dbd5cfec0aa5237b5}{set\+Total\+N\+Q9}} (Q9 q, int n)
+\begin{DoxyCompactList}\small\item\em Função que estabelece a quantidade total clientes que compraram em modo Normal. \end{DoxyCompactList}\item 
+char $\ast$$\ast$ \mbox{\hyperlink{estruturas_8c_ac049e518de65a922b035648adbca3011}{get\+Lista\+\_\+\+Prods\+N\+Q9}} (Q9 q)
+\begin{DoxyCompactList}\small\item\em Função que devolve a lista de produtos que foram comprados em modo Normal presente na estrutura. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{estruturas_8c_a65f6cf9c65dfa54185e2e97a1b61989b}{set\+Lista\+\_\+\+Prods\+N\+Q9}} (char $\ast$$\ast$a, Q9 q)
+\begin{DoxyCompactList}\small\item\em Função que estabelece a lista de produtos comprados em modo Normal da estrutura Q9. Caso exista uma previamente, é libertada e substituída. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{estruturas_8c_a27d3593315bdeabf5e55f63880582a1f}{insere\+\_\+\+Prod\+N\+Q9}} (char $\ast$key, Q9 q)
+\begin{DoxyCompactList}\small\item\em Função que insere na estrutura um código produto comprado em modo Normal. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{estruturas_8c_a7773d8d879984cb757cc92cbda1aa4db}{get\+Prod\+N\+Q9}} (Q9 q, int i)
+\begin{DoxyCompactList}\small\item\em Função que retorna um produto comprado em modo Normal numa dada posição. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{estruturas_8c_a524f34f450aeea4e6642d82ccba84083}{get\+Total\+P\+Q9}} (Q9 q)
+\begin{DoxyCompactList}\small\item\em Função que retorna a quantidade total clientes que compraram em modo Promocional. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{estruturas_8c_a7ca6bd940200f4faf28db8168cb2c8f6}{set\+Total\+P\+Q9}} (Q9 q, int n)
+\begin{DoxyCompactList}\small\item\em Função que estabelece a quantidade total clientes que compraram em modo Promocional. \end{DoxyCompactList}\item 
+char $\ast$$\ast$ \mbox{\hyperlink{estruturas_8c_aa3ec0d05af285be17b3fae819737c1c5}{get\+Lista\+\_\+\+Prods\+P\+Q9}} (Q9 q)
+\begin{DoxyCompactList}\small\item\em Função que devolve a lista de produtos que foram comprados em modo Promocional presente na estrutura. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{estruturas_8c_a615ee8b1f858a43902d2022c82df4f48}{set\+Lista\+\_\+\+Prods\+P\+Q9}} (char $\ast$$\ast$a, Q9 q)
+\begin{DoxyCompactList}\small\item\em Função que estabelece a lista de produtos comprados em modo Promocional da estrutura Q9. Caso exista uma previamente, é libertada e substituída. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{estruturas_8c_a8310f07b304f10a440373631d88e9c5f}{insere\+\_\+\+Prod\+P\+Q9}} (char $\ast$key, Q9 q)
+\begin{DoxyCompactList}\small\item\em Função que insere na estrutura um código produto comprado em modo Promocional. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{estruturas_8c_afc1ffcd21cd5988f72ca730337fa35c4}{get\+Prod\+P\+Q9}} (Q9 q, int i)
+\begin{DoxyCompactList}\small\item\em Função que retorna um produto comprado em modo Promocional numa dada posição. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structquerie10aux}{Q10\+Aux}} \mbox{\hyperlink{estruturas_8c_ac26ac45148a10e68a5c8ddeeb991fd82}{init\+\_\+\+Q10\+Aux}} (char $\ast$p)
+\begin{DoxyCompactList}\small\item\em Função que inicializa a estrutura Q10\+Aux. \end{DoxyCompactList}\item 
+Q10 \mbox{\hyperlink{estruturas_8c_aa08fa5336ceabb37b057a600c90108c0}{init\+\_\+\+Q10}} (int n)
+\begin{DoxyCompactList}\small\item\em Função que inicializa a estrutura Q10. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{estruturas_8c_ad45b8bac42cd5987cf34b07bf43b5cb1}{free\+Q10}} (Q10 q)
+\begin{DoxyCompactList}\small\item\em Função que liberta o espaço alocado por uma estrutura Q10. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{estruturas_8c_a5eea1cbd4f2f20361819bc64e16b4830}{set\+Q10\+Aux}} (\mbox{\hyperlink{structquerie10aux}{Q10\+Aux}} q, char $\ast$p, int qtd)
+\begin{DoxyCompactList}\small\item\em Função que estabelece a key e a quantidade de uma estrutura. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{estruturas_8c_a3b3fee2a6ed4ef4031bfe6b499ee5064}{insere\+\_\+\+Prod\+Info\+Q10}} (Q10 q, char $\ast$p, int qtd)
+\begin{DoxyCompactList}\small\item\em Função que insere na estrutura um código produto e a quantidade total comprada desse produto. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{estruturas_8c_a57cfaedb9154ebefa017793d7e9069fb}{get\+Produto\+Q10}} (Q10 q, int i)
+\begin{DoxyCompactList}\small\item\em Função que retorna o código de produto numa dada posição. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{estruturas_8c_a1d3e4709419d16264e02e7105ed9181e}{get\+Q10\+Qtd\+Produto}} (Q10 q, int i)
+\begin{DoxyCompactList}\small\item\em Função que retorna a quantidade total comprada de um produto. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{estruturas_8c_a6f05465cd9a94e92dfdaa1d5992337de}{get\+Num\+\_\+\+Total\+Q10}} (Q10 q)
+\begin{DoxyCompactList}\small\item\em Função que retorna o total de elementos na estrutura. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{estruturas_8c_ac70138609ef6aa6fabca57aca8681e83}{compare}} (const void $\ast$a, const void $\ast$b)
+\begin{DoxyCompactList}\small\item\em Função que compara duas estruturas Q10\+Aux pela quantidade. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{estruturas_8c_ab8e76cc797a94c81f1565859e2d52206}{sort\+And\+Get\+Q10}} (Q10 q)
+\begin{DoxyCompactList}\small\item\em Função que ordena uma estrutura. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structquerie11aux}{Q11\+Aux}} \mbox{\hyperlink{estruturas_8c_afa6665eab8b068e51289e6339e58d10d}{init\+\_\+\+Q11\+Aux}} (char $\ast$p)
+\begin{DoxyCompactList}\small\item\em Função que inicializa a estrutura Q11\+Aux. \end{DoxyCompactList}\item 
+Q11 \mbox{\hyperlink{estruturas_8c_a083b5ba28f8cd400e9577d217b5651ad}{init\+\_\+\+Q11}} (int n)
+\begin{DoxyCompactList}\small\item\em Função que inicializa a estrutura Q11. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{estruturas_8c_a8416b600cef53dfe3a52d5240c439aad}{free\+Q11}} (Q11 q)
+\begin{DoxyCompactList}\small\item\em Função que liberta o espaço alocado por uma estrutura Q11. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{estruturas_8c_a24626033b42d42f01097a3bb9deda944}{set\+Q11\+Aux}} (\mbox{\hyperlink{structquerie11aux}{Q11\+Aux}} q, char $\ast$p, int qt\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Função que estabelece a key e a quantidade, total e por filial, de uma estrutura. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{estruturas_8c_a8a4021930dd4dd73ce5da02f3324ecf7}{insere\+\_\+\+Prod\+Info\+Q11}} (Q11 q, char $\ast$p, int qt\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Função que insere na estrutura um código produto e a quantidade total comprada desse produto. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{estruturas_8c_af12a469a69c68fd7efda71a42dc34ce2}{get\+Produto\+Q11}} (Q11 q, int i)
+\begin{DoxyCompactList}\small\item\em Função que retorna o código de produto numa dada posição. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{estruturas_8c_a145e619612a0a6eb2941c817df3f2477}{get\+Q11\+Qtd\+Produto}} (Q11 q, int i)
+\begin{DoxyCompactList}\small\item\em Função que retorna a quantidade total comprada de um produto. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{estruturas_8c_ab4523ae1c16694bf756f2d780383702a}{get\+Q11\+N\+Clientes}} (Q11 q, int i)
+\begin{DoxyCompactList}\small\item\em Função que retorna a quantidade total de clientes que compraram um produto. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{estruturas_8c_a805ae53be14f2f04772ddeffe0bd9b44}{get\+Num\+\_\+\+Total\+Q11}} (Q11 q)
+\begin{DoxyCompactList}\small\item\em Função que retorna a quantidade total de elementos numa estrutura. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{estruturas_8c_a65320ba6ef2a1991f71ea5262b1d623f}{get\+Qtd\+Filial\+Q11}} (Q11 q, int pos, int filial)
+\begin{DoxyCompactList}\small\item\em Função que retorna a quantidade total comprada de um produto numa dada filial. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{estruturas_8c_a74f254e23f24d13b1b77b85f9936cb04}{get\+N\+Clientes\+Filial\+Q11}} (Q11 q, int pos, int filial)
+\begin{DoxyCompactList}\small\item\em Função que retorna a quantidade total de clientes que compraram um produto numa dada filial. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{estruturas_8c_ae1365abf168b20ce44f044cf9e616673}{altera\+N\+Clientes\+Q11}} (Q11 q, int j, int nc, int filial)
+\begin{DoxyCompactList}\small\item\em Função que altera o total de clientes que comprou um certo produto, bem como por filial. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{estruturas_8c_affec5cc58f67b01c883207388146f6b2}{compare\+Q11}} (const void $\ast$a, const void $\ast$b)
+\begin{DoxyCompactList}\small\item\em Função que compara duas estruturas Q11\+Aux pela quantidade. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{estruturas_8c_ad283e416672cf5a4f33f45360f8cb3c7}{sort\+And\+Get\+Q11}} (Q11 q)
+\begin{DoxyCompactList}\small\item\em Função que ordena uma estrutura. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structquerie12aux}{Q12\+Aux}} \mbox{\hyperlink{estruturas_8c_ab46c7bea720a42c33c4bf96ca59519dd}{init\+\_\+\+Q12\+Aux}} (char $\ast$p)
+\begin{DoxyCompactList}\small\item\em Função que inicializa a estrutura Q12\+Aux. \end{DoxyCompactList}\item 
+Q12 \mbox{\hyperlink{estruturas_8c_a754154c6f99b222d8bf98ee3b3e58b47}{init\+\_\+\+Q12}} (int n)
+\begin{DoxyCompactList}\small\item\em Função que inicializa a estrutura Q12. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{estruturas_8c_a35ab1d82b5e76bdd0ffb864544fb3420}{free\+Q12}} (Q12 q)
+\begin{DoxyCompactList}\small\item\em Função que liberta o espaço alocado por uma estrutura Q12. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{estruturas_8c_a7fe72cfa1852481895c5a876a7e4f5f4}{set\+Q12\+Aux}} (\mbox{\hyperlink{structquerie12aux}{Q12\+Aux}} q, char $\ast$p, double faturado)
+\begin{DoxyCompactList}\small\item\em Função que estabelece a key e o total faturado de uma estrutura. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{estruturas_8c_a9c83dd79a8536a5f76afc2c58cb67cf7}{insere\+\_\+\+Prod\+Info\+Q12}} (Q12 q, char $\ast$p, double faturado)
+\begin{DoxyCompactList}\small\item\em Função que insere na estrutura um código produto e o total faturado desse produto. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{estruturas_8c_ad3d2034aa97a5afb1c0272e0c1b63551}{get\+Produto\+Q12}} (Q12 q, int i)
+\begin{DoxyCompactList}\small\item\em Função que retorna o código de produto numa dada posição. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{estruturas_8c_a498e3df7c9234cdc0e63ac3db2da4f30}{get\+Q12\+Faturado}} (Q12 q, int i)
+\begin{DoxyCompactList}\small\item\em Função que retorna o total faturado de um dado produto. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{estruturas_8c_a176478e1727c80f13fbd06fb706489fd}{get\+Num\+\_\+\+Total\+Q12}} (Q12 q)
+\begin{DoxyCompactList}\small\item\em Função que retorna a quantidade total de elementos na estrutura. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{estruturas_8c_a273aaa394c26c4d3126e01978e2ced13}{compare\+Q12}} (const void $\ast$a, const void $\ast$b)
+\begin{DoxyCompactList}\small\item\em Função que compara duas estruturas Q12\+Aux pelo total faturado. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{estruturas_8c_ae1b6abc1d4907a928d52d2de7be09c3a}{sort\+And\+Get\+Q12}} (Q12 q)
+\begin{DoxyCompactList}\small\item\em Função que ordena uma estrutura. \end{DoxyCompactList}\item 
+Q13 \mbox{\hyperlink{estruturas_8c_a40348610ddfb3b978c4ba8c7999625d7}{init\+\_\+\+Q13}} ()
+\begin{DoxyCompactList}\small\item\em Função que inicializa a estrutura Q13. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{estruturas_8c_ae94dda05ff7b7786b3fa2f879cbcaef1}{free\+\_\+\+Q13}} (Q13 q)
+\begin{DoxyCompactList}\small\item\em Função que liberta o espaço alocado por uma estrutura Q13. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{estruturas_8c_ac1231409ac765d1718310ffbf44d795d}{get\+Q\+\_\+\+Clientes13}} (Q13 q)
+\begin{DoxyCompactList}\small\item\em Função que retorna a quantidade total de clientes. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{estruturas_8c_abf02af50107fe7bda8e35d148f2c38f0}{get\+Q\+\_\+\+Produtos13}} (Q13 q)
+\begin{DoxyCompactList}\small\item\em Função que retorna a quantidade total de produtos. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{estruturas_8c_a148617c2ee477178285f803ca55a7b73}{get\+V\+\_\+\+Validas13}} (Q13 q)
+\begin{DoxyCompactList}\small\item\em Função que retorna a quantidade total de vendas válidas. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{estruturas_8c_acb05b1690473b9bae2d2daeb6e272973}{get\+V\+\_\+\+Totais13}} (Q13 q)
+\begin{DoxyCompactList}\small\item\em Função que retorna a quantidade total de linhas de venda lidas. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{estruturas_8c_ab349add45eb17f31d012046c6490baa4}{get\+Clients\+\_\+\+Path13}} (Q13 q)
+\begin{DoxyCompactList}\small\item\em Função que retorna uma string com o caminho para o ficheiro de clientes. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{estruturas_8c_a8292aa0fa9f2fa68a02313919955e378}{get\+Products\+\_\+\+Path13}} (Q13 q)
+\begin{DoxyCompactList}\small\item\em Função que retorna uma string com o caminho para o ficheiro de produtos. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{estruturas_8c_a742ce0fe2aaee2ae7b10684439bc9b9b}{get\+Sales\+\_\+\+Path13}} (Q13 q)
+\begin{DoxyCompactList}\small\item\em Função que retorna uma string com o caminho para o ficheiro de vendas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{estruturas_8c_a70c5f541cf5b168d8b3851e828813e6a}{set\+Q\+\_\+\+Clientes13}} (Q13 q, int n)
+\begin{DoxyCompactList}\small\item\em Função que estabelece a quantidade total de clientes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{estruturas_8c_ad70fe37354f2c1d041dd6303bf55046c}{set\+Q\+\_\+\+Produtos13}} (Q13 q, int n)
+\begin{DoxyCompactList}\small\item\em Função que estabelece a quantidade total de produtos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{estruturas_8c_a8d1c23caf932f5e80f165b5fe5d49111}{set\+V\+\_\+\+Validas13}} (Q13 q, int n)
+\begin{DoxyCompactList}\small\item\em Função que estabelece a quantidade total de vendas válidas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{estruturas_8c_a4c4b00824bb825a5b96699b114a4b518}{set\+V\+\_\+\+Totais13}} (Q13 q, int n)
+\begin{DoxyCompactList}\small\item\em Função que estabelece a quantidade total de linhas de venda lidas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{estruturas_8c_ab4557190adbc6318f72a7b75c18b1060}{set\+Clients\+\_\+\+Path13}} (Q13 q, char $\ast$file)
+\begin{DoxyCompactList}\small\item\em Função que estabelece a quantidade total de vendas válidas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{estruturas_8c_a08cbcfcc3d7fc1306d5c55e3fb52628a}{set\+Products\+\_\+\+Path13}} (Q13 q, char $\ast$file)
+\begin{DoxyCompactList}\small\item\em Função que estabelece a quantidade total de vendas válidas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{estruturas_8c_a7df59ab6bcb1b50841edb6afa82b5d6c}{set\+Sales\+\_\+\+Path13}} (Q13 q, char $\ast$file)
+\begin{DoxyCompactList}\small\item\em Função que estabelece a quantidade total de vendas válidas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Ficheiro que contém a A\+PI relativa à implementação das estruturas. 
+
+
+
+\doxysubsection{Documentação das funções}
+\mbox{\Hypertarget{estruturas_8c_ae1365abf168b20ce44f044cf9e616673}\label{estruturas_8c_ae1365abf168b20ce44f044cf9e616673}} 
+\index{estruturas.c@{estruturas.c}!alteraNClientesQ11@{alteraNClientesQ11}}
+\index{alteraNClientesQ11@{alteraNClientesQ11}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{alteraNClientesQ11()}{alteraNClientesQ11()}}
+{\footnotesize\ttfamily void altera\+N\+Clientes\+Q11 (\begin{DoxyParamCaption}\item[{Q11}]{q,  }\item[{int}]{j,  }\item[{int}]{nc,  }\item[{int}]{filial }\end{DoxyParamCaption})}
+
+
+
+Função que altera o total de clientes que comprou um certo produto, bem como por filial. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Q11 que é a estrutura onde será procurado. \\
+\hline
+{\em j} & int que é a posição do produto na lista. \\
+\hline
+{\em nc} & int que é o número de clientes. \\
+\hline
+{\em filian} & int que é a filial a ser procurada. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+int que é a quantidade total. 
+\end{DoxyReturn}
+
+
+Definido na linha 915 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{915                                                          \{}
+\DoxyCodeLine{916   q-\/>ordenado[j]-\/>nclientes += nc;}
+\DoxyCodeLine{917   q-\/>ordenado[j]-\/>nc[filial] = nc;}
+\DoxyCodeLine{918 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_ac70138609ef6aa6fabca57aca8681e83}\label{estruturas_8c_ac70138609ef6aa6fabca57aca8681e83}} 
+\index{estruturas.c@{estruturas.c}!compare@{compare}}
+\index{compare@{compare}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{compare()}{compare()}}
+{\footnotesize\ttfamily int compare (\begin{DoxyParamCaption}\item[{const void $\ast$}]{a,  }\item[{const void $\ast$}]{b }\end{DoxyParamCaption})}
+
+
+
+Função que compara duas estruturas Q10\+Aux pela quantidade. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em a} & const void$\ast$ que é o primeiro elemento da comparação. \\
+\hline
+{\em b} & const void$\ast$ que é o segundo elemento da comparação. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+int que é o resultado da comparação. 
+\end{DoxyReturn}
+
+
+Definido na linha 737 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{737                                            \{}
+\DoxyCodeLine{738   \mbox{\hyperlink{structquerie10aux}{Q10Aux}} a1 = *((\mbox{\hyperlink{structquerie10aux}{Q10Aux}} *) a);}
+\DoxyCodeLine{739   \mbox{\hyperlink{structquerie10aux}{Q10Aux}} b1 = *((\mbox{\hyperlink{structquerie10aux}{Q10Aux}} *) b);}
+\DoxyCodeLine{740   \textcolor{keywordflow}{return} (b1-\/>quantidade -\/ a1-\/>quantidade);}
+\DoxyCodeLine{741 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_affec5cc58f67b01c883207388146f6b2}\label{estruturas_8c_affec5cc58f67b01c883207388146f6b2}} 
+\index{estruturas.c@{estruturas.c}!compareQ11@{compareQ11}}
+\index{compareQ11@{compareQ11}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{compareQ11()}{compareQ11()}}
+{\footnotesize\ttfamily int compare\+Q11 (\begin{DoxyParamCaption}\item[{const void $\ast$}]{a,  }\item[{const void $\ast$}]{b }\end{DoxyParamCaption})}
+
+
+
+Função que compara duas estruturas Q11\+Aux pela quantidade. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em a} & const void$\ast$ que é o primeiro elemento da comparação. \\
+\hline
+{\em b} & const void$\ast$ que é o segundo elemento da comparação. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+int que é o resultado da comparação. 
+\end{DoxyReturn}
+
+
+Definido na linha 926 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{926                                               \{}
+\DoxyCodeLine{927   \mbox{\hyperlink{structquerie11aux}{Q11Aux}} a1 = *((\mbox{\hyperlink{structquerie11aux}{Q11Aux}} *) a);}
+\DoxyCodeLine{928   \mbox{\hyperlink{structquerie11aux}{Q11Aux}} b1 = *((\mbox{\hyperlink{structquerie11aux}{Q11Aux}} *) b);}
+\DoxyCodeLine{929   \textcolor{keywordflow}{return} (b1-\/>quantidade -\/ a1-\/>quantidade);}
+\DoxyCodeLine{930 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_a273aaa394c26c4d3126e01978e2ced13}\label{estruturas_8c_a273aaa394c26c4d3126e01978e2ced13}} 
+\index{estruturas.c@{estruturas.c}!compareQ12@{compareQ12}}
+\index{compareQ12@{compareQ12}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{compareQ12()}{compareQ12()}}
+{\footnotesize\ttfamily int compare\+Q12 (\begin{DoxyParamCaption}\item[{const void $\ast$}]{a,  }\item[{const void $\ast$}]{b }\end{DoxyParamCaption})}
+
+
+
+Função que compara duas estruturas Q12\+Aux pelo total faturado. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em a} & const void$\ast$ que é o primeiro elemento da comparação. \\
+\hline
+{\em b} & const void$\ast$ que é o segundo elemento da comparação. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+int que é o resultado da comparação. 
+\end{DoxyReturn}
+
+
+Definido na linha 1061 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1061                                               \{}
+\DoxyCodeLine{1062   \mbox{\hyperlink{structquerie12aux}{Q12Aux}} a1 = *((\mbox{\hyperlink{structquerie12aux}{Q12Aux}} *) a);}
+\DoxyCodeLine{1063   \mbox{\hyperlink{structquerie12aux}{Q12Aux}} b1 = *((\mbox{\hyperlink{structquerie12aux}{Q12Aux}} *) b);}
+\DoxyCodeLine{1064   \textcolor{keywordflow}{if}(b1-\/>fat > a1-\/>fat) \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{1065   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(b1-\/>fat < a1-\/>fat) \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{1066   \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{1067 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_ae94dda05ff7b7786b3fa2f879cbcaef1}\label{estruturas_8c_ae94dda05ff7b7786b3fa2f879cbcaef1}} 
+\index{estruturas.c@{estruturas.c}!free\_Q13@{free\_Q13}}
+\index{free\_Q13@{free\_Q13}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{free\_Q13()}{free\_Q13()}}
+{\footnotesize\ttfamily void free\+\_\+\+Q13 (\begin{DoxyParamCaption}\item[{Q13}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que liberta o espaço alocado por uma estrutura Q13. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Q13 que é estrutura a ser libertada. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 1102 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1102                     \{}
+\DoxyCodeLine{1103     \textcolor{keywordflow}{if}(q)\{}
+\DoxyCodeLine{1104         free(q-\/>clients\_File\_Path);}
+\DoxyCodeLine{1105         free(q-\/>products\_File\_Path);}
+\DoxyCodeLine{1106         free(q-\/>sales\_File\_Path);}
+\DoxyCodeLine{1107         free(q);}
+\DoxyCodeLine{1108     \}}
+\DoxyCodeLine{1109 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_ad45b8bac42cd5987cf34b07bf43b5cb1}\label{estruturas_8c_ad45b8bac42cd5987cf34b07bf43b5cb1}} 
+\index{estruturas.c@{estruturas.c}!freeQ10@{freeQ10}}
+\index{freeQ10@{freeQ10}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{freeQ10()}{freeQ10()}}
+{\footnotesize\ttfamily void free\+Q10 (\begin{DoxyParamCaption}\item[{Q10}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que liberta o espaço alocado por uma estrutura Q10. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Q10 que é estrutura a ser libertada. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 660 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{660                    \{}
+\DoxyCodeLine{661   \textcolor{keywordflow}{if}(q-\/>ordenado)\{}
+\DoxyCodeLine{662     \textcolor{keywordtype}{int} i;}
+\DoxyCodeLine{663     \textcolor{keywordflow}{for}(i=0;i<q-\/>num\_total;i++)\{}
+\DoxyCodeLine{664       free(q-\/>ordenado[i]-\/>key);}
+\DoxyCodeLine{665       free(q-\/>ordenado[i]);}
+\DoxyCodeLine{666     \}}
+\DoxyCodeLine{667     free(q-\/>ordenado);}
+\DoxyCodeLine{668   \}}
+\DoxyCodeLine{669   free(q);}
+\DoxyCodeLine{670 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_a8416b600cef53dfe3a52d5240c439aad}\label{estruturas_8c_a8416b600cef53dfe3a52d5240c439aad}} 
+\index{estruturas.c@{estruturas.c}!freeQ11@{freeQ11}}
+\index{freeQ11@{freeQ11}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{freeQ11()}{freeQ11()}}
+{\footnotesize\ttfamily void free\+Q11 (\begin{DoxyParamCaption}\item[{Q11}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que liberta o espaço alocado por uma estrutura Q11. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Q11 que é estrutura a ser libertada. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 804 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{804                    \{}
+\DoxyCodeLine{805   \textcolor{keywordflow}{if}(q-\/>ordenado)\{}
+\DoxyCodeLine{806     \textcolor{keywordtype}{int} i;}
+\DoxyCodeLine{807     \textcolor{keywordflow}{for}(i=0;i<q-\/>num\_total;i++)\{}
+\DoxyCodeLine{808       free(q-\/>ordenado[i]-\/>key);}
+\DoxyCodeLine{809       free(q-\/>ordenado[i]-\/>nc);}
+\DoxyCodeLine{810       free(q-\/>ordenado[i]-\/>qtd);}
+\DoxyCodeLine{811       free(q-\/>ordenado[i]);}
+\DoxyCodeLine{812     \}}
+\DoxyCodeLine{813     free(q-\/>ordenado);}
+\DoxyCodeLine{814   \}}
+\DoxyCodeLine{815   free(q);}
+\DoxyCodeLine{816 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_a35ab1d82b5e76bdd0ffb864544fb3420}\label{estruturas_8c_a35ab1d82b5e76bdd0ffb864544fb3420}} 
+\index{estruturas.c@{estruturas.c}!freeQ12@{freeQ12}}
+\index{freeQ12@{freeQ12}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{freeQ12()}{freeQ12()}}
+{\footnotesize\ttfamily void free\+Q12 (\begin{DoxyParamCaption}\item[{Q12}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que liberta o espaço alocado por uma estrutura Q12. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Q12 que é estrutura a ser libertada. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 984 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{984                    \{}
+\DoxyCodeLine{985   \textcolor{keywordflow}{if}(q-\/>ordenado)\{}
+\DoxyCodeLine{986     \textcolor{keywordtype}{int} i;}
+\DoxyCodeLine{987     \textcolor{keywordflow}{for}(i=0;i<q-\/>num\_total;i++)\{}
+\DoxyCodeLine{988       free(q-\/>ordenado[i]-\/>key);}
+\DoxyCodeLine{989       free(q-\/>ordenado[i]);}
+\DoxyCodeLine{990     \}}
+\DoxyCodeLine{991     free(q-\/>ordenado);}
+\DoxyCodeLine{992   \}}
+\DoxyCodeLine{993   free(q);}
+\DoxyCodeLine{994 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_ae93bb7d4dc2c3b1009ab148785546871}\label{estruturas_8c_ae93bb7d4dc2c3b1009ab148785546871}} 
+\index{estruturas.c@{estruturas.c}!freeQ2@{freeQ2}}
+\index{freeQ2@{freeQ2}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{freeQ2()}{freeQ2()}}
+{\footnotesize\ttfamily void free\+Q2 (\begin{DoxyParamCaption}\item[{Q2}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que liberta o espaço alocado por uma estrutura Q2. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Q2 que é estrutura a ser libertada. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 29 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{29                  \{}
+\DoxyCodeLine{30     \textcolor{keywordflow}{if}(q-\/>lista\_produtos)\{}
+\DoxyCodeLine{31         \textcolor{keywordtype}{int} i;}
+\DoxyCodeLine{32         \textcolor{keywordflow}{for}(i = 0; i< q-\/>num\_total; i++) free(q-\/>lista\_produtos[i]);}
+\DoxyCodeLine{33         free(q-\/>lista\_produtos);}
+\DoxyCodeLine{34     \}}
+\DoxyCodeLine{35     free(q);}
+\DoxyCodeLine{36 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_a2657e49721819be2c973324b7f4b1fb6}\label{estruturas_8c_a2657e49721819be2c973324b7f4b1fb6}} 
+\index{estruturas.c@{estruturas.c}!freeQ5@{freeQ5}}
+\index{freeQ5@{freeQ5}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{freeQ5()}{freeQ5()}}
+{\footnotesize\ttfamily void free\+Q5 (\begin{DoxyParamCaption}\item[{Q5}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que liberta o espaço alocado por uma estrutura Q5. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Q5 que é estrutura a ser libertada. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 229 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{229                  \{}
+\DoxyCodeLine{230     \textcolor{keywordflow}{if}(q-\/>lista\_clientes)\{}
+\DoxyCodeLine{231         \textcolor{keywordtype}{int} i = 0;}
+\DoxyCodeLine{232         \textcolor{keywordflow}{for}(i=0; i<q-\/>num\_total;i++) free(q-\/>lista\_clientes[i]);}
+\DoxyCodeLine{233         free(q-\/>lista\_clientes);}
+\DoxyCodeLine{234     \}}
+\DoxyCodeLine{235     free(q);}
+\DoxyCodeLine{236 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_a4bdcf1cfe0759894da006eb85ff9ddf8}\label{estruturas_8c_a4bdcf1cfe0759894da006eb85ff9ddf8}} 
+\index{estruturas.c@{estruturas.c}!freeQ9@{freeQ9}}
+\index{freeQ9@{freeQ9}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{freeQ9()}{freeQ9()}}
+{\footnotesize\ttfamily void free\+Q9 (\begin{DoxyParamCaption}\item[{Q9}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que liberta o espaço alocado por uma estrutura Q9. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Q9 que é estrutura a ser libertada. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 480 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{480                  \{}
+\DoxyCodeLine{481   \textcolor{keywordtype}{int} i;}
+\DoxyCodeLine{482   \textcolor{keywordflow}{for}(i=0;i<q-\/>totalN;i++)\{}
+\DoxyCodeLine{483     free(q-\/>lista\_clientesN[i]);}
+\DoxyCodeLine{484   \}}
+\DoxyCodeLine{485   free(q-\/>lista\_clientesN);}
+\DoxyCodeLine{486   \textcolor{keywordflow}{for}(i=0;i<q-\/>totalP;i++)\{}
+\DoxyCodeLine{487     free(q-\/>lista\_clientesP[i]);}
+\DoxyCodeLine{488   \}}
+\DoxyCodeLine{489   free(q-\/>lista\_clientesP);}
+\DoxyCodeLine{490   free(q);}
+\DoxyCodeLine{491 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_af408459f743bbb053ccccdd324360399}\label{estruturas_8c_af408459f743bbb053ccccdd324360399}} 
+\index{estruturas.c@{estruturas.c}!getClienteQ5@{getClienteQ5}}
+\index{getClienteQ5@{getClienteQ5}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{getClienteQ5()}{getClienteQ5()}}
+{\footnotesize\ttfamily char$\ast$ get\+Cliente\+Q5 (\begin{DoxyParamCaption}\item[{Q5}]{q,  }\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+Função que retorna um cliente numa dada posição. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Q5 que é estrutura onde será procurada a string na posição referida. \\
+\hline
+{\em i} & int que é a posição a procurar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+char$\ast$ que é a string na posição dada da lista. 
+\end{DoxyReturn}
+
+
+Definido na linha 278 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{278                                \{}
+\DoxyCodeLine{279     \textcolor{keywordflow}{return} (q-\/>lista\_clientes[i]);}
+\DoxyCodeLine{280 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_ab349add45eb17f31d012046c6490baa4}\label{estruturas_8c_ab349add45eb17f31d012046c6490baa4}} 
+\index{estruturas.c@{estruturas.c}!getClients\_Path13@{getClients\_Path13}}
+\index{getClients\_Path13@{getClients\_Path13}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{getClients\_Path13()}{getClients\_Path13()}}
+{\footnotesize\ttfamily char$\ast$ get\+Clients\+\_\+\+Path13 (\begin{DoxyParamCaption}\item[{Q13}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que retorna uma string com o caminho para o ficheiro de clientes. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Q13 que é a estrutura onde será procurado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+char$\ast$ que é a a string com o caminho para o ficheiro. 
+\end{DoxyReturn}
+
+
+Definido na linha 1152 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1152                               \{}
+\DoxyCodeLine{1153     \textcolor{keywordflow}{return} q-\/>clients\_File\_Path;}
+\DoxyCodeLine{1154 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_a75b6e26a697fc6a042b69630cc50dc8f}\label{estruturas_8c_a75b6e26a697fc6a042b69630cc50dc8f}} 
+\index{estruturas.c@{estruturas.c}!getFat\_NQ3@{getFat\_NQ3}}
+\index{getFat\_NQ3@{getFat\_NQ3}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{getFat\_NQ3()}{getFat\_NQ3()}}
+{\footnotesize\ttfamily double get\+Fat\+\_\+\+N\+Q3 (\begin{DoxyParamCaption}\item[{Q3}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que retorna o total faturado em modo Normal. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Q3 que é a estrutura onde será procurado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+double que é o total faturado em modo normal. 
+\end{DoxyReturn}
+
+
+Definido na linha 164 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{164                        \{}
+\DoxyCodeLine{165     \textcolor{keywordflow}{return} q-\/>fat\_total\_N;}
+\DoxyCodeLine{166 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_a8d63c3baf11a777aee5af2979038f9be}\label{estruturas_8c_a8d63c3baf11a777aee5af2979038f9be}} 
+\index{estruturas.c@{estruturas.c}!getFat\_PQ3@{getFat\_PQ3}}
+\index{getFat\_PQ3@{getFat\_PQ3}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{getFat\_PQ3()}{getFat\_PQ3()}}
+{\footnotesize\ttfamily double get\+Fat\+\_\+\+P\+Q3 (\begin{DoxyParamCaption}\item[{Q3}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que retorna o total faturado em modo promocional. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Q3 que é a estrutura onde será procurado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+double que é o total de vendas registadas em modo normal. 
+\end{DoxyReturn}
+
+
+Definido na linha 182 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{182                        \{}
+\DoxyCodeLine{183     \textcolor{keywordflow}{return} q-\/>fat\_total\_P;}
+\DoxyCodeLine{184 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_a7791862d9be91d9ab89ab507ccb605bc}\label{estruturas_8c_a7791862d9be91d9ab89ab507ccb605bc}} 
+\index{estruturas.c@{estruturas.c}!getFat\_Q8@{getFat\_Q8}}
+\index{getFat\_Q8@{getFat\_Q8}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{getFat\_Q8()}{getFat\_Q8()}}
+{\footnotesize\ttfamily double get\+Fat\+\_\+\+Q8 (\begin{DoxyParamCaption}\item[{Q8}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que retorna o total faturado. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Q8 que é a estrutura onde será procurado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+double que é o total faturado. 
+\end{DoxyReturn}
+
+
+Definido na linha 438 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{438                       \{}
+\DoxyCodeLine{439     \textcolor{keywordflow}{return} q-\/>fat\_total;}
+\DoxyCodeLine{440 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_abc1fdb5c81669ebbd85128fae87d3b61}\label{estruturas_8c_abc1fdb5c81669ebbd85128fae87d3b61}} 
+\index{estruturas.c@{estruturas.c}!getLista\_ClientesQ5@{getLista\_ClientesQ5}}
+\index{getLista\_ClientesQ5@{getLista\_ClientesQ5}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{getLista\_ClientesQ5()}{getLista\_ClientesQ5()}}
+{\footnotesize\ttfamily char$\ast$$\ast$ get\+Lista\+\_\+\+Clientes\+Q5 (\begin{DoxyParamCaption}\item[{Q5}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que devolve a lista de clientes presente na estrutura. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Q5 que é estrutura onde se vai buscar a lista de strings. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+char$\ast$$\ast$ que é a lista de strings presente na estrutura. 
+\end{DoxyReturn}
+
+
+Definido na linha 243 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{243                                 \{}
+\DoxyCodeLine{244     \textcolor{keywordflow}{return} q-\/>lista\_clientes;}
+\DoxyCodeLine{245 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_ac049e518de65a922b035648adbca3011}\label{estruturas_8c_ac049e518de65a922b035648adbca3011}} 
+\index{estruturas.c@{estruturas.c}!getLista\_ProdsNQ9@{getLista\_ProdsNQ9}}
+\index{getLista\_ProdsNQ9@{getLista\_ProdsNQ9}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{getLista\_ProdsNQ9()}{getLista\_ProdsNQ9()}}
+{\footnotesize\ttfamily char$\ast$$\ast$ get\+Lista\+\_\+\+Prods\+N\+Q9 (\begin{DoxyParamCaption}\item[{Q9}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que devolve a lista de produtos que foram comprados em modo Normal presente na estrutura. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Q9 que é estrutura onde se vai buscar a lista de strings. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+char$\ast$$\ast$ que é a lista de strings presente na estrutura. 
+\end{DoxyReturn}
+
+
+Definido na linha 516 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{516                               \{}
+\DoxyCodeLine{517     \textcolor{keywordflow}{return} q-\/>lista\_clientesN;}
+\DoxyCodeLine{518 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_aa3ec0d05af285be17b3fae819737c1c5}\label{estruturas_8c_aa3ec0d05af285be17b3fae819737c1c5}} 
+\index{estruturas.c@{estruturas.c}!getLista\_ProdsPQ9@{getLista\_ProdsPQ9}}
+\index{getLista\_ProdsPQ9@{getLista\_ProdsPQ9}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{getLista\_ProdsPQ9()}{getLista\_ProdsPQ9()}}
+{\footnotesize\ttfamily char$\ast$$\ast$ get\+Lista\+\_\+\+Prods\+P\+Q9 (\begin{DoxyParamCaption}\item[{Q9}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que devolve a lista de produtos que foram comprados em modo Promocional presente na estrutura. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Q9 que é estrutura onde se vai buscar a lista de strings. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+char$\ast$$\ast$ que é a lista de strings presente na estrutura. 
+\end{DoxyReturn}
+
+
+Definido na linha 578 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{578                               \{}
+\DoxyCodeLine{579     \textcolor{keywordflow}{return} q-\/>lista\_clientesP;}
+\DoxyCodeLine{580 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_ab259a8bdc7ff97956f3e4d090c75978e}\label{estruturas_8c_ab259a8bdc7ff97956f3e4d090c75978e}} 
+\index{estruturas.c@{estruturas.c}!getLista\_ProdsQ2@{getLista\_ProdsQ2}}
+\index{getLista\_ProdsQ2@{getLista\_ProdsQ2}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{getLista\_ProdsQ2()}{getLista\_ProdsQ2()}}
+{\footnotesize\ttfamily char$\ast$$\ast$ get\+Lista\+\_\+\+Prods\+Q2 (\begin{DoxyParamCaption}\item[{Q2}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que devolve a lista de produtos presente na estrutura. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Q2 que é estrutura onde se vai buscar a lista de strings. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+char$\ast$$\ast$ que é a lista de strings presente na estrutura. 
+\end{DoxyReturn}
+
+
+Definido na linha 43 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{43                              \{}
+\DoxyCodeLine{44     \textcolor{keywordflow}{return} q-\/>lista\_produtos;}
+\DoxyCodeLine{45 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_a74f254e23f24d13b1b77b85f9936cb04}\label{estruturas_8c_a74f254e23f24d13b1b77b85f9936cb04}} 
+\index{estruturas.c@{estruturas.c}!getNClientesFilialQ11@{getNClientesFilialQ11}}
+\index{getNClientesFilialQ11@{getNClientesFilialQ11}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{getNClientesFilialQ11()}{getNClientesFilialQ11()}}
+{\footnotesize\ttfamily int get\+N\+Clientes\+Filial\+Q11 (\begin{DoxyParamCaption}\item[{Q11}]{q,  }\item[{int}]{pos,  }\item[{int}]{filial }\end{DoxyParamCaption})}
+
+
+
+Função que retorna a quantidade total de clientes que compraram um produto numa dada filial. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Q11 que é a estrutura onde será procurado. \\
+\hline
+{\em pos} & int que é a posição do produto na lista. \\
+\hline
+{\em filian} & int que é a filial a ser procurada. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+int que é a quantidade total. 
+\end{DoxyReturn}
+
+
+Definido na linha 903 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{903                                                      \{}
+\DoxyCodeLine{904   \textcolor{keywordflow}{return} q-\/>ordenado[pos]-\/>nc[filial];}
+\DoxyCodeLine{905 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_a6f05465cd9a94e92dfdaa1d5992337de}\label{estruturas_8c_a6f05465cd9a94e92dfdaa1d5992337de}} 
+\index{estruturas.c@{estruturas.c}!getNum\_TotalQ10@{getNum\_TotalQ10}}
+\index{getNum\_TotalQ10@{getNum\_TotalQ10}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{getNum\_TotalQ10()}{getNum\_TotalQ10()}}
+{\footnotesize\ttfamily int get\+Num\+\_\+\+Total\+Q10 (\begin{DoxyParamCaption}\item[{Q10}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que retorna o total de elementos na estrutura. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Q10 que é a estrutura onde será procurado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+int que é a quantidade de clientes. 
+\end{DoxyReturn}
+
+
+Definido na linha 727 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{727                           \{}
+\DoxyCodeLine{728   \textcolor{keywordflow}{return} q-\/>num\_total;}
+\DoxyCodeLine{729 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_a805ae53be14f2f04772ddeffe0bd9b44}\label{estruturas_8c_a805ae53be14f2f04772ddeffe0bd9b44}} 
+\index{estruturas.c@{estruturas.c}!getNum\_TotalQ11@{getNum\_TotalQ11}}
+\index{getNum\_TotalQ11@{getNum\_TotalQ11}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{getNum\_TotalQ11()}{getNum\_TotalQ11()}}
+{\footnotesize\ttfamily int get\+Num\+\_\+\+Total\+Q11 (\begin{DoxyParamCaption}\item[{Q11}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que retorna a quantidade total de elementos numa estrutura. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Q11 que é a estrutura onde será procurado. \\
+\hline
+{\em i} & int que é a posição do produto na lista. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+int que é a quantidade total. 
+\end{DoxyReturn}
+
+
+Definido na linha 881 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{881                           \{}
+\DoxyCodeLine{882   \textcolor{keywordflow}{return} q-\/>num\_total;}
+\DoxyCodeLine{883 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_a176478e1727c80f13fbd06fb706489fd}\label{estruturas_8c_a176478e1727c80f13fbd06fb706489fd}} 
+\index{estruturas.c@{estruturas.c}!getNum\_TotalQ12@{getNum\_TotalQ12}}
+\index{getNum\_TotalQ12@{getNum\_TotalQ12}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{getNum\_TotalQ12()}{getNum\_TotalQ12()}}
+{\footnotesize\ttfamily int get\+Num\+\_\+\+Total\+Q12 (\begin{DoxyParamCaption}\item[{Q12}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que retorna a quantidade total de elementos na estrutura. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Q12 que é a estrutura onde será procurado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+int que é a quantidade total. 
+\end{DoxyReturn}
+
+
+Definido na linha 1051 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1051                           \{}
+\DoxyCodeLine{1052   \textcolor{keywordflow}{return} q-\/>num\_total;}
+\DoxyCodeLine{1053 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_a9e0e8c25250d5db37d4ebc1fc743798b}\label{estruturas_8c_a9e0e8c25250d5db37d4ebc1fc743798b}} 
+\index{estruturas.c@{estruturas.c}!getNum\_TotalQ2@{getNum\_TotalQ2}}
+\index{getNum\_TotalQ2@{getNum\_TotalQ2}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{getNum\_TotalQ2()}{getNum\_TotalQ2()}}
+{\footnotesize\ttfamily int get\+Num\+\_\+\+Total\+Q2 (\begin{DoxyParamCaption}\item[{Q2}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que devolve o número total de elementos em Q2. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Q2 que é estrutura onde se vai buscar o número total de elementos. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+int que é o número total de elementos. 
+\end{DoxyReturn}
+
+
+Definido na linha 52 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{52                         \{}
+\DoxyCodeLine{53     \textcolor{keywordflow}{return} q-\/>num\_total;}
+\DoxyCodeLine{54 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_a9ae516a9240011b7f6a88bf126504875}\label{estruturas_8c_a9ae516a9240011b7f6a88bf126504875}} 
+\index{estruturas.c@{estruturas.c}!getNum\_TotalQ5@{getNum\_TotalQ5}}
+\index{getNum\_TotalQ5@{getNum\_TotalQ5}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{getNum\_TotalQ5()}{getNum\_TotalQ5()}}
+{\footnotesize\ttfamily int get\+Num\+\_\+\+Total\+Q5 (\begin{DoxyParamCaption}\item[{Q5}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que devolve o número total de elementos em Q5. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Q5 que é estrutura onde se vai buscar o número total de elementos. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+int que é o número total de elementos. 
+\end{DoxyReturn}
+
+
+Definido na linha 287 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{287                         \{}
+\DoxyCodeLine{288   \textcolor{keywordflow}{return} q-\/>num\_total;}
+\DoxyCodeLine{289 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_adfbb57b62820a71863070c7fdacb4071}\label{estruturas_8c_adfbb57b62820a71863070c7fdacb4071}} 
+\index{estruturas.c@{estruturas.c}!getNumClientessQ6@{getNumClientessQ6}}
+\index{getNumClientessQ6@{getNumClientessQ6}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{getNumClientessQ6()}{getNumClientessQ6()}}
+{\footnotesize\ttfamily int get\+Num\+Clientess\+Q6 (\begin{DoxyParamCaption}\item[{Q6}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que retorna a quantidade de clientes. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Q6 que é a estrutura onde será procurado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+int que é a quantidade de clientes. 
+\end{DoxyReturn}
+
+
+Definido na linha 326 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{326                            \{}
+\DoxyCodeLine{327   \textcolor{keywordflow}{return} q-\/>nclientes;}
+\DoxyCodeLine{328 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_a20dc4a41aafa3eacdf5d260cbfa7b546}\label{estruturas_8c_a20dc4a41aafa3eacdf5d260cbfa7b546}} 
+\index{estruturas.c@{estruturas.c}!getNumProdsQ6@{getNumProdsQ6}}
+\index{getNumProdsQ6@{getNumProdsQ6}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{getNumProdsQ6()}{getNumProdsQ6()}}
+{\footnotesize\ttfamily int get\+Num\+Prods\+Q6 (\begin{DoxyParamCaption}\item[{Q6}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que retorna a quantidade de produtos. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Q6 que é a estrutura onde será procurado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+int que é a quantidade de produtos. 
+\end{DoxyReturn}
+
+
+Definido na linha 317 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{317                        \{}
+\DoxyCodeLine{318   \textcolor{keywordflow}{return} q-\/>nprodutos;}
+\DoxyCodeLine{319 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_a7297594e6185a277bb88a435b80d2843}\label{estruturas_8c_a7297594e6185a277bb88a435b80d2843}} 
+\index{estruturas.c@{estruturas.c}!getNVendas\_Q8@{getNVendas\_Q8}}
+\index{getNVendas\_Q8@{getNVendas\_Q8}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{getNVendas\_Q8()}{getNVendas\_Q8()}}
+{\footnotesize\ttfamily int get\+N\+Vendas\+\_\+\+Q8 (\begin{DoxyParamCaption}\item[{Q8}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que retorna a quantidade total de vendas registadas. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Q8 que é a estrutura onde será procurado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+int que é a quantidade de vendas registadas. 
+\end{DoxyReturn}
+
+
+Definido na linha 420 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{420                        \{}
+\DoxyCodeLine{421     \textcolor{keywordflow}{return} q-\/>nvendas\_total;}
+\DoxyCodeLine{422 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_a7773d8d879984cb757cc92cbda1aa4db}\label{estruturas_8c_a7773d8d879984cb757cc92cbda1aa4db}} 
+\index{estruturas.c@{estruturas.c}!getProdNQ9@{getProdNQ9}}
+\index{getProdNQ9@{getProdNQ9}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{getProdNQ9()}{getProdNQ9()}}
+{\footnotesize\ttfamily char$\ast$ get\+Prod\+N\+Q9 (\begin{DoxyParamCaption}\item[{Q9}]{q,  }\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+Função que retorna um produto comprado em modo Normal numa dada posição. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Q9 que é estrutura onde será procurada a string na posição referida. \\
+\hline
+{\em i} & int que é a posição a procurar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+char$\ast$ que é a string na posição dada da lista. 
+\end{DoxyReturn}
+
+
+Definido na linha 551 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{551                              \{}
+\DoxyCodeLine{552     \textcolor{keywordflow}{return} (q-\/>lista\_clientesN[i]);}
+\DoxyCodeLine{553 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_afc1ffcd21cd5988f72ca730337fa35c4}\label{estruturas_8c_afc1ffcd21cd5988f72ca730337fa35c4}} 
+\index{estruturas.c@{estruturas.c}!getProdPQ9@{getProdPQ9}}
+\index{getProdPQ9@{getProdPQ9}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{getProdPQ9()}{getProdPQ9()}}
+{\footnotesize\ttfamily char$\ast$ get\+Prod\+P\+Q9 (\begin{DoxyParamCaption}\item[{Q9}]{q,  }\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+Função que retorna um produto comprado em modo Promocional numa dada posição. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Q9 que é estrutura onde será procurada a string na posição referida. \\
+\hline
+{\em i} & int que é a posição a procurar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+char$\ast$ que é a string na posição dada da lista. 
+\end{DoxyReturn}
+
+
+Definido na linha 613 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{613                              \{}
+\DoxyCodeLine{614     \textcolor{keywordflow}{return} (q-\/>lista\_clientesP[i]);}
+\DoxyCodeLine{615 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_a905cb45656c0f85394eac5c54234e1ed}\label{estruturas_8c_a905cb45656c0f85394eac5c54234e1ed}} 
+\index{estruturas.c@{estruturas.c}!getProdQ2@{getProdQ2}}
+\index{getProdQ2@{getProdQ2}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{getProdQ2()}{getProdQ2()}}
+{\footnotesize\ttfamily char$\ast$ get\+Prod\+Q2 (\begin{DoxyParamCaption}\item[{Q2}]{q,  }\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+Função que retorna um produto numa dada posição. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em i} & int que é a posição a procurar. \\
+\hline
+{\em q} & Q2 que é estrutura onde será procurada a string na posição referida. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+char$\ast$ que é a string na posição dada da lista. 
+\end{DoxyReturn}
+
+
+Definido na linha 96 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{96                             \{}
+\DoxyCodeLine{97     \textcolor{keywordflow}{return} (q-\/>lista\_produtos[i]);}
+\DoxyCodeLine{98 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_a8292aa0fa9f2fa68a02313919955e378}\label{estruturas_8c_a8292aa0fa9f2fa68a02313919955e378}} 
+\index{estruturas.c@{estruturas.c}!getProducts\_Path13@{getProducts\_Path13}}
+\index{getProducts\_Path13@{getProducts\_Path13}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{getProducts\_Path13()}{getProducts\_Path13()}}
+{\footnotesize\ttfamily char$\ast$ get\+Products\+\_\+\+Path13 (\begin{DoxyParamCaption}\item[{Q13}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que retorna uma string com o caminho para o ficheiro de produtos. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Q13 que é a estrutura onde será procurado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+char$\ast$ que é a a string com o caminho para o ficheiro. 
+\end{DoxyReturn}
+
+
+Definido na linha 1161 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1161                                \{}
+\DoxyCodeLine{1162     \textcolor{keywordflow}{return} q-\/>products\_File\_Path;}
+\DoxyCodeLine{1163 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_a57cfaedb9154ebefa017793d7e9069fb}\label{estruturas_8c_a57cfaedb9154ebefa017793d7e9069fb}} 
+\index{estruturas.c@{estruturas.c}!getProdutoQ10@{getProdutoQ10}}
+\index{getProdutoQ10@{getProdutoQ10}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{getProdutoQ10()}{getProdutoQ10()}}
+{\footnotesize\ttfamily char$\ast$ get\+Produto\+Q10 (\begin{DoxyParamCaption}\item[{Q10}]{q,  }\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+Função que retorna o código de produto numa dada posição. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Q10 que é estrutura onde será procurada a string na posição referida. \\
+\hline
+{\em i} & int que é a posição a procurar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+char$\ast$ que é a string na posição dada da lista. 
+\end{DoxyReturn}
+
+
+Definido na linha 707 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{707                                 \{}
+\DoxyCodeLine{708   \mbox{\hyperlink{structquerie10aux}{Q10Aux}} qaux = q-\/>ordenado[i];}
+\DoxyCodeLine{709   \textcolor{keywordflow}{return} qaux-\/>key;}
+\DoxyCodeLine{710 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_af12a469a69c68fd7efda71a42dc34ce2}\label{estruturas_8c_af12a469a69c68fd7efda71a42dc34ce2}} 
+\index{estruturas.c@{estruturas.c}!getProdutoQ11@{getProdutoQ11}}
+\index{getProdutoQ11@{getProdutoQ11}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{getProdutoQ11()}{getProdutoQ11()}}
+{\footnotesize\ttfamily char$\ast$ get\+Produto\+Q11 (\begin{DoxyParamCaption}\item[{Q11}]{q,  }\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+Função que retorna o código de produto numa dada posição. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Q11 que é estrutura onde será procurada a string na posição referida. \\
+\hline
+{\em i} & int que é a posição a procurar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+char$\ast$ que é a string na posição dada da lista. 
+\end{DoxyReturn}
+
+
+Definido na linha 851 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{851                                 \{}
+\DoxyCodeLine{852   \textcolor{keywordflow}{return} q-\/>ordenado[i]-\/>key;}
+\DoxyCodeLine{853 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_ad3d2034aa97a5afb1c0272e0c1b63551}\label{estruturas_8c_ad3d2034aa97a5afb1c0272e0c1b63551}} 
+\index{estruturas.c@{estruturas.c}!getProdutoQ12@{getProdutoQ12}}
+\index{getProdutoQ12@{getProdutoQ12}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{getProdutoQ12()}{getProdutoQ12()}}
+{\footnotesize\ttfamily char$\ast$ get\+Produto\+Q12 (\begin{DoxyParamCaption}\item[{Q12}]{q,  }\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+Função que retorna o código de produto numa dada posição. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Q12 que é estrutura onde será procurada a string na posição referida. \\
+\hline
+{\em i} & int que é a posição a procurar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+char$\ast$ que é a string na posição dada da lista. 
+\end{DoxyReturn}
+
+
+Definido na linha 1031 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1031                                 \{}
+\DoxyCodeLine{1032   \mbox{\hyperlink{structquerie12aux}{Q12Aux}} qaux = q-\/>ordenado[i];}
+\DoxyCodeLine{1033   \textcolor{keywordflow}{return} qaux-\/>key;}
+\DoxyCodeLine{1034 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_a1d3e4709419d16264e02e7105ed9181e}\label{estruturas_8c_a1d3e4709419d16264e02e7105ed9181e}} 
+\index{estruturas.c@{estruturas.c}!getQ10QtdProduto@{getQ10QtdProduto}}
+\index{getQ10QtdProduto@{getQ10QtdProduto}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{getQ10QtdProduto()}{getQ10QtdProduto()}}
+{\footnotesize\ttfamily int get\+Q10\+Qtd\+Produto (\begin{DoxyParamCaption}\item[{Q10}]{q,  }\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+Função que retorna a quantidade total comprada de um produto. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Q10 que é a estrutura onde será procurado. \\
+\hline
+{\em i} & int que é a posição do produto na lista. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+int que é a quantidade total. 
+\end{DoxyReturn}
+
+
+Definido na linha 718 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{718                                   \{}
+\DoxyCodeLine{719   \textcolor{keywordflow}{return} q-\/>ordenado[i]-\/>quantidade;}
+\DoxyCodeLine{720 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_ab4523ae1c16694bf756f2d780383702a}\label{estruturas_8c_ab4523ae1c16694bf756f2d780383702a}} 
+\index{estruturas.c@{estruturas.c}!getQ11NClientes@{getQ11NClientes}}
+\index{getQ11NClientes@{getQ11NClientes}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{getQ11NClientes()}{getQ11NClientes()}}
+{\footnotesize\ttfamily int get\+Q11\+N\+Clientes (\begin{DoxyParamCaption}\item[{Q11}]{q,  }\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+Função que retorna a quantidade total de clientes que compraram um produto. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Q11 que é a estrutura onde será procurado. \\
+\hline
+{\em i} & int que é a posição do produto na lista. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+int que é a quantidade total. 
+\end{DoxyReturn}
+
+
+Definido na linha 871 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{871                                  \{}
+\DoxyCodeLine{872   \textcolor{keywordflow}{return} q-\/>ordenado[i]-\/>nclientes;}
+\DoxyCodeLine{873 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_a145e619612a0a6eb2941c817df3f2477}\label{estruturas_8c_a145e619612a0a6eb2941c817df3f2477}} 
+\index{estruturas.c@{estruturas.c}!getQ11QtdProduto@{getQ11QtdProduto}}
+\index{getQ11QtdProduto@{getQ11QtdProduto}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{getQ11QtdProduto()}{getQ11QtdProduto()}}
+{\footnotesize\ttfamily int get\+Q11\+Qtd\+Produto (\begin{DoxyParamCaption}\item[{Q11}]{q,  }\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+Função que retorna a quantidade total comprada de um produto. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Q11 que é a estrutura onde será procurado. \\
+\hline
+{\em i} & int que é a posição do produto na lista. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+int que é a quantidade total. 
+\end{DoxyReturn}
+
+
+Definido na linha 861 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{861                                   \{}
+\DoxyCodeLine{862   \textcolor{keywordflow}{return} q-\/>ordenado[i]-\/>quantidade;}
+\DoxyCodeLine{863 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_a498e3df7c9234cdc0e63ac3db2da4f30}\label{estruturas_8c_a498e3df7c9234cdc0e63ac3db2da4f30}} 
+\index{estruturas.c@{estruturas.c}!getQ12Faturado@{getQ12Faturado}}
+\index{getQ12Faturado@{getQ12Faturado}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{getQ12Faturado()}{getQ12Faturado()}}
+{\footnotesize\ttfamily double get\+Q12\+Faturado (\begin{DoxyParamCaption}\item[{Q12}]{q,  }\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+Função que retorna o total faturado de um dado produto. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Q12 que é a estrutura onde será procurado. \\
+\hline
+{\em i} & int que é a posição do produto na lista. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+double que é o total faturado. 
+\end{DoxyReturn}
+
+
+Definido na linha 1042 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1042                                    \{}
+\DoxyCodeLine{1043   \textcolor{keywordflow}{return} q-\/>ordenado[i]-\/>fat;}
+\DoxyCodeLine{1044 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_ac1231409ac765d1718310ffbf44d795d}\label{estruturas_8c_ac1231409ac765d1718310ffbf44d795d}} 
+\index{estruturas.c@{estruturas.c}!getQ\_Clientes13@{getQ\_Clientes13}}
+\index{getQ\_Clientes13@{getQ\_Clientes13}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{getQ\_Clientes13()}{getQ\_Clientes13()}}
+{\footnotesize\ttfamily int get\+Q\+\_\+\+Clientes13 (\begin{DoxyParamCaption}\item[{Q13}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que retorna a quantidade total de clientes. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Q13 que é a estrutura onde será procurado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+int que é a quantidade total. 
+\end{DoxyReturn}
+
+
+Definido na linha 1116 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1116                           \{}
+\DoxyCodeLine{1117     \textcolor{keywordflow}{return} q-\/>q\_clientes;}
+\DoxyCodeLine{1118 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_abf02af50107fe7bda8e35d148f2c38f0}\label{estruturas_8c_abf02af50107fe7bda8e35d148f2c38f0}} 
+\index{estruturas.c@{estruturas.c}!getQ\_Produtos13@{getQ\_Produtos13}}
+\index{getQ\_Produtos13@{getQ\_Produtos13}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{getQ\_Produtos13()}{getQ\_Produtos13()}}
+{\footnotesize\ttfamily int get\+Q\+\_\+\+Produtos13 (\begin{DoxyParamCaption}\item[{Q13}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que retorna a quantidade total de produtos. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Q13 que é a estrutura onde será procurado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+int que é a quantidade total. 
+\end{DoxyReturn}
+
+
+Definido na linha 1125 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1125                           \{}
+\DoxyCodeLine{1126     \textcolor{keywordflow}{return} q-\/>q\_produtos;}
+\DoxyCodeLine{1127 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_a6de0c29a88ff9fe2c0dbab9caa9e5ec4}\label{estruturas_8c_a6de0c29a88ff9fe2c0dbab9caa9e5ec4}} 
+\index{estruturas.c@{estruturas.c}!getQt\_FilialQ7@{getQt\_FilialQ7}}
+\index{getQt\_FilialQ7@{getQt\_FilialQ7}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{getQt\_FilialQ7()}{getQt\_FilialQ7()}}
+{\footnotesize\ttfamily int get\+Qt\+\_\+\+Filial\+Q7 (\begin{DoxyParamCaption}\item[{Q7}]{q,  }\item[{int}]{i,  }\item[{int}]{j }\end{DoxyParamCaption})}
+
+
+
+Função que retorna a quantidade total comprada numa dada filial, num dado mês. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Q7 que é a estrutura onde será procurado. \\
+\hline
+{\em i} & int que é a filial a averiguar. \\
+\hline
+{\em j} & int que é o mês a averiguar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+int que é a quantidade total. 
+\end{DoxyReturn}
+
+
+Definido na linha 379 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{379                                       \{}
+\DoxyCodeLine{380   \textcolor{keywordflow}{return} q-\/>qtd\_total[i][j];}
+\DoxyCodeLine{381 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_a091bc27f06eb37f65306a188e24fe712}\label{estruturas_8c_a091bc27f06eb37f65306a188e24fe712}} 
+\index{estruturas.c@{estruturas.c}!getQt\_NQ3@{getQt\_NQ3}}
+\index{getQt\_NQ3@{getQt\_NQ3}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{getQt\_NQ3()}{getQt\_NQ3()}}
+{\footnotesize\ttfamily int get\+Qt\+\_\+\+N\+Q3 (\begin{DoxyParamCaption}\item[{Q3}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que retorna a quantidade total de vendas registas em modo Normal. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Q3 que é a estrutura onde será procurado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+int que é o total de vendas registadas em modo normal. 
+\end{DoxyReturn}
+
+
+Definido na linha 128 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{128                    \{}
+\DoxyCodeLine{129     \textcolor{keywordflow}{return} q-\/>qt\_total\_N;}
+\DoxyCodeLine{130 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_a86c58f60f5b15e13a6f44bdf1e7e058a}\label{estruturas_8c_a86c58f60f5b15e13a6f44bdf1e7e058a}} 
+\index{estruturas.c@{estruturas.c}!getQt\_PQ3@{getQt\_PQ3}}
+\index{getQt\_PQ3@{getQt\_PQ3}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{getQt\_PQ3()}{getQt\_PQ3()}}
+{\footnotesize\ttfamily int get\+Qt\+\_\+\+P\+Q3 (\begin{DoxyParamCaption}\item[{Q3}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que retorna a quantidade total de vendas registas em modo Promocional. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Q3 que é a estrutura onde será procurado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+int que é o total de vendas registadas em modo promocional. 
+\end{DoxyReturn}
+
+
+Definido na linha 146 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{146                    \{}
+\DoxyCodeLine{147     \textcolor{keywordflow}{return} q-\/>qt\_total\_P;}
+\DoxyCodeLine{148 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_a65320ba6ef2a1991f71ea5262b1d623f}\label{estruturas_8c_a65320ba6ef2a1991f71ea5262b1d623f}} 
+\index{estruturas.c@{estruturas.c}!getQtdFilialQ11@{getQtdFilialQ11}}
+\index{getQtdFilialQ11@{getQtdFilialQ11}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{getQtdFilialQ11()}{getQtdFilialQ11()}}
+{\footnotesize\ttfamily int get\+Qtd\+Filial\+Q11 (\begin{DoxyParamCaption}\item[{Q11}]{q,  }\item[{int}]{pos,  }\item[{int}]{filial }\end{DoxyParamCaption})}
+
+
+
+Função que retorna a quantidade total comprada de um produto numa dada filial. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Q11 que é a estrutura onde será procurado. \\
+\hline
+{\em pos} & int que é a posição do produto na lista. \\
+\hline
+{\em filian} & int que é a filial a ser procurada. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+int que é a quantidade total. 
+\end{DoxyReturn}
+
+
+Definido na linha 892 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{892                                               \{}
+\DoxyCodeLine{893   \textcolor{keywordflow}{return} q-\/>ordenado[pos]-\/>qtd[filial];}
+\DoxyCodeLine{894 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_a742ce0fe2aaee2ae7b10684439bc9b9b}\label{estruturas_8c_a742ce0fe2aaee2ae7b10684439bc9b9b}} 
+\index{estruturas.c@{estruturas.c}!getSales\_Path13@{getSales\_Path13}}
+\index{getSales\_Path13@{getSales\_Path13}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{getSales\_Path13()}{getSales\_Path13()}}
+{\footnotesize\ttfamily char$\ast$ get\+Sales\+\_\+\+Path13 (\begin{DoxyParamCaption}\item[{Q13}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que retorna uma string com o caminho para o ficheiro de vendas. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Q13 que é a estrutura onde será procurado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+char$\ast$ que é a a string com o caminho para o ficheiro. 
+\end{DoxyReturn}
+
+
+Definido na linha 1170 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1170                             \{}
+\DoxyCodeLine{1171     \textcolor{keywordflow}{return} q-\/>sales\_File\_Path;}
+\DoxyCodeLine{1172 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_a961f7422c1e722b50e8fab6ff4a021b8}\label{estruturas_8c_a961f7422c1e722b50e8fab6ff4a021b8}} 
+\index{estruturas.c@{estruturas.c}!getTotalNQ9@{getTotalNQ9}}
+\index{getTotalNQ9@{getTotalNQ9}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{getTotalNQ9()}{getTotalNQ9()}}
+{\footnotesize\ttfamily int get\+Total\+N\+Q9 (\begin{DoxyParamCaption}\item[{Q9}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que retorna a quantidade total clientes que compraram em modo Normal. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Q9 que é a estrutura onde será procurado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+int que é a quantidade de clientes. 
+\end{DoxyReturn}
+
+
+Definido na linha 498 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{498                      \{}
+\DoxyCodeLine{499   \textcolor{keywordflow}{return} q-\/>totalN;}
+\DoxyCodeLine{500 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_a524f34f450aeea4e6642d82ccba84083}\label{estruturas_8c_a524f34f450aeea4e6642d82ccba84083}} 
+\index{estruturas.c@{estruturas.c}!getTotalPQ9@{getTotalPQ9}}
+\index{getTotalPQ9@{getTotalPQ9}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{getTotalPQ9()}{getTotalPQ9()}}
+{\footnotesize\ttfamily int get\+Total\+P\+Q9 (\begin{DoxyParamCaption}\item[{Q9}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que retorna a quantidade total clientes que compraram em modo Promocional. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Q9 que é a estrutura onde será procurado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+int que é a quantidade de clientes. 
+\end{DoxyReturn}
+
+
+Definido na linha 560 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{560                      \{}
+\DoxyCodeLine{561   \textcolor{keywordflow}{return} q-\/>totalP;}
+\DoxyCodeLine{562 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_acb05b1690473b9bae2d2daeb6e272973}\label{estruturas_8c_acb05b1690473b9bae2d2daeb6e272973}} 
+\index{estruturas.c@{estruturas.c}!getV\_Totais13@{getV\_Totais13}}
+\index{getV\_Totais13@{getV\_Totais13}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{getV\_Totais13()}{getV\_Totais13()}}
+{\footnotesize\ttfamily int get\+V\+\_\+\+Totais13 (\begin{DoxyParamCaption}\item[{Q13}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que retorna a quantidade total de linhas de venda lidas. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Q13 que é a estrutura onde será procurado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+int que é a quantidade total. 
+\end{DoxyReturn}
+
+
+Definido na linha 1143 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1143                         \{}
+\DoxyCodeLine{1144     \textcolor{keywordflow}{return} q-\/>vendas\_totais;}
+\DoxyCodeLine{1145 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_a148617c2ee477178285f803ca55a7b73}\label{estruturas_8c_a148617c2ee477178285f803ca55a7b73}} 
+\index{estruturas.c@{estruturas.c}!getV\_Validas13@{getV\_Validas13}}
+\index{getV\_Validas13@{getV\_Validas13}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{getV\_Validas13()}{getV\_Validas13()}}
+{\footnotesize\ttfamily int get\+V\+\_\+\+Validas13 (\begin{DoxyParamCaption}\item[{Q13}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que retorna a quantidade total de vendas válidas. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Q13 que é a estrutura onde será procurado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+int que é a quantidade total. 
+\end{DoxyReturn}
+
+
+Definido na linha 1134 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1134                          \{}
+\DoxyCodeLine{1135     \textcolor{keywordflow}{return} q-\/>vendas\_validas;}
+\DoxyCodeLine{1136 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_aa08fa5336ceabb37b057a600c90108c0}\label{estruturas_8c_aa08fa5336ceabb37b057a600c90108c0}} 
+\index{estruturas.c@{estruturas.c}!init\_Q10@{init\_Q10}}
+\index{init\_Q10@{init\_Q10}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{init\_Q10()}{init\_Q10()}}
+{\footnotesize\ttfamily Q10 init\+\_\+\+Q10 (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Função que inicializa a estrutura Q10. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em n} & int que contém o tamanho do espaço necessário alocar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+q que é a estrutura inicializada. 
+\end{DoxyReturn}
+
+
+Definido na linha 649 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{649                    \{}
+\DoxyCodeLine{650   Q10 q = (Q10) malloc(\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} \mbox{\hyperlink{structquerie10}{querie10}}));}
+\DoxyCodeLine{651   q-\/>ordenado = malloc(n * \textcolor{keyword}{sizeof}(\mbox{\hyperlink{structquerie10aux}{Q10Aux}}));}
+\DoxyCodeLine{652   q-\/>num\_total = 0;}
+\DoxyCodeLine{653   \textcolor{keywordflow}{return} q;}
+\DoxyCodeLine{654 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_ac26ac45148a10e68a5c8ddeeb991fd82}\label{estruturas_8c_ac26ac45148a10e68a5c8ddeeb991fd82}} 
+\index{estruturas.c@{estruturas.c}!init\_Q10Aux@{init\_Q10Aux}}
+\index{init\_Q10Aux@{init\_Q10Aux}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{init\_Q10Aux()}{init\_Q10Aux()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structquerie10aux}{Q10\+Aux}} init\+\_\+\+Q10\+Aux (\begin{DoxyParamCaption}\item[{char $\ast$}]{p }\end{DoxyParamCaption})}
+
+
+
+Função que inicializa a estrutura Q10\+Aux. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em p} & char$\ast$ que indica o tamanho do espaço necessário alocar para a key. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+q que é a estrutura inicializada. 
+\end{DoxyReturn}
+
+
+Definido na linha 637 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{637                            \{}
+\DoxyCodeLine{638   \mbox{\hyperlink{structquerie10aux}{Q10Aux}} qaux = (\mbox{\hyperlink{structquerie10aux}{Q10Aux}}) malloc(\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} \mbox{\hyperlink{structquerie10aux}{querie10aux}}));}
+\DoxyCodeLine{639   qaux-\/>key = malloc((strlen(p)+1)*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));}
+\DoxyCodeLine{640   qaux-\/>quantidade = 0;}
+\DoxyCodeLine{641   \textcolor{keywordflow}{return} qaux;}
+\DoxyCodeLine{642 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_a083b5ba28f8cd400e9577d217b5651ad}\label{estruturas_8c_a083b5ba28f8cd400e9577d217b5651ad}} 
+\index{estruturas.c@{estruturas.c}!init\_Q11@{init\_Q11}}
+\index{init\_Q11@{init\_Q11}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{init\_Q11()}{init\_Q11()}}
+{\footnotesize\ttfamily Q11 init\+\_\+\+Q11 (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Função que inicializa a estrutura Q11. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em n} & int que contém o tamanho do espaço necessário alocar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+q que é a estrutura inicializada. 
+\end{DoxyReturn}
+
+
+Definido na linha 793 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{793                    \{}
+\DoxyCodeLine{794   Q11 q = (Q11) malloc(\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} \mbox{\hyperlink{structquerie11}{querie11}}));}
+\DoxyCodeLine{795   q-\/>ordenado = malloc(n* \textcolor{keyword}{sizeof}(\mbox{\hyperlink{structquerie11aux}{Q11Aux}}));}
+\DoxyCodeLine{796   q-\/>num\_total = 0;}
+\DoxyCodeLine{797   \textcolor{keywordflow}{return} q;}
+\DoxyCodeLine{798 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_afa6665eab8b068e51289e6339e58d10d}\label{estruturas_8c_afa6665eab8b068e51289e6339e58d10d}} 
+\index{estruturas.c@{estruturas.c}!init\_Q11Aux@{init\_Q11Aux}}
+\index{init\_Q11Aux@{init\_Q11Aux}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{init\_Q11Aux()}{init\_Q11Aux()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structquerie11aux}{Q11\+Aux}} init\+\_\+\+Q11\+Aux (\begin{DoxyParamCaption}\item[{char $\ast$}]{p }\end{DoxyParamCaption})}
+
+
+
+Função que inicializa a estrutura Q11\+Aux. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em p} & char$\ast$ que indica o tamanho do espaço necessário alocar para a key. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+q que é a estrutura inicializada. 
+\end{DoxyReturn}
+
+
+Definido na linha 773 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{773                            \{}
+\DoxyCodeLine{774   \mbox{\hyperlink{structquerie11aux}{Q11Aux}} qaux = (\mbox{\hyperlink{structquerie11aux}{Q11Aux}}) malloc(\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} \mbox{\hyperlink{structquerie11aux}{querie11aux}}));}
+\DoxyCodeLine{775   qaux-\/>key = malloc((strlen(p)+1)*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));}
+\DoxyCodeLine{776   qaux-\/>quantidade = 0;}
+\DoxyCodeLine{777   qaux-\/>nclientes = 0;}
+\DoxyCodeLine{778   qaux-\/>nc = malloc(FILIAL * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
+\DoxyCodeLine{779   qaux-\/>qtd = malloc(FILIAL * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
+\DoxyCodeLine{780   \textcolor{keywordtype}{int} i;}
+\DoxyCodeLine{781   \textcolor{keywordflow}{for}(i=0;i<FILIAL;i++)\{}
+\DoxyCodeLine{782     qaux-\/>nc[i] = 0;}
+\DoxyCodeLine{783     qaux-\/>qtd[i] = 0;}
+\DoxyCodeLine{784   \}}
+\DoxyCodeLine{785   \textcolor{keywordflow}{return} qaux;}
+\DoxyCodeLine{786 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_a754154c6f99b222d8bf98ee3b3e58b47}\label{estruturas_8c_a754154c6f99b222d8bf98ee3b3e58b47}} 
+\index{estruturas.c@{estruturas.c}!init\_Q12@{init\_Q12}}
+\index{init\_Q12@{init\_Q12}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{init\_Q12()}{init\_Q12()}}
+{\footnotesize\ttfamily Q12 init\+\_\+\+Q12 (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Função que inicializa a estrutura Q12. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em n} & int que contém o tamanho do espaço necessário alocar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+q que é a estrutura inicializada. 
+\end{DoxyReturn}
+
+
+Definido na linha 973 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{973                    \{}
+\DoxyCodeLine{974   Q12 q = (Q12) malloc(\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} \mbox{\hyperlink{structquerie10}{querie10}}));}
+\DoxyCodeLine{975   q-\/>ordenado = malloc(n * \textcolor{keyword}{sizeof}(\mbox{\hyperlink{structquerie12aux}{Q12Aux}}));}
+\DoxyCodeLine{976   q-\/>num\_total = 0;}
+\DoxyCodeLine{977   \textcolor{keywordflow}{return} q;}
+\DoxyCodeLine{978 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_ab46c7bea720a42c33c4bf96ca59519dd}\label{estruturas_8c_ab46c7bea720a42c33c4bf96ca59519dd}} 
+\index{estruturas.c@{estruturas.c}!init\_Q12Aux@{init\_Q12Aux}}
+\index{init\_Q12Aux@{init\_Q12Aux}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{init\_Q12Aux()}{init\_Q12Aux()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structquerie12aux}{Q12\+Aux}} init\+\_\+\+Q12\+Aux (\begin{DoxyParamCaption}\item[{char $\ast$}]{p }\end{DoxyParamCaption})}
+
+
+
+Função que inicializa a estrutura Q12\+Aux. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em p} & char$\ast$ que indica o tamanho do espaço necessário alocar para a key. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+q que é a estrutura inicializada. 
+\end{DoxyReturn}
+
+
+Definido na linha 961 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{961                            \{}
+\DoxyCodeLine{962   \mbox{\hyperlink{structquerie12aux}{Q12Aux}} qaux = (\mbox{\hyperlink{structquerie12aux}{Q12Aux}}) malloc(\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} \mbox{\hyperlink{structquerie12aux}{querie12aux}}));}
+\DoxyCodeLine{963   qaux-\/>key = malloc((strlen(p)+1)*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));}
+\DoxyCodeLine{964   qaux-\/>fat = 0;}
+\DoxyCodeLine{965   \textcolor{keywordflow}{return} qaux;}
+\DoxyCodeLine{966 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_a40348610ddfb3b978c4ba8c7999625d7}\label{estruturas_8c_a40348610ddfb3b978c4ba8c7999625d7}} 
+\index{estruturas.c@{estruturas.c}!init\_Q13@{init\_Q13}}
+\index{init\_Q13@{init\_Q13}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{init\_Q13()}{init\_Q13()}}
+{\footnotesize\ttfamily Q13 init\+\_\+\+Q13 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função que inicializa a estrutura Q13. 
+
+\begin{DoxyReturn}{Retorna}
+q que é a estrutura inicializada. 
+\end{DoxyReturn}
+
+
+Definido na linha 1093 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1093               \{}
+\DoxyCodeLine{1094     Q13 q = malloc(\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} \mbox{\hyperlink{structquerie13}{querie13}}));}
+\DoxyCodeLine{1095     \textcolor{keywordflow}{return} q;}
+\DoxyCodeLine{1096 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_a4f78a342418e7557703855977d27d61a}\label{estruturas_8c_a4f78a342418e7557703855977d27d61a}} 
+\index{estruturas.c@{estruturas.c}!init\_Q2@{init\_Q2}}
+\index{init\_Q2@{init\_Q2}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{init\_Q2()}{init\_Q2()}}
+{\footnotesize\ttfamily Q2 init\+\_\+\+Q2 (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Função que inicializa a estrutura Q2. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em n} & int que contém o tamanho do espaço necessário alocar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+q que é a estrutura inicializada. 
+\end{DoxyReturn}
+
+
+Definido na linha 18 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{18                  \{}
+\DoxyCodeLine{19     Q2 q = (Q2) malloc(\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} \mbox{\hyperlink{structquerie2}{querie2}}));}
+\DoxyCodeLine{20     q-\/>num\_total = 0;}
+\DoxyCodeLine{21     q-\/>lista\_produtos = malloc(n * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}*));}
+\DoxyCodeLine{22     \textcolor{keywordflow}{return} q;}
+\DoxyCodeLine{23 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_ae07ea144b7cbd11836f9288387fa7678}\label{estruturas_8c_ae07ea144b7cbd11836f9288387fa7678}} 
+\index{estruturas.c@{estruturas.c}!init\_Q3@{init\_Q3}}
+\index{init\_Q3@{init\_Q3}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{init\_Q3()}{init\_Q3()}}
+{\footnotesize\ttfamily Q3 init\+\_\+\+Q3 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função que inicializa a estrutura Q3. 
+
+\begin{DoxyReturn}{Retorna}
+q que é a estrutura inicializada. 
+\end{DoxyReturn}
+
+
+Definido na linha 114 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{114             \{}
+\DoxyCodeLine{115     Q3 q = (Q3) malloc(\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} \mbox{\hyperlink{structquerie3}{querie3}}));}
+\DoxyCodeLine{116     q-\/>qt\_total\_N = 0;}
+\DoxyCodeLine{117     q-\/>qt\_total\_P = 0;}
+\DoxyCodeLine{118     q-\/>fat\_total\_N = 0;}
+\DoxyCodeLine{119     q-\/>fat\_total\_P = 0;}
+\DoxyCodeLine{120     \textcolor{keywordflow}{return} q;}
+\DoxyCodeLine{121 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_a7ff451b69b1193f6205abef6b36cb9f2}\label{estruturas_8c_a7ff451b69b1193f6205abef6b36cb9f2}} 
+\index{estruturas.c@{estruturas.c}!init\_Q5@{init\_Q5}}
+\index{init\_Q5@{init\_Q5}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{init\_Q5()}{init\_Q5()}}
+{\footnotesize\ttfamily Q5 init\+\_\+\+Q5 (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Função que inicializa a estrutura Q5. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em n} & int que contém o tamanho do espaço necessário alocar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+q que é a estrutura inicializada. 
+\end{DoxyReturn}
+
+
+Definido na linha 218 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{218                  \{}
+\DoxyCodeLine{219   Q5 q = (Q5) malloc(\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} \mbox{\hyperlink{structquerie5}{querie5}}));}
+\DoxyCodeLine{220   q-\/>lista\_clientes = malloc(n * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}*));}
+\DoxyCodeLine{221   q-\/>num\_total = 0;}
+\DoxyCodeLine{222   \textcolor{keywordflow}{return} q;}
+\DoxyCodeLine{223 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_a326f73d7aaf537a118b4fd22b35bacad}\label{estruturas_8c_a326f73d7aaf537a118b4fd22b35bacad}} 
+\index{estruturas.c@{estruturas.c}!init\_Q6@{init\_Q6}}
+\index{init\_Q6@{init\_Q6}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{init\_Q6()}{init\_Q6()}}
+{\footnotesize\ttfamily Q6 init\+\_\+\+Q6 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função que inicializa a estrutura Q6. 
+
+\begin{DoxyReturn}{Retorna}
+q que é a estrutura inicializada. 
+\end{DoxyReturn}
+
+
+Definido na linha 305 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{305             \{}
+\DoxyCodeLine{306   Q6 q = (Q6) malloc(\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} \mbox{\hyperlink{structquerie6}{querie6}}));}
+\DoxyCodeLine{307   q-\/>nprodutos = 0;}
+\DoxyCodeLine{308   q-\/>nclientes = 0;}
+\DoxyCodeLine{309   \textcolor{keywordflow}{return} q;}
+\DoxyCodeLine{310 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_ab190d1e77a7bf1e6d7ebdb6f5b9187f5}\label{estruturas_8c_ab190d1e77a7bf1e6d7ebdb6f5b9187f5}} 
+\index{estruturas.c@{estruturas.c}!init\_Q7@{init\_Q7}}
+\index{init\_Q7@{init\_Q7}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{init\_Q7()}{init\_Q7()}}
+{\footnotesize\ttfamily Q7 init\+\_\+\+Q7 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função que inicializa a estrutura Q7. 
+
+\begin{DoxyReturn}{Retorna}
+q que é a estrutura inicializada. 
+\end{DoxyReturn}
+
+
+Definido na linha 361 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{361             \{}
+\DoxyCodeLine{362   Q7 q = (Q7) malloc(\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} \mbox{\hyperlink{structquerie7}{querie7}}));}
+\DoxyCodeLine{363   \textcolor{keywordtype}{int} i,j;}
+\DoxyCodeLine{364   \textcolor{keywordflow}{for}(i=0;i<FILIAL;i++)\{}
+\DoxyCodeLine{365     \textcolor{keywordflow}{for}(j=0;j<MESES;j++)\{}
+\DoxyCodeLine{366       q-\/>qtd\_total[i][j]=0;}
+\DoxyCodeLine{367     \}}
+\DoxyCodeLine{368   \}}
+\DoxyCodeLine{369   \textcolor{keywordflow}{return} q;}
+\DoxyCodeLine{370 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_a62c7951790fd4d1888d8b91775d42507}\label{estruturas_8c_a62c7951790fd4d1888d8b91775d42507}} 
+\index{estruturas.c@{estruturas.c}!init\_Q8@{init\_Q8}}
+\index{init\_Q8@{init\_Q8}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{init\_Q8()}{init\_Q8()}}
+{\footnotesize\ttfamily Q8 init\+\_\+\+Q8 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função que inicializa a estrutura Q8. 
+
+\begin{DoxyReturn}{Retorna}
+q que é a estrutura inicializada. 
+\end{DoxyReturn}
+
+
+Definido na linha 408 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{408             \{}
+\DoxyCodeLine{409     Q8 q = (Q8) malloc(\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} \mbox{\hyperlink{structquerie8}{querie8}}));}
+\DoxyCodeLine{410     q-\/>nvendas\_total = 0;}
+\DoxyCodeLine{411     q-\/>fat\_total = 0;}
+\DoxyCodeLine{412     \textcolor{keywordflow}{return} q;}
+\DoxyCodeLine{413 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_ae7e431264b18ffb3bc4d0818749d4f85}\label{estruturas_8c_ae7e431264b18ffb3bc4d0818749d4f85}} 
+\index{estruturas.c@{estruturas.c}!init\_Q9@{init\_Q9}}
+\index{init\_Q9@{init\_Q9}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{init\_Q9()}{init\_Q9()}}
+{\footnotesize\ttfamily Q9 init\+\_\+\+Q9 (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Função que inicializa a estrutura Q9. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em n} & int que contém o tamanho do espaço necessário alocar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+q que é a estrutura inicializada. 
+\end{DoxyReturn}
+
+
+Definido na linha 467 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{467                  \{}
+\DoxyCodeLine{468   Q9 q = (Q9) malloc(\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} \mbox{\hyperlink{structquerie9}{querie9}}));}
+\DoxyCodeLine{469   q-\/>totalN = 0;}
+\DoxyCodeLine{470   q-\/>totalP = 0;}
+\DoxyCodeLine{471   q-\/>lista\_clientesN = malloc(n*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}*));}
+\DoxyCodeLine{472   q-\/>lista\_clientesP = malloc(n*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}*));}
+\DoxyCodeLine{473   \textcolor{keywordflow}{return} q;}
+\DoxyCodeLine{474 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_ac4ee86ddb19af3c5e46b2e10dcb9fc8f}\label{estruturas_8c_ac4ee86ddb19af3c5e46b2e10dcb9fc8f}} 
+\index{estruturas.c@{estruturas.c}!insere\_ClienteQ5@{insere\_ClienteQ5}}
+\index{insere\_ClienteQ5@{insere\_ClienteQ5}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{insere\_ClienteQ5()}{insere\_ClienteQ5()}}
+{\footnotesize\ttfamily void insere\+\_\+\+Cliente\+Q5 (\begin{DoxyParamCaption}\item[{char $\ast$}]{key,  }\item[{Q5}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que insere na estrutura um código de cliente. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em key} & char$\ast$ que é o código do cliente a inserir na estrutura. \\
+\hline
+{\em q} & Q5 que é estrutura onde será inserida a key dada. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 267 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{267                                        \{}
+\DoxyCodeLine{268     q-\/>lista\_clientes[q-\/>num\_total] = malloc((strlen(key) +1) * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));}
+\DoxyCodeLine{269     strcpy(q-\/>lista\_clientes[q-\/>num\_total++],key);}
+\DoxyCodeLine{270 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_a3b3fee2a6ed4ef4031bfe6b499ee5064}\label{estruturas_8c_a3b3fee2a6ed4ef4031bfe6b499ee5064}} 
+\index{estruturas.c@{estruturas.c}!insere\_ProdInfoQ10@{insere\_ProdInfoQ10}}
+\index{insere\_ProdInfoQ10@{insere\_ProdInfoQ10}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{insere\_ProdInfoQ10()}{insere\_ProdInfoQ10()}}
+{\footnotesize\ttfamily void insere\+\_\+\+Prod\+Info\+Q10 (\begin{DoxyParamCaption}\item[{Q10}]{q,  }\item[{char $\ast$}]{p,  }\item[{int}]{qtd }\end{DoxyParamCaption})}
+
+
+
+Função que insere na estrutura um código produto e a quantidade total comprada desse produto. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Q10 que é estrutura onde será inserida a key dada. \\
+\hline
+{\em key} & char$\ast$ que é o código do produto a inserir na estrutura. \\
+\hline
+{\em qtd} & int que é a quantidade comprada do produto. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 689 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{689                                                  \{}
+\DoxyCodeLine{690   \textcolor{keywordtype}{int} i;}
+\DoxyCodeLine{691   \textcolor{keywordflow}{for}(i=0;i<q-\/>num\_total;i++)\{}
+\DoxyCodeLine{692     \textcolor{keywordflow}{if}(strcmp(q-\/>ordenado[i]-\/>key,p) == 0)\{}
+\DoxyCodeLine{693       q-\/>ordenado[i]-\/>quantidade += qtd;}
+\DoxyCodeLine{694       \textcolor{keywordflow}{return};}
+\DoxyCodeLine{695     \}}
+\DoxyCodeLine{696   \}}
+\DoxyCodeLine{697   q-\/>ordenado[q-\/>num\_total] = \mbox{\hyperlink{estruturas_8c_ac26ac45148a10e68a5c8ddeeb991fd82}{init\_Q10Aux}}(p);}
+\DoxyCodeLine{698   \mbox{\hyperlink{estruturas_8c_a5eea1cbd4f2f20361819bc64e16b4830}{setQ10Aux}}(q-\/>ordenado[q-\/>num\_total++],p,qtd);}
+\DoxyCodeLine{699 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_a8a4021930dd4dd73ce5da02f3324ecf7}\label{estruturas_8c_a8a4021930dd4dd73ce5da02f3324ecf7}} 
+\index{estruturas.c@{estruturas.c}!insere\_ProdInfoQ11@{insere\_ProdInfoQ11}}
+\index{insere\_ProdInfoQ11@{insere\_ProdInfoQ11}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{insere\_ProdInfoQ11()}{insere\_ProdInfoQ11()}}
+{\footnotesize\ttfamily void insere\+\_\+\+Prod\+Info\+Q11 (\begin{DoxyParamCaption}\item[{Q11}]{q,  }\item[{char $\ast$}]{p,  }\item[{int}]{qt\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Função que insere na estrutura um código produto e a quantidade total comprada desse produto. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Q11 que é estrutura onde será inserida a key dada. \\
+\hline
+{\em key} & char$\ast$ que é o código do produto a inserir na estrutura. \\
+\hline
+{\em qtd} & int\mbox{[}\mbox{]} que é o array com a quantidade total por filial desse produto. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 839 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{839                                                   \{}
+\DoxyCodeLine{840   q-\/>ordenado[q-\/>num\_total] = \mbox{\hyperlink{estruturas_8c_afa6665eab8b068e51289e6339e58d10d}{init\_Q11Aux}}(p);}
+\DoxyCodeLine{841   \mbox{\hyperlink{estruturas_8c_a24626033b42d42f01097a3bb9deda944}{setQ11Aux}}(q-\/>ordenado[q-\/>num\_total],p,qt);}
+\DoxyCodeLine{842   q-\/>num\_total++;}
+\DoxyCodeLine{843 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_a9c83dd79a8536a5f76afc2c58cb67cf7}\label{estruturas_8c_a9c83dd79a8536a5f76afc2c58cb67cf7}} 
+\index{estruturas.c@{estruturas.c}!insere\_ProdInfoQ12@{insere\_ProdInfoQ12}}
+\index{insere\_ProdInfoQ12@{insere\_ProdInfoQ12}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{insere\_ProdInfoQ12()}{insere\_ProdInfoQ12()}}
+{\footnotesize\ttfamily void insere\+\_\+\+Prod\+Info\+Q12 (\begin{DoxyParamCaption}\item[{Q12}]{q,  }\item[{char $\ast$}]{p,  }\item[{double}]{faturado }\end{DoxyParamCaption})}
+
+
+
+Função que insere na estrutura um código produto e o total faturado desse produto. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Q12 que é estrutura onde será inserida a key dada. \\
+\hline
+{\em key} & char$\ast$ que é o código do produto a inserir na estrutura. \\
+\hline
+{\em faturado} & double que é o total faturado desse produto. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 1013 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1013                                                          \{}
+\DoxyCodeLine{1014   \textcolor{keywordtype}{int} i;}
+\DoxyCodeLine{1015   \textcolor{keywordflow}{for}(i=0;i<q-\/>num\_total;i++)\{}
+\DoxyCodeLine{1016     \textcolor{keywordflow}{if}(strcmp(q-\/>ordenado[i]-\/>key,p) == 0)\{}
+\DoxyCodeLine{1017       q-\/>ordenado[i]-\/>fat += faturado;}
+\DoxyCodeLine{1018       \textcolor{keywordflow}{return};}
+\DoxyCodeLine{1019     \}}
+\DoxyCodeLine{1020   \}}
+\DoxyCodeLine{1021   q-\/>ordenado[q-\/>num\_total] = \mbox{\hyperlink{estruturas_8c_ab46c7bea720a42c33c4bf96ca59519dd}{init\_Q12Aux}}(p);}
+\DoxyCodeLine{1022   \mbox{\hyperlink{estruturas_8c_a7fe72cfa1852481895c5a876a7e4f5f4}{setQ12Aux}}(q-\/>ordenado[q-\/>num\_total++],p,faturado);}
+\DoxyCodeLine{1023 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_a27d3593315bdeabf5e55f63880582a1f}\label{estruturas_8c_a27d3593315bdeabf5e55f63880582a1f}} 
+\index{estruturas.c@{estruturas.c}!insere\_ProdNQ9@{insere\_ProdNQ9}}
+\index{insere\_ProdNQ9@{insere\_ProdNQ9}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{insere\_ProdNQ9()}{insere\_ProdNQ9()}}
+{\footnotesize\ttfamily void insere\+\_\+\+Prod\+N\+Q9 (\begin{DoxyParamCaption}\item[{char $\ast$}]{key,  }\item[{Q9}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que insere na estrutura um código produto comprado em modo Normal. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em key} & char$\ast$ que é o código do produto a inserir na estrutura. \\
+\hline
+{\em q} & Q9 que é estrutura onde será inserida a key dada. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 540 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{540                                      \{}
+\DoxyCodeLine{541     q-\/>lista\_clientesN[q-\/>totalN] = malloc((strlen(key) +1) * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));}
+\DoxyCodeLine{542     strcpy(q-\/>lista\_clientesN[q-\/>totalN++],key);}
+\DoxyCodeLine{543 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_a8310f07b304f10a440373631d88e9c5f}\label{estruturas_8c_a8310f07b304f10a440373631d88e9c5f}} 
+\index{estruturas.c@{estruturas.c}!insere\_ProdPQ9@{insere\_ProdPQ9}}
+\index{insere\_ProdPQ9@{insere\_ProdPQ9}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{insere\_ProdPQ9()}{insere\_ProdPQ9()}}
+{\footnotesize\ttfamily void insere\+\_\+\+Prod\+P\+Q9 (\begin{DoxyParamCaption}\item[{char $\ast$}]{key,  }\item[{Q9}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que insere na estrutura um código produto comprado em modo Promocional. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em key} & char$\ast$ que é o código do produto a inserir na estrutura. \\
+\hline
+{\em q} & Q9 que é estrutura onde será inserida a key dada. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 602 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{602                                      \{}
+\DoxyCodeLine{603     q-\/>lista\_clientesP[q-\/>totalP] = malloc((strlen(key) +1) * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));}
+\DoxyCodeLine{604     strcpy(q-\/>lista\_clientesP[q-\/>totalP++],key);}
+\DoxyCodeLine{605 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_a55dfe0c3e3dc5cc8ce80bad1bd26f7ae}\label{estruturas_8c_a55dfe0c3e3dc5cc8ce80bad1bd26f7ae}} 
+\index{estruturas.c@{estruturas.c}!insere\_ProdQ2@{insere\_ProdQ2}}
+\index{insere\_ProdQ2@{insere\_ProdQ2}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{insere\_ProdQ2()}{insere\_ProdQ2()}}
+{\footnotesize\ttfamily void insere\+\_\+\+Prod\+Q2 (\begin{DoxyParamCaption}\item[{char $\ast$}]{key,  }\item[{Q2}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que insere na estrutura um código de produto. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em key} & char$\ast$ que é o código do produto a inserir na estrutura. \\
+\hline
+{\em q} & Q2 que é estrutura onde será inserida a key dada. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 85 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{85                                     \{}
+\DoxyCodeLine{86     q-\/>lista\_produtos[q-\/>num\_total] = malloc((strlen(key) +1) * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));}
+\DoxyCodeLine{87     strcpy(q-\/>lista\_produtos[q-\/>num\_total++],key);}
+\DoxyCodeLine{88 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_ab4557190adbc6318f72a7b75c18b1060}\label{estruturas_8c_ab4557190adbc6318f72a7b75c18b1060}} 
+\index{estruturas.c@{estruturas.c}!setClients\_Path13@{setClients\_Path13}}
+\index{setClients\_Path13@{setClients\_Path13}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{setClients\_Path13()}{setClients\_Path13()}}
+{\footnotesize\ttfamily void set\+Clients\+\_\+\+Path13 (\begin{DoxyParamCaption}\item[{Q13}]{q,  }\item[{char $\ast$}]{file }\end{DoxyParamCaption})}
+
+
+
+Função que estabelece a quantidade total de vendas válidas. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Q13 que é a estrutura onde será estabelecido. \\
+\hline
+{\em file} & char$\ast$ que é o caminho para o ficheiro dos clientes. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 1215 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1215                                          \{}
+\DoxyCodeLine{1216     q-\/>clients\_File\_Path = file;}
+\DoxyCodeLine{1217 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_a029be7affe21b7c0f6a660b4f1859fff}\label{estruturas_8c_a029be7affe21b7c0f6a660b4f1859fff}} 
+\index{estruturas.c@{estruturas.c}!setFat\_NQ3@{setFat\_NQ3}}
+\index{setFat\_NQ3@{setFat\_NQ3}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{setFat\_NQ3()}{setFat\_NQ3()}}
+{\footnotesize\ttfamily void set\+Fat\+\_\+\+N\+Q3 (\begin{DoxyParamCaption}\item[{double}]{n,  }\item[{Q3}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que estabelece o total faturado em modo normal. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em n} & double que é o total faturado. \\
+\hline
+{\em q} & Q3 que é a estrutura onde será inserido. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 173 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{173                                \{}
+\DoxyCodeLine{174     q-\/>fat\_total\_N = n;}
+\DoxyCodeLine{175 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_af16b3ade4c87b1b81b3b0771fdb4078f}\label{estruturas_8c_af16b3ade4c87b1b81b3b0771fdb4078f}} 
+\index{estruturas.c@{estruturas.c}!setFat\_PQ3@{setFat\_PQ3}}
+\index{setFat\_PQ3@{setFat\_PQ3}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{setFat\_PQ3()}{setFat\_PQ3()}}
+{\footnotesize\ttfamily void set\+Fat\+\_\+\+P\+Q3 (\begin{DoxyParamCaption}\item[{double}]{n,  }\item[{Q3}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que estabelece o total faturado em modo promocional. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em n} & double que é o total faturado. \\
+\hline
+{\em q} & Q3 que é a estrutura onde será inserido. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 191 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{191                                \{}
+\DoxyCodeLine{192     q-\/>fat\_total\_P = n;}
+\DoxyCodeLine{193 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_ae5f3bba421573d83341b22ad44722815}\label{estruturas_8c_ae5f3bba421573d83341b22ad44722815}} 
+\index{estruturas.c@{estruturas.c}!setFat\_Q8@{setFat\_Q8}}
+\index{setFat\_Q8@{setFat\_Q8}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{setFat\_Q8()}{setFat\_Q8()}}
+{\footnotesize\ttfamily void set\+Fat\+\_\+\+Q8 (\begin{DoxyParamCaption}\item[{double}]{n,  }\item[{Q8}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que estabelece o total faturado. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em n} & double que é o total faturado. \\
+\hline
+{\em q} & Q8 que é a estrutura onde será estabelecido. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 447 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{447                               \{}
+\DoxyCodeLine{448     q-\/>fat\_total = n;}
+\DoxyCodeLine{449 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_adae1bf183249b0be29d2f96224ec73d1}\label{estruturas_8c_adae1bf183249b0be29d2f96224ec73d1}} 
+\index{estruturas.c@{estruturas.c}!setLista\_ClientesQ5@{setLista\_ClientesQ5}}
+\index{setLista\_ClientesQ5@{setLista\_ClientesQ5}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{setLista\_ClientesQ5()}{setLista\_ClientesQ5()}}
+{\footnotesize\ttfamily void set\+Lista\+\_\+\+Clientes\+Q5 (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{a,  }\item[{Q5}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que estabelece a lista de clientes da estrutura Q5. Caso exista uma previamente, é libertada e substituída. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em a} & char$\ast$$\ast$ que é nova lista da estrutura Q5. \\
+\hline
+{\em q} & Q5 que é estrutura onde será estabelecida a lista de string. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 252 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{252                                         \{}
+\DoxyCodeLine{253     \textcolor{keywordflow}{if}(q-\/>lista\_clientes)\{}
+\DoxyCodeLine{254         \textcolor{keywordtype}{int} i = 0;}
+\DoxyCodeLine{255         \textcolor{keywordflow}{while} (q-\/>lista\_clientes)\{}
+\DoxyCodeLine{256             free(q-\/>lista\_clientes[i++]);}
+\DoxyCodeLine{257         \}}
+\DoxyCodeLine{258     \}}
+\DoxyCodeLine{259     q-\/>lista\_clientes = a;}
+\DoxyCodeLine{260 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_a65f6cf9c65dfa54185e2e97a1b61989b}\label{estruturas_8c_a65f6cf9c65dfa54185e2e97a1b61989b}} 
+\index{estruturas.c@{estruturas.c}!setLista\_ProdsNQ9@{setLista\_ProdsNQ9}}
+\index{setLista\_ProdsNQ9@{setLista\_ProdsNQ9}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{setLista\_ProdsNQ9()}{setLista\_ProdsNQ9()}}
+{\footnotesize\ttfamily void set\+Lista\+\_\+\+Prods\+N\+Q9 (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{a,  }\item[{Q9}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que estabelece a lista de produtos comprados em modo Normal da estrutura Q9. Caso exista uma previamente, é libertada e substituída. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em a} & char$\ast$$\ast$ que é nova lista da estrutura Q9. \\
+\hline
+{\em q} & Q9 que é estrutura onde será estabelecida a lista de string. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 525 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{525                                       \{}
+\DoxyCodeLine{526     \textcolor{keywordflow}{if}(q-\/>lista\_clientesN)\{}
+\DoxyCodeLine{527         \textcolor{keywordtype}{int} i = 0;}
+\DoxyCodeLine{528         \textcolor{keywordflow}{while} (q-\/>lista\_clientesN)\{}
+\DoxyCodeLine{529             free(q-\/>lista\_clientesN[i++]);}
+\DoxyCodeLine{530         \}}
+\DoxyCodeLine{531     \}}
+\DoxyCodeLine{532     q-\/>lista\_clientesN = a;}
+\DoxyCodeLine{533 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_a615ee8b1f858a43902d2022c82df4f48}\label{estruturas_8c_a615ee8b1f858a43902d2022c82df4f48}} 
+\index{estruturas.c@{estruturas.c}!setLista\_ProdsPQ9@{setLista\_ProdsPQ9}}
+\index{setLista\_ProdsPQ9@{setLista\_ProdsPQ9}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{setLista\_ProdsPQ9()}{setLista\_ProdsPQ9()}}
+{\footnotesize\ttfamily void set\+Lista\+\_\+\+Prods\+P\+Q9 (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{a,  }\item[{Q9}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que estabelece a lista de produtos comprados em modo Promocional da estrutura Q9. Caso exista uma previamente, é libertada e substituída. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em a} & char$\ast$$\ast$ que é nova lista da estrutura Q9. \\
+\hline
+{\em q} & Q9 que é estrutura onde será estabelecida a lista de string. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 587 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{587                                       \{}
+\DoxyCodeLine{588     \textcolor{keywordflow}{if}(q-\/>lista\_clientesP)\{}
+\DoxyCodeLine{589         \textcolor{keywordtype}{int} i = 0;}
+\DoxyCodeLine{590         \textcolor{keywordflow}{while} (q-\/>lista\_clientesP)\{}
+\DoxyCodeLine{591             free(q-\/>lista\_clientesP[i++]);}
+\DoxyCodeLine{592         \}}
+\DoxyCodeLine{593     \}}
+\DoxyCodeLine{594     q-\/>lista\_clientesP = a;}
+\DoxyCodeLine{595 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_a09455f8e8bb85f74e74c289d7375ac78}\label{estruturas_8c_a09455f8e8bb85f74e74c289d7375ac78}} 
+\index{estruturas.c@{estruturas.c}!setLista\_ProdsQ2@{setLista\_ProdsQ2}}
+\index{setLista\_ProdsQ2@{setLista\_ProdsQ2}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{setLista\_ProdsQ2()}{setLista\_ProdsQ2()}}
+{\footnotesize\ttfamily void set\+Lista\+\_\+\+Prods\+Q2 (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{a,  }\item[{Q2}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que estabelece a lista de produtos da estrutura Q2. Caso exista uma previamente, é libertada e substituída. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em a} & char$\ast$$\ast$ que é nova lista da estrutura Q2. \\
+\hline
+{\em q} & Q2 que é estrutura onde será estabelecida a lista de string. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 61 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{61                                      \{}
+\DoxyCodeLine{62     \textcolor{keywordflow}{if}(q-\/>lista\_produtos)\{}
+\DoxyCodeLine{63         \textcolor{keywordtype}{int} i = 0;}
+\DoxyCodeLine{64         \textcolor{keywordflow}{while} (q-\/>lista\_produtos)\{}
+\DoxyCodeLine{65             free(q-\/>lista\_produtos[i++]);}
+\DoxyCodeLine{66         \}}
+\DoxyCodeLine{67     \}}
+\DoxyCodeLine{68     q-\/>lista\_produtos = a;}
+\DoxyCodeLine{69 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_a89139245dabf3f29938430bb633be51d}\label{estruturas_8c_a89139245dabf3f29938430bb633be51d}} 
+\index{estruturas.c@{estruturas.c}!setNum\_totalQ2@{setNum\_totalQ2}}
+\index{setNum\_totalQ2@{setNum\_totalQ2}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{setNum\_totalQ2()}{setNum\_totalQ2()}}
+{\footnotesize\ttfamily void set\+Num\+\_\+total\+Q2 (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{Q2}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que fixa o número total de elementos dentro da estrutura. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em n} & int que é o número total de elementos. \\
+\hline
+{\em q} & Q2 que é estrutura onde será fixado o número total de elementos. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 76 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{76                                 \{}
+\DoxyCodeLine{77     q-\/>num\_total = n;}
+\DoxyCodeLine{78 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_a2e15d8a1596e4fd5d59eea9412ac0f6a}\label{estruturas_8c_a2e15d8a1596e4fd5d59eea9412ac0f6a}} 
+\index{estruturas.c@{estruturas.c}!setNumClientesQ6@{setNumClientesQ6}}
+\index{setNumClientesQ6@{setNumClientesQ6}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{setNumClientesQ6()}{setNumClientesQ6()}}
+{\footnotesize\ttfamily void set\+Num\+Clientes\+Q6 (\begin{DoxyParamCaption}\item[{Q6}]{q,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Função que estabelece o número de produtos. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Q6 que é a estrutura onde será inserido. \\
+\hline
+{\em n} & int que é o número de clientes. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 344 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{344                                   \{}
+\DoxyCodeLine{345   q-\/>nclientes = n;}
+\DoxyCodeLine{346 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_a7b486f143ae7d234e9c519a2d18f627f}\label{estruturas_8c_a7b486f143ae7d234e9c519a2d18f627f}} 
+\index{estruturas.c@{estruturas.c}!setNumProdsQ6@{setNumProdsQ6}}
+\index{setNumProdsQ6@{setNumProdsQ6}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{setNumProdsQ6()}{setNumProdsQ6()}}
+{\footnotesize\ttfamily void set\+Num\+Prods\+Q6 (\begin{DoxyParamCaption}\item[{Q6}]{q,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Função que estabelece o número de produtos. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Q6 que é a estrutura onde será inserido. \\
+\hline
+{\em n} & int que é o número de produtos. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 335 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{335                                \{}
+\DoxyCodeLine{336   q-\/>nprodutos = n;}
+\DoxyCodeLine{337 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_ad0bb18f7237bbfe9aee55bd7d5b32415}\label{estruturas_8c_ad0bb18f7237bbfe9aee55bd7d5b32415}} 
+\index{estruturas.c@{estruturas.c}!setNVendas\_Q8@{setNVendas\_Q8}}
+\index{setNVendas\_Q8@{setNVendas\_Q8}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{setNVendas\_Q8()}{setNVendas\_Q8()}}
+{\footnotesize\ttfamily void set\+N\+Vendas\+\_\+\+Q8 (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{Q8}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que estabelece a quantidade total de vendas registadas. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em n} & int que é a quantidade total. \\
+\hline
+{\em q} & Q8 que é a estrutura onde será estabelecido. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 429 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{429                                \{}
+\DoxyCodeLine{430     q-\/>nvendas\_total = n;}
+\DoxyCodeLine{431 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_a08cbcfcc3d7fc1306d5c55e3fb52628a}\label{estruturas_8c_a08cbcfcc3d7fc1306d5c55e3fb52628a}} 
+\index{estruturas.c@{estruturas.c}!setProducts\_Path13@{setProducts\_Path13}}
+\index{setProducts\_Path13@{setProducts\_Path13}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{setProducts\_Path13()}{setProducts\_Path13()}}
+{\footnotesize\ttfamily void set\+Products\+\_\+\+Path13 (\begin{DoxyParamCaption}\item[{Q13}]{q,  }\item[{char $\ast$}]{file }\end{DoxyParamCaption})}
+
+
+
+Função que estabelece a quantidade total de vendas válidas. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Q13 que é a estrutura onde será estabelecido. \\
+\hline
+{\em file} & char$\ast$ que é o caminho para o ficheiro dos produtos. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 1224 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1224                                           \{}
+\DoxyCodeLine{1225     q-\/>products\_File\_Path = file;}
+\DoxyCodeLine{1226 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_a5eea1cbd4f2f20361819bc64e16b4830}\label{estruturas_8c_a5eea1cbd4f2f20361819bc64e16b4830}} 
+\index{estruturas.c@{estruturas.c}!setQ10Aux@{setQ10Aux}}
+\index{setQ10Aux@{setQ10Aux}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{setQ10Aux()}{setQ10Aux()}}
+{\footnotesize\ttfamily void set\+Q10\+Aux (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structquerie10aux}{Q10\+Aux}}}]{q,  }\item[{char $\ast$}]{p,  }\item[{int}]{qtd }\end{DoxyParamCaption})}
+
+
+
+Função que estabelece a key e a quantidade de uma estrutura. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Q10\+Aux que é estrutura onde serão inseridos estes parâmetros. \\
+\hline
+{\em p} & char$\ast$ que é o código do produto a ser inserido. \\
+\hline
+{\em qtd} & int que é a quantidade total desse produto. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 678 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{678                                           \{}
+\DoxyCodeLine{679   strcpy(q-\/>key,p);}
+\DoxyCodeLine{680   q-\/>quantidade = qtd;}
+\DoxyCodeLine{681 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_a24626033b42d42f01097a3bb9deda944}\label{estruturas_8c_a24626033b42d42f01097a3bb9deda944}} 
+\index{estruturas.c@{estruturas.c}!setQ11Aux@{setQ11Aux}}
+\index{setQ11Aux@{setQ11Aux}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{setQ11Aux()}{setQ11Aux()}}
+{\footnotesize\ttfamily void set\+Q11\+Aux (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structquerie11aux}{Q11\+Aux}}}]{q,  }\item[{char $\ast$}]{p,  }\item[{int}]{qt\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Função que estabelece a key e a quantidade, total e por filial, de uma estrutura. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Q11\+Aux que é estrutura onde serão inseridos estes parâmetros. \\
+\hline
+{\em p} & char$\ast$ que é o código do produto a ser inserido. \\
+\hline
+{\em qtd} & int\mbox{[}\mbox{]} que é o array com a quantidade total por filial desse produto. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 824 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{824                                            \{}
+\DoxyCodeLine{825   strcpy(q-\/>key,p);}
+\DoxyCodeLine{826   \textcolor{keywordtype}{int} i;}
+\DoxyCodeLine{827   \textcolor{keywordflow}{for}(i=0;i<FILIAL;i++)\{}
+\DoxyCodeLine{828     q-\/>quantidade += qt[i];}
+\DoxyCodeLine{829     q-\/>qtd[i] = qt[i];}
+\DoxyCodeLine{830   \}}
+\DoxyCodeLine{831 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_a7fe72cfa1852481895c5a876a7e4f5f4}\label{estruturas_8c_a7fe72cfa1852481895c5a876a7e4f5f4}} 
+\index{estruturas.c@{estruturas.c}!setQ12Aux@{setQ12Aux}}
+\index{setQ12Aux@{setQ12Aux}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{setQ12Aux()}{setQ12Aux()}}
+{\footnotesize\ttfamily void set\+Q12\+Aux (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structquerie12aux}{Q12\+Aux}}}]{q,  }\item[{char $\ast$}]{p,  }\item[{double}]{faturado }\end{DoxyParamCaption})}
+
+
+
+Função que estabelece a key e o total faturado de uma estrutura. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Q12\+Aux que é estrutura onde serão inseridos estes parâmetros. \\
+\hline
+{\em p} & char$\ast$ que é o código do produto a ser inserido. \\
+\hline
+{\em faturado} & double que é o total faturado desse produto. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 1002 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1002                                                   \{}
+\DoxyCodeLine{1003   strcpy(q-\/>key,p);}
+\DoxyCodeLine{1004   q-\/>fat = faturado;}
+\DoxyCodeLine{1005 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_a70c5f541cf5b168d8b3851e828813e6a}\label{estruturas_8c_a70c5f541cf5b168d8b3851e828813e6a}} 
+\index{estruturas.c@{estruturas.c}!setQ\_Clientes13@{setQ\_Clientes13}}
+\index{setQ\_Clientes13@{setQ\_Clientes13}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{setQ\_Clientes13()}{setQ\_Clientes13()}}
+{\footnotesize\ttfamily void set\+Q\+\_\+\+Clientes13 (\begin{DoxyParamCaption}\item[{Q13}]{q,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Função que estabelece a quantidade total de clientes. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Q13 que é a estrutura onde será estabelecido. \\
+\hline
+{\em n} & int que é a quantidade total. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 1179 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1179                                   \{}
+\DoxyCodeLine{1180     q-\/>q\_clientes = n;}
+\DoxyCodeLine{1181 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_ad70fe37354f2c1d041dd6303bf55046c}\label{estruturas_8c_ad70fe37354f2c1d041dd6303bf55046c}} 
+\index{estruturas.c@{estruturas.c}!setQ\_Produtos13@{setQ\_Produtos13}}
+\index{setQ\_Produtos13@{setQ\_Produtos13}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{setQ\_Produtos13()}{setQ\_Produtos13()}}
+{\footnotesize\ttfamily void set\+Q\+\_\+\+Produtos13 (\begin{DoxyParamCaption}\item[{Q13}]{q,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Função que estabelece a quantidade total de produtos. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Q13 que é a estrutura onde será estabelecido. \\
+\hline
+{\em n} & int que é a quantidade total. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 1188 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1188                                   \{}
+\DoxyCodeLine{1189     q-\/>q\_produtos = n;}
+\DoxyCodeLine{1190 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_a6296c506821d0c6a5edbf2f3e8caf708}\label{estruturas_8c_a6296c506821d0c6a5edbf2f3e8caf708}} 
+\index{estruturas.c@{estruturas.c}!setQt\_FilialQ7@{setQt\_FilialQ7}}
+\index{setQt\_FilialQ7@{setQt\_FilialQ7}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{setQt\_FilialQ7()}{setQt\_FilialQ7()}}
+{\footnotesize\ttfamily void set\+Qt\+\_\+\+Filial\+Q7 (\begin{DoxyParamCaption}\item[{Q7}]{q,  }\item[{int}]{n,  }\item[{int}]{i,  }\item[{int}]{j }\end{DoxyParamCaption})}
+
+
+
+Função que estabelece a quantidade total comprada numa dada filial, num dado mês. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Q7 que é a estrutura onde será estabelecido. \\
+\hline
+{\em n} & int que é a quantidade total. \\
+\hline
+{\em i} & int que é a filial. \\
+\hline
+{\em j} & int que é o mês. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 390 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{390                                               \{}
+\DoxyCodeLine{391   q-\/>qtd\_total[i][j] = n;}
+\DoxyCodeLine{392 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_ae7ddfc6c12a3175edafa3f58f95b0b6a}\label{estruturas_8c_ae7ddfc6c12a3175edafa3f58f95b0b6a}} 
+\index{estruturas.c@{estruturas.c}!setQt\_NQ3@{setQt\_NQ3}}
+\index{setQt\_NQ3@{setQt\_NQ3}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{setQt\_NQ3()}{setQt\_NQ3()}}
+{\footnotesize\ttfamily void set\+Qt\+\_\+\+N\+Q3 (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{Q3}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que estabelece a quantidade total de vendas registas em modo Normal. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em n} & int que é a quantidade total de vendas registadas. \\
+\hline
+{\em q} & Q3 que é a estrutura onde será inserido. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 137 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{137                            \{}
+\DoxyCodeLine{138     q-\/>qt\_total\_N = n;}
+\DoxyCodeLine{139 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_a350838bc921f8e756fc5867488b40318}\label{estruturas_8c_a350838bc921f8e756fc5867488b40318}} 
+\index{estruturas.c@{estruturas.c}!setQt\_PQ3@{setQt\_PQ3}}
+\index{setQt\_PQ3@{setQt\_PQ3}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{setQt\_PQ3()}{setQt\_PQ3()}}
+{\footnotesize\ttfamily void set\+Qt\+\_\+\+P\+Q3 (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{Q3}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que estabelece a quantidade total de vendas registas em modo promocional. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em n} & int que é a quantidade total de vendas registadas. \\
+\hline
+{\em q} & Q3 que é a estrutura onde será inserido. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 155 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{155                            \{}
+\DoxyCodeLine{156     q-\/>qt\_total\_P = n;}
+\DoxyCodeLine{157 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_a7df59ab6bcb1b50841edb6afa82b5d6c}\label{estruturas_8c_a7df59ab6bcb1b50841edb6afa82b5d6c}} 
+\index{estruturas.c@{estruturas.c}!setSales\_Path13@{setSales\_Path13}}
+\index{setSales\_Path13@{setSales\_Path13}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{setSales\_Path13()}{setSales\_Path13()}}
+{\footnotesize\ttfamily void set\+Sales\+\_\+\+Path13 (\begin{DoxyParamCaption}\item[{Q13}]{q,  }\item[{char $\ast$}]{file }\end{DoxyParamCaption})}
+
+
+
+Função que estabelece a quantidade total de vendas válidas. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Q13 que é a estrutura onde será estabelecido. \\
+\hline
+{\em file} & char$\ast$ que é o caminho para o ficheiro das vendas. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 1233 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1233                                        \{}
+\DoxyCodeLine{1234     q-\/>sales\_File\_Path = file;}
+\DoxyCodeLine{1235 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_a936b77cd07a68b7dbd5cfec0aa5237b5}\label{estruturas_8c_a936b77cd07a68b7dbd5cfec0aa5237b5}} 
+\index{estruturas.c@{estruturas.c}!setTotalNQ9@{setTotalNQ9}}
+\index{setTotalNQ9@{setTotalNQ9}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{setTotalNQ9()}{setTotalNQ9()}}
+{\footnotesize\ttfamily void set\+Total\+N\+Q9 (\begin{DoxyParamCaption}\item[{Q9}]{q,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Função que estabelece a quantidade total clientes que compraram em modo Normal. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em n} & int que é a quantidade total. \\
+\hline
+{\em q} & Q9 que é a estrutura onde será estabelecido. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 507 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{507                              \{}
+\DoxyCodeLine{508   q-\/>totalN = n;}
+\DoxyCodeLine{509 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_a7ca6bd940200f4faf28db8168cb2c8f6}\label{estruturas_8c_a7ca6bd940200f4faf28db8168cb2c8f6}} 
+\index{estruturas.c@{estruturas.c}!setTotalPQ9@{setTotalPQ9}}
+\index{setTotalPQ9@{setTotalPQ9}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{setTotalPQ9()}{setTotalPQ9()}}
+{\footnotesize\ttfamily void set\+Total\+P\+Q9 (\begin{DoxyParamCaption}\item[{Q9}]{q,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Função que estabelece a quantidade total clientes que compraram em modo Promocional. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em n} & int que é a quantidade total. \\
+\hline
+{\em q} & Q9 que é a estrutura onde será estabelecido. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 569 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{569                              \{}
+\DoxyCodeLine{570   q-\/>totalP = n;}
+\DoxyCodeLine{571 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_a4c4b00824bb825a5b96699b114a4b518}\label{estruturas_8c_a4c4b00824bb825a5b96699b114a4b518}} 
+\index{estruturas.c@{estruturas.c}!setV\_Totais13@{setV\_Totais13}}
+\index{setV\_Totais13@{setV\_Totais13}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{setV\_Totais13()}{setV\_Totais13()}}
+{\footnotesize\ttfamily void set\+V\+\_\+\+Totais13 (\begin{DoxyParamCaption}\item[{Q13}]{q,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Função que estabelece a quantidade total de linhas de venda lidas. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Q13 que é a estrutura onde será estabelecido. \\
+\hline
+{\em n} & int que é a quantidade total. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 1206 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1206                                 \{}
+\DoxyCodeLine{1207     q-\/>vendas\_totais = n;}
+\DoxyCodeLine{1208 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_a8d1c23caf932f5e80f165b5fe5d49111}\label{estruturas_8c_a8d1c23caf932f5e80f165b5fe5d49111}} 
+\index{estruturas.c@{estruturas.c}!setV\_Validas13@{setV\_Validas13}}
+\index{setV\_Validas13@{setV\_Validas13}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{setV\_Validas13()}{setV\_Validas13()}}
+{\footnotesize\ttfamily void set\+V\+\_\+\+Validas13 (\begin{DoxyParamCaption}\item[{Q13}]{q,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Função que estabelece a quantidade total de vendas válidas. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Q13 que é a estrutura onde será estabelecido. \\
+\hline
+{\em n} & int que é a quantidade total. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 1197 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1197                                  \{}
+\DoxyCodeLine{1198     q-\/>vendas\_validas = n;}
+\DoxyCodeLine{1199 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_ab8e76cc797a94c81f1565859e2d52206}\label{estruturas_8c_ab8e76cc797a94c81f1565859e2d52206}} 
+\index{estruturas.c@{estruturas.c}!sortAndGetQ10@{sortAndGetQ10}}
+\index{sortAndGetQ10@{sortAndGetQ10}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{sortAndGetQ10()}{sortAndGetQ10()}}
+{\footnotesize\ttfamily void sort\+And\+Get\+Q10 (\begin{DoxyParamCaption}\item[{Q10}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que ordena uma estrutura. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Q10 que é a estrutura a ser ordenada. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 747 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{747                          \{}
+\DoxyCodeLine{748   qsort(q-\/>ordenado,q-\/>num\_total,\textcolor{keyword}{sizeof}(q-\/>ordenado[0]),\mbox{\hyperlink{estruturas_8c_ac70138609ef6aa6fabca57aca8681e83}{compare}});}
+\DoxyCodeLine{749 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_ad283e416672cf5a4f33f45360f8cb3c7}\label{estruturas_8c_ad283e416672cf5a4f33f45360f8cb3c7}} 
+\index{estruturas.c@{estruturas.c}!sortAndGetQ11@{sortAndGetQ11}}
+\index{sortAndGetQ11@{sortAndGetQ11}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{sortAndGetQ11()}{sortAndGetQ11()}}
+{\footnotesize\ttfamily void sort\+And\+Get\+Q11 (\begin{DoxyParamCaption}\item[{Q11}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que ordena uma estrutura. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Q11 que é a estrutura a ser ordenada. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 936 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{936                          \{}
+\DoxyCodeLine{937   qsort(q-\/>ordenado,q-\/>num\_total,\textcolor{keyword}{sizeof}(q-\/>ordenado[0]),\mbox{\hyperlink{estruturas_8c_affec5cc58f67b01c883207388146f6b2}{compareQ11}});}
+\DoxyCodeLine{938 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{estruturas_8c_ae1b6abc1d4907a928d52d2de7be09c3a}\label{estruturas_8c_ae1b6abc1d4907a928d52d2de7be09c3a}} 
+\index{estruturas.c@{estruturas.c}!sortAndGetQ12@{sortAndGetQ12}}
+\index{sortAndGetQ12@{sortAndGetQ12}!estruturas.c@{estruturas.c}}
+\doxysubsubsection{\texorpdfstring{sortAndGetQ12()}{sortAndGetQ12()}}
+{\footnotesize\ttfamily void sort\+And\+Get\+Q12 (\begin{DoxyParamCaption}\item[{Q12}]{q }\end{DoxyParamCaption})}
+
+
+
+Função que ordena uma estrutura. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em q} & Q12 que é a estrutura a ser ordenada. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 1073 do ficheiro estruturas.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1073                          \{}
+\DoxyCodeLine{1074   qsort(q-\/>ordenado,q-\/>num\_total,\textcolor{keyword}{sizeof}(q-\/>ordenado[0]),\mbox{\hyperlink{estruturas_8c_a273aaa394c26c4d3126e01978e2ced13}{compareQ12}});}
+\DoxyCodeLine{1075 \}}
+
+\end{DoxyCode}

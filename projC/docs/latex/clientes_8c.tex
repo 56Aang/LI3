@@ -1,0 +1,422 @@
+\hypertarget{clientes_8c}{}\doxysection{Referência ao ficheiro src/clientes.c}
+\label{clientes_8c}\index{src/clientes.c@{src/clientes.c}}
+
+
+Ficheiro que contém a A\+PI relativa à implementação dos clientes.  
+
+
+{\ttfamily \#include \char`\"{}../include/clientes.\+h\char`\"{}}\newline
+\doxysubsection*{Estruturas de Dados}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcliente}{cliente}}
+\item 
+struct \mbox{\hyperlink{structcatalogo__clientes}{catalogo\+\_\+clientes}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+Cliente \mbox{\hyperlink{clientes_8c_a5f0cc74d03bcef2cf08ede6a6c82e413}{cria\+\_\+\+Cliente}} ()
+\begin{DoxyCompactList}\small\item\em Função que cria um novo cliente. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{clientes_8c_a329568d1883aca127fc8025cd20f0419}{free\+\_\+c}} (Cliente c)
+\begin{DoxyCompactList}\small\item\em Função que limpa da memória o espaço ocupado por um dado cliente. \end{DoxyCompactList}\item 
+Cliente \mbox{\hyperlink{clientes_8c_a955d8669b906641755247a9d0c05f5ff}{altera\+\_\+\+Cliente}} (Cliente c, char $\ast$e)
+\begin{DoxyCompactList}\small\item\em Função que altera o código de um determinado cliente. \end{DoxyCompactList}\item 
+Clientes\+\_\+\+Catalog \mbox{\hyperlink{clientes_8c_a4ce68937a14a9c16e98beeac9d9c393b}{init\+\_\+clientes\+\_\+catalog}} ()
+\begin{DoxyCompactList}\small\item\em Função que inicia um novo catálogo de clientes. \end{DoxyCompactList}\item 
+Boolean \mbox{\hyperlink{clientes_8c_aa1605360028ceae03157e2a53b9d30e4}{existe\+\_\+cliente}} (Clientes\+\_\+\+Catalog cat, char $\ast$key)
+\begin{DoxyCompactList}\small\item\em Função que verifica se existe um cliente. \end{DoxyCompactList}\item 
+Clientes\+\_\+\+Catalog \mbox{\hyperlink{clientes_8c_ab79e0e920fc19de6cd7278bb0e3f282c}{insere\+\_\+cliente}} (Clientes\+\_\+\+Catalog cat, Cliente e)
+\begin{DoxyCompactList}\small\item\em Função que insere um cliente num catálogo. \end{DoxyCompactList}\item 
+Clientes\+\_\+\+Catalog \mbox{\hyperlink{clientes_8c_a053cb24e83ea691e7761c29774f68a94}{insere\+\_\+\+Clientes\+\_\+\+Catalogo}} (Clientes\+\_\+\+Catalog cat, Cliente e, void $\ast$Estrutura)
+\begin{DoxyCompactList}\small\item\em Função que insere no catálogo de clientes um cliente juntamente com uma estrutura. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{clientes_8c_aff6903a09752ec30e03653dbb090062d}{free\+\_\+\+Clientes}} (Clientes\+\_\+\+Catalog cat, Funcao f)
+\begin{DoxyCompactList}\small\item\em Função com o objetivo de limpar da memória um dado catálogo de clientes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{clientes_8c_aea87fb3dba1a84e2f72b72445d07f796}{imprime\+\_\+\+Clientes}} (Clientes\+\_\+\+Catalog cat)
+\begin{DoxyCompactList}\small\item\em Função que imprime os clientes do catálogo de clientes. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{clientes_8c_a11ac69b7e3c0edc64e2776a9dc0d12db}{get\+Cliente\+Code}} (Cliente e)
+\begin{DoxyCompactList}\small\item\em Função que obtém o código do cliente. \end{DoxyCompactList}\item 
+Estrutura \mbox{\hyperlink{clientes_8c_a20860554e851f1ca7364f72a775efeba}{get\+\_\+cliente\+\_\+struct}} (Clientes\+\_\+\+Catalog cat, Cliente c)
+\begin{DoxyCompactList}\small\item\em Função que devolve a estrutura associada a um catálogo e a um cliente que lhe são passados como argumento. \end{DoxyCompactList}\item 
+Clientes\+\_\+\+Catalog \mbox{\hyperlink{clientes_8c_a7a093cfc4d9f6b350741d34d05e36e66}{altera\+\_\+\+Catalogo\+\_\+\+Clientes}} (Clientes\+\_\+\+Catalog cat, Cliente e, void $\ast$Estrutura)
+\begin{DoxyCompactList}\small\item\em Função que altera no catálogo de clientes um cliente juntamente com a estrutura. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Ficheiro que contém a A\+PI relativa à implementação dos clientes. 
+
+
+
+\doxysubsection{Documentação das funções}
+\mbox{\Hypertarget{clientes_8c_a7a093cfc4d9f6b350741d34d05e36e66}\label{clientes_8c_a7a093cfc4d9f6b350741d34d05e36e66}} 
+\index{clientes.c@{clientes.c}!altera\_Catalogo\_Clientes@{altera\_Catalogo\_Clientes}}
+\index{altera\_Catalogo\_Clientes@{altera\_Catalogo\_Clientes}!clientes.c@{clientes.c}}
+\doxysubsubsection{\texorpdfstring{altera\_Catalogo\_Clientes()}{altera\_Catalogo\_Clientes()}}
+{\footnotesize\ttfamily Clientes\+\_\+\+Catalog altera\+\_\+\+Catalogo\+\_\+\+Clientes (\begin{DoxyParamCaption}\item[{Clientes\+\_\+\+Catalog}]{cat,  }\item[{Cliente}]{e,  }\item[{void $\ast$}]{Estrutura }\end{DoxyParamCaption})}
+
+
+
+Função que altera no catálogo de clientes um cliente juntamente com a estrutura. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em cat} & Clientes\+\_\+\+Catalog onde se vai efetuar a alteração. \\
+\hline
+{\em e} & Cliente que vai alterar o existente. \\
+\hline
+{\em estrutura} & Conteúdo/\+Estrutura que vai alterar a existente. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Clientes\+\_\+\+Catalog atualizado. 
+\end{DoxyReturn}
+
+
+Definido na linha 150 do ficheiro clientes.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{150                                                                                              \{}
+\DoxyCodeLine{151   \textcolor{keywordtype}{char} *aux = \mbox{\hyperlink{clientes_8c_a11ac69b7e3c0edc64e2776a9dc0d12db}{getClienteCode}}(e);}
+\DoxyCodeLine{152   cat-\/>catalogo = \mbox{\hyperlink{catalogo_8c_acc5f085d5be2ccd45505eff9015e27db}{altera\_Catalogo}}(cat-\/>catalogo,aux,Estrutura);}
+\DoxyCodeLine{153   free(aux);}
+\DoxyCodeLine{154   \textcolor{keywordflow}{return} cat;}
+\DoxyCodeLine{155 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{clientes_8c_a955d8669b906641755247a9d0c05f5ff}\label{clientes_8c_a955d8669b906641755247a9d0c05f5ff}} 
+\index{clientes.c@{clientes.c}!altera\_Cliente@{altera\_Cliente}}
+\index{altera\_Cliente@{altera\_Cliente}!clientes.c@{clientes.c}}
+\doxysubsubsection{\texorpdfstring{altera\_Cliente()}{altera\_Cliente()}}
+{\footnotesize\ttfamily Cliente altera\+\_\+\+Cliente (\begin{DoxyParamCaption}\item[{Cliente}]{c,  }\item[{char $\ast$}]{e }\end{DoxyParamCaption})}
+
+
+
+Função que altera o código de um determinado cliente. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em c} & Cliente que vai ser alterado. \\
+\hline
+{\em e} & char$\ast$ apontador para o novo código do cliente. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Cliente alterado. 
+\end{DoxyReturn}
+
+
+Definido na linha 44 do ficheiro clientes.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{44                                           \{}
+\DoxyCodeLine{45     \textcolor{keywordflow}{if}(c-\/>n\_cliente)\{}
+\DoxyCodeLine{46         free(c-\/>n\_cliente);}
+\DoxyCodeLine{47     \}}
+\DoxyCodeLine{48     c-\/>n\_cliente = malloc((strlen(e) + 1) * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));}
+\DoxyCodeLine{49     strcpy(c-\/>n\_cliente,e);}
+\DoxyCodeLine{50     \textcolor{keywordflow}{return} c;}
+\DoxyCodeLine{51 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{clientes_8c_a5f0cc74d03bcef2cf08ede6a6c82e413}\label{clientes_8c_a5f0cc74d03bcef2cf08ede6a6c82e413}} 
+\index{clientes.c@{clientes.c}!cria\_Cliente@{cria\_Cliente}}
+\index{cria\_Cliente@{cria\_Cliente}!clientes.c@{clientes.c}}
+\doxysubsubsection{\texorpdfstring{cria\_Cliente()}{cria\_Cliente()}}
+{\footnotesize\ttfamily Cliente cria\+\_\+\+Cliente (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função que cria um novo cliente. 
+
+\begin{DoxyReturn}{Retorna}
+novo cliente nulo. 
+\end{DoxyReturn}
+
+
+Definido na linha 20 do ficheiro clientes.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{20                       \{}
+\DoxyCodeLine{21     Cliente c = (Cliente) malloc(\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} \mbox{\hyperlink{structcliente}{cliente}}));}
+\DoxyCodeLine{22     c-\/>n\_cliente = NULL;}
+\DoxyCodeLine{23     \textcolor{keywordflow}{return} c;}
+\DoxyCodeLine{24 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{clientes_8c_aa1605360028ceae03157e2a53b9d30e4}\label{clientes_8c_aa1605360028ceae03157e2a53b9d30e4}} 
+\index{clientes.c@{clientes.c}!existe\_cliente@{existe\_cliente}}
+\index{existe\_cliente@{existe\_cliente}!clientes.c@{clientes.c}}
+\doxysubsubsection{\texorpdfstring{existe\_cliente()}{existe\_cliente()}}
+{\footnotesize\ttfamily Boolean existe\+\_\+cliente (\begin{DoxyParamCaption}\item[{Clientes\+\_\+\+Catalog}]{cat,  }\item[{char $\ast$}]{key }\end{DoxyParamCaption})}
+
+
+
+Função que verifica se existe um cliente. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em cat} & Clientes\+\_\+\+Catalog onde se vai procurar. \\
+\hline
+{\em char} & $\ast$key a procurar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Boolean com o resultado. 
+\end{DoxyReturn}
+
+
+Definido na linha 69 do ficheiro clientes.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{69                                                        \{}
+\DoxyCodeLine{70     \textcolor{keywordflow}{return} \mbox{\hyperlink{catalogo_8c_a93fc716391dc53901dc2dbff97e75da1}{existe\_Catalogo}}(cat-\/>catalogo,key);}
+\DoxyCodeLine{71 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{clientes_8c_a329568d1883aca127fc8025cd20f0419}\label{clientes_8c_a329568d1883aca127fc8025cd20f0419}} 
+\index{clientes.c@{clientes.c}!free\_c@{free\_c}}
+\index{free\_c@{free\_c}!clientes.c@{clientes.c}}
+\doxysubsubsection{\texorpdfstring{free\_c()}{free\_c()}}
+{\footnotesize\ttfamily void free\+\_\+c (\begin{DoxyParamCaption}\item[{Cliente}]{c }\end{DoxyParamCaption})}
+
+
+
+Função que limpa da memória o espaço ocupado por um dado cliente. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em c} & Cliente a limpar da memória. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 30 do ficheiro clientes.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{30                       \{}
+\DoxyCodeLine{31     \textcolor{keywordflow}{if}(c)\{}
+\DoxyCodeLine{32         \textcolor{keywordflow}{if}(c-\/>n\_cliente)}
+\DoxyCodeLine{33             free(c-\/>n\_cliente);}
+\DoxyCodeLine{34         free(c);}
+\DoxyCodeLine{35     \}}
+\DoxyCodeLine{36 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{clientes_8c_aff6903a09752ec30e03653dbb090062d}\label{clientes_8c_aff6903a09752ec30e03653dbb090062d}} 
+\index{clientes.c@{clientes.c}!free\_Clientes@{free\_Clientes}}
+\index{free\_Clientes@{free\_Clientes}!clientes.c@{clientes.c}}
+\doxysubsubsection{\texorpdfstring{free\_Clientes()}{free\_Clientes()}}
+{\footnotesize\ttfamily void free\+\_\+\+Clientes (\begin{DoxyParamCaption}\item[{Clientes\+\_\+\+Catalog}]{cat,  }\item[{Funcao}]{f }\end{DoxyParamCaption})}
+
+
+
+Função com o objetivo de limpar da memória um dado catálogo de clientes. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em cat} & Clientes\+\_\+\+Catalog a limpar da memória. \\
+\hline
+{\em f} & Funcao que liberta a memória da estrutura associada. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 106 do ficheiro clientes.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{106                                                   \{}
+\DoxyCodeLine{107     \mbox{\hyperlink{catalogo_8c_aa40131c98313b4683617cd1757f7ea66}{free\_Catalogo}}(cat-\/>catalogo,f);}
+\DoxyCodeLine{108     free(cat);}
+\DoxyCodeLine{109 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{clientes_8c_a20860554e851f1ca7364f72a775efeba}\label{clientes_8c_a20860554e851f1ca7364f72a775efeba}} 
+\index{clientes.c@{clientes.c}!get\_cliente\_struct@{get\_cliente\_struct}}
+\index{get\_cliente\_struct@{get\_cliente\_struct}!clientes.c@{clientes.c}}
+\doxysubsubsection{\texorpdfstring{get\_cliente\_struct()}{get\_cliente\_struct()}}
+{\footnotesize\ttfamily Estrutura get\+\_\+cliente\+\_\+struct (\begin{DoxyParamCaption}\item[{Clientes\+\_\+\+Catalog}]{cat,  }\item[{Cliente}]{c }\end{DoxyParamCaption})}
+
+
+
+Função que devolve a estrutura associada a um catálogo e a um cliente que lhe são passados como argumento. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em cat} & Clientes\+\_\+\+Catalog de onde será devolvida a estrutura. \\
+\hline
+{\em c} & Cliente que indica onde está a estrutura que se pretende obter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void$\ast$ com apontador para a estrutura ou N\+U\+LL caso a mesma nao se encontre lá. 
+\end{DoxyReturn}
+
+
+Definido na linha 136 do ficheiro clientes.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{136                                                                \{}
+\DoxyCodeLine{137     \textcolor{keywordtype}{char} *aux = \mbox{\hyperlink{clientes_8c_a11ac69b7e3c0edc64e2776a9dc0d12db}{getClienteCode}}(c);}
+\DoxyCodeLine{138     Estrutura a = \mbox{\hyperlink{catalogo_8c_a2ed88930f3b18c3f107506ef3170508d}{get\_Cat\_struct}} (cat-\/>catalogo, aux);}
+\DoxyCodeLine{139     free(aux);}
+\DoxyCodeLine{140     \textcolor{keywordflow}{return} a;}
+\DoxyCodeLine{141 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{clientes_8c_a11ac69b7e3c0edc64e2776a9dc0d12db}\label{clientes_8c_a11ac69b7e3c0edc64e2776a9dc0d12db}} 
+\index{clientes.c@{clientes.c}!getClienteCode@{getClienteCode}}
+\index{getClienteCode@{getClienteCode}!clientes.c@{clientes.c}}
+\doxysubsubsection{\texorpdfstring{getClienteCode()}{getClienteCode()}}
+{\footnotesize\ttfamily char$\ast$ get\+Cliente\+Code (\begin{DoxyParamCaption}\item[{Cliente}]{e }\end{DoxyParamCaption})}
+
+
+
+Função que obtém o código do cliente. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em e} & Cliente do qual se pretende obter o código. return apontador para um char com o código do clientes \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 124 do ficheiro clientes.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{124                                \{}
+\DoxyCodeLine{125   \textcolor{keywordtype}{char} *aux = malloc(\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char})*(strlen(e-\/>n\_cliente)+1));}
+\DoxyCodeLine{126   strcpy(aux,e-\/>n\_cliente);}
+\DoxyCodeLine{127   \textcolor{keywordflow}{return} aux;}
+\DoxyCodeLine{128 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{clientes_8c_aea87fb3dba1a84e2f72b72445d07f796}\label{clientes_8c_aea87fb3dba1a84e2f72b72445d07f796}} 
+\index{clientes.c@{clientes.c}!imprime\_Clientes@{imprime\_Clientes}}
+\index{imprime\_Clientes@{imprime\_Clientes}!clientes.c@{clientes.c}}
+\doxysubsubsection{\texorpdfstring{imprime\_Clientes()}{imprime\_Clientes()}}
+{\footnotesize\ttfamily void imprime\+\_\+\+Clientes (\begin{DoxyParamCaption}\item[{Clientes\+\_\+\+Catalog}]{cat }\end{DoxyParamCaption})}
+
+
+
+Função que imprime os clientes do catálogo de clientes. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em cat} & Clientes\+\_\+\+Catalog onde estão os clientes. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 115 do ficheiro clientes.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{115                                            \{}
+\DoxyCodeLine{116     \mbox{\hyperlink{catalogo_8c_a00844e192fa3f0c5afc710d9da7c2c83}{imprime\_Catalogo}}(cat-\/>catalogo);}
+\DoxyCodeLine{117 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{clientes_8c_a4ce68937a14a9c16e98beeac9d9c393b}\label{clientes_8c_a4ce68937a14a9c16e98beeac9d9c393b}} 
+\index{clientes.c@{clientes.c}!init\_clientes\_catalog@{init\_clientes\_catalog}}
+\index{init\_clientes\_catalog@{init\_clientes\_catalog}!clientes.c@{clientes.c}}
+\doxysubsubsection{\texorpdfstring{init\_clientes\_catalog()}{init\_clientes\_catalog()}}
+{\footnotesize\ttfamily Clientes\+\_\+\+Catalog init\+\_\+clientes\+\_\+catalog (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função que inicia um novo catálogo de clientes. 
+
+\begin{DoxyReturn}{Retorna}
+Novo catalogo de clientes nulo. 
+\end{DoxyReturn}
+
+
+Definido na linha 57 do ficheiro clientes.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{57                                         \{}
+\DoxyCodeLine{58     Clientes\_Catalog \textcolor{keyword}{new} = malloc(\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} \mbox{\hyperlink{structcatalogo__clientes}{catalogo\_clientes}}));}
+\DoxyCodeLine{59     \textcolor{keyword}{new}-\/>catalogo = \mbox{\hyperlink{catalogo_8c_a5add1241036a95c143d5cb5d8e5e7fe5}{init\_Catalogo}}();}
+\DoxyCodeLine{60     \textcolor{keywordflow}{return} \textcolor{keyword}{new};}
+\DoxyCodeLine{61 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{clientes_8c_ab79e0e920fc19de6cd7278bb0e3f282c}\label{clientes_8c_ab79e0e920fc19de6cd7278bb0e3f282c}} 
+\index{clientes.c@{clientes.c}!insere\_cliente@{insere\_cliente}}
+\index{insere\_cliente@{insere\_cliente}!clientes.c@{clientes.c}}
+\doxysubsubsection{\texorpdfstring{insere\_cliente()}{insere\_cliente()}}
+{\footnotesize\ttfamily Clientes\+\_\+\+Catalog insere\+\_\+cliente (\begin{DoxyParamCaption}\item[{Clientes\+\_\+\+Catalog}]{cat,  }\item[{Cliente}]{e }\end{DoxyParamCaption})}
+
+
+
+Função que insere um cliente num catálogo. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em cat} & Clientes\+\_\+\+Catalog onde se vai inserir o cliente. \\
+\hline
+{\em e} & Cliente a ser inserido no catálogo de clientes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Clientes\+\_\+\+Catalog com o cliente inserido. 
+\end{DoxyReturn}
+
+
+Definido na linha 79 do ficheiro clientes.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{79                                                                 \{}
+\DoxyCodeLine{80     \textcolor{keywordtype}{char} *aux = \mbox{\hyperlink{clientes_8c_a11ac69b7e3c0edc64e2776a9dc0d12db}{getClienteCode}}(e);}
+\DoxyCodeLine{81     cat-\/>catalogo = \mbox{\hyperlink{catalogo_8c_a63d5cf63479a790b0f74a7bfa0dcd10a}{insere\_Catalogo}}(cat-\/>catalogo,aux,NULL);}
+\DoxyCodeLine{82     free(aux);}
+\DoxyCodeLine{83     \textcolor{keywordflow}{return} cat;}
+\DoxyCodeLine{84 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{clientes_8c_a053cb24e83ea691e7761c29774f68a94}\label{clientes_8c_a053cb24e83ea691e7761c29774f68a94}} 
+\index{clientes.c@{clientes.c}!insere\_Clientes\_Catalogo@{insere\_Clientes\_Catalogo}}
+\index{insere\_Clientes\_Catalogo@{insere\_Clientes\_Catalogo}!clientes.c@{clientes.c}}
+\doxysubsubsection{\texorpdfstring{insere\_Clientes\_Catalogo()}{insere\_Clientes\_Catalogo()}}
+{\footnotesize\ttfamily Clientes\+\_\+\+Catalog insere\+\_\+\+Clientes\+\_\+\+Catalogo (\begin{DoxyParamCaption}\item[{Clientes\+\_\+\+Catalog}]{cat,  }\item[{Cliente}]{e,  }\item[{void $\ast$}]{Estrutura }\end{DoxyParamCaption})}
+
+
+
+Função que insere no catálogo de clientes um cliente juntamente com uma estrutura. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em cat} & C\+Lientes\+\_\+\+Catalog onde insere o cliente e a estrutura. \\
+\hline
+{\em e} & Cliente a inserir. \\
+\hline
+{\em estrutura} & Conteúdo/\+Estrutura a inserir. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Clientes\+\_\+\+Catalog com o cliente e a estrutura inseridos. 
+\end{DoxyReturn}
+
+
+Definido na linha 93 do ficheiro clientes.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{93                                                                                              \{}
+\DoxyCodeLine{94     \textcolor{keywordtype}{char} *aux = \mbox{\hyperlink{clientes_8c_a11ac69b7e3c0edc64e2776a9dc0d12db}{getClienteCode}}(e);}
+\DoxyCodeLine{95     cat-\/>catalogo = \mbox{\hyperlink{catalogo_8c_a63d5cf63479a790b0f74a7bfa0dcd10a}{insere\_Catalogo}}(cat-\/>catalogo,aux, Estrutura);}
+\DoxyCodeLine{96     free(aux);}
+\DoxyCodeLine{97     \textcolor{keywordflow}{return} cat;}
+\DoxyCodeLine{98 \}}
+
+\end{DoxyCode}

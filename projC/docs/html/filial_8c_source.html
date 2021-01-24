@@ -1,0 +1,777 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ProjC LI3 - grupo 2: Código-Fonte de src/filial.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ProjC LI3 - grupo 2
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Localizar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Localizar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">filial.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="filial_8c.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;../include/filial.h&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">/*FILIAL_clientes*/</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="structfilial__c.html">    9</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structfilial__c.html">filial_c</a>{</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  Filial_Catalogo_Clientes f_clientes[FILIAL];</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;};</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">/*Filial_Catalogo_Clientes*/</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="structfilial__cat__clientes.html">   14</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structfilial__cat__clientes.html">filial_cat_clientes</a>{</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  Catalogo <a class="code" href="structcatalogo.html">catalogo</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;};</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">/*f_info_c*/</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="structfilial__info__cliente.html">   19</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structfilial__info__cliente.html">filial_info_cliente</a>{</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  AVL produtos_comprados[MESES];</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="keywordtype">int</span> qtd_total_compras[MESES];</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;};</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">/*info_c*/</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="structinfo__cliente.html">   25</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structinfo__cliente.html">info_cliente</a>{</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keywordtype">int</span> qtd;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keywordtype">double</span> faturacao;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;};</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">/*------------------------------------------------------------CLIENTES------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="filial_8c.html#af748ef77906df2597c4bdc2698ab807c">   39</a></span>&#160;FILIAL_clientes <a class="code" href="filial_8c.html#af748ef77906df2597c4bdc2698ab807c">cria_Filial_Clientes</a>(FILIAL_clientes f, Cliente c){</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keywordtype">int</span> i;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  Filial_Catalogo_Clientes cat;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keywordflow">for</span>(i= 0; i &lt; FILIAL; i++){</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    cat = f-&gt;f_clientes[i];</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    cat = <a class="code" href="filial_8c.html#a33e73f724f442a36e5078d2fe078822f">insere_info_cliente</a>(cat,c,NULL);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keywordflow">return</span> f;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="filial_8c.html#a9e230997f74b73b6927cd72baa4607be">   58</a></span>&#160;f_info_c <a class="code" href="filial_8c.html#a9e230997f74b73b6927cd72baa4607be">altera_info_cliente</a>(f_info_c f, Produto p, <span class="keywordtype">int</span> mes, <span class="keywordtype">int</span> qtd, <span class="keywordtype">double</span> preco){</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keywordtype">char</span> *aux = <a class="code" href="produtos_8c.html#a41fd3a5ec4fda805f937ed25bcbe5750">getProdutoCode</a>(p);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  info_c <span class="keyword">new</span> = <a class="code" href="avl_8c.html#a9c63fca5348576aa37364760756f565e">avl_getEstrutura</a>(f-&gt;produtos_comprados[mes-1],aux);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keywordflow">if</span> (<span class="keyword">new</span>==NULL) <span class="keyword">new</span> = <a class="code" href="filial_8c.html#ac547431fec615b1e6ea65de86fa0f204">init_Info_Cliente</a>();</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keyword">new</span>-&gt;qtd += qtd;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="keyword">new</span>-&gt;faturacao += qtd*preco;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  f-&gt;qtd_total_compras[mes-1] += qtd;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  f-&gt;produtos_comprados[mes-1] = <a class="code" href="avl_8c.html#a1dec82bcbce333d16733ecf7344d378b">avl_insert</a>(f-&gt;produtos_comprados[mes-1],aux,<span class="keyword">new</span>);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  free(aux);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keywordflow">return</span> f;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="filial_8c.html#abd728e46551e8d0a8a66fc9fa39683f7">   80</a></span>&#160;FILIAL_clientes <a class="code" href="filial_8c.html#abd728e46551e8d0a8a66fc9fa39683f7">altera_Filial_Cliente</a>(FILIAL_clientes f, Cliente c, Produto p, <span class="keywordtype">int</span> mes, <span class="keywordtype">int</span> qtd, <span class="keywordtype">double</span> preco, <span class="keywordtype">int</span> filial){</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="keywordtype">char</span> *aux = <a class="code" href="clientes_8c.html#a11ac69b7e3c0edc64e2776a9dc0d12db">getClienteCode</a>(c);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  Filial_Catalogo_Clientes cat = f-&gt;f_clientes[filial-1];</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  f_info_c cliente_info = <a class="code" href="filial_8c.html#a89475ebbb7a63681ed8888ffdf149f76">get_Filial_Cliente_struct</a>(cat,c);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="keywordflow">if</span> (cliente_info == NULL) cliente_info = <a class="code" href="filial_8c.html#a91ff37d535c1b0ac1b5093d5a9a08399">init_Filial_Info_Cliente</a>();</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  cliente_info = <a class="code" href="filial_8c.html#a9e230997f74b73b6927cd72baa4607be">altera_info_cliente</a>(cliente_info,p,mes,qtd,preco);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  cat-&gt;catalogo = <a class="code" href="catalogo_8c.html#acc5f085d5be2ccd45505eff9015e27db">altera_Catalogo</a>(cat-&gt;catalogo,aux,cliente_info);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  free(aux);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="keywordflow">return</span> f;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="filial_8c.html#ac547431fec615b1e6ea65de86fa0f204">   95</a></span>&#160;info_c <a class="code" href="filial_8c.html#ac547431fec615b1e6ea65de86fa0f204">init_Info_Cliente</a>(){</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  info_c <span class="keyword">new</span> = (info_c) malloc(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structinfo__cliente.html">info_cliente</a>));</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="keyword">new</span>-&gt;qtd = 0;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <span class="keyword">new</span>-&gt;faturacao = 0;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">new</span>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;}</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="filial_8c.html#a91ff37d535c1b0ac1b5093d5a9a08399">  106</a></span>&#160;f_info_c <a class="code" href="filial_8c.html#a91ff37d535c1b0ac1b5093d5a9a08399">init_Filial_Info_Cliente</a>(){</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  f_info_c <span class="keyword">new</span> = (f_info_c) malloc(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structfilial__info__cliente.html">filial_info_cliente</a>));</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  <span class="keywordtype">int</span> i;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  <span class="keywordflow">for</span>(i=0; i&lt;MESES; i++){</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keyword">new</span>-&gt;produtos_comprados[i] = <a class="code" href="avl_8c.html#a12edfb9dbe827acf6f4eadc70cf84c44">initAVL</a>();</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keyword">new</span>-&gt;qtd_total_compras[i] = 0;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  }</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">new</span>;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;}</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
+<div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="filial_8c.html#a060b67104e4d5d65acdd4dd308eaf4f2">  120</a></span>&#160;Filial_Catalogo_Clientes <a class="code" href="filial_8c.html#a060b67104e4d5d65acdd4dd308eaf4f2">init_Filial_Catalogo_Clientes</a>(){</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  Filial_Catalogo_Clientes <span class="keyword">new</span> = (Filial_Catalogo_Clientes) malloc (<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structfilial__cat__clientes.html">filial_cat_clientes</a>));</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  <span class="keyword">new</span>-&gt;catalogo = <a class="code" href="catalogo_8c.html#a5add1241036a95c143d5cb5d8e5e7fe5">init_Catalogo</a>();</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">new</span>;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;}</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno"><a class="line" href="filial_8c.html#ab32bfe5fe29208cbd961b06ff8ef49f3">  130</a></span>&#160;FILIAL_clientes <a class="code" href="filial_8c.html#ab32bfe5fe29208cbd961b06ff8ef49f3">init_filial_clientes</a>(){</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  FILIAL_clientes <span class="keyword">new</span> = malloc(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structfilial__c.html">filial_c</a>));</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  <span class="keywordtype">int</span> i;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  <span class="keywordflow">for</span>(i=0; i&lt;FILIAL;i++){</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keyword">new</span>-&gt;f_clientes[i] = <a class="code" href="filial_8c.html#a060b67104e4d5d65acdd4dd308eaf4f2">init_Filial_Catalogo_Clientes</a>();</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  }</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">new</span>;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;}</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
+<div class="line"><a name="l00146"></a><span class="lineno"><a class="line" href="filial_8c.html#a33e73f724f442a36e5078d2fe078822f">  146</a></span>&#160;Filial_Catalogo_Clientes <a class="code" href="filial_8c.html#a33e73f724f442a36e5078d2fe078822f">insere_info_cliente</a>(Filial_Catalogo_Clientes cat, Cliente c, <span class="keywordtype">void</span> * estrutura){</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;  <span class="keywordtype">char</span> *aux = <a class="code" href="clientes_8c.html#a11ac69b7e3c0edc64e2776a9dc0d12db">getClienteCode</a>(c);</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;  cat-&gt;catalogo = <a class="code" href="catalogo_8c.html#a63d5cf63479a790b0f74a7bfa0dcd10a">insere_Catalogo</a>(cat-&gt;catalogo,aux,estrutura);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;  free(aux);</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;  <span class="keywordflow">return</span> cat;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;}</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
+<div class="line"><a name="l00159"></a><span class="lineno"><a class="line" href="filial_8c.html#a89475ebbb7a63681ed8888ffdf149f76">  159</a></span>&#160;Estrutura <a class="code" href="filial_8c.html#a89475ebbb7a63681ed8888ffdf149f76">get_Filial_Cliente_struct</a>(Filial_Catalogo_Clientes f, Cliente c){</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;  <span class="keywordtype">char</span> *aux = <a class="code" href="clientes_8c.html#a11ac69b7e3c0edc64e2776a9dc0d12db">getClienteCode</a>(c);</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  Estrutura a = <a class="code" href="catalogo_8c.html#a2ed88930f3b18c3f107506ef3170508d">get_Cat_struct</a>(f-&gt;catalogo,aux);</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  free(aux);</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  <span class="keywordflow">return</span> a;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;}</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160; </div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="keyword">static</span> <span class="keywordtype">void</span> free_struct_filial_clientes_info(<span class="keywordtype">void</span> *f){</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  info_c aux = (info_c) f;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;  free(aux);</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;}</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;<span class="keyword">static</span> <span class="keywordtype">void</span> free_struct_filial_clientes(<span class="keywordtype">void</span> *f){</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;  f_info_c aux = (f_info_c) f;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;  <span class="keywordtype">int</span> i;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  <span class="keywordflow">for</span>(i =0; i&lt;MESES ; i++){</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <a class="code" href="avl_8c.html#a79d17c2e6df846c93b8a5743cd025735">avl_free</a>(aux-&gt;produtos_comprados[i],free_struct_filial_clientes_info);</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;  }</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;  free(aux);</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;}</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160; </div>
+<div class="line"><a name="l00192"></a><span class="lineno"><a class="line" href="filial_8c.html#a3344f48b0ea47e94c8c00cd75e63e97c">  192</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="filial_8c.html#a3344f48b0ea47e94c8c00cd75e63e97c">free_Filial_Catalogo_Clientes</a>(Filial_Catalogo_Clientes c){</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;  Filial_Catalogo_Clientes aux = (Filial_Catalogo_Clientes) c;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;  <a class="code" href="catalogo_8c.html#aa40131c98313b4683617cd1757f7ea66">free_Catalogo</a>(aux-&gt;catalogo,free_struct_filial_clientes);</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;  free(aux);</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;}</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160; </div>
+<div class="line"><a name="l00202"></a><span class="lineno"><a class="line" href="filial_8c.html#a6e68f36cbad6aac2f9db8dfba4a5ac9a">  202</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="filial_8c.html#a6e68f36cbad6aac2f9db8dfba4a5ac9a">free_Filial_Clientes</a>(FILIAL_clientes f){</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;  <span class="keywordtype">int</span> i;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;  <span class="keywordflow">for</span>(i = 0; i&lt;FILIAL; i++) <a class="code" href="filial_8c.html#a3344f48b0ea47e94c8c00cd75e63e97c">free_Filial_Catalogo_Clientes</a>(f-&gt;f_clientes[i]);</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;  free(f);</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;}</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160; </div>
+<div class="line"><a name="l00215"></a><span class="lineno"><a class="line" href="filial_8c.html#aba3f4d4d26e8bb3c688a6e6518ed306c">  215</a></span>&#160;Boolean <a class="code" href="filial_8c.html#aba3f4d4d26e8bb3c688a6e6518ed306c">existe_Cliente_Filial</a>(FILIAL_clientes f, Cliente c, <span class="keywordtype">int</span> filial){</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;  <span class="keywordtype">char</span> *aux = <a class="code" href="clientes_8c.html#a11ac69b7e3c0edc64e2776a9dc0d12db">getClienteCode</a>(c);</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;  Filial_Catalogo_Clientes cat = f-&gt;f_clientes[filial-1];</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;  Boolean a = <a class="code" href="catalogo_8c.html#a93fc716391dc53901dc2dbff97e75da1">existe_Catalogo</a>(cat-&gt;catalogo,aux);</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;  free(aux);</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;  <span class="keywordflow">return</span> a;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;}</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160; </div>
+<div class="line"><a name="l00228"></a><span class="lineno"><a class="line" href="filial_8c.html#aac5e8ac447815a64ec40111551fdbf10">  228</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="filial_8c.html#aac5e8ac447815a64ec40111551fdbf10">imprime_Filial_Clientes</a>(FILIAL_clientes f, <span class="keywordtype">int</span> filial){</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;  Filial_Catalogo_Clientes cat = f-&gt;f_clientes[filial-1];</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;  <a class="code" href="catalogo_8c.html#a00844e192fa3f0c5afc710d9da7c2c83">imprime_Catalogo</a>(cat-&gt;catalogo);</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;}</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160; </div>
+<div class="line"><a name="l00238"></a><span class="lineno"><a class="line" href="filial_8c.html#aa6738124d6788a5501121f3c5799e7c0">  238</a></span>&#160;Boolean <a class="code" href="filial_8c.html#aa6738124d6788a5501121f3c5799e7c0">cliente_Fez_Compras</a>(f_info_c f){</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;  <span class="keywordflow">if</span>(f==NULL) <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;  <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;}</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160; </div>
+<div class="line"><a name="l00249"></a><span class="lineno"><a class="line" href="filial_8c.html#a2cc9d012bf513b38832eb20ac97c1ff9">  249</a></span>&#160;Boolean <a class="code" href="filial_8c.html#a2cc9d012bf513b38832eb20ac97c1ff9">cliente_comprou_todas_filiais</a>(FILIAL_clientes f, <span class="keywordtype">char</span> *key){</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="keywordtype">int</span> i,counter=0;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    Filial_Catalogo_Clientes fc;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    f_info_c infoc;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="keywordflow">for</span>(i=0;i&lt;FILIAL;i++){</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;      fc = f-&gt;f_clientes[i];</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;      infoc = <a class="code" href="catalogo_8c.html#a2ed88930f3b18c3f107506ef3170508d">get_Cat_struct</a>(fc-&gt;catalogo,key);</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;      <span class="keywordflow">if</span>(infoc != NULL) counter++;</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    }</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    <span class="keywordflow">if</span>(counter == 3) <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;}</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160; </div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;<span class="comment">/*------------------------------------------------------------QUERIE5------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160; </div>
+<div class="line"><a name="l00270"></a><span class="lineno"><a class="line" href="filial_8c.html#a780712733f715420d4f2eaf5abda426b">  270</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="filial_8c.html#a780712733f715420d4f2eaf5abda426b">percorre_NODO_Filial_Q5</a>(NODO tree, FILIAL_clientes f, Q5 q){</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;  <span class="keywordflow">if</span>(tree==NULL) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;  NODO esq = <a class="code" href="avl_8c.html#aac6e354b6a9d07b76313a36c510c9f10">getNodoEsq</a>(tree);</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;  <a class="code" href="filial_8c.html#a780712733f715420d4f2eaf5abda426b">percorre_NODO_Filial_Q5</a>(esq,f,q);</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;  <a class="code" href="avl_8c.html#ab7e925aeda628a2fb80ed170c192c3c4">free_Nodo</a>(esq);</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160; </div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;  <span class="keywordtype">char</span> *<a class="code" href="structcliente.html">cliente</a> = <a class="code" href="avl_8c.html#a5804b8d40ea06fecc2ecd97415a6c18c">getString</a>(tree);</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="filial_8c.html#a2cc9d012bf513b38832eb20ac97c1ff9">cliente_comprou_todas_filiais</a>(f,<a class="code" href="structcliente.html">cliente</a>)){</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    <a class="code" href="estruturas_8c.html#ac4ee86ddb19af3c5e46b2e10dcb9fc8f">insere_ClienteQ5</a>(<a class="code" href="structcliente.html">cliente</a>,q);</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;  }</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;  free(<a class="code" href="structcliente.html">cliente</a>);</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160; </div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;  NODO dir = <a class="code" href="avl_8c.html#a5c9e707dfc9a11ffe65746c91b5111ba">getNodoDir</a>(tree);</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;  <a class="code" href="filial_8c.html#a780712733f715420d4f2eaf5abda426b">percorre_NODO_Filial_Q5</a>(dir,f,q);</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;  <a class="code" href="avl_8c.html#ab7e925aeda628a2fb80ed170c192c3c4">free_Nodo</a>(dir);</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;}</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160; </div>
+<div class="line"><a name="l00293"></a><span class="lineno"><a class="line" href="filial_8c.html#a2a8b81e327408db5fe3049fee4db6da5">  293</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="filial_8c.html#a2a8b81e327408db5fe3049fee4db6da5">percorre_AVL_Filial_Q5</a>(AVL tree, FILIAL_clientes f, Q5 q){</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;  NODO aux = <a class="code" href="avl_8c.html#af568e679a8db439de3758447f23b86e2">getNodo</a>(tree);</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;  <a class="code" href="filial_8c.html#a780712733f715420d4f2eaf5abda426b">percorre_NODO_Filial_Q5</a>(aux,f,q);</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;  <a class="code" href="avl_8c.html#ab7e925aeda628a2fb80ed170c192c3c4">free_Nodo</a>(aux);</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;}</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160; </div>
+<div class="line"><a name="l00304"></a><span class="lineno"><a class="line" href="filial_8c.html#ac893a66e15da4ac4f8a54259680e792b">  304</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="filial_8c.html#ac893a66e15da4ac4f8a54259680e792b">clientes_todas_filiais</a>(FILIAL_clientes f, Q5 q){</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;  Filial_Catalogo_Clientes fc;</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;  AVL auxiliar;</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;  <span class="keywordtype">int</span> j;</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;  fc = f-&gt;f_clientes[0];</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;  <span class="keywordflow">for</span>(j=0;j&lt;NR_LETRAS;j++){</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    auxiliar = <a class="code" href="catalogo_8c.html#a551505c19cd86f02ff31019e350df2a6">catalogo_getAVL</a>(fc-&gt;catalogo,j);</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    <a class="code" href="filial_8c.html#a2a8b81e327408db5fe3049fee4db6da5">percorre_AVL_Filial_Q5</a>(auxiliar,f,q);</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;  }</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;}</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160; </div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160; </div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;<span class="comment">/*------------------------------------------------------------QUERIE6------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160; </div>
+<div class="line"><a name="l00323"></a><span class="lineno"><a class="line" href="filial_8c.html#a174ccb563f801cc2928de3f9030ae508">  323</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="filial_8c.html#a174ccb563f801cc2928de3f9030ae508">percorre_NODO_Filial_Q6</a>(NODO tree, <span class="keywordtype">int</span> *aux){</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;  <span class="keywordflow">if</span> (tree == NULL) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;  NODO esq = <a class="code" href="avl_8c.html#aac6e354b6a9d07b76313a36c510c9f10">getNodoEsq</a>(tree);</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;  <a class="code" href="filial_8c.html#a174ccb563f801cc2928de3f9030ae508">percorre_NODO_Filial_Q6</a>(esq,aux);</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;  <a class="code" href="avl_8c.html#ab7e925aeda628a2fb80ed170c192c3c4">free_Nodo</a>(esq);</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160; </div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;  f_info_c f = (f_info_c) <a class="code" href="avl_8c.html#a948222e5aea0bc2696faf0a9ed64afe7">getCont</a>(tree);</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;  <span class="keywordflow">if</span>(!<a class="code" href="filial_8c.html#aa6738124d6788a5501121f3c5799e7c0">cliente_Fez_Compras</a>(f)){</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    (*aux)++;</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;  }</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;  NODO dir;</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;  dir = <a class="code" href="avl_8c.html#a5c9e707dfc9a11ffe65746c91b5111ba">getNodoDir</a>(tree);</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;  <a class="code" href="filial_8c.html#a174ccb563f801cc2928de3f9030ae508">percorre_NODO_Filial_Q6</a>(dir,aux);</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;  <a class="code" href="avl_8c.html#ab7e925aeda628a2fb80ed170c192c3c4">free_Nodo</a>(dir);</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;}</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160; </div>
+<div class="line"><a name="l00344"></a><span class="lineno"><a class="line" href="filial_8c.html#ac13a643d1d60ffdfad72eaab4083a574">  344</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="filial_8c.html#ac13a643d1d60ffdfad72eaab4083a574">percorre_AVL_Filial_Q6</a>(AVL tree, <span class="keywordtype">int</span> *aux){</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;  NODO f = <a class="code" href="avl_8c.html#af568e679a8db439de3758447f23b86e2">getNodo</a>(tree);</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;  <a class="code" href="filial_8c.html#a174ccb563f801cc2928de3f9030ae508">percorre_NODO_Filial_Q6</a>(f,aux);</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;  <a class="code" href="avl_8c.html#ab7e925aeda628a2fb80ed170c192c3c4">free_Nodo</a>(f);</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;}</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160; </div>
+<div class="line"><a name="l00355"></a><span class="lineno"><a class="line" href="filial_8c.html#a323e7fb9b4ea086a3ef28d111f4e9a11">  355</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="filial_8c.html#a323e7fb9b4ea086a3ef28d111f4e9a11">produtos_nao_comprados_num_filial</a>(FILIAL_clientes f,Q6 q){</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;  <span class="keywordtype">int</span> i,j,aux=0;</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;  Filial_Catalogo_Clientes fc;</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;  AVL auxiliar;</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;  <span class="keywordflow">for</span>(i=0; i &lt; FILIAL; i++){</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;    fc = f-&gt;f_clientes[i];</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;    <span class="keywordflow">for</span>(j=0;j&lt;NR_LETRAS;j++){</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;      auxiliar = <a class="code" href="catalogo_8c.html#a551505c19cd86f02ff31019e350df2a6">catalogo_getAVL</a>(fc-&gt;catalogo,j);</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;      <a class="code" href="filial_8c.html#ac13a643d1d60ffdfad72eaab4083a574">percorre_AVL_Filial_Q6</a>(auxiliar,&amp;aux);</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    }</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;  }</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;  <a class="code" href="estruturas_8c.html#a2e15d8a1596e4fd5d59eea9412ac0f6a">setNumClientesQ6</a>(q,aux);</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;}</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160; </div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;<span class="comment">/*------------------------------------------------------------QUERIE7------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160; </div>
+<div class="line"><a name="l00377"></a><span class="lineno"><a class="line" href="filial_8c.html#aa5347695e52cae9f93b727ea933f43d0">  377</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="filial_8c.html#aa5347695e52cae9f93b727ea933f43d0">quantidade_compras_cliente</a>(FILIAL_clientes f,<span class="keywordtype">char</span>* key,Q7 q){</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;  <span class="keywordtype">int</span> i,j;</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;  Filial_Catalogo_Clientes fc;</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;  f_info_c auxiliar;</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;  <span class="keywordflow">for</span>(i=0; i &lt; FILIAL; i++){</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;    fc = f-&gt;f_clientes[i];</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;    auxiliar = <a class="code" href="catalogo_8c.html#a2ed88930f3b18c3f107506ef3170508d">get_Cat_struct</a>(fc-&gt;catalogo,key);</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;    <span class="keywordflow">if</span>(auxiliar != NULL)</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;      <span class="keywordflow">for</span>(j=0;j&lt;MESES;j++){</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;        <a class="code" href="estruturas_8c.html#a6296c506821d0c6a5edbf2f3e8caf708">setQt_FilialQ7</a>(q,auxiliar-&gt;qtd_total_compras[j],i,j);</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;      }</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;  }</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;}</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160; </div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;<span class="comment">/*------------------------------------------------------------QUERIE10------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160; </div>
+<div class="line"><a name="l00398"></a><span class="lineno"><a class="line" href="filial_8c.html#ab64cfc83fe953e09d4e974e504f9b060">  398</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="filial_8c.html#ab64cfc83fe953e09d4e974e504f9b060">percorre_NODO_Filial_Q10</a>(NODO tree, Q10 q){</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;  <span class="keywordflow">if</span>(tree == NULL) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;  NODO esq = <a class="code" href="avl_8c.html#aac6e354b6a9d07b76313a36c510c9f10">getNodoEsq</a>(tree);</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;  <a class="code" href="filial_8c.html#ab64cfc83fe953e09d4e974e504f9b060">percorre_NODO_Filial_Q10</a>(esq,q);</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;  <a class="code" href="avl_8c.html#ab7e925aeda628a2fb80ed170c192c3c4">free_Nodo</a>(esq);</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160; </div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;  <span class="keywordtype">char</span>* prod = <a class="code" href="avl_8c.html#a5804b8d40ea06fecc2ecd97415a6c18c">getString</a>(tree);</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;  info_c f = <a class="code" href="avl_8c.html#a948222e5aea0bc2696faf0a9ed64afe7">getCont</a>(tree);</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;  <a class="code" href="estruturas_8c.html#a3b3fee2a6ed4ef4031bfe6b499ee5064">insere_ProdInfoQ10</a>(q,prod,f-&gt;qtd);</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;  free(prod);</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160; </div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;  NODO dir = <a class="code" href="avl_8c.html#a5c9e707dfc9a11ffe65746c91b5111ba">getNodoDir</a>(tree);</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;  <a class="code" href="filial_8c.html#ab64cfc83fe953e09d4e974e504f9b060">percorre_NODO_Filial_Q10</a>(dir,q);</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;  <a class="code" href="avl_8c.html#ab7e925aeda628a2fb80ed170c192c3c4">free_Nodo</a>(dir);</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160; </div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;}</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160; </div>
+<div class="line"><a name="l00420"></a><span class="lineno"><a class="line" href="filial_8c.html#ad8a1352ea1a1cc672c41a8c88e2e4acf">  420</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="filial_8c.html#ad8a1352ea1a1cc672c41a8c88e2e4acf">percorre_AVL_Filial_Q10</a>(AVL tree, Q10 q){</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;  NODO f = <a class="code" href="avl_8c.html#af568e679a8db439de3758447f23b86e2">getNodo</a>(tree);</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;  <a class="code" href="filial_8c.html#ab64cfc83fe953e09d4e974e504f9b060">percorre_NODO_Filial_Q10</a>(f,q);</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;  <a class="code" href="avl_8c.html#ab7e925aeda628a2fb80ed170c192c3c4">free_Nodo</a>(f);</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;}</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160; </div>
+<div class="line"><a name="l00432"></a><span class="lineno"><a class="line" href="filial_8c.html#a1da4d732385c5fa7a6dd39233be07051">  432</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="filial_8c.html#a1da4d732385c5fa7a6dd39233be07051">produtos_favoritos_cliente</a>(FILIAL_clientes f, <span class="keywordtype">char</span>* <a class="code" href="structcliente.html">cliente</a>, <span class="keywordtype">int</span> m, Q10 q){</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;  Filial_Catalogo_Clientes fc;</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;  f_info_c aux;</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;  AVL aux2;</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;  <span class="keywordtype">int</span> i;</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;  <span class="keywordflow">for</span>(i=0;i&lt;FILIAL;i++){</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;    fc = f-&gt;f_clientes[i];</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;    aux = <a class="code" href="catalogo_8c.html#a2ed88930f3b18c3f107506ef3170508d">get_Cat_struct</a>(fc-&gt;catalogo,<a class="code" href="structcliente.html">cliente</a>);</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;    aux2 = aux-&gt;produtos_comprados[m-1];</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;    <a class="code" href="filial_8c.html#ad8a1352ea1a1cc672c41a8c88e2e4acf">percorre_AVL_Filial_Q10</a>(aux2,q);</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;  }</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;}</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160; </div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;<span class="comment">/*------------------------------------------------------------QUERIE12------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160; </div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160; </div>
+<div class="line"><a name="l00453"></a><span class="lineno"><a class="line" href="filial_8c.html#aa118bae518fe81ed22ab87d41e9b47b5">  453</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="filial_8c.html#aa118bae518fe81ed22ab87d41e9b47b5">percorre_NODO_Filial_Q12</a>(NODO tree, Q12 q){</div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;  <span class="keywordflow">if</span>(tree==NULL) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;  NODO esq = <a class="code" href="avl_8c.html#aac6e354b6a9d07b76313a36c510c9f10">getNodoEsq</a>(tree);</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;  <a class="code" href="filial_8c.html#aa118bae518fe81ed22ab87d41e9b47b5">percorre_NODO_Filial_Q12</a>(esq,q);</div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;  <a class="code" href="avl_8c.html#ab7e925aeda628a2fb80ed170c192c3c4">free_Nodo</a>(esq);</div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160; </div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;  info_c aux = <a class="code" href="avl_8c.html#a948222e5aea0bc2696faf0a9ed64afe7">getCont</a>(tree);</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;  <span class="keywordtype">char</span>* prod = <a class="code" href="avl_8c.html#a5804b8d40ea06fecc2ecd97415a6c18c">getString</a>(tree);</div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;  <a class="code" href="estruturas_8c.html#a9c83dd79a8536a5f76afc2c58cb67cf7">insere_ProdInfoQ12</a>(q,prod,aux-&gt;faturacao);</div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;  free(prod);</div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160; </div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;  NODO dir = <a class="code" href="avl_8c.html#a5c9e707dfc9a11ffe65746c91b5111ba">getNodoDir</a>(tree);</div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;  <a class="code" href="filial_8c.html#aa118bae518fe81ed22ab87d41e9b47b5">percorre_NODO_Filial_Q12</a>(dir,q);</div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;  <a class="code" href="avl_8c.html#ab7e925aeda628a2fb80ed170c192c3c4">free_Nodo</a>(dir);</div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;}</div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160; </div>
+<div class="line"><a name="l00474"></a><span class="lineno"><a class="line" href="filial_8c.html#a37e0e7064b18a55b48baab75706ff44e">  474</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="filial_8c.html#a37e0e7064b18a55b48baab75706ff44e">percorre_AVL_Filial_Q12</a>(AVL tree, Q12 q){</div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;  NODO f = <a class="code" href="avl_8c.html#af568e679a8db439de3758447f23b86e2">getNodo</a>(tree);</div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;  <a class="code" href="filial_8c.html#aa118bae518fe81ed22ab87d41e9b47b5">percorre_NODO_Filial_Q12</a>(f,q);</div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;  <a class="code" href="avl_8c.html#ab7e925aeda628a2fb80ed170c192c3c4">free_Nodo</a>(f);</div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;}</div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160; </div>
+<div class="line"><a name="l00486"></a><span class="lineno"><a class="line" href="filial_8c.html#afbd224a180cd33a159cfe11b54d138f9">  486</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="filial_8c.html#afbd224a180cd33a159cfe11b54d138f9">produtosMaisCarosQ12</a>(FILIAL_clientes f, <span class="keywordtype">char</span>* <a class="code" href="structcliente.html">cliente</a>, Q12 q){</div>
+<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;  <span class="keywordtype">int</span> i,k;</div>
+<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;  Filial_Catalogo_Clientes fc;</div>
+<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;  f_info_c aux;</div>
+<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;  <span class="keywordflow">for</span>(i=0;i&lt;FILIAL;i++){</div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;    fc = f-&gt;f_clientes[i];</div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;    aux = <a class="code" href="catalogo_8c.html#a2ed88930f3b18c3f107506ef3170508d">get_Cat_struct</a>(fc-&gt;catalogo,<a class="code" href="structcliente.html">cliente</a>);</div>
+<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;    <span class="keywordflow">if</span>(aux!=NULL)</div>
+<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;      <span class="keywordflow">for</span>(k=0;k&lt;MESES;k++)</div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;        <a class="code" href="filial_8c.html#a37e0e7064b18a55b48baab75706ff44e">percorre_AVL_Filial_Q12</a>(aux-&gt;produtos_comprados[k],q);</div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;  }</div>
+<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;}</div>
+<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160; </div>
+<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;<span class="comment">/*------------------------------------------------------------PRODUTOS------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160; </div>
+<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160; </div>
+<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160; </div>
+<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;<span class="comment">/*FILIAL_produtos*/</span></div>
+<div class="line"><a name="l00504"></a><span class="lineno"><a class="line" href="structfilial__p.html">  504</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structfilial__p.html">filial_p</a>{</div>
+<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;  Filial_Catalogo_Produtos f_produtos[FILIAL];</div>
+<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;};</div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160; </div>
+<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;<span class="comment">/*Filial_Catalogo_Produtos*/</span></div>
+<div class="line"><a name="l00509"></a><span class="lineno"><a class="line" href="structfilial__cat__produtos.html">  509</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structfilial__cat__produtos.html">filial_cat_produtos</a>{</div>
+<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;  Catalogo <a class="code" href="structcatalogo.html">catalogo</a>;</div>
+<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;};</div>
+<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160; </div>
+<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;<span class="comment">/*f_info_p*/</span></div>
+<div class="line"><a name="l00514"></a><span class="lineno"><a class="line" href="structfilial__info__produtos.html">  514</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structfilial__info__produtos.html">filial_info_produtos</a>{</div>
+<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;  AVL clientes_compradores[MESES];</div>
+<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;  <span class="keywordtype">int</span> qtd_total_comprada[MESES];</div>
+<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;  <span class="keywordtype">double</span> faturacao_total_mes[MESES];</div>
+<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;};</div>
+<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160; </div>
+<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;<span class="comment">/*info_p*/</span></div>
+<div class="line"><a name="l00521"></a><span class="lineno"><a class="line" href="structinfo__produto.html">  521</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structinfo__produto.html">info_produto</a>{</div>
+<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;  <span class="keywordtype">int</span> tipo_compra; <span class="comment">/* &#39;N&#39; = 0 &amp; &#39;P = 1&#39; &amp; &#39;N+P&#39; = 2*/</span></div>
+<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;};</div>
+<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160; </div>
+<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160; </div>
+<div class="line"><a name="l00532"></a><span class="lineno"><a class="line" href="filial_8c.html#a68e9aeba6cf2841ffae5e08cf1bc4b9b">  532</a></span>&#160;FILIAL_produtos <a class="code" href="filial_8c.html#a68e9aeba6cf2841ffae5e08cf1bc4b9b">cria_Filial_Produtos</a>(FILIAL_produtos f, Produto p){</div>
+<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;  <span class="keywordtype">int</span> i;</div>
+<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;  Filial_Catalogo_Produtos cat;</div>
+<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;  <span class="keywordflow">for</span>(i = 0; i &lt; FILIAL; i++){</div>
+<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;    cat = f-&gt;f_produtos[i];</div>
+<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;    cat = <a class="code" href="filial_8c.html#ab348584c295c07065d61e0919e89b077">insere_info_produto</a>(cat,p,NULL);</div>
+<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;  }</div>
+<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;  <span class="keywordflow">return</span> f;</div>
+<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;}</div>
+<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160; </div>
+<div class="line"><a name="l00552"></a><span class="lineno"><a class="line" href="filial_8c.html#a0a563e388dc3503044345de6ad8af52e">  552</a></span>&#160;f_info_p <a class="code" href="filial_8c.html#a0a563e388dc3503044345de6ad8af52e">altera_info_produto</a>(f_info_p f, Cliente c, <span class="keywordtype">int</span> mes, <span class="keywordtype">int</span> qtd, <span class="keywordtype">double</span> preco,<span class="keywordtype">char</span> modo){</div>
+<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;  <span class="keywordtype">char</span> *aux = <a class="code" href="clientes_8c.html#a11ac69b7e3c0edc64e2776a9dc0d12db">getClienteCode</a>(c);</div>
+<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;  info_p <span class="keyword">new</span> = <a class="code" href="avl_8c.html#a9c63fca5348576aa37364760756f565e">avl_getEstrutura</a>(f-&gt;clientes_compradores[mes-1],aux);</div>
+<div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;  <span class="keywordflow">if</span> (<span class="keyword">new</span>==NULL) <span class="keyword">new</span> = <a class="code" href="filial_8c.html#ab5ca2453968d6ffa7cb2a3777e3f82ac">init_Info_Produto</a>(modo);</div>
+<div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;  <span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;    <span class="keywordflow">if</span>( (new-&gt;tipo_compra == 0 &amp;&amp; modo == <span class="charliteral">&#39;P&#39;</span>) || (new-&gt;tipo_compra == 1 &amp;&amp; modo == <span class="charliteral">&#39;N&#39;</span>)) <span class="keyword">new</span>-&gt;tipo_compra = 2;</div>
+<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(modo == <span class="charliteral">&#39;N&#39;</span>) <span class="keyword">new</span>-&gt;tipo_compra = 0;</div>
+<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;    <span class="keywordflow">else</span> <span class="keyword">new</span>-&gt;tipo_compra = 1;</div>
+<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;  }</div>
+<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;  f-&gt;qtd_total_comprada[mes-1] += qtd;</div>
+<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;  f-&gt;faturacao_total_mes[mes-1] += qtd*preco;</div>
+<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;  f-&gt;clientes_compradores[mes-1] = <a class="code" href="avl_8c.html#a1dec82bcbce333d16733ecf7344d378b">avl_insert</a>(f-&gt;clientes_compradores[mes-1],aux,<span class="keyword">new</span>);</div>
+<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;  free(aux);</div>
+<div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;  <span class="keywordflow">return</span> f;</div>
+<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;}</div>
+<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160; </div>
+<div class="line"><a name="l00578"></a><span class="lineno"><a class="line" href="filial_8c.html#aedfe7662609b1eadfa34656ea5f49d50">  578</a></span>&#160;FILIAL_produtos <a class="code" href="filial_8c.html#aedfe7662609b1eadfa34656ea5f49d50">altera_Filial_Produto</a>(FILIAL_produtos f, Cliente c, Produto p, <span class="keywordtype">int</span> mes, <span class="keywordtype">int</span> qtd, <span class="keywordtype">double</span> preco, <span class="keywordtype">int</span> filial, <span class="keywordtype">char</span> modo){</div>
+<div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;  <span class="keywordtype">char</span>* aux = <a class="code" href="produtos_8c.html#a41fd3a5ec4fda805f937ed25bcbe5750">getProdutoCode</a>(p);</div>
+<div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;  Filial_Catalogo_Produtos cat = f-&gt;f_produtos[filial-1];</div>
+<div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;  f_info_p product_info = <a class="code" href="filial_8c.html#afcea80844e765a91c4a15c7c1228ca47">get_Filial_Produto_struct</a>(cat,p);</div>
+<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;  <span class="keywordflow">if</span>(product_info == NULL) product_info = <a class="code" href="filial_8c.html#a8755d33e575f2c4ce453bc26dbc26bae">init_Filial_Info_Produto</a>();</div>
+<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;  product_info = <a class="code" href="filial_8c.html#a0a563e388dc3503044345de6ad8af52e">altera_info_produto</a>(product_info,c,mes,qtd,preco,modo);</div>
+<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;  cat-&gt;catalogo = <a class="code" href="catalogo_8c.html#acc5f085d5be2ccd45505eff9015e27db">altera_Catalogo</a>(cat-&gt;catalogo,aux,product_info);</div>
+<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;  free(aux);</div>
+<div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;  <span class="keywordflow">return</span> f;</div>
+<div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;}</div>
+<div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160; </div>
+<div class="line"><a name="l00593"></a><span class="lineno"><a class="line" href="filial_8c.html#ab5ca2453968d6ffa7cb2a3777e3f82ac">  593</a></span>&#160;info_p <a class="code" href="filial_8c.html#ab5ca2453968d6ffa7cb2a3777e3f82ac">init_Info_Produto</a>(<span class="keywordtype">char</span> modo){</div>
+<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;  info_p <span class="keyword">new</span> = (info_p) malloc(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structinfo__produto.html">info_produto</a>));</div>
+<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;  <span class="keywordflow">if</span>(modo == <span class="charliteral">&#39;N&#39;</span>) <span class="keyword">new</span>-&gt;tipo_compra = 0;</div>
+<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;  <span class="keywordflow">else</span> <span class="keyword">new</span>-&gt;tipo_compra = 1;</div>
+<div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">new</span>;</div>
+<div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;}</div>
+<div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160; </div>
+<div class="line"><a name="l00604"></a><span class="lineno"><a class="line" href="filial_8c.html#a8755d33e575f2c4ce453bc26dbc26bae">  604</a></span>&#160;f_info_p <a class="code" href="filial_8c.html#a8755d33e575f2c4ce453bc26dbc26bae">init_Filial_Info_Produto</a>(){</div>
+<div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;  f_info_p <span class="keyword">new</span> = (f_info_p) malloc(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structfilial__info__produtos.html">filial_info_produtos</a>));</div>
+<div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;  <span class="keywordtype">int</span> i;</div>
+<div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;  <span class="keywordflow">for</span>(i=0; i&lt;MESES; i++){</div>
+<div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;    <span class="keyword">new</span>-&gt;clientes_compradores[i] = <a class="code" href="avl_8c.html#a12edfb9dbe827acf6f4eadc70cf84c44">initAVL</a>();</div>
+<div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;    <span class="keyword">new</span>-&gt;qtd_total_comprada[i] = 0;</div>
+<div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;    <span class="keyword">new</span>-&gt;faturacao_total_mes[i] = 0;</div>
+<div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160;  }</div>
+<div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">new</span>;</div>
+<div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160;}</div>
+<div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160; </div>
+<div class="line"><a name="l00619"></a><span class="lineno"><a class="line" href="filial_8c.html#a5824febefe4bdc121f81f3e40c718b28">  619</a></span>&#160;Filial_Catalogo_Produtos <a class="code" href="filial_8c.html#a5824febefe4bdc121f81f3e40c718b28">init_Filial_Catalogo_Produtos</a>(){</div>
+<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;  Filial_Catalogo_Produtos <span class="keyword">new</span> = (Filial_Catalogo_Produtos) malloc (<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structfilial__cat__produtos.html">filial_cat_produtos</a>));</div>
+<div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;  <span class="keyword">new</span>-&gt;catalogo = <a class="code" href="catalogo_8c.html#a5add1241036a95c143d5cb5d8e5e7fe5">init_Catalogo</a>();</div>
+<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">new</span>;</div>
+<div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160;}</div>
+<div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160; </div>
+<div class="line"><a name="l00629"></a><span class="lineno"><a class="line" href="filial_8c.html#a497ea2c43a261a3fdba1af1f998211ed">  629</a></span>&#160;FILIAL_produtos <a class="code" href="filial_8c.html#a497ea2c43a261a3fdba1af1f998211ed">init_filial_produtos</a>(){</div>
+<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;  FILIAL_produtos <span class="keyword">new</span> = malloc(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structfilial__p.html">filial_p</a>));</div>
+<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;  <span class="keywordtype">int</span> i;</div>
+<div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;  <span class="keywordflow">for</span>(i=0; i&lt;FILIAL;i++){</div>
+<div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;    <span class="keyword">new</span>-&gt;f_produtos[i] = <a class="code" href="filial_8c.html#a5824febefe4bdc121f81f3e40c718b28">init_Filial_Catalogo_Produtos</a>();</div>
+<div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;  }</div>
+<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">new</span>;</div>
+<div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;}</div>
+<div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160; </div>
+<div class="line"><a name="l00644"></a><span class="lineno"><a class="line" href="filial_8c.html#afcea80844e765a91c4a15c7c1228ca47">  644</a></span>&#160;Estrutura <a class="code" href="filial_8c.html#afcea80844e765a91c4a15c7c1228ca47">get_Filial_Produto_struct</a>(Filial_Catalogo_Produtos f, Produto p){</div>
+<div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;  <span class="keywordtype">char</span>* aux = <a class="code" href="produtos_8c.html#a41fd3a5ec4fda805f937ed25bcbe5750">getProdutoCode</a>(p);</div>
+<div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;  Estrutura a = <a class="code" href="catalogo_8c.html#a2ed88930f3b18c3f107506ef3170508d">get_Cat_struct</a>(f-&gt;catalogo,aux);</div>
+<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;  free(aux);</div>
+<div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;  <span class="keywordflow">return</span> a;</div>
+<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;}</div>
+<div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160; </div>
+<div class="line"><a name="l00658"></a><span class="lineno"><a class="line" href="filial_8c.html#ab348584c295c07065d61e0919e89b077">  658</a></span>&#160;Filial_Catalogo_Produtos <a class="code" href="filial_8c.html#ab348584c295c07065d61e0919e89b077">insere_info_produto</a>(Filial_Catalogo_Produtos cat, Produto p, <span class="keywordtype">void</span> * Estrutura){</div>
+<div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;  <span class="keywordtype">char</span>* aux = <a class="code" href="produtos_8c.html#a41fd3a5ec4fda805f937ed25bcbe5750">getProdutoCode</a>(p);</div>
+<div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;  cat-&gt;catalogo = <a class="code" href="catalogo_8c.html#a63d5cf63479a790b0f74a7bfa0dcd10a">insere_Catalogo</a>(cat-&gt;catalogo,aux,Estrutura);</div>
+<div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;  free(aux);</div>
+<div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;  <span class="keywordflow">return</span> cat;</div>
+<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;}</div>
+<div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160; </div>
+<div class="line"><a name="l00672"></a><span class="lineno"><a class="line" href="filial_8c.html#ace8f9ee0f37621c18d30fe23b578d1e0">  672</a></span>&#160;Boolean <a class="code" href="filial_8c.html#ace8f9ee0f37621c18d30fe23b578d1e0">existe_Produto_Filial</a>(FILIAL_produtos f, Produto p, <span class="keywordtype">int</span> filial){</div>
+<div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;  <span class="keywordtype">char</span> *aux = <a class="code" href="produtos_8c.html#a41fd3a5ec4fda805f937ed25bcbe5750">getProdutoCode</a>(p);</div>
+<div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;  Filial_Catalogo_Produtos cat = f-&gt;f_produtos[filial-1];</div>
+<div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;  Boolean a = <a class="code" href="catalogo_8c.html#a93fc716391dc53901dc2dbff97e75da1">existe_Catalogo</a>(cat-&gt;catalogo,aux);</div>
+<div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;  free(aux);</div>
+<div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;  <span class="keywordflow">return</span> a;</div>
+<div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160; </div>
+<div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160;}</div>
+<div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160; </div>
+<div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;<span class="keyword">static</span> <span class="keywordtype">void</span> free_struct_filial_produtos_info(<span class="keywordtype">void</span> *f){</div>
+<div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;  info_p aux = (info_p) f;</div>
+<div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;  free(aux);</div>
+<div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160; </div>
+<div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160;}</div>
+<div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160; </div>
+<div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;<span class="keyword">static</span> <span class="keywordtype">void</span> free_struct_filial_produtos(<span class="keywordtype">void</span> *f){</div>
+<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;  f_info_p aux = (f_info_p) f;</div>
+<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;  <span class="keywordtype">int</span> i;</div>
+<div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;  <span class="keywordflow">for</span>(i =0; i&lt;MESES ; i++){</div>
+<div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;    <a class="code" href="avl_8c.html#a79d17c2e6df846c93b8a5743cd025735">avl_free</a>(aux-&gt;clientes_compradores[i],free_struct_filial_produtos_info);</div>
+<div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;  }</div>
+<div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;  free(aux);</div>
+<div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;}</div>
+<div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160; </div>
+<div class="line"><a name="l00708"></a><span class="lineno"><a class="line" href="filial_8c.html#a5549f860a856de1e8d97fe6d8ddf99f5">  708</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="filial_8c.html#a5549f860a856de1e8d97fe6d8ddf99f5">free_Filial_Catalogo_Produtos</a>(Filial_Catalogo_Produtos c){</div>
+<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;  Filial_Catalogo_Produtos aux = (Filial_Catalogo_Produtos) c;</div>
+<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;  <a class="code" href="catalogo_8c.html#aa40131c98313b4683617cd1757f7ea66">free_Catalogo</a>(aux-&gt;catalogo,free_struct_filial_produtos);</div>
+<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;  free(aux);</div>
+<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;}</div>
+<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160; </div>
+<div class="line"><a name="l00718"></a><span class="lineno"><a class="line" href="filial_8c.html#a6b7a5a7c61edeb160390f46406f100a9">  718</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="filial_8c.html#a6b7a5a7c61edeb160390f46406f100a9">free_Filial_Produtos</a>(FILIAL_produtos f){</div>
+<div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;  <span class="keywordtype">int</span> i;</div>
+<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;  <span class="keywordflow">for</span>(i = 0; i&lt;FILIAL; i++) <a class="code" href="filial_8c.html#a5549f860a856de1e8d97fe6d8ddf99f5">free_Filial_Catalogo_Produtos</a>(f-&gt;f_produtos[i]);</div>
+<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;  free(f);</div>
+<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;}</div>
+<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160; </div>
+<div class="line"><a name="l00729"></a><span class="lineno"><a class="line" href="filial_8c.html#aaaf29a7502d926f215c6c5d20ba8c835">  729</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="filial_8c.html#aaaf29a7502d926f215c6c5d20ba8c835">imprime_Filial_Produtos</a>(FILIAL_produtos f, <span class="keywordtype">int</span> filial){</div>
+<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;  Filial_Catalogo_Produtos cat = f-&gt;f_produtos[filial-1];</div>
+<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;  <a class="code" href="catalogo_8c.html#a00844e192fa3f0c5afc710d9da7c2c83">imprime_Catalogo</a>(cat-&gt;catalogo);</div>
+<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;}</div>
+<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160; </div>
+<div class="line"><a name="l00739"></a><span class="lineno"><a class="line" href="filial_8c.html#aec87d4c01a97d01acfe6f079d7b13105">  739</a></span>&#160;Boolean <a class="code" href="filial_8c.html#aec87d4c01a97d01acfe6f079d7b13105">produto_Foi_Comprado</a>(f_info_p f){</div>
+<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;  <span class="keywordflow">if</span> (f == NULL) <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;  <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160;}</div>
+<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160; </div>
+<div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160; </div>
+<div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160; </div>
+<div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;<span class="comment">/*-----------------------------------------QUERIE4-----------------------------------------*/</span></div>
+<div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160; </div>
+<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160; </div>
+<div class="line"><a name="l00755"></a><span class="lineno"><a class="line" href="filial_8c.html#aa6405b8d9d3a95934d7574ab6b6f4e95">  755</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="filial_8c.html#aa6405b8d9d3a95934d7574ab6b6f4e95">percorre_NODO_Filial_Q4</a>(NODO tree, Q2 q, <span class="keywordtype">int</span> *aux){</div>
+<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;  <span class="keywordflow">if</span>(tree==NULL) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;  NODO esq = <a class="code" href="avl_8c.html#aac6e354b6a9d07b76313a36c510c9f10">getNodoEsq</a>(tree);</div>
+<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;  <a class="code" href="filial_8c.html#aa6405b8d9d3a95934d7574ab6b6f4e95">percorre_NODO_Filial_Q4</a>(esq,q,aux);</div>
+<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;  <a class="code" href="avl_8c.html#ab7e925aeda628a2fb80ed170c192c3c4">free_Nodo</a>(esq);</div>
+<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160; </div>
+<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;  f_info_p f = (f_info_p) <a class="code" href="avl_8c.html#a948222e5aea0bc2696faf0a9ed64afe7">getCont</a>(tree);</div>
+<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;  <span class="keywordtype">char</span>* <a class="code" href="structproduto.html">produto</a> = <a class="code" href="avl_8c.html#a5804b8d40ea06fecc2ecd97415a6c18c">getString</a>(tree);</div>
+<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;  <span class="keywordflow">if</span>(!<a class="code" href="filial_8c.html#aec87d4c01a97d01acfe6f079d7b13105">produto_Foi_Comprado</a>(f)){</div>
+<div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;    <a class="code" href="estruturas_8c.html#a55dfe0c3e3dc5cc8ce80bad1bd26f7ae">insere_ProdQ2</a>(<a class="code" href="structproduto.html">produto</a>,q);</div>
+<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160;    (*aux)++;</div>
+<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;  }</div>
+<div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;  free(<a class="code" href="structproduto.html">produto</a>);</div>
+<div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160; </div>
+<div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160;  NODO dir = <a class="code" href="avl_8c.html#a5c9e707dfc9a11ffe65746c91b5111ba">getNodoDir</a>(tree);</div>
+<div class="line"><a name="l00770"></a><span class="lineno">  770</span>&#160;  <a class="code" href="filial_8c.html#aa6405b8d9d3a95934d7574ab6b6f4e95">percorre_NODO_Filial_Q4</a>(dir,q,aux);</div>
+<div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160;  <a class="code" href="avl_8c.html#ab7e925aeda628a2fb80ed170c192c3c4">free_Nodo</a>(dir);</div>
+<div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;}</div>
+<div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160; </div>
+<div class="line"><a name="l00780"></a><span class="lineno"><a class="line" href="filial_8c.html#abee6a817652e5119139de120b3267813">  780</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="filial_8c.html#abee6a817652e5119139de120b3267813">percorre_AVL_Filial_Q4</a>(AVL tree, Q2 q, <span class="keywordtype">int</span> *aux){</div>
+<div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;  NODO f = <a class="code" href="avl_8c.html#af568e679a8db439de3758447f23b86e2">getNodo</a>(tree);</div>
+<div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160;  <a class="code" href="filial_8c.html#aa6405b8d9d3a95934d7574ab6b6f4e95">percorre_NODO_Filial_Q4</a>(f,q,aux);</div>
+<div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;  <a class="code" href="avl_8c.html#ab7e925aeda628a2fb80ed170c192c3c4">free_Nodo</a>(f);</div>
+<div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;}</div>
+<div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160; </div>
+<div class="line"><a name="l00792"></a><span class="lineno"><a class="line" href="filial_8c.html#aaf0b804e595f9bc786067a5eecbd2368">  792</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="filial_8c.html#aaf0b804e595f9bc786067a5eecbd2368">produtos_nao_comprados_filial</a>(FILIAL_produtos f, <span class="keywordtype">int</span> filial, Q2 q){</div>
+<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;  Filial_Catalogo_Produtos cat = f-&gt;f_produtos[filial-1];</div>
+<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;  <span class="keywordtype">int</span> i,aux=0;</div>
+<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;  AVL auxiliar;</div>
+<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;  <span class="keywordflow">for</span>(i=0;i&lt;NR_LETRAS;i++){</div>
+<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;    auxiliar = <a class="code" href="catalogo_8c.html#a551505c19cd86f02ff31019e350df2a6">catalogo_getAVL</a>(cat-&gt;catalogo,i);</div>
+<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;    <a class="code" href="filial_8c.html#abee6a817652e5119139de120b3267813">percorre_AVL_Filial_Q4</a>(auxiliar,q,&amp;aux);</div>
+<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;  }</div>
+<div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;  <a class="code" href="estruturas_8c.html#a89139245dabf3f29938430bb633be51d">setNum_totalQ2</a>(aux,q);</div>
+<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;}</div>
+<div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160; </div>
+<div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160;<span class="comment">/*-----------------------------------------QUERIE9-----------------------------------------*/</span></div>
+<div class="line"><a name="l00804"></a><span class="lineno">  804</span>&#160; </div>
+<div class="line"><a name="l00812"></a><span class="lineno"><a class="line" href="filial_8c.html#a019dc39f3e3a6f01e400922349095b0a">  812</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="filial_8c.html#a019dc39f3e3a6f01e400922349095b0a">percorre_NODO_Filial_Q9</a>(NODO tree, Q9 q, <span class="keywordtype">int</span> *aux1, <span class="keywordtype">int</span> *aux2){</div>
+<div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160;  <span class="keywordflow">if</span>(tree==NULL) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00814"></a><span class="lineno">  814</span>&#160;  NODO esq = <a class="code" href="avl_8c.html#aac6e354b6a9d07b76313a36c510c9f10">getNodoEsq</a>(tree);</div>
+<div class="line"><a name="l00815"></a><span class="lineno">  815</span>&#160;  <a class="code" href="filial_8c.html#a019dc39f3e3a6f01e400922349095b0a">percorre_NODO_Filial_Q9</a>(esq,q,aux1,aux2);</div>
+<div class="line"><a name="l00816"></a><span class="lineno">  816</span>&#160;  <a class="code" href="avl_8c.html#ab7e925aeda628a2fb80ed170c192c3c4">free_Nodo</a>(esq);</div>
+<div class="line"><a name="l00817"></a><span class="lineno">  817</span>&#160; </div>
+<div class="line"><a name="l00818"></a><span class="lineno">  818</span>&#160;  info_p f = (info_p) <a class="code" href="avl_8c.html#a948222e5aea0bc2696faf0a9ed64afe7">getCont</a>(tree);</div>
+<div class="line"><a name="l00819"></a><span class="lineno">  819</span>&#160;  <span class="keywordtype">char</span>* <a class="code" href="structcliente.html">cliente</a> = <a class="code" href="avl_8c.html#a5804b8d40ea06fecc2ecd97415a6c18c">getString</a>(tree);</div>
+<div class="line"><a name="l00820"></a><span class="lineno">  820</span>&#160;  <span class="keywordflow">if</span>(f-&gt;tipo_compra == 0){</div>
+<div class="line"><a name="l00821"></a><span class="lineno">  821</span>&#160;    <a class="code" href="estruturas_8c.html#a27d3593315bdeabf5e55f63880582a1f">insere_ProdNQ9</a>(<a class="code" href="structcliente.html">cliente</a>,q);</div>
+<div class="line"><a name="l00822"></a><span class="lineno">  822</span>&#160;    (*aux1)++;</div>
+<div class="line"><a name="l00823"></a><span class="lineno">  823</span>&#160;  }</div>
+<div class="line"><a name="l00824"></a><span class="lineno">  824</span>&#160;  <span class="keywordflow">else</span> <span class="keywordflow">if</span>(f-&gt;tipo_compra == 1){</div>
+<div class="line"><a name="l00825"></a><span class="lineno">  825</span>&#160;    <a class="code" href="estruturas_8c.html#a8310f07b304f10a440373631d88e9c5f">insere_ProdPQ9</a>(<a class="code" href="structcliente.html">cliente</a>,q);</div>
+<div class="line"><a name="l00826"></a><span class="lineno">  826</span>&#160;    (*aux2)++;</div>
+<div class="line"><a name="l00827"></a><span class="lineno">  827</span>&#160;  }</div>
+<div class="line"><a name="l00828"></a><span class="lineno">  828</span>&#160;  <span class="keywordflow">else</span> <span class="keywordflow">if</span>(f-&gt;tipo_compra == 2){</div>
+<div class="line"><a name="l00829"></a><span class="lineno">  829</span>&#160;    <a class="code" href="estruturas_8c.html#a27d3593315bdeabf5e55f63880582a1f">insere_ProdNQ9</a>(<a class="code" href="structcliente.html">cliente</a>,q);</div>
+<div class="line"><a name="l00830"></a><span class="lineno">  830</span>&#160;    <a class="code" href="estruturas_8c.html#a8310f07b304f10a440373631d88e9c5f">insere_ProdPQ9</a>(<a class="code" href="structcliente.html">cliente</a>,q);</div>
+<div class="line"><a name="l00831"></a><span class="lineno">  831</span>&#160;    (*aux1)++;</div>
+<div class="line"><a name="l00832"></a><span class="lineno">  832</span>&#160;    (*aux2)++;</div>
+<div class="line"><a name="l00833"></a><span class="lineno">  833</span>&#160;  }</div>
+<div class="line"><a name="l00834"></a><span class="lineno">  834</span>&#160;  free(<a class="code" href="structcliente.html">cliente</a>);</div>
+<div class="line"><a name="l00835"></a><span class="lineno">  835</span>&#160; </div>
+<div class="line"><a name="l00836"></a><span class="lineno">  836</span>&#160;  NODO dir = <a class="code" href="avl_8c.html#a5c9e707dfc9a11ffe65746c91b5111ba">getNodoDir</a>(tree);</div>
+<div class="line"><a name="l00837"></a><span class="lineno">  837</span>&#160;  <a class="code" href="filial_8c.html#a019dc39f3e3a6f01e400922349095b0a">percorre_NODO_Filial_Q9</a>(dir,q,aux1,aux2);</div>
+<div class="line"><a name="l00838"></a><span class="lineno">  838</span>&#160;  <a class="code" href="avl_8c.html#ab7e925aeda628a2fb80ed170c192c3c4">free_Nodo</a>(dir);</div>
+<div class="line"><a name="l00839"></a><span class="lineno">  839</span>&#160; </div>
+<div class="line"><a name="l00840"></a><span class="lineno">  840</span>&#160; </div>
+<div class="line"><a name="l00841"></a><span class="lineno">  841</span>&#160;}</div>
+<div class="line"><a name="l00842"></a><span class="lineno">  842</span>&#160; </div>
+<div class="line"><a name="l00850"></a><span class="lineno"><a class="line" href="filial_8c.html#a15e86c5e0fa18e412d1649a88c38657c">  850</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="filial_8c.html#a15e86c5e0fa18e412d1649a88c38657c">percorre_AVL_Filial_Q9</a>(AVL tree, Q9 q, <span class="keywordtype">int</span> *aux1, <span class="keywordtype">int</span> *aux2){</div>
+<div class="line"><a name="l00851"></a><span class="lineno">  851</span>&#160;  NODO f = <a class="code" href="avl_8c.html#af568e679a8db439de3758447f23b86e2">getNodo</a>(tree);</div>
+<div class="line"><a name="l00852"></a><span class="lineno">  852</span>&#160;  <a class="code" href="filial_8c.html#a019dc39f3e3a6f01e400922349095b0a">percorre_NODO_Filial_Q9</a>(f,q,aux1,aux2);</div>
+<div class="line"><a name="l00853"></a><span class="lineno">  853</span>&#160;  <a class="code" href="avl_8c.html#ab7e925aeda628a2fb80ed170c192c3c4">free_Nodo</a>(f);</div>
+<div class="line"><a name="l00854"></a><span class="lineno">  854</span>&#160;}</div>
+<div class="line"><a name="l00855"></a><span class="lineno">  855</span>&#160; </div>
+<div class="line"><a name="l00862"></a><span class="lineno"><a class="line" href="filial_8c.html#ab52ea1316abba2849b9fb71416f61cca">  862</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="filial_8c.html#ab52ea1316abba2849b9fb71416f61cca">lista_produtos_comprados_filial</a>(Q9 q,FILIAL_produtos f, <span class="keywordtype">char</span>* key, <span class="keywordtype">int</span> filial){</div>
+<div class="line"><a name="l00863"></a><span class="lineno">  863</span>&#160;  Filial_Catalogo_Produtos fc = f-&gt;f_produtos[filial-1];</div>
+<div class="line"><a name="l00864"></a><span class="lineno">  864</span>&#160;  f_info_p info = <a class="code" href="catalogo_8c.html#a2ed88930f3b18c3f107506ef3170508d">get_Cat_struct</a>(fc-&gt;catalogo,key);</div>
+<div class="line"><a name="l00865"></a><span class="lineno">  865</span>&#160;  <span class="keywordtype">int</span> i,aux1=0,aux2=0;</div>
+<div class="line"><a name="l00866"></a><span class="lineno">  866</span>&#160;  <span class="keywordflow">if</span> (info != NULL)</div>
+<div class="line"><a name="l00867"></a><span class="lineno">  867</span>&#160;    <span class="keywordflow">for</span>(i=0;i&lt;MESES;i++){</div>
+<div class="line"><a name="l00868"></a><span class="lineno">  868</span>&#160;        <a class="code" href="filial_8c.html#a15e86c5e0fa18e412d1649a88c38657c">percorre_AVL_Filial_Q9</a>(info-&gt;clientes_compradores[i],q,&amp;aux1,&amp;aux2);</div>
+<div class="line"><a name="l00869"></a><span class="lineno">  869</span>&#160;    }</div>
+<div class="line"><a name="l00870"></a><span class="lineno">  870</span>&#160;  <a class="code" href="estruturas_8c.html#a936b77cd07a68b7dbd5cfec0aa5237b5">setTotalNQ9</a>(q,aux1);</div>
+<div class="line"><a name="l00871"></a><span class="lineno">  871</span>&#160;  <a class="code" href="estruturas_8c.html#a7ca6bd940200f4faf28db8168cb2c8f6">setTotalPQ9</a>(q,aux2);</div>
+<div class="line"><a name="l00872"></a><span class="lineno">  872</span>&#160;}</div>
+<div class="line"><a name="l00873"></a><span class="lineno">  873</span>&#160; </div>
+<div class="line"><a name="l00874"></a><span class="lineno">  874</span>&#160;<span class="comment">/*-----------------------------------------QUERIE11-----------------------------------------*/</span></div>
+<div class="line"><a name="l00875"></a><span class="lineno">  875</span>&#160; </div>
+<div class="line"><a name="l00876"></a><span class="lineno">  876</span>&#160; </div>
+<div class="line"><a name="l00883"></a><span class="lineno"><a class="line" href="filial_8c.html#a3ed5610efa2fb41ca5f6e4e041672118">  883</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="filial_8c.html#a3ed5610efa2fb41ca5f6e4e041672118">defineNClientes</a>(FILIAL_produtos f, Q11 q, <span class="keywordtype">int</span> limit){</div>
+<div class="line"><a name="l00884"></a><span class="lineno">  884</span>&#160;  <span class="keywordtype">int</span> i,j,k,nc;</div>
+<div class="line"><a name="l00885"></a><span class="lineno">  885</span>&#160;  <span class="keywordtype">int</span> l2 = <a class="code" href="estruturas_8c.html#a805ae53be14f2f04772ddeffe0bd9b44">getNum_TotalQ11</a>(q);</div>
+<div class="line"><a name="l00886"></a><span class="lineno">  886</span>&#160;  Filial_Catalogo_Produtos fc;</div>
+<div class="line"><a name="l00887"></a><span class="lineno">  887</span>&#160;  f_info_p aux;</div>
+<div class="line"><a name="l00888"></a><span class="lineno">  888</span>&#160;  <span class="keywordtype">char</span>* prod;</div>
+<div class="line"><a name="l00889"></a><span class="lineno">  889</span>&#160;  <span class="keywordflow">for</span>(i=0;i&lt;FILIAL;i++){</div>
+<div class="line"><a name="l00890"></a><span class="lineno">  890</span>&#160;    fc = f-&gt;f_produtos[i];</div>
+<div class="line"><a name="l00891"></a><span class="lineno">  891</span>&#160;    <span class="keywordflow">for</span>(j=0;j&lt;l2 &amp;&amp; j&lt;limit;j++){</div>
+<div class="line"><a name="l00892"></a><span class="lineno">  892</span>&#160;      prod = <a class="code" href="estruturas_8c.html#af12a469a69c68fd7efda71a42dc34ce2">getProdutoQ11</a>(q,j);</div>
+<div class="line"><a name="l00893"></a><span class="lineno">  893</span>&#160;      aux = <a class="code" href="catalogo_8c.html#a2ed88930f3b18c3f107506ef3170508d">get_Cat_struct</a>(fc-&gt;catalogo,prod);</div>
+<div class="line"><a name="l00894"></a><span class="lineno">  894</span>&#160;      <span class="keywordflow">if</span>(aux != NULL)</div>
+<div class="line"><a name="l00895"></a><span class="lineno">  895</span>&#160;      <span class="keywordflow">for</span>(k=0;k&lt;MESES;k++){</div>
+<div class="line"><a name="l00896"></a><span class="lineno">  896</span>&#160;        nc = <a class="code" href="avl_8c.html#a785a0f5acefc1cd1085f1eb65fff5c43">avl_getTamanho</a>(aux-&gt;clientes_compradores[k]);</div>
+<div class="line"><a name="l00897"></a><span class="lineno">  897</span>&#160;        <a class="code" href="estruturas_8c.html#ae1365abf168b20ce44f044cf9e616673">alteraNClientesQ11</a>(q,j,nc,i);</div>
+<div class="line"><a name="l00898"></a><span class="lineno">  898</span>&#160;      }</div>
+<div class="line"><a name="l00899"></a><span class="lineno">  899</span>&#160;    }</div>
+<div class="line"><a name="l00900"></a><span class="lineno">  900</span>&#160;  }</div>
+<div class="line"><a name="l00901"></a><span class="lineno">  901</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="afilial_8c_html_ab64cfc83fe953e09d4e974e504f9b060"><div class="ttname"><a href="filial_8c.html#ab64cfc83fe953e09d4e974e504f9b060">percorre_NODO_Filial_Q10</a></div><div class="ttdeci">void percorre_NODO_Filial_Q10(NODO tree, Q10 q)</div><div class="ttdoc">Função que percorre os nodos de uma AVL.</div><div class="ttdef"><b>Definition:</b> <a href="filial_8c_source.html#l00398">filial.c:398</a></div></div>
+<div class="ttc" id="afilial_8c_html_aac5e8ac447815a64ec40111551fdbf10"><div class="ttname"><a href="filial_8c.html#aac5e8ac447815a64ec40111551fdbf10">imprime_Filial_Clientes</a></div><div class="ttdeci">void imprime_Filial_Clientes(FILIAL_clientes f, int filial)</div><div class="ttdoc">Função que imprime uma filial de clientes.</div><div class="ttdef"><b>Definition:</b> <a href="filial_8c_source.html#l00228">filial.c:228</a></div></div>
+<div class="ttc" id="aestruturas_8c_html_ae1365abf168b20ce44f044cf9e616673"><div class="ttname"><a href="estruturas_8c.html#ae1365abf168b20ce44f044cf9e616673">alteraNClientesQ11</a></div><div class="ttdeci">void alteraNClientesQ11(Q11 q, int j, int nc, int filial)</div><div class="ttdoc">Função que altera o total de clientes que comprou um certo produto, bem como por filial.</div><div class="ttdef"><b>Definition:</b> <a href="estruturas_8c_source.html#l00915">estruturas.c:915</a></div></div>
+<div class="ttc" id="aestruturas_8c_html_a7ca6bd940200f4faf28db8168cb2c8f6"><div class="ttname"><a href="estruturas_8c.html#a7ca6bd940200f4faf28db8168cb2c8f6">setTotalPQ9</a></div><div class="ttdeci">void setTotalPQ9(Q9 q, int n)</div><div class="ttdoc">Função que estabelece a quantidade total clientes que compraram em modo Promocional.</div><div class="ttdef"><b>Definition:</b> <a href="estruturas_8c_source.html#l00569">estruturas.c:569</a></div></div>
+<div class="ttc" id="aestruturas_8c_html_a3b3fee2a6ed4ef4031bfe6b499ee5064"><div class="ttname"><a href="estruturas_8c.html#a3b3fee2a6ed4ef4031bfe6b499ee5064">insere_ProdInfoQ10</a></div><div class="ttdeci">void insere_ProdInfoQ10(Q10 q, char *p, int qtd)</div><div class="ttdoc">Função que insere na estrutura um código produto e a quantidade total comprada desse produto.</div><div class="ttdef"><b>Definition:</b> <a href="estruturas_8c_source.html#l00689">estruturas.c:689</a></div></div>
+<div class="ttc" id="afilial_8c_html_aaaf29a7502d926f215c6c5d20ba8c835"><div class="ttname"><a href="filial_8c.html#aaaf29a7502d926f215c6c5d20ba8c835">imprime_Filial_Produtos</a></div><div class="ttdeci">void imprime_Filial_Produtos(FILIAL_produtos f, int filial)</div><div class="ttdoc">Função que imprime uma filial de produtos.</div><div class="ttdef"><b>Definition:</b> <a href="filial_8c_source.html#l00729">filial.c:729</a></div></div>
+<div class="ttc" id="aavl_8c_html_a948222e5aea0bc2696faf0a9ed64afe7"><div class="ttname"><a href="avl_8c.html#a948222e5aea0bc2696faf0a9ed64afe7">getCont</a></div><div class="ttdeci">void * getCont(NODO n)</div><div class="ttdoc">Função que dado um NODO retorna o seu contéudo.</div><div class="ttdef"><b>Definition:</b> <a href="avl_8c_source.html#l00201">avl.c:201</a></div></div>
+<div class="ttc" id="afilial_8c_html_a6b7a5a7c61edeb160390f46406f100a9"><div class="ttname"><a href="filial_8c.html#a6b7a5a7c61edeb160390f46406f100a9">free_Filial_Produtos</a></div><div class="ttdeci">void free_Filial_Produtos(FILIAL_produtos f)</div><div class="ttdoc">Função que liberta da memória o espaço ocupado pelo array que contém a informação de cada filial de p...</div><div class="ttdef"><b>Definition:</b> <a href="filial_8c_source.html#l00718">filial.c:718</a></div></div>
+<div class="ttc" id="aestruturas_8c_html_a6296c506821d0c6a5edbf2f3e8caf708"><div class="ttname"><a href="estruturas_8c.html#a6296c506821d0c6a5edbf2f3e8caf708">setQt_FilialQ7</a></div><div class="ttdeci">void setQt_FilialQ7(Q7 q, int n, int i, int j)</div><div class="ttdoc">Função que estabelece a quantidade total comprada numa dada filial, num dado mês.</div><div class="ttdef"><b>Definition:</b> <a href="estruturas_8c_source.html#l00390">estruturas.c:390</a></div></div>
+<div class="ttc" id="aavl_8c_html_ab7e925aeda628a2fb80ed170c192c3c4"><div class="ttname"><a href="avl_8c.html#ab7e925aeda628a2fb80ed170c192c3c4">free_Nodo</a></div><div class="ttdeci">void free_Nodo(NODO node)</div><div class="ttdoc">Função que limpa da memória um dado NODO.</div><div class="ttdef"><b>Definition:</b> <a href="avl_8c_source.html#l00446">avl.c:446</a></div></div>
+<div class="ttc" id="afilial_8c_html_abee6a817652e5119139de120b3267813"><div class="ttname"><a href="filial_8c.html#abee6a817652e5119139de120b3267813">percorre_AVL_Filial_Q4</a></div><div class="ttdeci">void percorre_AVL_Filial_Q4(AVL tree, Q2 q, int *aux)</div><div class="ttdoc">Função que percorre uma AVL.</div><div class="ttdef"><b>Definition:</b> <a href="filial_8c_source.html#l00780">filial.c:780</a></div></div>
+<div class="ttc" id="acatalogo_8c_html_a00844e192fa3f0c5afc710d9da7c2c83"><div class="ttname"><a href="catalogo_8c.html#a00844e192fa3f0c5afc710d9da7c2c83">imprime_Catalogo</a></div><div class="ttdeci">void imprime_Catalogo(Catalogo cat)</div><div class="ttdoc">Função que imprime um catálogo.</div><div class="ttdef"><b>Definition:</b> <a href="catalogo_8c_source.html#l00091">catalogo.c:91</a></div></div>
+<div class="ttc" id="aavl_8c_html_af568e679a8db439de3758447f23b86e2"><div class="ttname"><a href="avl_8c.html#af568e679a8db439de3758447f23b86e2">getNodo</a></div><div class="ttdeci">NODO getNodo(AVL a)</div><div class="ttdoc">Função que dada uma AVL retorna o nodo da sua raiz.</div><div class="ttdef"><b>Definition:</b> <a href="avl_8c_source.html#l00128">avl.c:128</a></div></div>
+<div class="ttc" id="afilial_8c_html_ac13a643d1d60ffdfad72eaab4083a574"><div class="ttname"><a href="filial_8c.html#ac13a643d1d60ffdfad72eaab4083a574">percorre_AVL_Filial_Q6</a></div><div class="ttdeci">void percorre_AVL_Filial_Q6(AVL tree, int *aux)</div><div class="ttdoc">Função que percorre uma AVL.</div><div class="ttdef"><b>Definition:</b> <a href="filial_8c_source.html#l00344">filial.c:344</a></div></div>
+<div class="ttc" id="afilial_8c_html_ace8f9ee0f37621c18d30fe23b578d1e0"><div class="ttname"><a href="filial_8c.html#ace8f9ee0f37621c18d30fe23b578d1e0">existe_Produto_Filial</a></div><div class="ttdeci">Boolean existe_Produto_Filial(FILIAL_produtos f, Produto p, int filial)</div><div class="ttdoc">Função que verifica se existe um determinado produto numa filial.</div><div class="ttdef"><b>Definition:</b> <a href="filial_8c_source.html#l00672">filial.c:672</a></div></div>
+<div class="ttc" id="afilial_8c_html_a6e68f36cbad6aac2f9db8dfba4a5ac9a"><div class="ttname"><a href="filial_8c.html#a6e68f36cbad6aac2f9db8dfba4a5ac9a">free_Filial_Clientes</a></div><div class="ttdeci">void free_Filial_Clientes(FILIAL_clientes f)</div><div class="ttdoc">Função que liberta da memória o espaço ocupado pelo array que contém a informação de cada filial de c...</div><div class="ttdef"><b>Definition:</b> <a href="filial_8c_source.html#l00202">filial.c:202</a></div></div>
+<div class="ttc" id="afilial_8c_html_a060b67104e4d5d65acdd4dd308eaf4f2"><div class="ttname"><a href="filial_8c.html#a060b67104e4d5d65acdd4dd308eaf4f2">init_Filial_Catalogo_Clientes</a></div><div class="ttdeci">Filial_Catalogo_Clientes init_Filial_Catalogo_Clientes()</div><div class="ttdoc">Função que inicializa o catálogo da filial de clientes.</div><div class="ttdef"><b>Definition:</b> <a href="filial_8c_source.html#l00120">filial.c:120</a></div></div>
+<div class="ttc" id="afilial_8c_html_ab32bfe5fe29208cbd961b06ff8ef49f3"><div class="ttname"><a href="filial_8c.html#ab32bfe5fe29208cbd961b06ff8ef49f3">init_filial_clientes</a></div><div class="ttdeci">FILIAL_clientes init_filial_clientes()</div><div class="ttdoc">Função que inicializa a informação das filiais dos clientes.</div><div class="ttdef"><b>Definition:</b> <a href="filial_8c_source.html#l00130">filial.c:130</a></div></div>
+<div class="ttc" id="aestruturas_8c_html_a89139245dabf3f29938430bb633be51d"><div class="ttname"><a href="estruturas_8c.html#a89139245dabf3f29938430bb633be51d">setNum_totalQ2</a></div><div class="ttdeci">void setNum_totalQ2(int n, Q2 q)</div><div class="ttdoc">Função que fixa o número total de elementos dentro da estrutura.</div><div class="ttdef"><b>Definition:</b> <a href="estruturas_8c_source.html#l00076">estruturas.c:76</a></div></div>
+<div class="ttc" id="aavl_8c_html_a12edfb9dbe827acf6f4eadc70cf84c44"><div class="ttname"><a href="avl_8c.html#a12edfb9dbe827acf6f4eadc70cf84c44">initAVL</a></div><div class="ttdeci">AVL initAVL()</div><div class="ttdoc">Função que inicializa uma nova AVL.</div><div class="ttdef"><b>Definition:</b> <a href="avl_8c_source.html#l00039">avl.c:39</a></div></div>
+<div class="ttc" id="afilial_8c_html_a497ea2c43a261a3fdba1af1f998211ed"><div class="ttname"><a href="filial_8c.html#a497ea2c43a261a3fdba1af1f998211ed">init_filial_produtos</a></div><div class="ttdeci">FILIAL_produtos init_filial_produtos()</div><div class="ttdoc">Função que inicializa a informação das filiais dos produtos.</div><div class="ttdef"><b>Definition:</b> <a href="filial_8c_source.html#l00629">filial.c:629</a></div></div>
+<div class="ttc" id="astructinfo__cliente_html"><div class="ttname"><a href="structinfo__cliente.html">info_cliente</a></div><div class="ttdef"><b>Definition:</b> <a href="filial_8c_source.html#l00025">filial.c:25</a></div></div>
+<div class="ttc" id="afilial_8c_html_a8755d33e575f2c4ce453bc26dbc26bae"><div class="ttname"><a href="filial_8c.html#a8755d33e575f2c4ce453bc26dbc26bae">init_Filial_Info_Produto</a></div><div class="ttdeci">f_info_p init_Filial_Info_Produto()</div><div class="ttdoc">Função que inicializa a informação de um produto.</div><div class="ttdef"><b>Definition:</b> <a href="filial_8c_source.html#l00604">filial.c:604</a></div></div>
+<div class="ttc" id="afilial_8c_html_a9e230997f74b73b6927cd72baa4607be"><div class="ttname"><a href="filial_8c.html#a9e230997f74b73b6927cd72baa4607be">altera_info_cliente</a></div><div class="ttdeci">f_info_c altera_info_cliente(f_info_c f, Produto p, int mes, int qtd, double preco)</div><div class="ttdoc">Função que altera a informação de um cliente.</div><div class="ttdef"><b>Definition:</b> <a href="filial_8c_source.html#l00058">filial.c:58</a></div></div>
+<div class="ttc" id="afilial_8c_html_ab5ca2453968d6ffa7cb2a3777e3f82ac"><div class="ttname"><a href="filial_8c.html#ab5ca2453968d6ffa7cb2a3777e3f82ac">init_Info_Produto</a></div><div class="ttdeci">info_p init_Info_Produto(char modo)</div><div class="ttdoc">Função que inicializa o tipo de compra de um produto.</div><div class="ttdef"><b>Definition:</b> <a href="filial_8c_source.html#l00593">filial.c:593</a></div></div>
+<div class="ttc" id="aavl_8c_html_a785a0f5acefc1cd1085f1eb65fff5c43"><div class="ttname"><a href="avl_8c.html#a785a0f5acefc1cd1085f1eb65fff5c43">avl_getTamanho</a></div><div class="ttdeci">int avl_getTamanho(AVL tree)</div><div class="ttdoc">Função que devolve o tamanho de uma AVL.</div><div class="ttdef"><b>Definition:</b> <a href="avl_8c_source.html#l00119">avl.c:119</a></div></div>
+<div class="ttc" id="afilial_8c_html_a68e9aeba6cf2841ffae5e08cf1bc4b9b"><div class="ttname"><a href="filial_8c.html#a68e9aeba6cf2841ffae5e08cf1bc4b9b">cria_Filial_Produtos</a></div><div class="ttdeci">FILIAL_produtos cria_Filial_Produtos(FILIAL_produtos f, Produto p)</div><div class="ttdoc">Função que cria uma filial de produtos, inserindo informação na mesma.</div><div class="ttdef"><b>Definition:</b> <a href="filial_8c_source.html#l00532">filial.c:532</a></div></div>
+<div class="ttc" id="astructfilial__cat__produtos_html"><div class="ttname"><a href="structfilial__cat__produtos.html">filial_cat_produtos</a></div><div class="ttdef"><b>Definition:</b> <a href="filial_8c_source.html#l00509">filial.c:509</a></div></div>
+<div class="ttc" id="aestruturas_8c_html_a8310f07b304f10a440373631d88e9c5f"><div class="ttname"><a href="estruturas_8c.html#a8310f07b304f10a440373631d88e9c5f">insere_ProdPQ9</a></div><div class="ttdeci">void insere_ProdPQ9(char *key, Q9 q)</div><div class="ttdoc">Função que insere na estrutura um código produto comprado em modo Promocional.</div><div class="ttdef"><b>Definition:</b> <a href="estruturas_8c_source.html#l00602">estruturas.c:602</a></div></div>
+<div class="ttc" id="acatalogo_8c_html_acc5f085d5be2ccd45505eff9015e27db"><div class="ttname"><a href="catalogo_8c.html#acc5f085d5be2ccd45505eff9015e27db">altera_Catalogo</a></div><div class="ttdeci">Catalogo altera_Catalogo(Catalogo c, char *key, void *estrutura)</div><div class="ttdoc">Função que altera uma estrutura no catálogo tendo como referência de posicionamento um char* key.</div><div class="ttdef"><b>Definition:</b> <a href="catalogo_8c_source.html#l00069">catalogo.c:69</a></div></div>
+<div class="ttc" id="afilial_8c_html_aedfe7662609b1eadfa34656ea5f49d50"><div class="ttname"><a href="filial_8c.html#aedfe7662609b1eadfa34656ea5f49d50">altera_Filial_Produto</a></div><div class="ttdeci">FILIAL_produtos altera_Filial_Produto(FILIAL_produtos f, Cliente c, Produto p, int mes, int qtd, double preco, int filial, char modo)</div><div class="ttdoc">Função que altera a informação de uma filial de produtos.</div><div class="ttdef"><b>Definition:</b> <a href="filial_8c_source.html#l00578">filial.c:578</a></div></div>
+<div class="ttc" id="acatalogo_8c_html_a2ed88930f3b18c3f107506ef3170508d"><div class="ttname"><a href="catalogo_8c.html#a2ed88930f3b18c3f107506ef3170508d">get_Cat_struct</a></div><div class="ttdeci">Estrutura get_Cat_struct(Catalogo c, char *key)</div><div class="ttdoc">Função que devolve a estrutura associada a uma key de um catálogo que lhe é passada como argumento.</div><div class="ttdef"><b>Definition:</b> <a href="catalogo_8c_source.html#l00044">catalogo.c:44</a></div></div>
+<div class="ttc" id="acatalogo_8c_html_a5add1241036a95c143d5cb5d8e5e7fe5"><div class="ttname"><a href="catalogo_8c.html#a5add1241036a95c143d5cb5d8e5e7fe5">init_Catalogo</a></div><div class="ttdeci">Catalogo init_Catalogo()</div><div class="ttdoc">Função que inicializa um novo catálogo.</div><div class="ttdef"><b>Definition:</b> <a href="catalogo_8c_source.html#l00017">catalogo.c:17</a></div></div>
+<div class="ttc" id="afilial_8c_html_aec87d4c01a97d01acfe6f079d7b13105"><div class="ttname"><a href="filial_8c.html#aec87d4c01a97d01acfe6f079d7b13105">produto_Foi_Comprado</a></div><div class="ttdeci">Boolean produto_Foi_Comprado(f_info_p f)</div><div class="ttdoc">Função que verifica se um produto foi comprado.</div><div class="ttdef"><b>Definition:</b> <a href="filial_8c_source.html#l00739">filial.c:739</a></div></div>
+<div class="ttc" id="afilial_8c_html_a5824febefe4bdc121f81f3e40c718b28"><div class="ttname"><a href="filial_8c.html#a5824febefe4bdc121f81f3e40c718b28">init_Filial_Catalogo_Produtos</a></div><div class="ttdeci">Filial_Catalogo_Produtos init_Filial_Catalogo_Produtos()</div><div class="ttdoc">Função que inicializa o catálogo da filial de produtos.</div><div class="ttdef"><b>Definition:</b> <a href="filial_8c_source.html#l00619">filial.c:619</a></div></div>
+<div class="ttc" id="afilial_8c_html_aba3f4d4d26e8bb3c688a6e6518ed306c"><div class="ttname"><a href="filial_8c.html#aba3f4d4d26e8bb3c688a6e6518ed306c">existe_Cliente_Filial</a></div><div class="ttdeci">Boolean existe_Cliente_Filial(FILIAL_clientes f, Cliente c, int filial)</div><div class="ttdoc">Função que verifica se existe um determinado cliente numa filial.</div><div class="ttdef"><b>Definition:</b> <a href="filial_8c_source.html#l00215">filial.c:215</a></div></div>
+<div class="ttc" id="aestruturas_8c_html_a805ae53be14f2f04772ddeffe0bd9b44"><div class="ttname"><a href="estruturas_8c.html#a805ae53be14f2f04772ddeffe0bd9b44">getNum_TotalQ11</a></div><div class="ttdeci">int getNum_TotalQ11(Q11 q)</div><div class="ttdoc">Função que retorna a quantidade total de elementos numa estrutura.</div><div class="ttdef"><b>Definition:</b> <a href="estruturas_8c_source.html#l00881">estruturas.c:881</a></div></div>
+<div class="ttc" id="afilial_8c_html_afcea80844e765a91c4a15c7c1228ca47"><div class="ttname"><a href="filial_8c.html#afcea80844e765a91c4a15c7c1228ca47">get_Filial_Produto_struct</a></div><div class="ttdeci">Estrutura get_Filial_Produto_struct(Filial_Catalogo_Produtos f, Produto p)</div><div class="ttdoc">Função que devolve a estrutura associada a um produto de um catálogo que lhe é passado como argumento...</div><div class="ttdef"><b>Definition:</b> <a href="filial_8c_source.html#l00644">filial.c:644</a></div></div>
+<div class="ttc" id="astructfilial__c_html"><div class="ttname"><a href="structfilial__c.html">filial_c</a></div><div class="ttdef"><b>Definition:</b> <a href="filial_8c_source.html#l00009">filial.c:9</a></div></div>
+<div class="ttc" id="afilial_8c_html_ac547431fec615b1e6ea65de86fa0f204"><div class="ttname"><a href="filial_8c.html#ac547431fec615b1e6ea65de86fa0f204">init_Info_Cliente</a></div><div class="ttdeci">info_c init_Info_Cliente()</div><div class="ttdoc">Função que inicializa a informação de um produto do cliente.</div><div class="ttdef"><b>Definition:</b> <a href="filial_8c_source.html#l00095">filial.c:95</a></div></div>
+<div class="ttc" id="afilial_8c_html_ac893a66e15da4ac4f8a54259680e792b"><div class="ttname"><a href="filial_8c.html#ac893a66e15da4ac4f8a54259680e792b">clientes_todas_filiais</a></div><div class="ttdeci">void clientes_todas_filiais(FILIAL_clientes f, Q5 q)</div><div class="ttdoc">Função que insere numa estrutura os clientes que compraram em todas as filiais.</div><div class="ttdef"><b>Definition:</b> <a href="filial_8c_source.html#l00304">filial.c:304</a></div></div>
+<div class="ttc" id="afilial_8c_html_a5549f860a856de1e8d97fe6d8ddf99f5"><div class="ttname"><a href="filial_8c.html#a5549f860a856de1e8d97fe6d8ddf99f5">free_Filial_Catalogo_Produtos</a></div><div class="ttdeci">void free_Filial_Catalogo_Produtos(Filial_Catalogo_Produtos c)</div><div class="ttdoc">Função que liberta da memória o espaço ocupado pelo catálogo das filiais dos produtos.</div><div class="ttdef"><b>Definition:</b> <a href="filial_8c_source.html#l00708">filial.c:708</a></div></div>
+<div class="ttc" id="afilial_8c_html_aa6405b8d9d3a95934d7574ab6b6f4e95"><div class="ttname"><a href="filial_8c.html#aa6405b8d9d3a95934d7574ab6b6f4e95">percorre_NODO_Filial_Q4</a></div><div class="ttdeci">void percorre_NODO_Filial_Q4(NODO tree, Q2 q, int *aux)</div><div class="ttdoc">Função que percorre os nodos de uma AVL.</div><div class="ttdef"><b>Definition:</b> <a href="filial_8c_source.html#l00755">filial.c:755</a></div></div>
+<div class="ttc" id="afilial_8c_html_a3ed5610efa2fb41ca5f6e4e041672118"><div class="ttname"><a href="filial_8c.html#a3ed5610efa2fb41ca5f6e4e041672118">defineNClientes</a></div><div class="ttdeci">void defineNClientes(FILIAL_produtos f, Q11 q, int limit)</div><div class="ttdoc">Função que altera numa estrutura o número de clientes que compraram dado produto.</div><div class="ttdef"><b>Definition:</b> <a href="filial_8c_source.html#l00883">filial.c:883</a></div></div>
+<div class="ttc" id="afilial_8c_html_a3344f48b0ea47e94c8c00cd75e63e97c"><div class="ttname"><a href="filial_8c.html#a3344f48b0ea47e94c8c00cd75e63e97c">free_Filial_Catalogo_Clientes</a></div><div class="ttdeci">void free_Filial_Catalogo_Clientes(Filial_Catalogo_Clientes c)</div><div class="ttdoc">Função que liberta da memória o espaço ocupado pelo catálogo das filiais dos clientes.</div><div class="ttdef"><b>Definition:</b> <a href="filial_8c_source.html#l00192">filial.c:192</a></div></div>
+<div class="ttc" id="afilial_8c_html_af748ef77906df2597c4bdc2698ab807c"><div class="ttname"><a href="filial_8c.html#af748ef77906df2597c4bdc2698ab807c">cria_Filial_Clientes</a></div><div class="ttdeci">FILIAL_clientes cria_Filial_Clientes(FILIAL_clientes f, Cliente c)</div><div class="ttdoc">Função que cria uma filial de clientes, inserindo informação na mesma.</div><div class="ttdef"><b>Definition:</b> <a href="filial_8c_source.html#l00039">filial.c:39</a></div></div>
+<div class="ttc" id="astructproduto_html"><div class="ttname"><a href="structproduto.html">produto</a></div><div class="ttdef"><b>Definition:</b> <a href="produtos_8c_source.html#l00009">produtos.c:9</a></div></div>
+<div class="ttc" id="afilial_8c_html_a33e73f724f442a36e5078d2fe078822f"><div class="ttname"><a href="filial_8c.html#a33e73f724f442a36e5078d2fe078822f">insere_info_cliente</a></div><div class="ttdeci">Filial_Catalogo_Clientes insere_info_cliente(Filial_Catalogo_Clientes cat, Cliente c, void *estrutura)</div><div class="ttdoc">Função que insere num cliente de um catálogo uma estrutura.</div><div class="ttdef"><b>Definition:</b> <a href="filial_8c_source.html#l00146">filial.c:146</a></div></div>
+<div class="ttc" id="aestruturas_8c_html_a9c83dd79a8536a5f76afc2c58cb67cf7"><div class="ttname"><a href="estruturas_8c.html#a9c83dd79a8536a5f76afc2c58cb67cf7">insere_ProdInfoQ12</a></div><div class="ttdeci">void insere_ProdInfoQ12(Q12 q, char *p, double faturado)</div><div class="ttdoc">Função que insere na estrutura um código produto e o total faturado desse produto.</div><div class="ttdef"><b>Definition:</b> <a href="estruturas_8c_source.html#l01013">estruturas.c:1013</a></div></div>
+<div class="ttc" id="acatalogo_8c_html_a63d5cf63479a790b0f74a7bfa0dcd10a"><div class="ttname"><a href="catalogo_8c.html#a63d5cf63479a790b0f74a7bfa0dcd10a">insere_Catalogo</a></div><div class="ttdeci">Catalogo insere_Catalogo(Catalogo c, char *key, void *estrutura)</div><div class="ttdoc">Função que insere no catálogo tendo como referência de posicionamento um char* key.</div><div class="ttdef"><b>Definition:</b> <a href="catalogo_8c_source.html#l00056">catalogo.c:56</a></div></div>
+<div class="ttc" id="aavl_8c_html_aac6e354b6a9d07b76313a36c510c9f10"><div class="ttname"><a href="avl_8c.html#aac6e354b6a9d07b76313a36c510c9f10">getNodoEsq</a></div><div class="ttdeci">NODO getNodoEsq(NODO n)</div><div class="ttdoc">Função que dado um NODO retorna o nodo á sua esquerda.</div><div class="ttdef"><b>Definition:</b> <a href="avl_8c_source.html#l00149">avl.c:149</a></div></div>
+<div class="ttc" id="aestruturas_8c_html_ac4ee86ddb19af3c5e46b2e10dcb9fc8f"><div class="ttname"><a href="estruturas_8c.html#ac4ee86ddb19af3c5e46b2e10dcb9fc8f">insere_ClienteQ5</a></div><div class="ttdeci">void insere_ClienteQ5(char *key, Q5 q)</div><div class="ttdoc">Função que insere na estrutura um código de cliente.</div><div class="ttdef"><b>Definition:</b> <a href="estruturas_8c_source.html#l00267">estruturas.c:267</a></div></div>
+<div class="ttc" id="afilial_8c_html_a2cc9d012bf513b38832eb20ac97c1ff9"><div class="ttname"><a href="filial_8c.html#a2cc9d012bf513b38832eb20ac97c1ff9">cliente_comprou_todas_filiais</a></div><div class="ttdeci">Boolean cliente_comprou_todas_filiais(FILIAL_clientes f, char *key)</div><div class="ttdoc">Função que verifica se um cliente comprou em todas as filiais.</div><div class="ttdef"><b>Definition:</b> <a href="filial_8c_source.html#l00249">filial.c:249</a></div></div>
+<div class="ttc" id="afilial_8c_html_ab52ea1316abba2849b9fb71416f61cca"><div class="ttname"><a href="filial_8c.html#ab52ea1316abba2849b9fb71416f61cca">lista_produtos_comprados_filial</a></div><div class="ttdeci">void lista_produtos_comprados_filial(Q9 q, FILIAL_produtos f, char *key, int filial)</div><div class="ttdoc">Função que insere numa estrutura o código dos clientes que compraram um dado produto numa dada filial...</div><div class="ttdef"><b>Definition:</b> <a href="filial_8c_source.html#l00862">filial.c:862</a></div></div>
+<div class="ttc" id="afilial_8c_html_a1da4d732385c5fa7a6dd39233be07051"><div class="ttname"><a href="filial_8c.html#a1da4d732385c5fa7a6dd39233be07051">produtos_favoritos_cliente</a></div><div class="ttdeci">void produtos_favoritos_cliente(FILIAL_clientes f, char *cliente, int m, Q10 q)</div><div class="ttdoc">Função que insere numa estrutura o código e a quantidade dos produtos que um certo cliente comprou.</div><div class="ttdef"><b>Definition:</b> <a href="filial_8c_source.html#l00432">filial.c:432</a></div></div>
+<div class="ttc" id="astructinfo__produto_html"><div class="ttname"><a href="structinfo__produto.html">info_produto</a></div><div class="ttdef"><b>Definition:</b> <a href="filial_8c_source.html#l00521">filial.c:521</a></div></div>
+<div class="ttc" id="afilial_8c_html_ad8a1352ea1a1cc672c41a8c88e2e4acf"><div class="ttname"><a href="filial_8c.html#ad8a1352ea1a1cc672c41a8c88e2e4acf">percorre_AVL_Filial_Q10</a></div><div class="ttdeci">void percorre_AVL_Filial_Q10(AVL tree, Q10 q)</div><div class="ttdoc">Função que percorre uma AVL.</div><div class="ttdef"><b>Definition:</b> <a href="filial_8c_source.html#l00420">filial.c:420</a></div></div>
+<div class="ttc" id="aavl_8c_html_a5804b8d40ea06fecc2ecd97415a6c18c"><div class="ttname"><a href="avl_8c.html#a5804b8d40ea06fecc2ecd97415a6c18c">getString</a></div><div class="ttdeci">char * getString(NODO n)</div><div class="ttdoc">Função que dado um NODO retorna uma copia da sua string.</div><div class="ttdef"><b>Definition:</b> <a href="avl_8c_source.html#l00189">avl.c:189</a></div></div>
+<div class="ttc" id="astructfilial__cat__clientes_html"><div class="ttname"><a href="structfilial__cat__clientes.html">filial_cat_clientes</a></div><div class="ttdef"><b>Definition:</b> <a href="filial_8c_source.html#l00014">filial.c:14</a></div></div>
+<div class="ttc" id="afilial_8c_html_a780712733f715420d4f2eaf5abda426b"><div class="ttname"><a href="filial_8c.html#a780712733f715420d4f2eaf5abda426b">percorre_NODO_Filial_Q5</a></div><div class="ttdeci">void percorre_NODO_Filial_Q5(NODO tree, FILIAL_clientes f, Q5 q)</div><div class="ttdoc">Função que percorre os nodos da AVL.</div><div class="ttdef"><b>Definition:</b> <a href="filial_8c_source.html#l00270">filial.c:270</a></div></div>
+<div class="ttc" id="afilial_8c_html_a15e86c5e0fa18e412d1649a88c38657c"><div class="ttname"><a href="filial_8c.html#a15e86c5e0fa18e412d1649a88c38657c">percorre_AVL_Filial_Q9</a></div><div class="ttdeci">void percorre_AVL_Filial_Q9(AVL tree, Q9 q, int *aux1, int *aux2)</div><div class="ttdoc">Função que percorre uma AVL.</div><div class="ttdef"><b>Definition:</b> <a href="filial_8c_source.html#l00850">filial.c:850</a></div></div>
+<div class="ttc" id="aestruturas_8c_html_a55dfe0c3e3dc5cc8ce80bad1bd26f7ae"><div class="ttname"><a href="estruturas_8c.html#a55dfe0c3e3dc5cc8ce80bad1bd26f7ae">insere_ProdQ2</a></div><div class="ttdeci">void insere_ProdQ2(char *key, Q2 q)</div><div class="ttdoc">Função que insere na estrutura um código de produto.</div><div class="ttdef"><b>Definition:</b> <a href="estruturas_8c_source.html#l00085">estruturas.c:85</a></div></div>
+<div class="ttc" id="afilial_8c_html_aa6738124d6788a5501121f3c5799e7c0"><div class="ttname"><a href="filial_8c.html#aa6738124d6788a5501121f3c5799e7c0">cliente_Fez_Compras</a></div><div class="ttdeci">Boolean cliente_Fez_Compras(f_info_c f)</div><div class="ttdoc">Função que verifica se um cliente efetuou compras.</div><div class="ttdef"><b>Definition:</b> <a href="filial_8c_source.html#l00238">filial.c:238</a></div></div>
+<div class="ttc" id="aavl_8c_html_a9c63fca5348576aa37364760756f565e"><div class="ttname"><a href="avl_8c.html#a9c63fca5348576aa37364760756f565e">avl_getEstrutura</a></div><div class="ttdeci">Estrutura avl_getEstrutura(AVL node, Valor value)</div><div class="ttdoc">Função que devolve a estrutura associada a um nodo de uma AVL passada como argumento.</div><div class="ttdef"><b>Definition:</b> <a href="avl_8c_source.html#l00110">avl.c:110</a></div></div>
+<div class="ttc" id="aavl_8c_html_a1dec82bcbce333d16733ecf7344d378b"><div class="ttname"><a href="avl_8c.html#a1dec82bcbce333d16733ecf7344d378b">avl_insert</a></div><div class="ttdeci">AVL avl_insert(AVL tree, Valor key, Estrutura estrutura)</div><div class="ttdoc">Função que insere na arvore tree tendo como referência de posicionamento um char*.</div><div class="ttdef"><b>Definition:</b> <a href="avl_8c_source.html#l00065">avl.c:65</a></div></div>
+<div class="ttc" id="afilial_8c_html_aa5347695e52cae9f93b727ea933f43d0"><div class="ttname"><a href="filial_8c.html#aa5347695e52cae9f93b727ea933f43d0">quantidade_compras_cliente</a></div><div class="ttdeci">void quantidade_compras_cliente(FILIAL_clientes f, char *key, Q7 q)</div><div class="ttdoc">Função que insere numa estrutura a quantidade de compras que um dado cliente fez em cada filial,...</div><div class="ttdef"><b>Definition:</b> <a href="filial_8c_source.html#l00377">filial.c:377</a></div></div>
+<div class="ttc" id="afilial_8c_html_a019dc39f3e3a6f01e400922349095b0a"><div class="ttname"><a href="filial_8c.html#a019dc39f3e3a6f01e400922349095b0a">percorre_NODO_Filial_Q9</a></div><div class="ttdeci">void percorre_NODO_Filial_Q9(NODO tree, Q9 q, int *aux1, int *aux2)</div><div class="ttdoc">Função que percorre os nodos de uma AVL.</div><div class="ttdef"><b>Definition:</b> <a href="filial_8c_source.html#l00812">filial.c:812</a></div></div>
+<div class="ttc" id="afilial_8c_html_aa118bae518fe81ed22ab87d41e9b47b5"><div class="ttname"><a href="filial_8c.html#aa118bae518fe81ed22ab87d41e9b47b5">percorre_NODO_Filial_Q12</a></div><div class="ttdeci">void percorre_NODO_Filial_Q12(NODO tree, Q12 q)</div><div class="ttdoc">Função que percorre os nodos de uma AVL.</div><div class="ttdef"><b>Definition:</b> <a href="filial_8c_source.html#l00453">filial.c:453</a></div></div>
+<div class="ttc" id="astructfilial__p_html"><div class="ttname"><a href="structfilial__p.html">filial_p</a></div><div class="ttdef"><b>Definition:</b> <a href="filial_8c_source.html#l00504">filial.c:504</a></div></div>
+<div class="ttc" id="aestruturas_8c_html_a936b77cd07a68b7dbd5cfec0aa5237b5"><div class="ttname"><a href="estruturas_8c.html#a936b77cd07a68b7dbd5cfec0aa5237b5">setTotalNQ9</a></div><div class="ttdeci">void setTotalNQ9(Q9 q, int n)</div><div class="ttdoc">Função que estabelece a quantidade total clientes que compraram em modo Normal.</div><div class="ttdef"><b>Definition:</b> <a href="estruturas_8c_source.html#l00507">estruturas.c:507</a></div></div>
+<div class="ttc" id="aclientes_8c_html_a11ac69b7e3c0edc64e2776a9dc0d12db"><div class="ttname"><a href="clientes_8c.html#a11ac69b7e3c0edc64e2776a9dc0d12db">getClienteCode</a></div><div class="ttdeci">char * getClienteCode(Cliente e)</div><div class="ttdoc">Função que obtém o código do cliente.</div><div class="ttdef"><b>Definition:</b> <a href="clientes_8c_source.html#l00124">clientes.c:124</a></div></div>
+<div class="ttc" id="afilial_8c_html_afbd224a180cd33a159cfe11b54d138f9"><div class="ttname"><a href="filial_8c.html#afbd224a180cd33a159cfe11b54d138f9">produtosMaisCarosQ12</a></div><div class="ttdeci">void produtosMaisCarosQ12(FILIAL_clientes f, char *cliente, Q12 q)</div><div class="ttdoc">Função que insere numa estrutura o código e o total faturado dos produtos que um certo cliente compro...</div><div class="ttdef"><b>Definition:</b> <a href="filial_8c_source.html#l00486">filial.c:486</a></div></div>
+<div class="ttc" id="aestruturas_8c_html_a27d3593315bdeabf5e55f63880582a1f"><div class="ttname"><a href="estruturas_8c.html#a27d3593315bdeabf5e55f63880582a1f">insere_ProdNQ9</a></div><div class="ttdeci">void insere_ProdNQ9(char *key, Q9 q)</div><div class="ttdoc">Função que insere na estrutura um código produto comprado em modo Normal.</div><div class="ttdef"><b>Definition:</b> <a href="estruturas_8c_source.html#l00540">estruturas.c:540</a></div></div>
+<div class="ttc" id="acatalogo_8c_html_aa40131c98313b4683617cd1757f7ea66"><div class="ttname"><a href="catalogo_8c.html#aa40131c98313b4683617cd1757f7ea66">free_Catalogo</a></div><div class="ttdeci">void free_Catalogo(Catalogo cat, Funcao f)</div><div class="ttdoc">Função com o objetivo de limpar da memória um dado catálogo.</div><div class="ttdef"><b>Definition:</b> <a href="catalogo_8c_source.html#l00080">catalogo.c:80</a></div></div>
+<div class="ttc" id="afilial_8c_html_a37e0e7064b18a55b48baab75706ff44e"><div class="ttname"><a href="filial_8c.html#a37e0e7064b18a55b48baab75706ff44e">percorre_AVL_Filial_Q12</a></div><div class="ttdeci">void percorre_AVL_Filial_Q12(AVL tree, Q12 q)</div><div class="ttdoc">Função que percorre uma AVL.</div><div class="ttdef"><b>Definition:</b> <a href="filial_8c_source.html#l00474">filial.c:474</a></div></div>
+<div class="ttc" id="afilial_8c_html_ab348584c295c07065d61e0919e89b077"><div class="ttname"><a href="filial_8c.html#ab348584c295c07065d61e0919e89b077">insere_info_produto</a></div><div class="ttdeci">Filial_Catalogo_Produtos insere_info_produto(Filial_Catalogo_Produtos cat, Produto p, void *Estrutura)</div><div class="ttdoc">Função que insere num produto de um catálogo uma estrutura.</div><div class="ttdef"><b>Definition:</b> <a href="filial_8c_source.html#l00658">filial.c:658</a></div></div>
+<div class="ttc" id="afilial_8c_html_a91ff37d535c1b0ac1b5093d5a9a08399"><div class="ttname"><a href="filial_8c.html#a91ff37d535c1b0ac1b5093d5a9a08399">init_Filial_Info_Cliente</a></div><div class="ttdeci">f_info_c init_Filial_Info_Cliente()</div><div class="ttdoc">Função que inicializa a informação de todos os produtos comprados pelo cliente.</div><div class="ttdef"><b>Definition:</b> <a href="filial_8c_source.html#l00106">filial.c:106</a></div></div>
+<div class="ttc" id="aprodutos_8c_html_a41fd3a5ec4fda805f937ed25bcbe5750"><div class="ttname"><a href="produtos_8c.html#a41fd3a5ec4fda805f937ed25bcbe5750">getProdutoCode</a></div><div class="ttdeci">char * getProdutoCode(Produto p)</div><div class="ttdoc">Função que retorna o código de um produto.</div><div class="ttdef"><b>Definition:</b> <a href="produtos_8c_source.html#l00112">produtos.c:112</a></div></div>
+<div class="ttc" id="aestruturas_8c_html_af12a469a69c68fd7efda71a42dc34ce2"><div class="ttname"><a href="estruturas_8c.html#af12a469a69c68fd7efda71a42dc34ce2">getProdutoQ11</a></div><div class="ttdeci">char * getProdutoQ11(Q11 q, int i)</div><div class="ttdoc">Função que retorna o código de produto numa dada posição.</div><div class="ttdef"><b>Definition:</b> <a href="estruturas_8c_source.html#l00851">estruturas.c:851</a></div></div>
+<div class="ttc" id="astructcliente_html"><div class="ttname"><a href="structcliente.html">cliente</a></div><div class="ttdef"><b>Definition:</b> <a href="clientes_8c_source.html#l00008">clientes.c:8</a></div></div>
+<div class="ttc" id="aavl_8c_html_a5c9e707dfc9a11ffe65746c91b5111ba"><div class="ttname"><a href="avl_8c.html#a5c9e707dfc9a11ffe65746c91b5111ba">getNodoDir</a></div><div class="ttdeci">NODO getNodoDir(NODO n)</div><div class="ttdoc">Função que dado um NODO retorna o nodo á sua direita.</div><div class="ttdef"><b>Definition:</b> <a href="avl_8c_source.html#l00169">avl.c:169</a></div></div>
+<div class="ttc" id="astructfilial__info__produtos_html"><div class="ttname"><a href="structfilial__info__produtos.html">filial_info_produtos</a></div><div class="ttdef"><b>Definition:</b> <a href="filial_8c_source.html#l00514">filial.c:514</a></div></div>
+<div class="ttc" id="astructcatalogo_html"><div class="ttname"><a href="structcatalogo.html">catalogo</a></div><div class="ttdef"><b>Definition:</b> <a href="catalogo_8c_source.html#l00009">catalogo.c:9</a></div></div>
+<div class="ttc" id="aestruturas_8c_html_a2e15d8a1596e4fd5d59eea9412ac0f6a"><div class="ttname"><a href="estruturas_8c.html#a2e15d8a1596e4fd5d59eea9412ac0f6a">setNumClientesQ6</a></div><div class="ttdeci">void setNumClientesQ6(Q6 q, int n)</div><div class="ttdoc">Função que estabelece o número de produtos.</div><div class="ttdef"><b>Definition:</b> <a href="estruturas_8c_source.html#l00344">estruturas.c:344</a></div></div>
+<div class="ttc" id="afilial_8c_html_aaf0b804e595f9bc786067a5eecbd2368"><div class="ttname"><a href="filial_8c.html#aaf0b804e595f9bc786067a5eecbd2368">produtos_nao_comprados_filial</a></div><div class="ttdeci">void produtos_nao_comprados_filial(FILIAL_produtos f, int filial, Q2 q)</div><div class="ttdoc">Função que insere numa estrutura o código e a quantidade total de produtos que ninguém comprou,...</div><div class="ttdef"><b>Definition:</b> <a href="filial_8c_source.html#l00792">filial.c:792</a></div></div>
+<div class="ttc" id="aavl_8c_html_a79d17c2e6df846c93b8a5743cd025735"><div class="ttname"><a href="avl_8c.html#a79d17c2e6df846c93b8a5743cd025735">avl_free</a></div><div class="ttdeci">void avl_free(AVL nodo, Funcao f)</div><div class="ttdoc">Função com o objetivo de limpar da memória uma dada AVL.</div><div class="ttdef"><b>Definition:</b> <a href="avl_8c_source.html#l00210">avl.c:210</a></div></div>
+<div class="ttc" id="afilial_8c_html_a89475ebbb7a63681ed8888ffdf149f76"><div class="ttname"><a href="filial_8c.html#a89475ebbb7a63681ed8888ffdf149f76">get_Filial_Cliente_struct</a></div><div class="ttdeci">Estrutura get_Filial_Cliente_struct(Filial_Catalogo_Clientes f, Cliente c)</div><div class="ttdoc">Função que devolve a estrutura associada a um cliente de um catálogo que lhe é passado como argumento...</div><div class="ttdef"><b>Definition:</b> <a href="filial_8c_source.html#l00159">filial.c:159</a></div></div>
+<div class="ttc" id="astructfilial__info__cliente_html"><div class="ttname"><a href="structfilial__info__cliente.html">filial_info_cliente</a></div><div class="ttdef"><b>Definition:</b> <a href="filial_8c_source.html#l00019">filial.c:19</a></div></div>
+<div class="ttc" id="afilial_8c_html_a0a563e388dc3503044345de6ad8af52e"><div class="ttname"><a href="filial_8c.html#a0a563e388dc3503044345de6ad8af52e">altera_info_produto</a></div><div class="ttdeci">f_info_p altera_info_produto(f_info_p f, Cliente c, int mes, int qtd, double preco, char modo)</div><div class="ttdoc">Função que altera a informação de um produto.</div><div class="ttdef"><b>Definition:</b> <a href="filial_8c_source.html#l00552">filial.c:552</a></div></div>
+<div class="ttc" id="afilial_8c_html_a323e7fb9b4ea086a3ef28d111f4e9a11"><div class="ttname"><a href="filial_8c.html#a323e7fb9b4ea086a3ef28d111f4e9a11">produtos_nao_comprados_num_filial</a></div><div class="ttdeci">void produtos_nao_comprados_num_filial(FILIAL_clientes f, Q6 q)</div><div class="ttdoc">Função que insere numa estrutura a quantidade de clientes que não compraram em nenhuma filial.</div><div class="ttdef"><b>Definition:</b> <a href="filial_8c_source.html#l00355">filial.c:355</a></div></div>
+<div class="ttc" id="acatalogo_8c_html_a93fc716391dc53901dc2dbff97e75da1"><div class="ttname"><a href="catalogo_8c.html#a93fc716391dc53901dc2dbff97e75da1">existe_Catalogo</a></div><div class="ttdeci">Boolean existe_Catalogo(Catalogo catalogo, char *key)</div><div class="ttdoc">Função que verifica se existe uma key num catálogo.</div><div class="ttdef"><b>Definition:</b> <a href="catalogo_8c_source.html#l00032">catalogo.c:32</a></div></div>
+<div class="ttc" id="acatalogo_8c_html_a551505c19cd86f02ff31019e350df2a6"><div class="ttname"><a href="catalogo_8c.html#a551505c19cd86f02ff31019e350df2a6">catalogo_getAVL</a></div><div class="ttdeci">AVL catalogo_getAVL(Catalogo cat, int index)</div><div class="ttdoc">Função que devolve a AVL que se encontra numa determinada posição do array.</div><div class="ttdef"><b>Definition:</b> <a href="catalogo_8c_source.html#l00103">catalogo.c:103</a></div></div>
+<div class="ttc" id="afilial_8c_html_abd728e46551e8d0a8a66fc9fa39683f7"><div class="ttname"><a href="filial_8c.html#abd728e46551e8d0a8a66fc9fa39683f7">altera_Filial_Cliente</a></div><div class="ttdeci">FILIAL_clientes altera_Filial_Cliente(FILIAL_clientes f, Cliente c, Produto p, int mes, int qtd, double preco, int filial)</div><div class="ttdoc">Função que altera a informação de uma filial de clientes.</div><div class="ttdef"><b>Definition:</b> <a href="filial_8c_source.html#l00080">filial.c:80</a></div></div>
+<div class="ttc" id="afilial_8c_html_a2a8b81e327408db5fe3049fee4db6da5"><div class="ttname"><a href="filial_8c.html#a2a8b81e327408db5fe3049fee4db6da5">percorre_AVL_Filial_Q5</a></div><div class="ttdeci">void percorre_AVL_Filial_Q5(AVL tree, FILIAL_clientes f, Q5 q)</div><div class="ttdoc">Função que percorre uma AVL.</div><div class="ttdef"><b>Definition:</b> <a href="filial_8c_source.html#l00293">filial.c:293</a></div></div>
+<div class="ttc" id="afilial_8c_html_a174ccb563f801cc2928de3f9030ae508"><div class="ttname"><a href="filial_8c.html#a174ccb563f801cc2928de3f9030ae508">percorre_NODO_Filial_Q6</a></div><div class="ttdeci">void percorre_NODO_Filial_Q6(NODO tree, int *aux)</div><div class="ttdoc">Função que percorre os nodos da AVL.</div><div class="ttdef"><b>Definition:</b> <a href="filial_8c_source.html#l00323">filial.c:323</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>
